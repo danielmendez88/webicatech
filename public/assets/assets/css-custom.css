@@ -1,0 +1,55 @@
+
+.lista { width: 100%; height: auto;}
+.lista ul { width: 100%;  display: table; padding: 20px; }
+.lista ul li { width: 50%; float: left;  list-style-image: url(../../img/vinetas/vineta-mas.png); }
+.lista ul li a{ color: #6D6E71; }
+.lista ul li a:hover{ }
+
+
+.p-info-contacto{
+		border-left: 2px solid #621132;
+		padding-left: 16px;
+		margin-left: 20px;
+	}
+.div-fuente{
+	background-color:#3E3F41; 
+	color:white;
+	font-size:14px;
+	text-align:right;
+	padding-top: 5px;
+}
+.div-dato{
+	border: 1px solid #eee;
+	vertical-align: middle;
+	padding-top: 5px;
+}	
+.img-shadow{
+	box-shadow: rgb(0, 0, 0) 0px 0px 45px 0px;
+}
+
+.title-org{
+	color: #621132 !important;
+    font-size: 16px !important;
+    font-weight: 600;
+}
+
+.fuente-marron{
+    color: #621132;
+}
+
+.letra-capital-c{
+	border: 2px solid;
+    color: #621132 !important;
+    font-size: 31px;
+    padding: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
+}
+.formato-contenido{
+	font-size: 15px;
+    text-align: justify;
+}
+
+.g-font-size-21{
+	font-size: 21px !important;
+}

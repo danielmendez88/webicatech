@@ -1,0 +1,83 @@
+/* 
+Theme Name: Dependencias de Gobierno del Estado de Chiapas
+Template Theme URI: https://chiapas.gob.mx
+Author: Secretaría de Salud
+Description: Plantilla que cumple con el manual básico de identidad del Gobierno del Estado de Chiapas Administración 2018-2024".
+Version: 1.0
+*/
+
+.masonry-img-top {
+    display: inline-block;
+    height: 250px;
+    width: 100%;
+}
+
+.masonry-img-square {
+    display: inline-block;
+    height: auto;
+    width: 100%;
+}
+
+.masonry-img-top img {
+    object-fit: cover;
+    width:100%;
+    height: 250px;
+}
+
+.masonry-img-square img {
+    object-fit: cover;
+    width:100%;
+    height: auto;
+}
+.masonry-dark-caption {
+    background: #333;
+    color: white;
+    overflow: hidden;
+}
+.masonry-dark-caption a {
+    color: white;
+}
+
+.u-block-hover:hover .g-color-accent--hover, .g-color-accent--hover:hover {
+    color: #B09A5B !important;
+}
+  
+.g-parent:hover .g-color-accent--parent-hover {
+color: #B09A5B !important;
+}
+
+.nav-link.active {
+    color:#621132;
+}
+.post img {
+    max-width: 100%;
+    height: auto;
+}
+.circleBase {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
+.type1 {
+    width: 130px;
+    height: 130px;
+    box-shadow: 0 0 15px 0 grey;
+    margin-left: auto;
+    margin-right: auto;
+}
+.type1 img {
+   height: 100%;
+   width: 100%;
+   border-radius: 50%;
+}
+
+.unidades  {
+    width: 445px;
+}
+
+.unidades img {
+   height: 100%;
+   width: 30%;
+}
+
+@media (min-width: 1200px) {
+}
