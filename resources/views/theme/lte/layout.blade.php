@@ -9,7 +9,7 @@
 					<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 					<meta http-equiv="x-ua-compatible" content="ie=edge">
 									
-					<link rel="shortcut icon" href="{{ asset("favicon.ico") }} type="image/x-icon">
+					<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
 					
 					<!-- Google Fonts -->
 					<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet"> 
@@ -65,9 +65,6 @@
 						}
 						.lista {
 							height: 337px;
-							-moz-box-shadow: 1px 1px 5px #999;
-							-webkit-box-shadow: 1px 1px 5px #999;
-							box-shadow: 1px 1px 5px #999;
 						}
 						/* line 25, ../sass/jQuery.verticalCarousel.scss */
 						.smartmarquee {
@@ -109,7 +106,7 @@
 					<!-- FOOTER PORTAL DE GOBIERNO -->
 					@include("theme.lte.footer")
         
-		
+						<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 						<script src="{{asset("assets/vendor/jquery/jquery.min.js")}}"></script>
 						<script src="{{asset("assets/vendor/jquery-migrate/jquery-migrate.min.js")}}"></script>
 						<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -131,7 +128,7 @@
 						<script src="{{asset("assets/js/components/hs.carousel.js")}}"></script>
 						<script src="{{asset("assets/js/components/hs.go-to.js")}}"></script>
 						<script src="{{asset("assets/js/functions.js")}}"></script>
-						<script src="{{asset("assets/js/unslider.js")}}"></script>
+						<script src="{{asset("assets/js/responsiveslides.js")}}"></script>
 						<script src="{{asset("assets/js/scripts/jquery.smartmarquee.js")}}"></script>
 						<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5d51c3873387b20012d77a1a&product='inline-share-buttons" async='async'></script>
 						<!--plug in facebook-->
@@ -141,6 +138,9 @@
 
 						
 						<script>
+							$(function() {
+								$(".rslides").responsiveSlides();
+							});
 
 						  $(document).on('ready', function () {
 
@@ -165,13 +165,14 @@
 							    $.HSCore.components.HSCarousel.init('.js-carousel');				    
 							    $.HSCore.components.HSGoTo.init('.js-go-to');
 
-							    $('.slider_unidades').unslider({
+							    /*$('.slider_unidades').unslider({
 									speed: 800,              
 									delay: 4000,              
 									keys: true,              
 									dots: true,               
 									fluid: true          
-								});
+								});*/
+								 // Slideshow 1
 
 								$('.carousel').carousel({
 								  interval: 3000

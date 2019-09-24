@@ -9,37 +9,65 @@
             <div class="masonry-grid-sizer col-sm-12"></div>
             <div class="masonry-grid-item col-sm-12 col-md-12 col-lg-12 g-mb-30">
 
-
-                    <b><h6>DECRETOS</h6></b><br>
-                        @foreach ($deccrea as $key => $value)
+                <br><div class="row">
+                    <div class="col-md-12">
+                         <div class="section-title">
+                                <div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
+                                        <h4 class="u-heading-v2______title text-uppercase g-font-weight-300 mb-0">DECRETOS</h4>
+                                </div>
+                         </div>
+                     </div>
+                 </div>
+                         @foreach ($deccrea as $key => $value)
                             <a target="_blank" href="{{ $value }}"><b>{{ $key }}</b></a><br>
                         @endforeach    
 
-                    <br><b><h6>REGLAMENTOS</h6></b><br>
+                        <br><div class="row">
+                            <div class="col-md-12">
+                                    <div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
+                                            <h4 class="u-heading-v2______title text-uppercase g-font-weight-300 mb-0">REGLAMENTOS</h4>
+                                    </div>
+                             </div>
+                         </div>
                         @foreach ($reglam as $key => $value)
                           <a target="_blank" href="{{ $value }}"><b>{{ $key }}</b></a><br>
                          @endforeach
 
-                    <br><b><h6>MANUALES</h6></b><br>
+                         <br><div class="row">
+                            <div class="col-md-12">
+                                    <div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
+                                            <h4 class="u-heading-v2______title text-uppercase g-font-weight-300 mb-0">MANUALES</h4>
+                                    </div>
+                             </div>
+                         </div>
                     @foreach ($manual as $key => $value)
                          <a target="_blank" href="{{ $value }}"><b>{{ $key }}<b></a><br>
-                        @endforeach
+                        @endforeach <br>
 
-                    <br><b><h6>MANUAL DE PROCEDIMIENTOS</h6></b><br>
-                        @foreach ($manualproc as $key => $value)
-                            <a target="_blank" href="{{ $value }}"><b>{{ $key }}<b></a><br>
-                          @endforeach
+         <div class="row">
+             <div class="col-md-12">
+                    <div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
+                            <h4 class="u-heading-v2______title text-uppercase g-font-weight-300 mb-0">MANUAL DE PROCEDIMIENTOS</h4>
+                    </div>
+             </div>
+         </div>
+         @foreach ($manualproc as $key => $value)
+             <a target="_blank" href="{{ $value }}"><b>{{ $key }}<b></a><br>
+         @endforeach <br>
 
                     
-                    <br><b><h6>MANUAL DE ORGANIZACION</h6></b><br>
-                        @foreach ($manualorga as $key => $value)
-                            <a target="_blank" href="{{ $value }}"><b>{{ $key }}<b></a><br>
-                          @endforeach
+         <div class="row">
+             <div class="col-md-12">
+                    <div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
+                            <h4 class="u-heading-v2______title text-uppercase g-font-weight-300 mb-0">MANUAL DE ORGANIZACION</h4>
+                    </div>
+             </div>
+         </div>
+            @foreach ($manualorga as $key => $value)
+                 <a target="_blank" href="{{ $value }}"><b>{{ $key }}<b></a><br>
+             @endforeach
 
-                    <br><b><h6>CODIGOS</h6></b><br>
-                        @foreach ($codigos as $key => $value)
-                            <a target="_blank" href="{{ $value }}"><b>{{ $key }}<b></a><br>
-                            @endforeach
+                   
             </div>
         </div>
     </div>

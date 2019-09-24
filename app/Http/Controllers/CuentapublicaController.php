@@ -144,15 +144,9 @@ class CuentapublicaController extends Controller
             'Manual de Organizacion -Glosario de Terminos de Trabajo' => 'normatividad_/manuales/organizacion/glosario_de_terminos_y_trabajo.pdf'
         );
 
-        $norma_codigos =array(
-            'Codigo de Conducta ICATECH' => 'normatividad_/codigos/códigodeconductaicatech.pdf',
-            'Codigo de Etica' => 'normatividad_/codigos/codigodeetica.pdf'
-        );
-
-
-
+        
         return view('pages.normatividad', ['deccrea'=> $dec_decretos, 'reglam'=> $reg_reglamentos, 'manual'=> $man_induccion,
-        'manualproc'=> $manu_procedimientos, 'manualorga'=> $manu_organizacion, 'codigos' =>$norma_codigos]);
+        'manualproc'=> $manu_procedimientos, 'manualorga'=> $manu_organizacion,]);
 
     }
 
@@ -380,6 +374,16 @@ class CuentapublicaController extends Controller
         return view('pages.avisosprivacidad', ['avis_inte' =>$avisos_integrales, 'unejec' => $avisos_ejecutiva, 'diradm' => $avisos_administrativa,
         'dirplan' => $avisos_planeacion, 'dirtacad' => $avisos_tecnica, 'avis_simpl' => $avisos_simplificados, 'simejec' => $simplificados_ejecutiva, 'simadmi' => $simplificados_administrativa,
         'simplan' => $simplificados_planeacion, 'simacad' => $simplificados_academica]);
+    }
+
+    public function codigodeconducta()
+    {
+        $conduc_codigos =array(
+            'Codigo de Conducta ICATECH' => 'codigos_conducta/códigodeconductaicatech.pdf', 
+            'Codigo de Honestidad y Etica de los Servidores Públicos de la Administración Pública del Estado de Chiapas ' => 'codigos_conducta/codigodeetica.pdf'
+        );
+
+        return view('pages.codigodeconducta', ['codigos' =>$conduc_codigos]);
     }
 
 

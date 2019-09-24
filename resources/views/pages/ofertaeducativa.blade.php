@@ -2,38 +2,37 @@
 @section('title', 'Oferta Educativa | Icatech')
 
 @section('content')
+
 <div class="container g-pt-25">
-
-		<div class="masonry-grid row g-mb-0 row-eq-height">
-			<div class="masonry-grid-sizer col-sm-12"></div>
-			<div class="masonry-grid-item col-sm-6 col-md-6 col-lg-3 g-mb-30">
-				<article class="masonry-dark-caption u-shadow-v32 u-shadow-v21--hover g-transition-0_3 h-100 g-rounded-top-5 g-rounded-bottom-5">
-					<a class="masonry-img-square">
-						<img src="Imagenes Pagina/banner_oferta_vertical.jpg">
-					</a>
-				</article>
+	<div class="row">
+		<div class="col-md-2 col-sm-4 imagen1">
+			<img src="Imagenes Pagina/bannerrequisitosvertical.jpg" class="img-thumbnail"></a>
+		</div>
+			<div class="col-md-3 col-sm-4 imagen2">
+			<img src="Imagenes Pagina/especializacion.jpg" class="img-thumbnail"></a>	
 			</div>
-			<!--elemento-->
-			
-			<div class="masonry-grid-item col-sm-6 col-md-6 col-lg-3 g-mb-30">
-				<article class="masonry-dark-caption u-shadow-v32 u-shadow-v21--hover g-transition-0_3 h-100 g-rounded-top-5 g-rounded-bottom-5">
-					<a class="masonry-img-square">
-						<img src="Imagenes Pagina/requisitos2.jpg">
-					</a>
-					
-				</article>
-			</div>
-		</div>
-			<!--elemento END-->
+			<div class="col-md-3 col-sm-4 imagen3">
+				<img src="Imagenes Pagina/oficios.jpg" class="img-thumbnail"></a>	
+				</div>
+				<div class="col-md-3 col-sm-4 imagen4">
+					<img src="Imagenes Pagina/profesionalizacion.jpg" class="img-thumbnail"></a>	
+					</div>
+					<div class="col-md-2 col-sm-4 imagen4">
+							<img src="Imagenes Pagina/icon-footer.png" class="img-thumbnail"></a>	
+							</div>
+					<div class="col-md-3 col-sm-4 imagen5">
+						<img src="Imagenes Pagina/sedena.jpg" class="img-thumbnail"></a>	
+						</div>
+						<div class="col-md-3 col-sm-4 imagen6">
+							<img src="Imagenes Pagina/sedespi.jpg" class="img-thumbnail"></a>	
+							</div>
+							<div class="col-md-3 col-sm-4 imagen6">
+									<img src="Imagenes Pagina/adultosmayores.jpg" class="img-thumbnail"></a>	
+							</div>
 
-		</div>
-	
-	
-    
-			
-					  
-		</div>
-		
-    </section>
+							
+													
+	</div>
 </div>
+</section>	
 @stop

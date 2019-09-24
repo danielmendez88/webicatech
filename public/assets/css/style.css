@@ -79,5 +79,13 @@ color: #B09A5B !important;
    width: 30%;
 }
 
+#MyVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
 @media (min-width: 1200px) {
 }

@@ -59,6 +59,9 @@ Route::get('/cuenta-publica', 'CuentapublicaController@index');
 Route::get('directorio',function(){
 	return view('pages.directorio');
 });
+//CODIGO DE CONDUCTA
+Route::get('/codigodeconducta', 'CuentapublicaController@codigodeconducta');
+
 Auth::routes();
 
 // grupo con un componente llamado midleware
