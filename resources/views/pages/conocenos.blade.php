@@ -7,7 +7,7 @@
 		<div class="masonry-grid row g-mb-0 row-eq-height">
 			<div class="masonry-grid-sizer col-sm-12"></div>
 			<div class="masonry-grid-item col-sm-6 col-md-6 col-lg-12 g-mb-30">
-				<img src="Imagenes Pagina/banner conocenos.jpg" align=RIGHT style="max-width:100%;width:auto;height:auto;">
+				<img src="Imagenes Pagina/banner_conocenos_vertical.jpg" ALIGN=LEFT style="max-width:20%;width:auto;height:auto;">
 				  <br>
 	              <p><h2><b>Quienes Somos:</b></h2></p>
 				  <br><b>Historia</b>
@@ -24,6 +24,9 @@
 				  <p align=justify> 3.	Promover la impartición de cursos de capacitación a obreros en mano de obra calificada que corresponden a las necesidades de los mercados laborales del Estado.</p>
 				  <p align=justify> 4.	Apoyar las acciones de capacitación para el trabajo de los sectores productivos del estado, así como la capacitación tanto para el trabajo de personas sin empleo o discapacitadas, como no egresados de primarias, secundarias o preparatorias.</p>
 				  <p align=justify> 5.	Aumentar con los programas de capacitación el nivel de productividad de los trabajadores.</p>
+
+				  <a href="{{ url("directorio") }}" style="font-size: auto;" target="_blank"><b>DIRECTORIO</b>
+
 			</div>
 		</div>
 	</div>

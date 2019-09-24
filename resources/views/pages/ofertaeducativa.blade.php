@@ -4,25 +4,36 @@
 @section('content')
 <div class="container g-pt-25">
 
-	<section class="text-left">
-        <div class="container">
-          
-		<img src="Imagenes Pagina/banner icatechoferta.jpg" ALIGN=RIGHT style="max-width:100%;width:auto;height:auto;">	<br>					
-		<p><h2><b>Requisitos:</b></h2></p>	
-		<p><h4>Los requisitos que necesitas para poder inscribirte son los siguientes:</h4></p><b>
-			<h7>-Ser mayor de 15 años</h7></br>
-			<h7>-Saber Leer y Escribir</h7></br>
-			<h7>-Copia de Acta de Nacimiento</h7></br>
-			<h7>-Copia de Identificación Oficial</h7></br>
-			<h7>-Comprobante de Domicilio</h7></br>
-			<h7>-CURP</h7></br>
-			<h7>-Pago de Cuota de Recuperación</h7></br>
-			<h7>-2 Fotografías Infantiles</h7></br>
-		  
-		</br>-Notas Redactadas</br>
-		-Multimedia (videos)</br>
-		  
-        </div>
+		<div class="masonry-grid row g-mb-0 row-eq-height">
+			<div class="masonry-grid-sizer col-sm-12"></div>
+			<div class="masonry-grid-item col-sm-6 col-md-6 col-lg-3 g-mb-30">
+				<article class="masonry-dark-caption u-shadow-v32 u-shadow-v21--hover g-transition-0_3 h-100 g-rounded-top-5 g-rounded-bottom-5">
+					<a class="masonry-img-square">
+						<img src="Imagenes Pagina/banner_oferta_vertical.jpg">
+					</a>
+				</article>
+			</div>
+			<!--elemento-->
+			
+			<div class="masonry-grid-item col-sm-6 col-md-6 col-lg-3 g-mb-30">
+				<article class="masonry-dark-caption u-shadow-v32 u-shadow-v21--hover g-transition-0_3 h-100 g-rounded-top-5 g-rounded-bottom-5">
+					<a class="masonry-img-square">
+						<img src="Imagenes Pagina/requisitos2.jpg">
+					</a>
+					
+				</article>
+			</div>
+		</div>
+			<!--elemento END-->
+
+		</div>
+	
+	
+    
+			
+					  
+		</div>
+		
     </section>
 </div>
 @stop

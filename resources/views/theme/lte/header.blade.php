@@ -27,8 +27,21 @@
 		</div>
 	</header>
 	<!--seccion-->
-	<section class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll dzsprx-readyall loaded under-760 under-500" data-options='{direction: "normal", settings_mode_oneelement_max_offset: "150"}' style="height: 390px">
-		<div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-img-hero g-bg-bluegray-opacity-0_3--after " style=" background-image: url('Imagenes Pagina/banner.jpg'); height: 100%; width: 100% ; transform: translate3d(0px, 0px, 0px);"></div>
+
+    <div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-img-hero g-bg-bluegray-opacity-0_3--after " style="height: 100%; background-image: (); transform: translate3d(0px, 0px, 0px);"></div>
+    <div class="container u-bg-overlay__inner text-center g-py-70">
+        <video autoplay muted loop> <source src="Imagenes Pagina/portada web.mp4" type="video/mp4"/></video>
+        <form method="get">
+            <div class="g-max-width-540 mx-auto g-mb-20">
+                <div class="input-group">
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+
+	
+		<!--seccion<div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-img-hero g-bg-bluegray-opacity-0_3--after " style="background-image: url('Imagenes Pagina/banner.jpg'); height: 100%; width: 100% ; transform: translate3d(0px, 0px, 0px);"></div>-->
 		<!--<div class="container u-bg-overlay__inner text-center g-py-150">
 			<h2 class="h4 g-color-white g-font-weight-400 g-mb-30">Te encuentras en <span class="g-font-weight-600">ICATECH</span></h2>
 		</div>-->

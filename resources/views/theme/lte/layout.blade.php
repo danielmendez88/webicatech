@@ -3,19 +3,19 @@
 			
 			
 				<head>
-					<title>@yield('title', 'some default title to show if child doesnt set one')</title>
+					<title>@yield('title', 'Instituto de Capacitación y Vinculación Tecnológica del Estado de Chiapas | Icatech')</title>
 					
 					<meta charset="utf-8">
 					<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 					<meta http-equiv="x-ua-compatible" content="ie=edge">
 									
-					<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+					<link rel="shortcut icon" href="{{ asset("favicon.ico") }} type="image/x-icon">
 					
 					<!-- Google Fonts -->
 					<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet"> 
 					
 					<!-- CSS Global Compulsory -->
-					<link rel="stylesheet" href="{{asset("assets/vendor/bootstrap/bootstrap.min.css")}}">
+					<link rel="stylesheet" href="{{asset("assets/vendor/bootstrap/bootstrap.min.css") }}">
 					<link rel="stylesheet" href="{{asset("assets/vendor/bootstrap/offcanvas.css")}}">
 					
 					<!-- CSS Implementing Plugins -->
@@ -177,7 +177,12 @@
 								  interval: 3000
 								})
 						  });
+						</script>
+						<script>
+							document.getElementById('vid').play();
 						</script>	
+
+						
 				</body>
 			</html>
 		
