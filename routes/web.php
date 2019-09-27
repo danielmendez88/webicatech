@@ -59,8 +59,8 @@ Route::get('/cuenta-publica', 'CuentapublicaController@index');
 Route::get('directorio',function(){
 	return view('pages.directorio');
 });
-//CODIGO DE CONDUCTA
-Route::get('/codigodeconducta', 'CuentapublicaController@codigodeconducta');
+//Integridad
+Route::get('/Integridad', 'CuentapublicaController@Integridad');
 
 Auth::routes();
 

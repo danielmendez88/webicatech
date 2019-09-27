@@ -304,6 +304,9 @@ class CuentapublicaController extends Controller
 
         $avisos_ejecutiva =array(
             'AREA DE INFORMATICA' => 'avisos_privacidad/integral/AVISO_INTEGRAL_INFORMATICA.pdf',
+        );
+        
+        $avisos_juridico =array(
             'UNIDAD JURIDICA' => 'avisos_privacidad/integral/AVISO_INTEGRAL_JURIDICO.pdf',
             'UNIDAD DE TRANSPARENCIA (Derecho ARCO)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_ARCO_TRANSP.pdf',
             'UNIDAD DE TRANSPARENCIA' => 'avisos_privacidad/integral/AVISO_INTEGRAL_SOLICITUDES_TRANSP.pdf'
@@ -371,19 +374,19 @@ class CuentapublicaController extends Controller
 
         
 
-        return view('pages.avisosprivacidad', ['avis_inte' =>$avisos_integrales, 'unejec' => $avisos_ejecutiva, 'diradm' => $avisos_administrativa,
+        return view('pages.avisosprivacidad', ['avis_inte' =>$avisos_integrales, 'unejec' => $avisos_ejecutiva, 'unjuri' => $avisos_juridico, 'diradm' => $avisos_administrativa,
         'dirplan' => $avisos_planeacion, 'dirtacad' => $avisos_tecnica, 'avis_simpl' => $avisos_simplificados, 'simejec' => $simplificados_ejecutiva, 'simadmi' => $simplificados_administrativa,
         'simplan' => $simplificados_planeacion, 'simacad' => $simplificados_academica]);
     }
 
-    public function codigodeconducta()
+    public function Integridad()
     {
         $conduc_codigos =array(
             'Codigo de Conducta ICATECH' => 'codigos_conducta/códigodeconductaicatech.pdf', 
             'Codigo de Honestidad y Etica de los Servidores Públicos de la Administración Pública del Estado de Chiapas ' => 'codigos_conducta/codigodeetica.pdf'
         );
-
-        return view('pages.codigodeconducta', ['codigos' =>$conduc_codigos]);
+       
+        return view('pages.Integridad', ['codigos1' =>$conduc_codigos]);
     }
 
 

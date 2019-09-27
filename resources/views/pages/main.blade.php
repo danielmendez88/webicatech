@@ -35,12 +35,7 @@
 							<li>
 								<p> MÁS DE 500 CURSOS CERTIFICADOS POR LA SEP SON A LOS QUE PODRÁN ACCEDER LA COMUNIDAD ESTUDIANTIL DE LA UTS. </p> <a target="_blank" href="comunicados/comunicado_de_prensa_003.docx"><b>Leer Más...</b></a>
 							</li>
-							<li>
-									<a href="/codigodeconducta" class="masonry-img-square"> <img src="Imagenes Pagina/banner_codigo_de_condcuta_1.jpg" alt="Banner"></a>
-							</li>
-							<li>
-									<a href="https://www.chiapas.gob.mx/media/plan-desarrollo-2019/Plan-Estatal-de-Desarrollo-Chiapas-2019-2024.pdf" class="masonry-img-square"> <img src="Imagenes Pagina/banner-plan.png" alt="Banner"></a>
-							</li>											
+																	
 							
 						</ul>
 					</div>
@@ -90,12 +85,38 @@
 		</div>
 	</div>
 	<!--redes sociales-->
+	<!--div-->
+
+
 	<div class="container g-pt-25">
-		<div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
-			<h2 class="u-heading-v2__title text-uppercase g-font-weight-300 mb-0">redes sociales</h2>
+			<div class="u-heading-v2-5--bottom g-brd-primary g-mb-50 text-left">
+					<h3>Importancia</h3>
+			</div>
+			<div class="about-text">
+				<p>
+<marquee behavior="alternate">
+
+<a href="https://www.chiapas.gob.mx/media/plan-desarrollo-2019/Plan-Estatal-de-Desarrollo-Chiapas-2019-2024.pdf" target="_new"><img src="Imagenes Pagina/banner-plan.png" width="600px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="/Integridad" target=""><img src="Imagenes Pagina/integridad banner.jpg" width="370px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/transparencia" target=""><img src="Imagenes Pagina/banner icatechtransparencia2.jpg" width="370px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/cobertura" target=""><img src="Imagenes Pagina/cobertura.jpg" width="600px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/normatividad" target=""><img src="Imagenes Pagina/normatividad.jpg" width="370px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+</marquee>
+				</p>
+			</div>
+		</div>
+
+			
+	<!--banners-->
+	<div class="container g-pt-25">
+		<div class="u-heading-v2-5--bottom g-brd-primary g-mb-50 text-left">
+				<h3>Redes Sociales</h3>
 		</div>
 		<div class="row">
 			<div class="col-xs-8 col-sm-6">
+					<h3>Facebook<hr class="red"></h3>	
 				<div class="fb-page" 
 					data-href="https://www.facebook.com/Icatech-Chiapas-475079282568212/" 
 					data-tabs="timeline" 
@@ -114,24 +135,19 @@
 			</div>
 			<!---->
 			<div class="col-xs-8 col-sm-6">
-				<div class="fb-page" 
-					data-href="https://www.facebook.com/facebook" 
-					data-tabs="timeline" 
-					data-width="500" 
-					data-height="" 
-					data-small-header="true" 
-					data-adapt-container-width="true" 
-					data-hide-cover="false" 
-					data-show-facepile="true">
-						<blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore">
-							<a href="https://www.facebook.com/facebook">Facebook</a>
-						</blockquote>
-				</div>
+			<h3>Twitter<hr class="red"></h3> 
+			<a class="twitter-timeline" 
+				data-width="500" 
+				data-height="550"
+				 href="https://twitter.com/IcatechOficial?ref_src=twsrc%5Etfw">Tweets by IcatechOficial</a> 
+				 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+				 </script>
 			</div>
 			<!---->
-		</div>
+			
+		</div>								
 	</div>
 	<!--redes sociales END-->
-	<br>
+	
 
 @stop
