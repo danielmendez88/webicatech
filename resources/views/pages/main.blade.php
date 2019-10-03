@@ -99,7 +99,7 @@
 <a href="https://www.chiapas.gob.mx/media/plan-desarrollo-2019/Plan-Estatal-de-Desarrollo-Chiapas-2019-2024.pdf" target="_new"><img src="Imagenes Pagina/banner-plan.png" width="600px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a href="/Integridad" target=""><img src="Imagenes Pagina/integridad banner.jpg" width="370px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="/transparencia" target=""><img src="Imagenes Pagina/banner icatechtransparencia2.jpg" width="370px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/transparencia" target=""><img src="Imagenes Pagina/banner icatechtransparencia4.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="/cobertura" target=""><img src="Imagenes Pagina/cobertura.jpg" width="600px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="/normatividad" target=""><img src="Imagenes Pagina/normatividad.jpg" width="370px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 

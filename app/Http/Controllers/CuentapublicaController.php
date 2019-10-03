@@ -116,13 +116,10 @@ class CuentapublicaController extends Controller
         );
 
         $man_induccion =array(
-            'Manual de Inducción 2012' => 'normatividad_/manuales/induccion/manual_induccion2012.pdf',
-            'Manual de Inducción 2016' => 'normatividad_/manuales/induccion/manual_induccion2016.pdf',
             'Manual de Inducción 2018' => 'normatividad_/manuales/induccion/manual_induccion2018.pdf'
         );
 
         $manu_procedimientos =array(
-            'Manuales de Procedimientos 2012' => 'normatividad_/manuales/procedimientos/manual_procedimientos2012.pdf',
             'Manual de Procedimientos' => 'normatividad_/manuales/procedimientos/procedimientos.pdf',
             '-Comisaria' => 'normatividad_/manuales/procedimientos/1comisaria.pdf',
             '-Unidad Jurídica' => 'normatividad_/manuales/procedimientos/2unidad_juridica.pdf',
@@ -137,10 +134,9 @@ class CuentapublicaController extends Controller
         );
 
         $manu_organizacion =array(
-            'Manual de Organizacion 2012' =>'normatividad_/manuales/organizacion/manual_organizacion2012.pdf',
             'Manual de Organizacion' => 'normatividad_/manuales/organizacion/organizacion.pdf',
-            'Manual de Organizacion -Organigramas y Funciones' => 'normatividad_/manuales/organizacion/organigramas_y_funciones_1.pdf',
-            'Manual de Organizacion -Organigramas y Funciones.2' => 'normatividad_/manuales/organizacion/organigramas_y_funciones_2.pdf',
+            'Manual de Organizacion -Organigramas y Funciones Parte 1' => 'normatividad_/manuales/organizacion/organigramas_y_funciones_1.pdf',
+            'Manual de Organizacion -Organigramas y Funciones Parte 2' => 'normatividad_/manuales/organizacion/organigramas_y_funciones_2.pdf',
             'Manual de Organizacion -Glosario de Terminos de Trabajo' => 'normatividad_/manuales/organizacion/glosario_de_terminos_y_trabajo.pdf'
         );
 
@@ -153,22 +149,28 @@ class CuentapublicaController extends Controller
     public function licitaciones()
     {
         $lic_federales =array(
-            'ICATECH-ICTP/001/2019 - Acta de Junta de Aclaración de Dudas' => 'licitaciones_/federal/acta_de_aclaracion_de_dudas3 .pdf',
-            'ICATECH-ICTP/001/2019 - Acta de Apertura de Propuestas Técnicas y Económicas' => 'licitaciones_/federal/acta_de_apertura_de_propuestas.pdf',
-            'ICATECH-ICTP/001/2019 - Acta de Fallo' =>'licitaciones_/federal/acta_de_fallo.pdf',
-            'ICATECH-ICTP/002/2019 - Acta de Junta de Aclaración de Dudas' => 'licitaciones_/federal/acta_de_jaictp-002_2019.pdf',              
-            'ICATECH-ICTP/003/2019 - Acta de Junta de Aclaración de Dudas' => 'licitaciones_/federal/acta_de_jaictp-003_2019.pdf',                  
-            'ICATECH-ICTP/002/2019 - Acta de Apertura de Propuestas Técnicas y Económicas' => 'licitaciones_/federal/acta_de_apertura_propuestas_icatech_ictp_002_2019.pdf',                   
-            'ICATECH-ICTP/003/2019 - Acta de Apertura de Propuestas Técnicas y Económicas' => 'licitaciones_/federal/acta_de_apertura_propuestas_icatech_ictp_003_2019.pdf',                  
-            'ICATECH-ICTP/002/2019 - Acta Circunstanciada 001' => 'licitaciones_/federal/acta_circunstanciada_ictp-002_2019.pdf',                       
-            'ICATECH-ICTP/003/2019 - Acta Circunstanciada 002' => 'licitaciones_/federal/acta_circunstanciada_ictp-003_2019.pdf',                       
-            'ICATECH-ICTP/002/2019 - Acta de Fallo' => 'licitaciones_/federal/fallo_icatech_ictp-002_2019.pdf',                   
-            'ICATECH-ICTP/003/2019 - Acta de Fallo' => 'licitaciones_/federal/fallo_icatech-ictp-003_2019.pdf'
+            '- Acta de Junta de Aclaración de Dudas' => 'licitaciones_/federal/acta_de_aclaracion_de_dudas3 .pdf',
+            '- Acta de Apertura de Propuestas Técnicas y Económicas' => 'licitaciones_/federal/acta_de_apertura_de_propuestas.pdf',
+            '- Acta de Fallo' =>'licitaciones_/federal/acta_de_fallo.pdf',
+        );
+
+        $lic_federales2 =array(
+            '- Acta de Junta de Aclaración de Dudas' => 'licitaciones_/federal/acta_de_jaictp-002_2019.pdf',              
+            '- Acta de Apertura de Propuestas Técnicas y Económicas' => 'licitaciones_/federal/acta_de_apertura_propuestas_icatech_ictp_002_2019.pdf',
+            '- Acta Circunstanciada 001' => 'licitaciones_/federal/acta_circunstanciada_ictp-002_2019.pdf',
+            '- Acta de Fallo' => 'licitaciones_/federal/fallo_icatech_ictp-002_2019.pdf',
+        );
+        
+        $lic_federales3 =array(
+            '- Acta de Junta de Aclaración de Dudas' => 'licitaciones_/federal/acta_de_jaictp-003_2019.pdf',                   
+            '- Acta de Apertura de Propuestas Técnicas y Económicas' => 'licitaciones_/federal/acta_de_apertura_propuestas_icatech_ictp_003_2019.pdf',                  
+            '- Acta Circunstanciada 002' => 'licitaciones_/federal/acta_circunstanciada_ictp-003_2019.pdf',                       
+            '- Acta de Fallo' => 'licitaciones_/federal/fallo_icatech-ictp-003_2019.pdf'
 
         );
 
 
-        return view('pages.licitaciones', ['licfed'=> $lic_federales]);
+        return view('pages.licitaciones', ['licfed'=> $lic_federales, 'licfed2'=> $lic_federales2, 'licfed3'=> $lic_federales3]);
     }
 
     public function sevac()
@@ -210,14 +212,6 @@ class CuentapublicaController extends Controller
             'Pasivos Contingentes' => 'sevac_/2019/t2/pasivoscontingentes.pdf'
         
         );
-
-
-        return view('pages.sevac', ['primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre]);
-
-    }
-
-    public function sevac_2018()
-    {
 
         $prim_trimestre2018 =array(
             'Montos Pagados por Concepto de Ayudas y Subsidios' => 'sevac_/2018/t1/D.1.11_Montos_pagados_por_concepto_de_ayudas_y_subidios.pdf',
@@ -290,26 +284,29 @@ class CuentapublicaController extends Controller
             'Programación y Proyectos de Inversion' => 'sevac_/2018_/t3/D.4.3 Prog y Proyectos de Inversion.pdf'
         );
 
-        //($prim_trimestre2018);
-        return view('pages.sevac2018', ['trim2018' => $prim_trimestre2018, 'segtrim' => $seg_trimestre2018, 'tertrim' => $terc_trimestre2018]);
+
+        return view('pages.sevac', ['primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim' => $seg_trimestre2018, 'tertrim' => $terc_trimestre2018]);
+
     }
+
+        
 
     public function avisosprivacidad()
     {
 
         $avisos_integrales =array(
             'ICATECH' => 'avisos_privacidad/integral/AVISO_INTEGRAL_ICATECH.pdf',
-            'DIRECCION GENERAL' => 'avisos_privacidad/integral/AVISO_INTEGRAL_DIRECCION_G..pdf'
+            'Dirección General' => 'avisos_privacidad/integral/AVISO_INTEGRAL_DIRECCION_G..pdf'
         );
 
         $avisos_ejecutiva =array(
-            'AREA DE INFORMATICA' => 'avisos_privacidad/integral/AVISO_INTEGRAL_INFORMATICA.pdf',
+            'Area de Infórmatica' => 'avisos_privacidad/integral/AVISO_INTEGRAL_INFORMATICA.pdf',
         );
         
         $avisos_juridico =array(
-            'UNIDAD JURIDICA' => 'avisos_privacidad/integral/AVISO_INTEGRAL_JURIDICO.pdf',
-            'UNIDAD DE TRANSPARENCIA (Derecho ARCO)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_ARCO_TRANSP.pdf',
-            'UNIDAD DE TRANSPARENCIA' => 'avisos_privacidad/integral/AVISO_INTEGRAL_SOLICITUDES_TRANSP.pdf'
+            'Unidad Juridica' => 'avisos_privacidad/integral/AVISO_INTEGRAL_JURIDICO.pdf',
+            'Unidad de Transparencia (Derecho ARCO)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_ARCO_TRANSP.pdf',
+            'Unidad de Transparencia' => 'avisos_privacidad/integral/AVISO_INTEGRAL_SOLICITUDES_TRANSP.pdf'
         );
 
         $avisos_administrativa =array(
@@ -324,6 +321,9 @@ class CuentapublicaController extends Controller
         
         $avisos_planeacion =array(
             'Dirección de Planeación' => 'avisos_privacidad/integral/AVISO_INTEGRAL_PLANEACION.pdf',
+        );    
+          
+        $avisos_vinculacion =array(
             'Dirección de Vinculacion' => '',
             'Direccion de Vinculación con el Sector Productivo' => 'avisos_privacidad/integral/AVISO_INTEGRAL_VINC._CONVENIOS_SEC_PROD..pdf',
             'Dirección de Vinculación Seguimiento a Egresados' => 'avisos_privacidad/integral/AVISO_INTEGRAL_VINC._SEGUIMIENTO_EGRESADOS_VINCULACION.pdf'
@@ -333,19 +333,26 @@ class CuentapublicaController extends Controller
         $avisos_tecnica =array(
             'Departamento de Gestión Academica (Instructores)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_TECNICA_ACADEMICA_VALIDACIÓN_DEL_PERSONAL_TECNICA_ACADEMICA.pdf',
             'Departamento de Certificación y Control' => 'avisos_privacidad/integral/AVISO_INTEGRAL_TECNICA_A_CONTROL_ESCOLAR_TECNICA_A..pdf',
+            
+        );
+
+        $avisos_comisaria =array(
             'Comisaria Pública' => 'avisos_privacidad/integral/INTEGRAL_COMISARIA.pdf'
         );
 
         $avisos_simplificados =array(
             'ICATECH' => 'avisos_privacidad/simplificado/AVISO_SMPLIFICADO_ICATECH.pdf',
-            'DIRECCION GENERAL' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_DIRECCION_G..pdf'
+            'Dirección General' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_DIRECCION_G..pdf'
         );
 
         $simplificados_ejecutiva =array(
-            'AREA DE INFORMATICA' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_INFORMATICA.pdf',
-            'UNIDAD JURIDICA' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_JURIDICO.pdf',
-            'UNIDAD DE TRANSPARENCIA (Derecho ARCO)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_ARCO_TRANSP.pdf',
-            'UNIDAD DE TRANSPARENCIA' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_SOLICITUDES_TRANSP.pdf'
+            'Area de Infórmatica' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_INFORMATICA.pdf',
+        );
+
+        $simplificados_juridico =array(
+            'Unidad Juridica' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_JURIDICO.pdf',
+            'Unidad de Transparencia (Derecho ARCO)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_ARCO_TRANSP.pdf',
+            'Unidad de Transparencia' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_SOLICITUDES_TRANSP.pdf'
         );
 
         $simplificados_administrativa =array(
@@ -359,7 +366,10 @@ class CuentapublicaController extends Controller
         );
         
         $simplificados_planeacion =array(
-            'Dirección de Planeación' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_PLANEACION.pdf',
+            'Dirección de Planeación' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_PLANEACION.pdf'
+        );
+
+        $simplificados_vinculacion =array(
             'Dirección de Vinculacion' => '',
             'Direccion de Vinculación con el Sector Productivo' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_VINC._CONVENIOS_SEC_PROD.pdf',
             'Dirección de Vinculación Seguimiento a Egresados' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_VINC.seguimiento_egresados_SEC_PROD.pdf'
@@ -368,25 +378,31 @@ class CuentapublicaController extends Controller
 
         $simplificados_academica =array(
             'Departamento de Gestión Academica (Instructores)' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_TECNICA_ACADEMICA_VALIDACIÓN_DEL_PERSONAL_TECNICA_ACADEMICA.pdf',
-            'Departamento de Certificación y Control' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_TECNICA_ACADEMICACONTROL_ESCOLAR_TECNICA_A..pdf',
+            'Departamento de Certificación y Control' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_TECNICA_ACADEMICACONTROL_ESCOLAR_TECNICA_A..pdf'
+        );
+
+        $simplificados_comisaria =array(
             'Comisaria Pública' => 'avisos_privacidad/simplificado/SIMPLI_COMISARIA.pdf'
         );
 
         
 
         return view('pages.avisosprivacidad', ['avis_inte' =>$avisos_integrales, 'unejec' => $avisos_ejecutiva, 'unjuri' => $avisos_juridico, 'diradm' => $avisos_administrativa,
-        'dirplan' => $avisos_planeacion, 'dirtacad' => $avisos_tecnica, 'avis_simpl' => $avisos_simplificados, 'simejec' => $simplificados_ejecutiva, 'simadmi' => $simplificados_administrativa,
-        'simplan' => $simplificados_planeacion, 'simacad' => $simplificados_academica]);
+        'dirplan' => $avisos_planeacion, 'dirvincula' => $avisos_vinculacion, 'dirtacad' => $avisos_tecnica, 'comi' => $avisos_comisaria, 'avis_simpl' => $avisos_simplificados, 'simejec' => $simplificados_ejecutiva, 'simjuri' => $simplificados_juridico, 'simadmi' => $simplificados_administrativa,
+        'simplan' => $simplificados_planeacion, 'simvincu' => $simplificados_vinculacion, 'simacad' => $simplificados_academica, 'simcomi' =>$simplificados_comisaria]);
     }
 
     public function Integridad()
     {
         $conduc_codigos =array(
             'Codigo de Conducta ICATECH' => 'codigos_conducta/códigodeconductaicatech.pdf', 
+        );
+
+        $honesti_codigos =array(
             'Codigo de Honestidad y Etica de los Servidores Públicos de la Administración Pública del Estado de Chiapas ' => 'codigos_conducta/codigodeetica.pdf'
         );
        
-        return view('pages.Integridad', ['codigos1' =>$conduc_codigos]);
+        return view('pages.Integridad', ['codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos]);
     }
 
 
