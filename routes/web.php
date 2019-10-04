@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'ComunicadoController@index');
 // CONOCENOS
 Route::get('/conocenos', function(){
 	return view('pages.conocenos');
@@ -27,9 +25,8 @@ Route::get('/oferta-educativa', function(){
 	return view('pages.ofertaeducativa');
 });
 // NOTICIAS
-Route::get('/noticias', function(){
-	return view('pages.noticias');
-});
+Route::get('/noticias', 'ComunicadoController@index');
+Route::post('/noticias-save', 'ComunicadoController@store');
 // NOTICIAS DETALLES
 Route::get('/detalles-noticias', function(){
 	$param = "detalle de la noticia";
@@ -61,6 +58,8 @@ Route::get('directorio',function(){
 });
 //Integridad
 Route::get('/Integridad', 'CuentapublicaController@Integridad');
+// Comunicado detalle
+Route::get('/comunicado-detalle/{id}/{slug}', 'ComunicadoController@show');
 
 Auth::routes();
 

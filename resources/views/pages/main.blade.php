@@ -26,17 +26,12 @@
 					</div>
 					<div class="smartmarquee lista">
 						<ul class="vc_list">
-							<li>
-								<p> DE CAPACITACIÓN Y VINCULACIÓN TECNOLÓGICA DEL ESTADO DE CHIAPAS, LANZA CONVOCATORI PARA PROFESIONALES, TÉCNICOS O PRÁCTICOS EN CIENCIAS, ARTES Y/O OFICIOS</p> <a target="_blank" href="comunicados/comunicado_de_prensa.docx"><b>Leer Más...</b></a>
-							</li>
-							<li>
-								<p> SIGNARON EL CONVENIO LA DIRECTORA DEL ICATECH, FABIOLA LIBETH ASTUDILLO REYES, Y EL DIRECTOR DE LA ESCUELA SUPERIOR, MÉDICO JESÚS AQUINO JUAN. </p> <a target="_blank" href="comunicados/comunicado_de_prensa_002.docx"><b>Leer Más...</b></a>
-							</li>
-							<li>
-								<p> MÁS DE 500 CURSOS CERTIFICADOS POR LA SEP SON A LOS QUE PODRÁN ACCEDER LA COMUNIDAD ESTUDIANTIL DE LA UTS. </p> <a target="_blank" href="comunicados/comunicado_de_prensa_003.docx"><b>Leer Más...</b></a>
-							</li>
-																	
-							
+							@foreach ($new_all as $noticias)
+								<li>
+									<p>{{ $noticias->resumen }}</p> 
+									<a target="_blank" href="comunicado-detalle/{{ base64_encode($noticias->id) }}/{{ $noticias->url }}"><b>Leer Más...</b></a>
+								</li>
+							@endforeach							
 						</ul>
 					</div>
 				</div>
