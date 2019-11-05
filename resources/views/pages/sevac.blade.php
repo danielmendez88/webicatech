@@ -5,6 +5,7 @@
 @section('content')
 <!--llama contenido de la pagina -->
     <div class="container g-pt-25">
+        <img src="Imagenes Pagina/SEVAC.jpg" class="img-responsive" width="100%" alig="center">
         <div class="masonry-grid row  row-eq-height">
             <div class="masonry-grid-sizer col-sm-12"></div>
                 <div class="masonry-grid-item col-sm-12 col-md-12 col-lg-12 g-mb-30">

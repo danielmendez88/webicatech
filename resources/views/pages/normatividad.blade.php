@@ -6,6 +6,7 @@
 <!--llama contenido de la pagina -->
 
     <div class="container g-pt-25">
+        <img src="Imagenes Pagina/bannernormatividad.jpg" class="img-responsive" width="100%" alig="center">
      <section class="text-left">
                  <!--nuevo!-->
          <div class="card rounded-0 g-brd-none">
@@ -17,7 +18,7 @@
                                  <i class="fa fa-minus"></i>
                          </span>
                                  <span class="g-pa-20">
-                                  Decretos
+                                     Decretos
                                  </span>
                      </a>
                  </h5>
@@ -29,13 +30,13 @@
                      @foreach ($deccrea as $key => $value)
                          <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
                              <div class="d-flex justify-content-start">
-                                 <h5 class="g-font-weight-600 g-color-black">{{ $key }}</h5>
+                                 <h6 class="g-font-weight-600 g-color-black">{{ $key }}</h6>
                                      
                              </div>
                                  <div class="d-flex justify-content-between">
                                      <ul class="u-list-inline"></ul>
                                          <div class="align-self-center">
-                                             <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/pdf.png"alt=""></a>
+                                             <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
                                          </div>
                                  </div>
                          </li>
@@ -67,13 +68,13 @@
                                   @foreach ($reglam as $key => $value)
                                     <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
                                       <div class="d-flex justify-content-start">
-                                        <h5 class="g-font-weight-600 g-color-black">{{ $key }}</h5>
+                                        <h6 class="g-font-weight-600 g-color-black">{{ $key }}</h6>
                                         
                                       </div>
                                         <div class="d-flex justify-content-between">
                                           <ul class="u-list-inline"></ul>
                                           <div class="align-self-center">
-                                            <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/pdf.png"alt=""></a>
+                                            <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
                                           </div>
                                         </div>
                                     </li>
@@ -105,13 +106,13 @@
                                           @foreach ($manual as $key => $value)
                                             <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
                                               <div class="d-flex justify-content-start">
-                                                <h5 class="g-font-weight-600 g-color-black">{{ $key }}</h5>
+                                                <h6 class="g-font-weight-600 g-color-black">{{ $key }}</h6>
                                                 
                                               </div>
                                                 <div class="d-flex justify-content-between">
                                                   <ul class="u-list-inline"></ul>
                                                   <div class="align-self-center">
-                                                    <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/pdf.png"alt=""></a>
+                                                    <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
                                                   </div>
                                                 </div>
                                             </li>
@@ -142,13 +143,13 @@
                                       @foreach ($manualproc as $key => $value)
                                         <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
                                           <div class="d-flex justify-content-start">
-                                            <h5 class="g-font-weight-600 g-color-black">{{ $key }}</h5>
+                                            <h6 class="g-font-weight-600 g-color-black">{{ $key }}</h6>
                                             
                                           </div>
                                             <div class="d-flex justify-content-between">
                                               <ul class="u-list-inline"></ul>
                                               <div class="align-self-center">
-                                                <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/pdf.png"alt=""></a>
+                                                <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
                                               </div>
                                             </div>
                                         </li>
@@ -179,13 +180,13 @@
                                   @foreach ($manualorga as $key => $value)
                                     <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
                                       <div class="d-flex justify-content-start">
-                                        <h5 class="g-font-weight-600 g-color-black">{{ $key }}</h5>
+                                        <h6 class="g-font-weight-600 g-color-black">{{ $key }}</h6>
                                         
                                       </div>
                                         <div class="d-flex justify-content-between">
                                           <ul class="u-list-inline"></ul>
                                           <div class="align-self-center">
-                                            <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/pdf.png"alt=""></a>
+                                            <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
                                           </div>
                                         </div>
                                     </li>

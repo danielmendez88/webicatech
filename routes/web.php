@@ -21,12 +21,11 @@ Route::get('/cobertura', function(){
 	return view('pages.cobertura');
 });
 // OFERTA EDUTATIVA
-Route::get('/oferta-educativa', function(){
-	return view('pages.ofertaeducativa');
-});
+Route::get('/oferta-educativa', 'CursoController@index')->name('oferta-educativa');
 // NOTICIAS
 Route::get('/noticias', 'ComunicadoController@index');
 Route::post('/noticias-save', 'ComunicadoController@store');
+Route::get('/nuevo-comunicado', 'ComunicadoController@getform');
 // NOTICIAS DETALLES
 Route::get('/detalles-noticias', function(){
 	$param = "detalle de la noticia";
@@ -60,6 +59,13 @@ Route::get('directorio',function(){
 Route::get('/Integridad', 'CuentapublicaController@Integridad');
 // Comunicado detalle
 Route::get('/comunicado-detalle/{id}/{slug}', 'ComunicadoController@show');
+//INSTRUCTORES
+Route::get( '/instructores', function(){
+	return view('pages.instructores');
+});
+
+Route::get('/cursos/{id}/{categoria}', 'CursoController@show')->name('cursos');
+	
 
 Auth::routes();
 

@@ -7,7 +7,7 @@
 <div class="container g-pt-25">
     <section class="text-left">
         <div class="container">
-            <img src="Imagenes Pagina/PRIVACIDAD.jpg" ALIGN=RIGHT style="max-width:25%;width:auto;height:auto;">
+            <img src="Imagenes Pagina/avisodeprivacidad.jpg" class="img-responsive" width="100%" alig="center">
         </div>
           <br>
             <p><b><h5>AVISOS DE PRIVACIDAD INTEGRALES</h5></b></p>

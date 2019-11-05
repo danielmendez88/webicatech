@@ -10,7 +10,7 @@
 						</span>
 					</button>
 
-					<a href="http://www.chiapas.gob.mx" class="navbar-brand g-text-underline--hover"><img src="assets/logo/escudo-icono.png" alt=""></a>
+					<a href="http://www.chiapas.gob.mx" class="navbar-brand g-text-underline--hover"><img src="../../assets/logo/escudo-icono.png" alt=""></a>
 					<a href="http://www.chiapas.gob.mx" class="g-color-white-opacity-0_9 g-font-size-16 g-font-weight-300 g-font-secondary g-text-underline--hover">chiapas<span class="g-color-white-opacity-0_6">.gob.mx</span></a>
 
 					<div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg" id="navBar">
@@ -31,7 +31,7 @@
 		class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll dzsprx-readyall loaded" 
 		data-options='{direction: "normal", settings_mode_oneelement_max_offset: "150"}' style="height: 390px">
 		<video autoplay muted loop id="MyVideo"> 
-			<source src="Imagenes Pagina/portada web.mp4" type="video/mp4"/>
+			<source src="../../Imagenes Pagina/portada web.mp4" type="video/mp4"/>
 		</video>
 		<!--<div class="container u-bg-overlay__inner text-center g-py-55">
 			

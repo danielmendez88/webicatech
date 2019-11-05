@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Validator,Redirect,Response,Storage,File;
 use App\Models\Comunidado;
 
 class ComunicadoController extends Controller
@@ -39,30 +40,49 @@ class ComunicadoController extends Controller
      */
     public function store(Request $request)
     {
-        // agregamos el registro de validación
-        $request->validate([
-            'titulo' => 'required',
-            'imagen' => 'required',
-            'fecha_publicacion' => 'required',
-            'localizacion' => 'required',
-            'contenido' => 'required',
-            'categorias' => 'required',
-            'url ' => 'required',
-            'resumen' => 'required',
-        ]);
+        try {
+            //code...
+            $validator = Validator::make($request->all(), [
+                'titulo' => 'required',
+                'imagen_comunicado' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+                'localizacion' => 'required',
+                'contenido' => 'required',
+                'categoria' => 'required',
+                'url' => 'required'
+            ]);
+            if ($validator->fails()) {
+                # code...
+                return Redirect::to("/error-cargar-comunicado");
+            } else {
+                # code...
+                $saveComunicado = new Comunidado();
+                if ($request->hasFile('imagen_comunicado')) {
+                    # si se encuentra la imagen comenzamos a subirlo...
+                    $file = $request->file('imagen_comunicado');
+                    $tamanio = $file->getSize();
+                    $extensionImagen = $file->getClientOriginalExtension(); // extension de la imagen
+                    $destinationPath = public_path('/uploadFiles/'); // upload path
+                    $imagenFile = trim(str_slug($request->url, '-')) . "." . $extensionImagen; // nombre de la imagen al momento de subirla
+                    $file->move($destinationPath, $imagenFile); // subir imagen al servidor
+                    $imagenUrl = url('/uploadFiles/'.$imagenFile);
+                }
 
-        $saveComunicado = new Comunidado();
-        $saveComunicado->titulo = $request->titulo;
-        $saveComunicado->imagen = $request->imagen;
-        $saveComunicado->fecha_publicacion = $request->fecha_publicacion;
-        $saveComunicado->localizacion = $request->localizacion;
-        $saveComunicado->contenido = $request->contenido;
-        $saveComunicado->categorias = $request->categorias;
-        $saveComunicado->url = $saveComunicado->getSlugAttribute($request->titulo);
-        $saveComunicado->resumen = $request->resumen;
-        // guardamos el contenido en la base de datos
-        $saveComunicado->save();
-        return response()->json('Comunicado agregado éxitosamente', 200);
+                $saveComunicado->titulo = trim($request->titulo);
+                $saveComunicado->imagen = trim($imagenUrl);
+                $saveComunicado->localizacion = trim($request->localizacion);
+                $saveComunicado->contenido = trim($request->contenido);
+                $saveComunicado->categorias = trim($request->categoria);
+                $saveComunicado->resumen = trim($request->titulo);
+                $saveComunicado->confirmado = true;
+                $saveComunicado->url = str_slug($request->url, '-');
+
+                $saveComunicado->save();
+
+                return Redirect::to("/administrador/registro-personal")->withSuccess('Personal Agregado éxitosamente.');
+            }
+        } catch (Exception $e) {
+            //throw $th;
+        }
 
     }
 
@@ -74,6 +94,7 @@ class ComunicadoController extends Controller
      */
     public function show($id)
     {
+        $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
         //el comunicado exacto
         $iddecode = base64_decode($id);
         //dd($iddecode);
@@ -83,13 +104,15 @@ class ComunicadoController extends Controller
                     ->get();
         $titulo = $detatelle[0]->titulo;
         $imagen = $detatelle[0]->imagen;
-        $fecha_publicacion = $detatelle[0]->fecha_publicacion;
+        $fecha = \Carbon\Carbon::parse($detatelle[0]->fecha_publicacion);
+        $mes = $meses[($fecha->format('n')) - 1];
+        $fecha_pub = $fecha->format('d') . ' de ' . $mes . ' de ' . $fecha->format('Y');
         $localizacion = $detatelle[0]->localizacion;
         $contenido = $detatelle[0]->contenido;
         $categorias = $detatelle[0]->categorias;
         $url = $detatelle[0]->url;
         $resumen = $detatelle[0]->resumen;
-        return view('pages.noticias_detalles', compact('titulo', 'imagen', 'fecha_publicacion', 'localizacion', 'contenido', 'categorias', 'url', 'resumen'))
+        return view('pages.noticias_detalles', compact('titulo', 'imagen', 'fecha_pub', 'localizacion', 'contenido', 'categorias', 'url', 'resumen'))
             ->withArticle($detatelle);
     }
 
@@ -125,5 +148,12 @@ class ComunicadoController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /*
+     * Método para mostrar el formulario de captura 
+     */
+    public function getform(){
+        return view('pages.formulario_comunicado');
     }
 }

@@ -106,8 +106,8 @@ class CuentapublicaController extends Controller
     public function normatividad()
     {
         $dec_decretos = array(
-            'Decreto de Creación' => 'normatividad_/decretos/decreto_de_creacion.pdf',
-            'Decreto Modificatorio' => 'normatividad_/decretos/decreto_modificatorio.pdf'
+            'Decreto de Creación' => 'normatividad_/decretos/decreto-de-creacion.pdf',
+            'Decreto Modificatorio' => 'normatividad_/decretos/decreto-modificatorio.pdf'
         );
 
         $reg_reglamentos = array(

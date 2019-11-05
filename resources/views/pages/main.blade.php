@@ -42,7 +42,7 @@
 	</div>
 	<div class="container g-pt-25">
 		<div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
-			<h2 class="u-heading-v2__title text-uppercase g-font-weight-300 mb-0">Últimas Noticias</h2>
+			<h2 class="u-heading-v2__title text-uppercase g-font-weight-300 mb-0">Videoteca</h2>
 		</div>
 		<div class="masonry-grid row g-mb-0 row-eq-height">
 			<div class="masonry-grid-sizer col-sm-12"></div>
@@ -57,7 +57,7 @@
 			<div class="masonry-grid-item col-sm-6 col-md-6 col-lg-6 g-mb-30">
 				<div class="about-image">
 					<div class="image">
-						<a target="_blank" href="https://www.youtube.com/watch?v=RNypfXYUjvg&feature=youtu.be"><img src="Imagenes Pagina/icatips2.jpg" alt="About Images" class="img-thumbnail"></a><br><br>
+						<a target="_blank" href="https://www.youtube.com/channel/UCsdL9XSwa6M0wPpR1twF1PA/videos"><img src="Imagenes Pagina/icatips2.jpg" alt="About Images" class="img-thumbnail"></a><br><br>
 					</div>
 				</div>
 			</div>
@@ -85,20 +85,20 @@
 
 	<div class="container g-pt-25">
 			<div class="u-heading-v2-5--bottom g-brd-primary g-mb-50 text-left">
-					<h3>Importancia</h3>
+					<h3>Información ICATECH</h3>
 			</div>
 			<div class="about-text">
 				<p>
-<marquee behavior="alternate">
+					<marquee behavior="alternate">
 
-<a href="https://www.chiapas.gob.mx/media/plan-desarrollo-2019/Plan-Estatal-de-Desarrollo-Chiapas-2019-2024.pdf" target="_new"><img src="Imagenes Pagina/banner-plan.png" width="600px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="https://www.chiapas.gob.mx/media/plan-desarrollo-2019/Plan-Estatal-de-Desarrollo-Chiapas-2019-2024.pdf" target="_new"><img src="Imagenes Pagina/banner-plan.png" width="600px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 
-<a href="/Integridad" target=""><img src="Imagenes Pagina/integridad banner.jpg" width="370px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="/transparencia" target=""><img src="Imagenes Pagina/banner icatechtransparencia4.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="/cobertura" target=""><img src="Imagenes Pagina/cobertura.jpg" width="600px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="/normatividad" target=""><img src="Imagenes Pagina/normatividad.jpg" width="370px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="/Integridad" target=""><img src="Imagenes Pagina/integridad banner.jpg" width="370px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="/transparencia" target=""><img src="Imagenes Pagina/banner icatechtransparencia4.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="/avisos-de-privacidad" target=""><img src="Imagenes Pagina/avisodeprivacidad2.jpg" width="500px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="/normatividad" target=""><img src="Imagenes Pagina/normatividad2.jpg" width="370px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 
-</marquee>
+					</marquee>
 				</p>
 			</div>
 		</div>

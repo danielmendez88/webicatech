@@ -8,8 +8,10 @@
         <div class="masonry-grid row  row-eq-height">
             <div class="masonry-grid-sizer col-sm-12"></div>
             <div class="masonry-grid-item col-sm-12 col-md-12 col-lg-12 g-mb-30">
+
+                <img src="Imagenes Pagina/cuenta-publica.jpg" class="img-responsive" width="100%" alig="center">
          
-                    <b><h4>INFORMACION DE LA CUENTA PUBLICA 2019</h4></b><br>
+                    <br><br><b><h4>INFORMACION DE LA CUENTA PUBLICA 2019</h4></b><br>
                     <b><h5>PRIMER TRIMESTRE 2019</h5></b><br>
                    
                 <!--información financiera 2019!-->
