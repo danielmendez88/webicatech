@@ -34,12 +34,24 @@ class CuentapublicaController extends Controller
             'Formatos Ley de Disciplina Financiera' =>'cuenta_publica/st2019/financiera/leydisciplinafinanciera.pdf'
         );
         $inf_presupuestal2 = array(
-            'Bienes Patrimoniales' => 'cuenta_publica/st2019/financiera/bienespatrimoniales.pdf',
-            'Formatos de Analisis' => 'cuenta_publica/st2019/financiera/formatosdeanalisis.pdf',
-            'Formatos Armonizados Conac' => 'cuenta_publica/st2019/financiera/armonizadosconac.pdf',
+            'Información Presupuestaria' => 'cuenta_publica/st2019/presupuestal/informacionpresupuestaria.pdf',
+            'Formato Analisis Funcional' => 'cuenta_publica/st2019/presupuestal/analisisfuncional.pdf',
+            'Formatos Armonizados Conac' => 'cuenta_publica/st2019/presupuestal/armonizadosconac.pdf',
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/st2019/presupuestal/leydisciplinafinanciera.pdf'
         );
-
+        $inf_financiera3 = array(
+            'Bienes Patrimoniales' => 'cuenta_publica/tt2019/financiera/BIENESPATRIMONIALES.pdf',
+            'Formatos de Analisis' => 'cuenta_publica/tt2019/financiera/FORMATOSDEANALISIS.pdf',
+            'Formatos Armonizados Conac' =>'cuenta_publica/tt2019/financiera/ARMONIZADOSCONAC.pdf',
+            'Formatos Ley de Disciplina Financiera' =>'cuenta_publica/tt2019/financiera/LEYDEDISCIPLINAFINANCIERA.pdf'
+        );
+        $inf_presupuestal3 = array(
+            'Información Presupuestaria' => 'cuenta_publica/tt2019/presupuestal/pptal.pdf',
+            'Formato Analisis Funcional' => 'cuenta_publica/tt2019/presupuestal/analisisfuncional.pdf',
+            'Formatos Armonizados Conac' => 'cuenta_publica/tt2019/presupuestal/conac.pdf',
+            'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/tt2019/presupuestal/ldf.pdf'
+        );  
+        
         $inf_financiera18 = array(
             'Bienes Patrimoniales' => 'cuenta_publica/2018/st2018/financiera/bienes.pdf',
             'Formatos de Analisis' => 'cuenta_publica/2018/st2018/financiera/fmtosanalisis.pdf',
@@ -96,7 +108,7 @@ class CuentapublicaController extends Controller
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/2018/ct2018/presupuestal/ldf.pdf'
         );
         
-        return view('pages.cuentapublica', ['infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 
+        return view('pages.cuentapublica', ['infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3, 
         'inffin18'=> $inf_financiera18, 'infpres18'=> $inf_presupuestal18, 'inffin182t'=> $inf_financiera182t, 'infpres182t'=> $inf_presupuestal182t, 'inffint183t'=> $inf_financiera183t, 'infpres183t'=> $inf_presupuestal183t,
         'inffin184t'=> $inf_financiera184t, 'infpres184t'=> $inf_presupuestal184t]);
 
@@ -213,6 +225,19 @@ class CuentapublicaController extends Controller
         
         );
 
+        $ter_trimestre =array(
+            'Estado Analitico de la deuda y otros pasivos' => 'sevac_/2019/t3/Estado_Analitico_de_la_Deuda_y_Otros_Pasivos.PDF',
+            'Estado Analitico del Activo' => 'sevac_/2019/t3/Estado_Analitico_del_Activo.PDF',
+            'Estado de Actividades'  => 'sevac_/2019/t3/Estado_de_Actividades.PDF',
+            'Estado de Cambios en la Situación Financiera' => 'sevac_/2019/t3/Estado_de_Cambios_en_la_Situacion_Financiera.PDF',
+            'Estado de Flujos de Efectivo' => 'sevac_/2019/t3/Estado_de_Flujos_de_Efectivo.PDF',
+            'Estado de Situación Financiera' => 'sevac_/2019/t3/Estado_de_Situacion_Financiera_.PDF',
+            'Estado de Variación de la Hacienda Pública' => 'sevac_/2019/t3/Estado_de_Variacion_de_la_Hacienda_Publica.PDF',
+            'Informe sobre Pasivos Contingentes' => 'sevac_/2019/t3/Informe_Sobre_Pasivos_Contingentes.PDF',
+            'Notas a los Estados Financieros' => 'sevac_/2019/t3/Notas_a_los_Estados_Financieros.PDF',
+            'Relación de Cuentas Bancarias Productivos Espesificas' => 'sevac_/2019/t3/Relacion_de_Cuentas_Bancarias_Productivas_Especificas.pdf'
+        );
+
         $prim_trimestre2018 =array(
             'Montos Pagados por Concepto de Ayudas y Subsidios' => 'sevac_/2018/t1/D.1.11_Montos_pagados_por_concepto_de_ayudas_y_subidios.pdf',
             'Estado de Actividades' => 'sevac_/2018/t1/D.2.1_Estado_de_Actividades.pdf',
@@ -285,7 +310,7 @@ class CuentapublicaController extends Controller
         );
 
 
-        return view('pages.sevac', ['primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim' => $seg_trimestre2018, 'tertrim' => $terc_trimestre2018]);
+        return view('pages.sevac', ['primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018]);
 
     }
 
