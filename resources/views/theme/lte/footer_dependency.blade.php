@@ -26,6 +26,7 @@
 				<div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8"><h2 class="u-heading-v2__title h6 mb-0">Transparencia</h2></div>
 				<ul class="list-unstyled">
 					<li class="g-mb-5"><i class="fa fa-angle-right g-mr-5"></i><a class="g-color-white-opacity-0_8" href="http://icatech.transparencia.chiapas.gob.mx/">Transparencia ICATECH</a></li>
+					<li class="g-mb-5"><i class="fa fa-angle-right g-mr-5"></i><a class="g-color-white-opacity-0_8" href="/avisos-de-privacidad">Avisos de Privacidad</a></li>
 					
 				</ul>
 			</div>

@@ -123,7 +123,6 @@ class CuentapublicaController extends Controller
         );
 
         $reg_reglamentos = array(
-            'Reglamento Interior ICATECH' => 'normatividad_/reglamentos/reglamento_interior_icatech.pdf',
             'Reglamento Interior 2018' => 'normatividad_/reglamentos/reglamento_interior2018.pdf'
         );
 
