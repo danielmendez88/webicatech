@@ -18,19 +18,22 @@
 
 <section class="container g-py-0 g-pt-0 g-pb-0">
     <div class="row">
-        <div class="col-12 g-pb-40">
-            <article>
-                <div class="row">
-                    <div class="col-md-3">
-                        <a href="http://saludchiapas.gob.mx/presentan-programa-estatal-de-salud-2019-2024-para-el-acceso-efectivo-y-universal/">
-                            <img class="img-fluid w-100 g-rounded-5 g-mb-0" src="http://saludchiapas.gob.mx/wp-content/uploads/2019/10/COPLADE.jpg" alt="">
-                        </a>
+        @foreach ($instructores as $instructor)
+                <div class="masonry-grid-item col-sm-6 col-md-6 col-lg-12">
+                    <div class="g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-10 g-pt-20 g-bg-secondary">
+                        <p>
+                            <strong> Nombre: </strong> {{ $instructor->nombre }}
+                        </p>
+                        <p>
+                            <strong>Especialidad:</strong> {{ $instructor->especialidad }}
+                        </p>
+                        <p>
+                            <strong>Grado Académico: </strong> {{ $instructor->gradoAcademico }}
+                        </p>
                     </div>
-                    <div class="col-md-9"></div>
                 </div>
-            </article>
-            <hr class="g-brd-gray-light-v4 g-my-20">
-        </div>
+
+            @endforeach
     </div>
 </section>
 
