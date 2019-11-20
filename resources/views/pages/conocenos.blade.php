@@ -6,7 +6,7 @@
 	
 	<div class="container g-pt-50">
 		<div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
-			<a href="https://www.chiapas.gob.mx/funcionarios/estatal/ejecutivo/instituto-capacitacion">
+			<a href="https://www.chiapas.gob.mx/funcionarios/estatal/ejecutivo/instituto-capacitacion" target="_blank">
 				<h2>Directorio</h2>
 			</a>
 		</div>

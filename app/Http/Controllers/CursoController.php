@@ -17,7 +17,7 @@ class CursoController extends Controller
     {
         //
         $categoria = new Categoria();
-        $categorias = $categoria::WHERE('id', '<', 6)->get();
+        $categorias = $categoria::WHERE('id', '!=', 6)->get();
         // return view('', compact);
         // return redirect()->route('oferta-educativa');
         return view('pages.ofertaeducativa', compact('categorias'));

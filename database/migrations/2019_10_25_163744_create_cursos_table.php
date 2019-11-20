@@ -22,14 +22,14 @@ class CreateCursosTable extends Migration
             $table->boolean('solicitudAutorizacion');
             $table->integer('duracion')->nullable();
             $table->date('fechaValidacion');
-            $table->unsignedBigInteger('unidadAccionMovil');
+            $table->unsignedBigInteger('unidadAccionMovil')->nullable();
             $table->foreign('unidadAccionMovil')->references('id')->on('administrativebodies')
                     ->onUpdate('cascade')->onDelete('set null');
             $table->string('modalidad', 50);
             $table->string('clasificacion', 50);
             $table->text('observacion');
             $table->decimal('costo', 8, 2);
-            $table->unsignedBigInteger('categoria_id');
+            $table->unsignedBigInteger('categoria_id')->nullable();
             $table->foreign('categoria_id')->references('id')->on('categoria')
                     ->onUpdate('cascade')->onDelete('set null');
             $table->timestamps();

@@ -57,7 +57,7 @@
                              <i class="fa fa-minus"></i>
                              </span>
                                <span class="g-pa-20">
-                                     Reglamentos
+                                     Reglamento
                                 </span>
                           </a>
                          </h5>
