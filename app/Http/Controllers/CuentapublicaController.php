@@ -423,10 +423,22 @@ class CuentapublicaController extends Controller
         );
 
         $honesti_codigos =array(
-            'Codigo de Honestidad y Etica de los Servidores Públicos de la Administración Pública del Estado de Chiapas ' => 'codigos_conducta/codigodeetica.pdf'
+            'Codigo de Honestidad y Etica de los Servidores Públicos de la Administración Pública del Estado de Chiapas ' => 'codigos_conducta/codigodeetica.pdf',
+        );
+
+        $acuerdos_codigo =array(
+            'Acuerdos' => 'codigos_conducta/acuerdo-limpio.pdf',
+        );
+
+        $directorio_codigo =array(
+            'DIRECTORIO COMITÉ DE ÉTICA Y DE PREVENCIÓN DE CONFLICTO DE INTERÉS' => 'codigos_conducta/directorio.pdf',
+        );
+
+        $plandetrabajo_codigo =array(
+            'Plan de Trabajo Anual 2019'=> 'codigos_conducta/plan-de-trabajo-anual.pdf',
         );
        
-        return view('pages.Integridad', ['codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos]);
+        return view('pages.Integridad', ['codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo]);
     }
 
 
