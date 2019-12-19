@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-lg-8 g-mb-30 g-mb-0--lg">
                 <article class="post" style="text-align: justify;">
-                    <img class="img-fluid w-100 g-rounded-5 g-mb-25" src="{{ $imagen }}" alt="{{ $titulo }}">
+                    <img class="img-fluid w-100 g-rounded-5 g-mb-25" src="{{$imagen }}" alt="{{ $titulo }}">
                     <time>{{ $fecha_pub }}</time>
                     <p><strong>{{ $localizacion }} .-</strong>&nbsp;&nbsp;{{ $contenido }}</p>
                     <ul class="list-inline g-font-size-12 mb-0">
