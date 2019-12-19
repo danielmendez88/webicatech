@@ -65,9 +65,9 @@ class ComunicadoController extends Controller
                     $file = $request->file('imagen_comunicado'); # obtenemos el archivo
                     $tamanio = $file->getClientSize(); #obtener el tamaño del archivo del cliente
                     $extensionImagen = $file->getClientOriginalExtension(); // extension de la imagen
-                    $imagenFile = str_slug($request->url, '-'). "." . $extensionImagen; // nombre de la imagen al momento de subirla
+                    $imagenFile = trim(str_slug($request->url, '-')) . "." . $extensionImagen; // nombre de la imagen al momento de subirla
                     $request->file('imagen_comunicado')->storeAs('/uploadFiles/', $imagenFile); // guardamos el archivo en la carpeta storage
-                    $imagenUrl = Storage::url("/uploadFiles/".$imagenFile); // obtenemos la url donde se encuentra el archivo almacenado en el servidor.
+                    $imagenUrl = Storage::url('/uploadFiles/'.$imagenFile); // obtenemos la url donde se encuentra el archivo almacenado en el servidor.
                 } else {
                     return Redirect::to("/error-cargar-comunicado");
                 }
