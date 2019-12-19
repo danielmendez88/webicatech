@@ -60,7 +60,7 @@ Route::get('/Integridad', 'CuentapublicaController@Integridad');
 // Comunicado detalle
 Route::get('/comunicado-detalle/{id}/{slug}', 'ComunicadoController@show');
 //INSTRUCTORES
-Route::get( '/instructores', 'CursoControlle@instructores');
+Route::get( '/instructores', 'CursoController@instructores');
 
 Route::get('/cursos/{id}/{categoria}', 'CursoController@show')->name('cursos');
 	
