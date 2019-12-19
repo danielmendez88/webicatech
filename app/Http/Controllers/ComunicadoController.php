@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator,Redirect,Response,Storage,File;
 use App\Models\Comunidado;
+use Carbon\Carbon;
 
 class ComunicadoController extends Controller
 {
@@ -76,6 +77,7 @@ class ComunicadoController extends Controller
                 $saveComunicado->resumen = trim($request->titulo);
                 $saveComunicado->confirmado = true;
                 $saveComunicado->url = str_slug($request->url, '-');
+                $saveComunicado->fecha_publicacion = Carbon::now();
 
                 $saveComunicado->save();
 
