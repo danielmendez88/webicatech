@@ -130,7 +130,7 @@
 						<script src="{{asset("assets/js/functions.js")}}"></script>
 						<script src="{{asset("assets/js/responsiveslides.js")}}"></script>
 						<script src="{{asset("assets/js/scripts/jquery.smartmarquee.js")}}"></script>
-						<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5d51c3873387b20012d77a1a&product='inline-share-buttons" async='async'></script>
+						<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5dfd0fcc371df40012bae859&product=inline-share-buttons&cms=sop' async='async'></script>
 						<!--plug in facebook-->
 						<div id="fb-root"></div>
 						<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=2084976248184121&autoLogAppEvents=1"></script>

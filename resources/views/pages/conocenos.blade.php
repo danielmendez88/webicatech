@@ -25,7 +25,7 @@
 						</p>
 					</div>
 					<a class="masonry-img-top spaceimg">
-						<img class="g-rounded-top-5" src="/Imagenes pagina/mision-icatech.png" alt="">
+						<img class="g-rounded-top-5" src="/Imagenes pagina/mision.jpg" alt="">
 					</a>
 				</article>
 			</div>
@@ -42,7 +42,7 @@
 						</p>
 					</div>
 					<a class="masonry-img-top spaceimg">
-						<img class="g-rounded-top-5" src="/Imagenes pagina/vision-icatech.png" alt="">
+						<img class="g-rounded-top-5" src="/Imagenes pagina/vision.jpg" alt="">
 					</a>
 				</article>
 			</div>

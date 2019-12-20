@@ -26,6 +26,8 @@ Route::get('/oferta-educativa', 'CursoController@index')->name('oferta-educativa
 Route::get('/noticias', 'ComunicadoController@index');
 Route::post('/noticias-save', 'ComunicadoController@store');
 Route::get('/nuevo-comunicado', 'ComunicadoController@getform');
+// agregar el indice principal de comunicados
+Route::get('/comunicado', 'ComunicadoController@getnews');
 // NOTICIAS DETALLES
 Route::get('/detalles-noticias', function(){
 	$param = "detalle de la noticia";

@@ -162,4 +162,12 @@ class ComunicadoController extends Controller
     public function getform(){
         return view('pages.formulario_comunicado');
     }
+    /**
+     * 
+     */
+    public function getnews() {
+        $comunicados = new Comunidado();
+        $newsAll = $comunicados::WHERE('confirmado', true)->get();
+        return view('pages.news', compact('newsAll'));
+    }
 }

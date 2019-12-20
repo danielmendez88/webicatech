@@ -1,5 +1,5 @@
 @extends("theme.lte.layout_news")
-@section('title', 'Agregar Comunicado | Icatecch')
+@section('title', 'Icatech | Agregar comunicado')
 
 @section('content')
 <section class="container g-py-40 g-pt-40 g-pb-0">
