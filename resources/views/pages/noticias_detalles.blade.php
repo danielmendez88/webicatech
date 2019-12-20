@@ -1,5 +1,5 @@
 @extends("theme.lte.layout_news")
-@section('title', 'Detalle de la noticia | Icatecch')
+@section('title', 'Icatech | {{ $titulo }}')
 
 @section('content')
     <section class="container g-py-40 g-pt-40 g-pb-0">
@@ -21,7 +21,7 @@
                     <ul class="list-inline g-font-size-12 mb-0">
                         <li class="list-inline-item g-mb-10">
                             <a href="" class="u-tags-v1 g-color-black g-bg-black-opacity-0_1 g-bg-morado--hover g-color-white--hover g-rounded-50 g-py-4 g-px-15">
-                                {{ $categorias }}
+                            {{ /* $categorias */ }}
                             </a>    
                         </li>
                     </ul>
