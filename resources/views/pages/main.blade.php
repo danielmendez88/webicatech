@@ -11,7 +11,6 @@
 					<ul class="rslides" id="slider1">
 						<li><img src="../../Imagenes Pagina/2.jpg" alt=""></li>
 						<li><img src="../../Imagenes Pagina/1.jpg" alt=""></li>
-						<li><img src="../../Imagenes Pagina/6.jpg" alt=""></li>
 						<li><img src="../../Imagenes Pagina/4.jpg" alt=""></li>
 						<li><img src="../../Imagenes Pagina/5.jpg" alt=""></li>
 						<li><img src="../../Imagenes Pagina/3.jpg" alt=""></li>

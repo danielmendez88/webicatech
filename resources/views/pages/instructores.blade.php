@@ -8,6 +8,7 @@
 <section class="container g-py-40 g-pt-40 g-pb-0">
     <div class="row">
         <div class="col-md-12">
+                <img src="Imagenes Pagina/instructores.jpg" class="img-responsive" width="100%">
             <h1 class="d-block g-mb-3 g-font-size-18 g-color-primary g-font-weight-500 g-font-secondary">
                 Instructores
             </h1>

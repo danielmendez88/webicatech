@@ -53,7 +53,7 @@
 			<div class="masonry-grid-item col-sm-12 col-md-12 col-lg-5 g-mb-30">
 				<article class="u-shadow-v32 u-shadow-v21--hover g-transition-0_3 h-100">
 					<div class="g-bg-white g-pa-20 g-rounded-bottom-5">
-						<a class="masonry-img-top">
+						<a class="masonry-img-caption">
 							<img class="g-rounded-top-5" src="/Imagenes pagina/objetivos_icatech.png" alt="">
 						</a>
 					</div>
@@ -63,7 +63,7 @@
 				<article class="u-shadow-v32 u-shadow-v21--hover g-transition-0_3 h-100">
 					<div class="imgbcgrnd g-pa-20 g-rounded-bottom-5">
 						<div class="g-brd-primary g-mb-30 text-left">
-							<a href=>
+							<a href="#">
 								<h3>Objetivo</h3>
 							</a>
 						</div>
