@@ -12,6 +12,7 @@
                 <div class="sharethis-inline-share-buttons"></div>
             </div>
         </div>
+        <hr class="g-brd-gray-light-v4"/>
     </section>
 <!--end seccion-->
 @stop
