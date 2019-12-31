@@ -17,6 +17,7 @@
 					<!-- CSS Global Compulsory -->
 					<link rel="stylesheet" href="{{asset("assets/vendor/bootstrap/bootstrap.min.css") }}">
 					<link rel="stylesheet" href="{{asset("assets/vendor/bootstrap/offcanvas.css")}}">
+					<script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
 					
 					<!-- CSS Implementing Plugins -->
 					<link rel="stylesheet" href="{{asset("assets/fonts/font-awesome/css/font-awesome.min.css")}}">
@@ -39,6 +40,7 @@
 					<link rel="stylesheet" href="{{asset("assets/css/style.css")}}">
 					<link rel="stylesheet" href="{{asset("assets/css/principal.css")}}">
 					<link rel="stylesheet" type="text/css" href="{{asset("assets/css/slider_unidad.css")}}">
+					<script type='text/javascript'src='https://platform-api.sharethis.com/js/sharethis.js#property=5dfd0fcc371df40012bae859&product=inline-share-buttons&cms=sop'async='async'></script>
 					
 					<style type="text/css">
 						.verticalCarousel {
@@ -129,8 +131,7 @@
 						<script src="{{asset("assets/js/components/hs.go-to.js")}}"></script>
 						<script src="{{asset("assets/js/functions.js")}}"></script>
 						<script src="{{asset("assets/js/responsiveslides.js")}}"></script>
-						<script src="{{asset("assets/js/scripts/jquery.smartmarquee.js")}}"></script>
-						<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5dfd0fcc371df40012bae859&product=inline-share-buttons&cms=sop' async='async'></script>
+						<script src="{{ asset("assets/js/scripts/jquery.smartmarquee.js")}}"></script>
 						<!--plug in facebook-->
 						<div id="fb-root"></div>
 						<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=2084976248184121&autoLogAppEvents=1"></script>

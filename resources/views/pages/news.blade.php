@@ -46,7 +46,7 @@
                                 </ul>
                             </div>
                             <p class="g-mb-15"></p>
-                            <p>{{ $string= substr($itemNews->contenido, 0, 25) }} [...]</p>
+                            <p>{{ $string= substr($itemNews->contenido, 0, 50) }} [...]</p>
                             <p></p>
                         </div>
                     </div>
