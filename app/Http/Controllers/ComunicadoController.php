@@ -167,7 +167,8 @@ class ComunicadoController extends Controller
      */
     public function getnews() {
         $comunicados = new Comunidado();
-        $newsAll = $comunicados::WHERE('confirmado', true)->get();
+        $newsAll = $comunicados::WHERE('confirmado', true)->paginate(7);
+        $newsAll->withPath('comunicado/url');
         return view('pages.news', compact('newsAll'));
     }
 }
