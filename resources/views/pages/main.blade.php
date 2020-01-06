@@ -80,8 +80,21 @@
 	</div>
 	<!--redes sociales-->
 	<!--div-->
+	<!--Convocatorias-->
+	<div class="container g-pt-25">
+		<div class="u-heading-v2-5--bottom g-brd-primary g-mb-50 text-left">
+				<h3>Convocatoria ICATECH</h3>
+		</div>
+				<div class="about-image">
+					<div class="image">
+						<a target="_blank" href="convocatorias/convocatoria-consejeros.pdf"><img src="convocatorias/convocatoria.jpg" alt="About Images" class="img-thumbnail"></a><br><br>
+					</div>
+				</div>
+			</div>
 
-
+		</div>
+	</div>
+	<!--Convocatorias-->
 	<div class="container g-pt-25">
 			<div class="u-heading-v2-5--bottom g-brd-primary g-mb-50 text-left">
 					<h3>Información ICATECH</h3>
