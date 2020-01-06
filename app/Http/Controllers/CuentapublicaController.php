@@ -437,8 +437,12 @@ class CuentapublicaController extends Controller
         $plandetrabajo_codigo =array(
             'Plan de Trabajo Anual 2019'=> 'codigos_conducta/plan-de-trabajo-anual.pdf',
         );
+
+        $convocatorias_codigo =array(
+            'Convocatorias 2020'=> 'codigos_conducta/convocatorias/convocatoria-consejeros.pdf',
+        );
        
-        return view('pages.Integridad', ['codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo]);
+        return view('pages.Integridad', ['codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo, 'convocatorias' =>$convocatorias_codigo]);
     }
 
 
