@@ -87,7 +87,7 @@
 		</div>
 				<div class="about-image">
 					<div class="image">
-						<a target="_blank" href="convocatorias/convocatoria-consejeros.pdf"><img src="codigos_conducta/convocatorias/convocatoria.jpg" alt="About Images" class="img-thumbnail"></a><br><br>
+						<a target="_blank" href="codigos_conducta/convocatorias/convocatoria-consejeros.pdf"><img src="codigos_conducta/convocatorias/convocatoria.jpg" alt="About Images" class="img-thumbnail"></a><br><br>
 					</div>
 				</div>
 			</div>

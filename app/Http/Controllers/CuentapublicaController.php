@@ -441,8 +441,12 @@ class CuentapublicaController extends Controller
         $convocatorias_codigo =array(
             'Convocatorias 2020'=> 'codigos_conducta/convocatorias/convocatoria-consejeros.pdf',
         );
+
+        $protocolodeatencion_codigo =array(
+            'Protocolo de Atención de Quejas y Denuncias'=> 'codigos_conducta/protocolo-de-atencion-a-denuncias.pdf',
+        );
        
-        return view('pages.Integridad', ['codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo, 'convocatorias' =>$convocatorias_codigo]);
+        return view('pages.Integridad', ['codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo, 'convocatorias' =>$convocatorias_codigo, 'protocolo' =>$protocolodeatencion_codigo]);
     }
 
 
