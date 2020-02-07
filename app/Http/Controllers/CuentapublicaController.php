@@ -449,7 +449,11 @@ class CuentapublicaController extends Controller
         return view('pages.Integridad', ['codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo, 'convocatorias' =>$convocatorias_codigo, 'protocolo' =>$protocolodeatencion_codigo]);
     }
 
-
+    public function transparenciaicatech()
+    {
+        }
+   
+    
     /**
      * Show the form for creating a new resource.
      *

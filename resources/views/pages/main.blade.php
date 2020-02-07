@@ -155,6 +155,55 @@
 		</div>								
 	</div>
 	<!--redes sociales END-->
+
+<!--ventana emergente -
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Open Bootstrap Modal on Page Load</title>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                
+			</div>
+			
+            <div class="modal-body">
+                <p>INFORMACION DE CURSOS DEL MES DE FEBRERO DE 2020</p>
+                <form>
+                    <div class="image">
+						<a target="_blank" href="http://www.icatech.gob.mx/oferta-educativa"><img src="codigos_conducta/convocatorias/cursos.jpeg" alt="About Images" class="img-thumbnail"></a><br><br>
+					</div>
+                 
+                  
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
+ventana emergente fin -->
+<!--messenger!-->
+
+
+<!--messenger!-->
 	
 
 @stop

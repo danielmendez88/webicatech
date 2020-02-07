@@ -190,9 +190,23 @@
 								})
 						  });
 						</script>
+						<!--prueba!-->
 						<script>
 							document.getElementById('vid').play();
 						</script>
+						<script>
+
+							$(document).ready(function(){
+						
+								$("#myModal").modal('show');
+						
+							});
+						
+						</script>
+						<!--prueba!-->
+						<!--messenger facebook!-->
+					
+						<!--messenger facebook!-->
 				</body>
 			</html>
 		
