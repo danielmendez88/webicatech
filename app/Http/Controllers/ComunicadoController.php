@@ -59,7 +59,8 @@ class ComunicadoController extends Controller
                 return Redirect::to("/error-cargar-comunicado");
             } else {
                 # code...
-                $res = substr($request->contenido, 0, 140);
+                $safecontent = $this->antiScript($request->contenido);
+                $saferes = substr($safecontent, 0, 140);
                 $saveComunicado = new Comunidado();
                 if ($request->hasFile('imagen_comunicado')) {
                     # si se encuentra la imagen comenzamos a subirlo...
@@ -72,17 +73,17 @@ class ComunicadoController extends Controller
                 } else {
                     return Redirect::to("/error-cargar-comunicado");
                 }
+                
 
                 $saveComunicado->titulo = trim($request->titulo);
                 $saveComunicado->imagen = trim($imagenUrl);
                 $saveComunicado->localizacion = trim($request->localizacion);
-                $saveComunicado->contenido = trim($request->contenido);
+                $saveComunicado->contenido = trim(strip_tags($safecontent,'<p><a><br>'));
                 $saveComunicado->categorias = trim($request->categoria);
-                $saveComunicado->resumen = trim($res); //Orignal = $request->titulo
+                $saveComunicado->resumen = trim(strip_tags($saferes,'<p><a><br>'));
                 $saveComunicado->confirmado = true;
                 $saveComunicado->url = str_slug($request->url, '-');
                 $saveComunicado->fecha_publicacion = Carbon::now();
-
                 $saveComunicado->save();
 
                 return Redirect::to("/administrador/registro-personal")->withSuccess('Personal Agregado éxitosamente.');
@@ -173,5 +174,17 @@ class ComunicadoController extends Controller
         $newsAll = $comunicados::WHERE('confirmado', true)->latest()->paginate(7);
         $newsAll->withPath('comunicado/url');
         return view('pages.news', compact('newsAll'));
+    }
+
+    protected function antiScript($contenido)
+    {
+        $pattern = '/script.*?\/script/ius'; 
+        $safecontenido = preg_replace($pattern, '', $contenido) ? preg_replace('/script.*?\/script/ius', '', $contenido) : $contenido; // elimina cualquier tipo de ataque con script
+        if (strcmp($contenido, $safecontenido) !== 0)
+        {
+            $safecontenido = NULL;
+        }
+
+        return $safecontenido;
     }
 }

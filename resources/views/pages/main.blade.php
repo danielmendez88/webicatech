@@ -30,7 +30,7 @@
 							@foreach ($new_all as $noticias)
 								<li>
 									<p><h3>{{ $noticias->titulo }}</h3></p> 
-									<p>{{ $noticias->resumen }} [...]</p>
+									<p>{!! html_entity_decode($noticias->resumen) !!} [...]</p>
 									<a target="_blank" href="comunicado-detalle/{{ base64_encode($noticias->id) }}/{{ $noticias->url }}"><b>Leer Más...</b></a>
 								</li>
 							@endforeach							

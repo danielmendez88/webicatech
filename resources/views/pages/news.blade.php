@@ -48,7 +48,7 @@
                                 </ul>
                             </div>
                             <p class="g-mb-15"></p>
-                            <p>{{$itemNews->resumen}} [...]</p>
+                            <p>{!! html_entity_decode($itemNews->resumen) !!} [...]</p>
                             <p></p>
                         </div>
                     </div>
