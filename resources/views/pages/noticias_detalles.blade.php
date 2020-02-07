@@ -17,7 +17,7 @@
                 <article class="post">
                     <img class="img-fluid w-100 g-rounded-5 g-mb-25" src="{{$imagen }}" alt="{{ $titulo }}">
                     <time>{{ $fecha_pub }}</time>
-                    <p><strong>{{ $localizacion }} .-</strong>&nbsp;&nbsp;{{ $contenido }}</p>
+                    <p><strong>{{ $localizacion }} .-</strong>&nbsp;&nbsp;{!! html_entity_decode($contenido); !!}</p>
                     <ul class="list-inline g-font-size-12 mb-0">
                         <li class="list-inline-item g-mb-10">
                             <a href="" class="u-tags-v1 g-color-black g-bg-black-opacity-0_1 g-bg-morado--hover g-color-white--hover g-rounded-50 g-py-4 g-px-15">

@@ -52,6 +52,9 @@
 					<link rel="stylesheet" type="text/css" href="{{asset("assets/css/slider_unidad.css")}}">
 					<script type='text/javascript'src='https://platform-api.sharethis.com/js/sharethis.js#property=5dfd0fcc371df40012bae859&product=inline-share-buttons&cms=sop'async='async'></script>
 					
+					 <!-- Icons -->
+					 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
 					<style type="text/css">
 						.verticalCarousel {
 						  max-width: 100%;

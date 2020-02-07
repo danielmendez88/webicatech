@@ -21,7 +21,7 @@ class ComunicadoController extends Controller
     {
         // este metodo nos dará acceso a todos los datos convenientes
         $comunidado = new Comunidado();
-        $new_all = $comunidado::WHERE('confirmado', true)->get();
+        $new_all = $comunidado::WHERE('confirmado', true)->latest()->limit(5)->get();
         // return view('', compact);
         return view('index', compact('new_all'));
     }
@@ -59,6 +59,7 @@ class ComunicadoController extends Controller
                 return Redirect::to("/error-cargar-comunicado");
             } else {
                 # code...
+                $res = substr($request->contenido, 0, 140);
                 $saveComunicado = new Comunidado();
                 if ($request->hasFile('imagen_comunicado')) {
                     # si se encuentra la imagen comenzamos a subirlo...
@@ -77,7 +78,7 @@ class ComunicadoController extends Controller
                 $saveComunicado->localizacion = trim($request->localizacion);
                 $saveComunicado->contenido = trim($request->contenido);
                 $saveComunicado->categorias = trim($request->categoria);
-                $saveComunicado->resumen = trim($request->titulo);
+                $saveComunicado->resumen = trim($res); //Orignal = $request->titulo
                 $saveComunicado->confirmado = true;
                 $saveComunicado->url = str_slug($request->url, '-');
                 $saveComunicado->fecha_publicacion = Carbon::now();
@@ -164,10 +165,12 @@ class ComunicadoController extends Controller
     }
     /**
      * 
+     * 
+     * 
      */
     public function getnews() {
         $comunicados = new Comunidado();
-        $newsAll = $comunicados::WHERE('confirmado', true)->paginate(7);
+        $newsAll = $comunicados::WHERE('confirmado', true)->latest()->paginate(7);
         $newsAll->withPath('comunicado/url');
         return view('pages.news', compact('newsAll'));
     }

@@ -23,10 +23,12 @@
                 <article>
                     <div class="row">
                         <div class="col-md-3">
+                        <!--<link rel="stylesheet" type="text/css" href="css/render.css"> -->
                             <a href="comunicado-detalle/{{ base64_encode($itemNews->id) }}/{{ $itemNews->url }}">
                                 <img class="img-fluid w-100 g-rounded-5 g-mb-0" src="{{ $itemNews->imagen }}" alt="{{ $itemNews->titulo }}"/>
                             </a>
                         </div>
+                        
                         <div class="col-md-9">
                             <h3 class="g-color-gray-dark-v3 g-font-weight-500 mb-3 g-font-secondary" style="font-size:1.1rem">
                                 <a href="comunicado-detalle/{{ base64_encode($itemNews->id) }}/{{ $itemNews->url }}">
@@ -46,7 +48,7 @@
                                 </ul>
                             </div>
                             <p class="g-mb-15"></p>
-                            <p>{{ $string= substr($itemNews->contenido, 0, 50) }} [...]</p>
+                            <p>{{$itemNews->resumen}} [...]</p>
                             <p></p>
                         </div>
                     </div>

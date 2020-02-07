@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="cc-payment" class="control-label mb-1">Contenido</label>
-                                    <textarea name="contenido" id="contenido" cols="30" rows="7" class="form-control" aria-required="true"></textarea>
+                                    <textarea name="contenido" id="contenido" cols="30" rows="7" class="form-control" aria-required="true"></textarea> 
                                 </div>
                                 <div class="form-group">
                                     <label for="cc-payment" class="control-label mb-1">Imagen</label>

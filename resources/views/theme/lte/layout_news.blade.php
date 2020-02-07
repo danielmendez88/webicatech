@@ -39,6 +39,10 @@
         <link rel="stylesheet" href="{{asset("assets/css/style.css")}}">
         <link rel="stylesheet" href="{{asset("assets/css/principal.css")}}">
         <link rel="stylesheet" type="text/css" href="{{asset("assets/css/slider_unidad.css")}}">
+        <link rel="stylesheet" href="{{asset("assets/css/trumbowyg.min.css")}}">
+
+        <!-- Icons -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
         
     </head>
 
@@ -89,6 +93,11 @@
             <div id="fb-root"></div>
             <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=2084976248184121&autoLogAppEvents=1"></script>
             <!--plug in facebook END-->
+            <!--plug trumbowyg-->
+            <script src="{{asset("assets/vendor/trumbowyg/dist/trumbowyg.min.js")}}"></script>
+            <script src="{{asset("assets/vendor/Trumbowyg/dist/plugins/cleanpaste/trumbowyg.cleanpaste.min.js")}}"></script>
+            <!--plug trumbowyg END-->
+
 
             
             <script>
@@ -131,6 +140,7 @@
                     $('.carousel').carousel({
                       interval: 3000
                     })
+                    $('#contenido').trumbowyg();
               });
             </script>
             <script>

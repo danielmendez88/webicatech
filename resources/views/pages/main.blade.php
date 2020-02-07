@@ -21,13 +21,16 @@
 				<!--div contenedor-->
 				<div class="verticalCarousel">
 					<div class="verticalCarouselHeader">
+					<a href="/comunicado">
 						<h3>COMUNICADOS</h3>
+					</a>
 					</div>
 					<div class="smartmarquee lista">
 						<ul class="vc_list">
 							@foreach ($new_all as $noticias)
 								<li>
-									<p>{{ $noticias->resumen }}</p> 
+									<p><h3>{{ $noticias->titulo }}</h3></p> 
+									<p>{{ $noticias->resumen }} [...]</p>
 									<a target="_blank" href="comunicado-detalle/{{ base64_encode($noticias->id) }}/{{ $noticias->url }}"><b>Leer Más...</b></a>
 								</li>
 							@endforeach							
