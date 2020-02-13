@@ -44,14 +44,15 @@
 			<h2 class="u-heading-v2__title text-uppercase g-font-weight-300 mb-0">Videoteca</h2>
 		</div>
 		<div class="masonry-grid row g-mb-0 row-eq-height">
-			<div class="masonry-grid-sizer col-sm-12"></div>
-			<div class="masonry-grid-item col-sm-6 col-md-6 col-lg-6 g-mb-30">
+			<div class="masonry-grid-sizer col-sm-12">
+			</div>
+				<div class="masonry-grid-item col-sm-6 col-md-6 col-lg-6 g-mb-30">
 				<div class="about-image">
 					<div class="image">
 						<a target="_blank" href="https://www.youtube.com/watch?v=moXgHeA1e2Q&feature=youtu.be"><img src="Imagenes Pagina/icatechinforma.jpg" alt="Banner" class="img-thumbnail"></a><br><br>
 					</div>
 				</div>
-			</div>
+				</div>
 			<!--div-->
 			<div class="masonry-grid-item col-sm-6 col-md-6 col-lg-6 g-mb-30">
 				<div class="about-image">
@@ -80,25 +81,11 @@
 	</div>
 	<!--redes sociales-->
 	<!--div-->
-	<!--Convocatorias-->
+
 	<div class="container g-pt-25">
 		<div class="u-heading-v2-5--bottom g-brd-primary g-mb-50 text-left">
-				<h3>Convocatoria ICATECH</h3>
+				<h3>Información ICATECH</h3>
 		</div>
-				<div class="about-image">
-					<div class="image">
-						<a target="_blank" href="codigos_conducta/convocatorias/convocatoria-consejeros.pdf"><img src="codigos_conducta/convocatorias/convocatoria.jpg" alt="About Images" class="img-thumbnail"></a><br><br>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-	<!--Convocatorias-->
-	<div class="container g-pt-25">
-			<div class="u-heading-v2-5--bottom g-brd-primary g-mb-50 text-left">
-					<h3>Información ICATECH</h3>
-			</div>
 			<div class="about-text">
 				<p>
 					<marquee behavior="alternate">
@@ -113,7 +100,7 @@
 					</marquee>
 				</p>
 			</div>
-		</div>
+	</div>
 
 			
 	<!--banners-->
@@ -156,7 +143,8 @@
 	</div>
 	<!--redes sociales END-->
 
-<!--ventana emergente -
+	
+
 <html lang="en">
 
 <head>
@@ -183,15 +171,23 @@
 			</div>
 			
             <div class="modal-body">
-                <p>INFORMACION DE CURSOS DEL MES DE FEBRERO DE 2020</p>
+                
                 <form>
-                    <div class="image">
-						<a target="_blank" href="http://www.icatech.gob.mx/oferta-educativa"><img src="codigos_conducta/convocatorias/cursos.jpeg" alt="About Images" class="img-thumbnail"></a><br><br>
+						
+                    <div class="">
+						<a target="_blank" href="https://www.facebook.com/Icatech-Chiapas-475079282568212/">
+							<video class="video-fluid z-depth-1" autoplay muted loop>
+								<source src="../../Imagenes Pagina/videoicatechpop.mp4" type="video/mp4" />
+						  	</video>
+						</a>
 					</div>
                  
-                  
+					
                 </form>
-            </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+			</div>
         </div>
     </div>
 </div>
@@ -199,11 +195,7 @@
 </body>
 
 </html>
-ventana emergente fin -->
-<!--messenger!-->
 
-
-<!--messenger!-->
 	
 
 @stop

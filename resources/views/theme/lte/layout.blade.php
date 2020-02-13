@@ -198,8 +198,11 @@
 
 							$(document).ready(function(){
 						
-								$("#myModal").modal('show');
-						
+								// $("#myModal").modal('show');
+
+								setTimeout(function() {
+									$('#myModal').modal();
+								}, 8000);
 							});
 						
 						</script>
