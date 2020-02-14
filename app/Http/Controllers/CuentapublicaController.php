@@ -487,7 +487,7 @@ class CuentapublicaController extends Controller
 
     public function transparenciaicatech()
     {
-        }
+    }
    
     
     /**
