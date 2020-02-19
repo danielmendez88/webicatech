@@ -69,7 +69,7 @@ Route::get('/cursos/{id}/{categoria}', 'CursoController@show')->name('cursos');
 //transparencia-icatech
 Route::get('/transparenciaicatech', 'CuentapublicaController@transparenciaicatech');
 // prospectos
-//Route::get('/prospectosalumnos', 'ProspectosController@index');
+Route::get('/prospectosalumnos', 'ProspectosController@index');
 	
 
 Auth::routes();
