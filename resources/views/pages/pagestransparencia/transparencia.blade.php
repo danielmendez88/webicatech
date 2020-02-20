@@ -18,22 +18,7 @@
 			<a href="descargas/transparencia/acta12reunionordinaria.pdf" target="_blank"> Acta 12 Reunion Ordinaria</a>
 
 			<b>
-				<h1>planeacion</h1>
-            <!--Nuevo contenido-->
-                <h2>2017 EP 03</h2>
-                <a href="{{asset("descargas/transparencia/ep03-2017/EP01_Analitico_de_Partidas_1er_Trimestre_2017.pdf")}}" target="_blank">
-                    EP01 Analítico de Partidas 1er Trimestre 2017
-                </a> <p>
-                <a href="{{asset("descargas/transparencia/ep03-2017/EP01_EP01_Analitico_de_Partidas_2o_Trimestre_2017.pdf")}}" target="_blank">
-                    EP01 EP01 Analítico de Partidas 2o Trimestre 2017
-                </a> <p>
-                <a href="{{asset("descargas/transparencia/ep03-2017/EP01_EP01_Analitico_de_Partidas_3er_Trimestre_2017.pdf")}}" target="_blank">
-                    EP01 EP01 Analítico de Partidas 3er Trimestre 2017
-                </a> <p>
-                <a href="{{asset("descargas/transparencia/ep03-2017/EP01_EP01_Analitico_de_Partidas_4o_Trimestre_2017.pdf")}}" target="_blank">
-                    EP01 EP01 Analítico de Partidas 4o Trimestre 2017
-                </a> <p>
-            <!--Nuevo contenido END-->
+                <h1>planeacion</h1>
 				<h2>2017 fracc30poa </h2>
 			<a href="descargas/transparencia/fracc30poa/2017/avance_mensual _por_unidades_1er_trimestre_2017.pdf" target="_blank">Avance por Unidades 1 Trimestre</a> <p>
 			<a href="descargas/transparencia/fracc30poa/2017/avance_mensual_por_unidades_2do_trimestre_2017.pdf" target="_blank">Avance por Unidades 2 Trimestre</a> <p>
@@ -75,7 +60,34 @@
 			<a href="descargas/transparencia/fracc31breportesep-01/2018/epo1_3ertrimestre_2018.pdf" target="_blank"> 3 Trimestre</a> <p>
 			<a href="descargas/transparencia/fracc31breportesep-01/2018/epo1_4otrimestre_2018.pdf" target="_blank">4 Trimestre</a> <p>
 
-
+                <!--Nuevo contenido-->
+                <h2>2017 EP 03</h2>
+            <a href="{{asset("descargas/transparencia/ep03-2017/EP01_Analitico_de_Partidas_1er_Trimestre_2017.pdf")}}" target="_blank">
+                EP01 Analítico de Partidas 1er Trimestre 2017
+            </a> <p>
+            <a href="{{asset("descargas/transparencia/ep03-2017/EP01_EP01_Analitico_de_Partidas_2o_Trimestre_2017.pdf")}}" target="_blank">
+                EP01 EP01 Analítico de Partidas 2o Trimestre 2017
+            </a> <p>
+            <a href="{{asset("descargas/transparencia/ep03-2017/EP01_EP01_Analitico_de_Partidas_3er_Trimestre_2017.pdf")}}" target="_blank">
+                EP01 EP01 Analítico de Partidas 3er Trimestre 2017
+            </a> <p>
+            <a href="{{asset("descargas/transparencia/ep03-2017/EP01_EP01_Analitico_de_Partidas_4o_Trimestre_2017.pdf")}}" target="_blank">
+                EP01 EP01 Analítico de Partidas 4o Trimestre 2017
+            </a> <p>
+            <!--Nuevo contenido END-->
+                <h2>POA 2016</h2>
+            <a href="{{asset("descargas/transparencia/poa-2016/Evaluacion_POA_2016_1er_Trimestre.pdf")}}" target="_blank">
+                Evaluación POA 2016 1er Trimestre
+            </a> <p>
+            <a href="{{asset("descargas/transparencia/poa-2016/Evaluacion_POA_2016_2o_Trimestre.pdf")}}" target="_blank">
+                Evaluación POA 2016 2o Trimestre
+            </a> <p>
+            <a href="{{asset("descargas/transparencia/poa-2016/Evaluacion_POA_2016_3er_Trimestre.pdf")}}" target="_blank">
+                Evaluación POA 2016 3er Trimestre
+            </a> <p>
+            <a href="{{asset("descargas/transparencia/poa-2016/Evaluacion_POA_2016_4o_Trimestre.pdf")}}" target="_blank">
+                Evaluación POA 2016 4o Trimestre
+            </a> <p>
 			</b>
 
 		<p>
