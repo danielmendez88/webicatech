@@ -484,6 +484,15 @@ class CuentapublicaController extends Controller
        
         return view('pages.Integridad', ['codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo, 'convocatorias' =>$convocatorias_codigo, 'protocolo' =>$protocolodeatencion_codigo]);
     }
+    public function planarchivo()
+    {
+        $plananual_codigo =array(
+            'Plan Anual de Desarrollo Archivistico'=> 'plan_desarrollo/PADA2020_VERSION_PUB.pdf',
+        );
+
+        return view('pages.planarchivo', ['desarrollo' =>$plananual_codigo]);
+
+    }
 
     public function transparenciaicatech()
     {

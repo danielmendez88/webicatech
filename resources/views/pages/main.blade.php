@@ -94,6 +94,7 @@
 
 					<a href="/Integridad" target=""><img src="Imagenes Pagina/bannericatechintegridad.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="/transparencia" target=""><img src="Imagenes Pagina/banner icatechtransparencia4.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="/planarchivo" target=""><img src="Imagenes Pagina/programa_anual_icatech.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="/avisos-de-privacidad" target=""><img src="Imagenes Pagina/avisodeprivacidad2.jpg" width="500px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="/normatividad" target=""><img src="Imagenes Pagina/normatividad2.jpg" width="370px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -145,42 +146,35 @@
 
 	
 
-<html lang="en">
+	<html lang="en">
 
-<head>
+		<head>
 
-<meta charset="utf-8">
+			<meta charset="utf-8">
 
-<title>Open Bootstrap Modal on Page Load</title>
+			<title>Open Bootstrap Modal on Page Load</title>
 
-<link rel="stylesheet" href="css/bootstrap.min.css">
-
-<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-
-<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-
-<script src="js/bootstrap.min.js"></script>
-</head>
-<body>
-<div id="myModal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
+			 <link rel="stylesheet" href="css/bootstrap.min.css">
+				 <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+				 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+				 <script src="js/bootstrap.min.js"></script>
+		</head>
+		<body>
+		 <div id="myModal" class="modal fade">
+    		 <div class="modal-dialog">
+        		 <div class="modal-content">
+            	     <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                
-			</div>
-			
-            <div class="modal-body">
-                
-                <form>
-						
-                    <div class="">
-						<a target="_blank" href="https://www.facebook.com/Icatech-Chiapas-475079282568212/">
-							<video class="video-fluid z-depth-1" autoplay muted loop>
+ 					 </div>
+	             <div class="modal-body">
+             <form>
+                	 <div class="">
+					     <a target="_blank" href="https://www.facebook.com/Icatech-Chiapas-475079282568212/">
+							 <video class="video-fluid z-depth-1" autoplay muted loop>
 								<source src="../../Imagenes Pagina/videoicatechpop.mp4" type="video/mp4" />
-						  	</video>
-						</a>
-					</div>
+						     </video>
+						 </a>
+					 </div>
                  
 					
                 </form>

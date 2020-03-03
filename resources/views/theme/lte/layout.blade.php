@@ -202,7 +202,7 @@
 
 								setTimeout(function() {
 									$('#myModal').modal();
-								}, 8000);
+								}, 1000);
 							});
 						
 						</script>
