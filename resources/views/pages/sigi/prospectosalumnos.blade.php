@@ -6,7 +6,6 @@
 
   
   <section class="container g-py-40 g-pt-40 g-pb-0">
-
     <form class="needs-validation" novalidate>
       <div class="form-row">
         <div class="col-md-4 mb-3">

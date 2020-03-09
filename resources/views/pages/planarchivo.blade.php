@@ -42,11 +42,11 @@
                 
             </div>
              <p align="justify">
-                    Archivo de concentración: Al integrado por documentos transferidos desde las áreas o unidades productoras, cuyo uso y consulta es esporádica y que permanecen en él hasta su disposición documental.
-                    Archivo de trámite: Al integrado por documentos de archivo de uso cotidiano y necesario para el ejercicio de las atribuciones y funciones de los sujetos obligados.
-                    Archivo histórico: Al integrado por documentos de conservación permanente y de relevancia para la memoria nacional, regional o local de carácter público.
-                    Baja documental: A la eliminación de aquella documentación que haya prescrito su vigencia, valores documentales y, en su caso, plazos de conservación; y que no posea valores históricos, de acuerdo con la Ley y las disposiciones jurídicas aplicables.
-                    Baja documental: A la eliminación de aquella documentación que haya prescrito su vigencia, valores documentales y, en su caso, plazos de conservación; y que no posea valores históricos, de acuerdo con la Ley y las disposiciones jurídicas aplicables.
+                    <b>Archivo de concentración:</b> Al integrado por documentos transferidos desde las áreas o unidades productoras, cuyo uso y consulta es esporádica y que permanecen en él hasta su disposición documental.
+                    <br><b>Archivo de trámite:</b> Al integrado por documentos de archivo de uso cotidiano y necesario para el ejercicio de las atribuciones y funciones de los sujetos obligados.
+                    <br><b>Archivo histórico:</b> Al integrado por documentos de conservación permanente y de relevancia para la memoria nacional, regional o local de carácter público.
+                    <br><b>Baja documental:</b> A la eliminación de aquella documentación que haya prescrito su vigencia, valores documentales y, en su caso, plazos de conservación; y que no posea valores históricos, de acuerdo con la Ley y las disposiciones jurídicas aplicables.
+                    
              </p>
         </div>
         </article>
