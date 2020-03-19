@@ -193,9 +193,26 @@
 								})
 						  });
 						</script>
+						<!--prueba!-->
 						<script>
 							document.getElementById('vid').play();
 						</script>
+						<script>
+
+							$(document).ready(function(){
+						
+								// $("#myModal").modal('show');
+
+								setTimeout(function() {
+									$('#myModal').modal();
+								}, 1000);
+							});
+						
+						</script>
+						<!--prueba!-->
+						<!--messenger facebook!-->
+					
+						<!--messenger facebook!-->
 				</body>
 			</html>
 		

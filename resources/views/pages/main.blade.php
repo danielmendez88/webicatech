@@ -47,14 +47,15 @@
 			<h2 class="u-heading-v2__title text-uppercase g-font-weight-300 mb-0">Videoteca</h2>
 		</div>
 		<div class="masonry-grid row g-mb-0 row-eq-height">
-			<div class="masonry-grid-sizer col-sm-12"></div>
-			<div class="masonry-grid-item col-sm-6 col-md-6 col-lg-6 g-mb-30">
+			<div class="masonry-grid-sizer col-sm-12">
+			</div>
+				<div class="masonry-grid-item col-sm-6 col-md-6 col-lg-6 g-mb-30">
 				<div class="about-image">
 					<div class="image">
 						<a target="_blank" href="https://www.youtube.com/watch?v=moXgHeA1e2Q&feature=youtu.be"><img src="Imagenes Pagina/icatechinforma.jpg" alt="Banner" class="img-thumbnail"></a><br><br>
 					</div>
 				</div>
-			</div>
+				</div>
 			<!--div-->
 			<div class="masonry-grid-item col-sm-6 col-md-6 col-lg-6 g-mb-30">
 				<div class="about-image">
@@ -83,25 +84,11 @@
 	</div>
 	<!--redes sociales-->
 	<!--div-->
-	<!--Convocatorias-->
+
 	<div class="container g-pt-25">
 		<div class="u-heading-v2-5--bottom g-brd-primary g-mb-50 text-left">
-				<h3>Convocatoria ICATECH</h3>
+				<h3>Información ICATECH</h3>
 		</div>
-				<div class="about-image">
-					<div class="image">
-						<a target="_blank" href="codigos_conducta/convocatorias/convocatoria-consejeros.pdf"><img src="codigos_conducta/convocatorias/convocatoria.jpg" alt="About Images" class="img-thumbnail"></a><br><br>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-	<!--Convocatorias-->
-	<div class="container g-pt-25">
-			<div class="u-heading-v2-5--bottom g-brd-primary g-mb-50 text-left">
-					<h3>Información ICATECH</h3>
-			</div>
 			<div class="about-text">
 				<p>
 					<marquee behavior="alternate">
@@ -110,13 +97,14 @@
 
 					<a href="/Integridad" target=""><img src="Imagenes Pagina/bannericatechintegridad.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="/transparencia" target=""><img src="Imagenes Pagina/banner icatechtransparencia4.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="/planarchivo" target=""><img src="Imagenes Pagina/programa_anual_icatech.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="/avisos-de-privacidad" target=""><img src="Imagenes Pagina/avisodeprivacidad2.jpg" width="500px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="/normatividad" target=""><img src="Imagenes Pagina/normatividad2.jpg" width="370px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 
 					</marquee>
 				</p>
 			</div>
-		</div>
+	</div>
 
 			
 	<!--banners-->
@@ -158,6 +146,53 @@
 		</div>								
 	</div>
 	<!--redes sociales END-->
+
+	
+
+	<html lang="en">
+
+		<head>
+
+			<meta charset="utf-8">
+
+			<title>Open Bootstrap Modal on Page Load</title>
+
+			 <link rel="stylesheet" href="css/bootstrap.min.css">
+				 <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+				 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+				 <script src="js/bootstrap.min.js"></script>
+		</head>
+		<body>
+		 <div id="myModal" class="modal fade">
+    		 <div class="modal-dialog">
+        		 <div class="modal-content">
+            	     <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+ 					 </div>
+	             <div class="modal-body">
+             <form>
+                	 <div class="">
+					     <a target="_blank" href="https://www.facebook.com/Icatech-Chiapas-475079282568212/">
+							 <video class="video-fluid z-depth-1" autoplay muted loop>
+								<source src="../../Imagenes Pagina/videoicatechpop.mp4" type="video/mp4" />
+						     </video>
+						 </a>
+					 </div>
+                 
+					
+                </form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+			</div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
+
 	
 
 @stop

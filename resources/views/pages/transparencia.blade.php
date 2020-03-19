@@ -40,8 +40,7 @@
 				
 			</div>
 	</div>
-	
-	
+
 					<div class="container g-pt-50">
 					<div class="tab-pane active" id="#red">
 						<hr>
@@ -56,4 +55,36 @@
 						  
 					  </form>
 					</div>
+									  
+					    <head>
+						<meta charset="utf-3">
+						<title>Open Bootstrap Modal on Page Load</title>
+						<link rel="stylesheet" href="css/bootstrap.min.css">
+						<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+						<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+						<script src="js/bootstrap.min.js"></script>
+						</head>
+						<body>
+						 <div id="myModal" class="modal fade">
+						 	 <div class="modal-dialog">
+								 <div class="modal-content">
+								     <div class="modal-header">
+									 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								     </div>									
+									 <div class="modal-body">
+										 <form>
+										 <div class="">
+												<b>ESTAS POR INGRESAR AL PORTAL DE TRANSPARENCIA EN EL QUE PUEDES CONSULTAR INFORMACIÓN PUBLICA DEL ICATECH , SI POSTERIORMENTE A TU VISITA AUN TIENES DUDAS, PUEDES CONTACTARNOS DE MANERA DIRECTA: unidaddetransparenciaicatech@gmail.com 961– 61 2  16 21  ext. 208 </b>
+										 </div>
+										</form>
+									 </div>
+									 <div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+									 </div>
+								 </div>
+							 </div>
+						 </div>
+						</body>
+
+						 
 @stop

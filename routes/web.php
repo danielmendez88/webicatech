@@ -65,6 +65,14 @@ Route::get('/comunicado-detalle/{id}/{slug}', 'ComunicadoController@show');
 Route::get( '/instructores', 'CursoController@instructores');
 
 Route::get('/cursos/{id}/{categoria}', 'CursoController@show')->name('cursos');
+
+//transparencia-icatech
+Route::get('/transparenciaicatech', 'CuentapublicaController@transparenciaicatech');
+// prospectos
+Route::get('/prospectosalumnos', 'ProspectosController@index');
+// TRANSPARENCIA
+	Route::get('/planarchivo', 'CuentapublicaController@planarchivo');
+
 	
 
 Auth::routes();
@@ -74,4 +82,12 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/home', 'HomeController@index')->name('home');
 	Route::get('/noticias-seguimientos', 'HomeController@news')->name('noticias-seguimientos');
 });
+
+Route::get('listadotransparencia', function () {
+	return view('pages.pagestransparencia.transparencia');
+});
+// nueva ruta para el controlador transparencia/
+ //PLANEACION NUEVA PAGINA/
+ 
+ 
 

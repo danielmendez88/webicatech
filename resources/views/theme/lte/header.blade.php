@@ -26,13 +26,21 @@
 			</nav>
 		</div>
 	</header>
-	<!--seccion-->
+
 	<section 
 		class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll dzsprx-readyall loaded" 
 		data-options='{direction: "normal", settings_mode_oneelement_max_offset: "150"}' style="height: 390px">
+		
 		<video autoplay muted loop id="MyVideo"> 
 			<source src="../../Imagenes Pagina/portada web.mp4" type="video/mp4"/>
 		</video>
+	
+		
+	<!--video--¡-->
+	
+	
+
+
 		<!--<div class="container u-bg-overlay__inner text-center g-py-55">
 			
 		</div>-->

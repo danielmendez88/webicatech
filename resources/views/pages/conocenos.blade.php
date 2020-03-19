@@ -21,7 +21,7 @@
 							</a>
 						</div>
 						<p align="justify">
-							Impartir capacitación para y en el trabajo a la pobación, contribuyendo al mejoramiento de su calidad de vida mediante programas estratégicos con enfoque sustentable y sostenible, impulsando el desarrollo del estado.
+							Impartir capacitación para y en el trabajo a la población, contribuyendo al mejoramiento de su calidad de vida mediante programas estratégicos con enfoque sustentable y sostenible, impulsando el desarrollo del estado.
 						</p>
 					</div>
 					<a class="masonry-img-top spaceimg">

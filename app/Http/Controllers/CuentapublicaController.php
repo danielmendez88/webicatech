@@ -237,6 +237,42 @@ class CuentapublicaController extends Controller
             'Relación de Cuentas Bancarias Productivos Espesificas' => 'sevac_/2019/t3/Relacion_de_Cuentas_Bancarias_Productivas_Especificas.pdf'
         );
 
+        $cuar_trimestre =array(
+            'Analisis de las Principales Variaciones y Adecuaciones al Presupuesto' => 'sevac_/2019/t4/Analisis_de_las_Principales_Variac_y_Adec_del_Ppto.pdf',											
+            'Analisis de los Recursos Federales Etiquetados por Financiamientos' => 'sevac_/2019/t4/Analisis_de_los_recursos_federales_por_fte_de_financiamiento.pdf',											
+            'Aplicación del Presupuesto Total por Rubros'  => 'sevac_/2019/t4/Aplicacion_del_presupuesto_Total_por_Rubros.pdf',											
+            'Cierre Anual 2019'  => 'sevac_/2019/t4/Cierre_Anual_2019.pdf',											
+            'Comparativo de Analisis del Presupuesto por Objeto del Gasto'  => 'sevac_/2019/t4/ComparativoAnalisis_del_Ppto_por_Objeto_del_Gasto.pdf',											
+            'Endeudamiento Neto'  => 'sevac_/2019/t4/endeudamiento_neto.pdf',											
+            'Analitico de Partidas por Clasificacion Administrativa'  => 'sevac_/2019/t4/EP-01_Analitico_de_Partidas_por_Clasificacion_Administrativa.pdf',											
+            'Ingresos Estatales'  => 'sevac_/2019/t4/EP-1A01_Ingresos_Estatales.pdf',											
+            'Por Capitulos Concepto por Partidas Generica y Especifica'  => 'sevac_/2019/t4/EP-03_por_Capitulos_Partida_Generica_y_Partida_Especifica.pdf',											
+            'Resumen Tipo de Gasto y Partida'  => 'sevac_/2019/t4/EP-08_Resumen_Tipo_de_Gasto_y_Partida.pdf',											
+            'Fondo General de Participaciones' => 'sevac_/2019/t4/EP-5811_Fondo_General_de_Participaciones.pdf',											
+            'Impuesto a la Venta Final de Gasolina y Diesel' => 'sevac_/2019/t4/EP-5817_Impuesto_a_la_Venta_Final_de_Gasolina_y_Diesel.pdf',											
+            'Otros Recursos ISR Participable Estatal' => 'sevac_/2019/t4/EP-5818_Otros_Recursos_ISR_Participable_Estatal.pdf',											
+            'Otros Subsidios' => 'sevac_/2019/t4/EP-5932_Otros_Subsidios.pdf',											
+            'Estado Analitico de Ingresos' => 'sevac_/2019/t4/estado_analitico_ingresos.pdf',											
+            'Formato del Ejercicio y Destino de Gasto Federalizado y Reintegros' => 'sevac_/2019/t4/Formato_del_Ejercicio_y_Destino_de_Gasto_Federalizado_y_Reintegros.pdf',											
+            'Guia de Cumplimiento de la LDF' => 'sevac_/2019/t4/GuiadeCumplimientodelaLDF.pdf',											
+            'Intereses de la Deuda' => 'sevac_/2019/t4/Intereses_de_la_Deuda.pdf',											
+            'Clasificacion por Objeto del Gasto' => 'sevac_/2019/t4/LDF_6a_Clasificacion_por_Objeto_del_Gasto_Capitulos_y_Conceptos.pdf',											
+            'Clasificacion Administrativa' => 'sevac_/2019/t4/LDF_6b_Clasificacion_Administrativa.pdf',											
+            'Clasificacion Funcional' => 'sevac_/2019/t4/LDF_6c_Clasificacion_Funcional_Finalidad_y_Funcion.pdf',											
+            'Clasificacion de Servicios Personales por Categoria' => 'sevac_/2019/t4/LDF_6d_Clasificación_de_Servicios_Personales_por_Categoria.pdf',											
+            'Programas y Proyectos de Inversion' => 'sevac_/2019/t4/Programas_y_Proyectos_de_Inversion.pdf',											
+            'Clasificacion Objeto Gasto' => 'sevac_/2019/t4/RPA_1_Clasificacion_Objeto_Gasto_Capitulos_Conceptos.pdf',											
+            'Clasificacion Economica Tipo Gasto' => 'sevac_/2019/t4/RPA_2_Clasificacion_Economica_Tipo__Gasto.pdf',											
+            'Clasificacion Administrativa Organismo' => 'sevac_/2019/t4/RPA_3_Clasificacion_Administrativa_Organismo.pdf',											
+            'Clasificacion Administrativa Poderes' => 'sevac_/2019/t4/RPA_4_Clasificacion_Administrativa_Poderes.pdf',											
+            'Clasificacion Administrativa Entidades' => 'sevac_/2019/t4/RPA_5_Clasificacion_Administrativa_Entidades.pdf',											
+            'Clasificacion Funcional Funcion' => 'sevac_/2019/t4/RPA_6_Clasificacion_Funcional_Finalidad_Funcion.pdf',											
+            'Gasto por Categoria Programatica' => 'sevac_/2019/t4/RPA_7_Gasto_por_Categoria_Programatica.pdf'											
+            
+
+        );
+
+
         $prim_trimestre2018 =array(
             'Montos Pagados por Concepto de Ayudas y Subsidios' => 'sevac_/2018/t1/D.1.11_Montos_pagados_por_concepto_de_ayudas_y_subidios.pdf',
             'Estado de Actividades' => 'sevac_/2018/t1/D.2.1_Estado_de_Actividades.pdf',
@@ -309,7 +345,7 @@ class CuentapublicaController extends Controller
         );
 
 
-        return view('pages.sevac', ['primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018]);
+        return view('pages.sevac', ['primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018]);
 
     }
 
@@ -448,8 +484,21 @@ class CuentapublicaController extends Controller
        
         return view('pages.Integridad', ['codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo, 'convocatorias' =>$convocatorias_codigo, 'protocolo' =>$protocolodeatencion_codigo]);
     }
+    public function planarchivo()
+    {
+        $plananual_codigo =array(
+            'Plan Anual de Desarrollo Archivistico'=> 'plan_desarrollo/PADA2020_VERSION_PUB.pdf',
+        );
 
+        return view('pages.planarchivo', ['desarrollo' =>$plananual_codigo]);
 
+    }
+
+    public function transparenciaicatech()
+    {
+    }
+   
+    
     /**
      * Show the form for creating a new resource.
      *
