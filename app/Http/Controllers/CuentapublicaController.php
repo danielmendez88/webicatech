@@ -11,7 +11,7 @@ class CuentapublicaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
- 
+
     public function index()
     {
         // aqui vamos a crear nuestro arreglo
@@ -50,8 +50,21 @@ class CuentapublicaController extends Controller
             'Formato Analisis Funcional' => 'cuenta_publica/tt2019/presupuestal/analisisfuncional.pdf',
             'Formatos Armonizados Conac' => 'cuenta_publica/tt2019/presupuestal/conac.pdf',
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/tt2019/presupuestal/ldf.pdf'
-        );  
-        
+        );
+
+        $inf_financiera4 = array(
+            'Bienes Patrimoniales' => 'cuenta_publica/ct2019/financiera/bienes_patrimoniales.pdf',
+            'Formatos de Analisis' => 'cuenta_publica/ct2019/financiera/formatos_de_analisis.pdf',
+            'Formatos Armonizados Conac' =>'cuenta_publica/ct2019/financiera/armonizados_conac.pdf',
+            'Formatos Ley de Disciplina Financiera' =>'cuenta_publica/ct2019/financiera/ley_disciplina_financiera.pdf'
+        );
+        $inf_presupuestal4 = array(
+            'Información Presupuestaria' => 'cuenta_publica/ct2019/presupuestal/informacion_presupuestaria.pdf',
+            'Formato Analisis Funcional' => 'cuenta_publica/ct2019/presupuestal/analisis_funcional.pdf',
+            'Formatos Armonizados Conac' => 'cuenta_publica/ct2019/presupuestal/formatos_armonizados_conac.pdf',
+            'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/ct2019/presupuestal/formatos_LDF.pdf'
+        );
+
         $inf_financiera18 = array(
             'Bienes Patrimoniales' => 'cuenta_publica/2018/st2018/financiera/bienes.pdf',
             'Formatos de Analisis' => 'cuenta_publica/2018/st2018/financiera/fmtosanalisis.pdf',
@@ -107,9 +120,9 @@ class CuentapublicaController extends Controller
             'Formatos Armonizados Conac' => 'cuenta_publica/2018/ct2018/presupuestal/conac.pdf',
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/2018/ct2018/presupuestal/ldf.pdf'
         );
-        
-        return view('pages.cuentapublica', ['infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3, 
-        'inffin18'=> $inf_financiera18, 'infpres18'=> $inf_presupuestal18, 'inffin182t'=> $inf_financiera182t, 'infpres182t'=> $inf_presupuestal182t, 'inffint183t'=> $inf_financiera183t, 'infpres183t'=> $inf_presupuestal183t,
+
+        return view('pages.cuentapublica', ['infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3,
+        'infFin4'=>$inf_financiera4,'infPre4'=>$inf_presupuestal4,'inffin18'=> $inf_financiera18, 'infpres18'=> $inf_presupuestal18, 'inffin182t'=> $inf_financiera182t, 'infpres182t'=> $inf_presupuestal182t, 'inffint183t'=> $inf_financiera183t, 'infpres183t'=> $inf_presupuestal183t,
         'inffin184t'=> $inf_financiera184t, 'infpres184t'=> $inf_presupuestal184t]);
 
 
@@ -141,7 +154,7 @@ class CuentapublicaController extends Controller
             '-Dirección de Vinculación con el Sector Productivo' => 'normatividad_/manuales/procedimientos/7direccion_de_vinculacion.pdf',
             '-Unidades de Capacitación' => 'normatividad_/manuales/procedimientos/8unidades_de_capacitacion.pdf',
             '-Glosario de Terminos y Grupo de Trabajos' => 'normatividad_/manuales/procedimientos/9glosario_de_terminos_y_trabajo.pdf'
-            
+
         );
 
         $manu_organizacion =array(
@@ -151,7 +164,7 @@ class CuentapublicaController extends Controller
             'Manual de Organizacion -Glosario de Terminos de Trabajo' => 'normatividad_/manuales/organizacion/glosario_de_terminos_y_trabajo.pdf'
         );
 
-        
+
         return view('pages.normatividad', ['deccrea'=> $dec_decretos, 'reglam'=> $reg_reglamentos, 'manual'=> $man_induccion,
         'manualproc'=> $manu_procedimientos, 'manualorga'=> $manu_organizacion,]);
 
@@ -166,16 +179,16 @@ class CuentapublicaController extends Controller
         );
 
         $lic_federales2 =array(
-            '- Acta de Junta de Aclaración de Dudas' => 'licitaciones_/federal/acta_de_jaictp-002_2019.pdf',              
+            '- Acta de Junta de Aclaración de Dudas' => 'licitaciones_/federal/acta_de_jaictp-002_2019.pdf',
             '- Acta de Apertura de Propuestas Técnicas y Económicas' => 'licitaciones_/federal/acta_de_apertura_propuestas_icatech_ictp_002_2019.pdf',
             '- Acta Circunstanciada 001' => 'licitaciones_/federal/acta_circunstanciada_ictp-002_2019.pdf',
             '- Acta de Fallo' => 'licitaciones_/federal/fallo_icatech_ictp-002_2019.pdf',
         );
-        
+
         $lic_federales3 =array(
-            '- Acta de Junta de Aclaración de Dudas' => 'licitaciones_/federal/acta_de_jaictp-003_2019.pdf',                   
-            '- Acta de Apertura de Propuestas Técnicas y Económicas' => 'licitaciones_/federal/acta_de_apertura_propuestas_icatech_ictp_003_2019.pdf',                  
-            '- Acta Circunstanciada 002' => 'licitaciones_/federal/acta_circunstanciada_ictp-003_2019.pdf',                       
+            '- Acta de Junta de Aclaración de Dudas' => 'licitaciones_/federal/acta_de_jaictp-003_2019.pdf',
+            '- Acta de Apertura de Propuestas Técnicas y Económicas' => 'licitaciones_/federal/acta_de_apertura_propuestas_icatech_ictp_003_2019.pdf',
+            '- Acta Circunstanciada 002' => 'licitaciones_/federal/acta_circunstanciada_ictp-003_2019.pdf',
             '- Acta de Fallo' => 'licitaciones_/federal/fallo_icatech-ictp-003_2019.pdf'
 
         );
@@ -221,7 +234,20 @@ class CuentapublicaController extends Controller
             'Estado de Variación Hacienda Pública' => 'sevac_/2019/t2/estadodevariacionhdapublica.pdf',
             'Notas a los Estados Financieros' => 'sevac_/2019/t2/notasalosestadosfinancieros.pdf',
             'Pasivos Contingentes' => 'sevac_/2019/t2/pasivoscontingentes.pdf'
-        
+
+        );
+
+        $ter_trimestre =array(
+            'Estado Analitico de la deuda y otros pasivos' => 'sevac_/2019/t3/Estado_Analitico_de_la_Deuda_y_Otros_Pasivos.PDF',
+            'Estado Analitico del Activo' => 'sevac_/2019/t3/Estado_Analitico_del_Activo.PDF',
+            'Estado de Actividades'  => 'sevac_/2019/t3/Estado_de_Actividades.PDF',
+            'Estado de Cambios en la Situación Financiera' => 'sevac_/2019/t3/Estado_de_Cambios_en_la_Situacion_Financiera.PDF',
+            'Estado de Flujos de Efectivo' => 'sevac_/2019/t3/Estado_de_Flujos_de_Efectivo.PDF',
+            'Estado de Situación Financiera' => 'sevac_/2019/t3/Estado_de_Situacion_Financiera_.PDF',
+            'Estado de Variación de la Hacienda Pública' => 'sevac_/2019/t3/Estado_de_Variacion_de_la_Hacienda_Publica.PDF',
+            'Informe sobre Pasivos Contingentes' => 'sevac_/2019/t3/Informe_Sobre_Pasivos_Contingentes.PDF',
+            'Notas a los Estados Financieros' => 'sevac_/2019/t3/Notas_a_los_Estados_Financieros.PDF',
+            'Relación de Cuentas Bancarias Productivos Espesificas' => 'sevac_/2019/t3/Relacion_de_Cuentas_Bancarias_Productivas_Especificas.pdf'
         );
 
         $ter_trimestre =array(
@@ -238,39 +264,52 @@ class CuentapublicaController extends Controller
         );
 
         $cuar_trimestre =array(
-            'Analisis de las Principales Variaciones y Adecuaciones al Presupuesto' => 'sevac_/2019/t4/Analisis_de_las_Principales_Variac_y_Adec_del_Ppto.pdf',											
-            'Analisis de los Recursos Federales Etiquetados por Financiamientos' => 'sevac_/2019/t4/Analisis_de_los_recursos_federales_por_fte_de_financiamiento.pdf',											
-            'Aplicación del Presupuesto Total por Rubros'  => 'sevac_/2019/t4/Aplicacion_del_presupuesto_Total_por_Rubros.pdf',											
-            'Cierre Anual 2019'  => 'sevac_/2019/t4/Cierre_Anual_2019.pdf',											
-            'Comparativo de Analisis del Presupuesto por Objeto del Gasto'  => 'sevac_/2019/t4/ComparativoAnalisis_del_Ppto_por_Objeto_del_Gasto.pdf',											
-            'Endeudamiento Neto'  => 'sevac_/2019/t4/endeudamiento_neto.pdf',											
-            'Analitico de Partidas por Clasificacion Administrativa'  => 'sevac_/2019/t4/EP-01_Analitico_de_Partidas_por_Clasificacion_Administrativa.pdf',											
-            'Ingresos Estatales'  => 'sevac_/2019/t4/EP-1A01_Ingresos_Estatales.pdf',											
-            'Por Capitulos Concepto por Partidas Generica y Especifica'  => 'sevac_/2019/t4/EP-03_por_Capitulos_Partida_Generica_y_Partida_Especifica.pdf',											
-            'Resumen Tipo de Gasto y Partida'  => 'sevac_/2019/t4/EP-08_Resumen_Tipo_de_Gasto_y_Partida.pdf',											
-            'Fondo General de Participaciones' => 'sevac_/2019/t4/EP-5811_Fondo_General_de_Participaciones.pdf',											
-            'Impuesto a la Venta Final de Gasolina y Diesel' => 'sevac_/2019/t4/EP-5817_Impuesto_a_la_Venta_Final_de_Gasolina_y_Diesel.pdf',											
-            'Otros Recursos ISR Participable Estatal' => 'sevac_/2019/t4/EP-5818_Otros_Recursos_ISR_Participable_Estatal.pdf',											
-            'Otros Subsidios' => 'sevac_/2019/t4/EP-5932_Otros_Subsidios.pdf',											
-            'Estado Analitico de Ingresos' => 'sevac_/2019/t4/estado_analitico_ingresos.pdf',											
-            'Formato del Ejercicio y Destino de Gasto Federalizado y Reintegros' => 'sevac_/2019/t4/Formato_del_Ejercicio_y_Destino_de_Gasto_Federalizado_y_Reintegros.pdf',											
-            'Guia de Cumplimiento de la LDF' => 'sevac_/2019/t4/GuiadeCumplimientodelaLDF.pdf',											
-            'Intereses de la Deuda' => 'sevac_/2019/t4/Intereses_de_la_Deuda.pdf',											
-            'Clasificacion por Objeto del Gasto' => 'sevac_/2019/t4/LDF_6a_Clasificacion_por_Objeto_del_Gasto_Capitulos_y_Conceptos.pdf',											
-            'Clasificacion Administrativa' => 'sevac_/2019/t4/LDF_6b_Clasificacion_Administrativa.pdf',											
-            'Clasificacion Funcional' => 'sevac_/2019/t4/LDF_6c_Clasificacion_Funcional_Finalidad_y_Funcion.pdf',											
-            'Clasificacion de Servicios Personales por Categoria' => 'sevac_/2019/t4/LDF_6d_Clasificación_de_Servicios_Personales_por_Categoria.pdf',											
-            'Programas y Proyectos de Inversion' => 'sevac_/2019/t4/Programas_y_Proyectos_de_Inversion.pdf',											
-            'Clasificacion Objeto Gasto' => 'sevac_/2019/t4/RPA_1_Clasificacion_Objeto_Gasto_Capitulos_Conceptos.pdf',											
-            'Clasificacion Economica Tipo Gasto' => 'sevac_/2019/t4/RPA_2_Clasificacion_Economica_Tipo__Gasto.pdf',											
-            'Clasificacion Administrativa Organismo' => 'sevac_/2019/t4/RPA_3_Clasificacion_Administrativa_Organismo.pdf',											
-            'Clasificacion Administrativa Poderes' => 'sevac_/2019/t4/RPA_4_Clasificacion_Administrativa_Poderes.pdf',											
-            'Clasificacion Administrativa Entidades' => 'sevac_/2019/t4/RPA_5_Clasificacion_Administrativa_Entidades.pdf',											
-            'Clasificacion Funcional Funcion' => 'sevac_/2019/t4/RPA_6_Clasificacion_Funcional_Finalidad_Funcion.pdf',											
-            'Gasto por Categoria Programatica' => 'sevac_/2019/t4/RPA_7_Gasto_por_Categoria_Programatica.pdf'											
-            
-
+            'Estado Analitico de la deuda y otros pasivos' => 'sevac_/2019/tt4/estado_analatico_deuda_y_pasivos.PDF',
+            'Estado Analitico del Activo' => 'sevac_/2019/tt4/edo_analitico_del_activo.PDF',
+            'Estado de Actividades'  => 'sevac_/2019/tt4/estado_de_actividades.PDF',
+            'Estado de Cambios en la Situación Financiera' => 'sevac_/2019/tt4/edo_cambios_en_situacion_financiera.PDF',
+            'Estado de Flujos de Efectivo' => 'sevac_/2019/tt4/edo_flujos_de_efectivo.PDF',
+            'Estado de Situación Financiera' => 'sevac_/2019/tt4/edo_situacion_financiera.PDF',
+            'Estado de Variación de la Hacienda Pública' => 'sevac_/2019/tt4/edo_variacion_hacienda_publica.PDF',
+            'Informe sobre Pasivos Contingentes' => 'sevac_/2019/tt4/informes_pasivos_contingentes.PDF',
+            'Notas a los Estados Financieros' => 'sevac_/2019/tt4/notas_edos_financieros.PDF',
+            'Relación de Cuentas Bancarias Productivos Espesificas' => 'sevac_/2019/tt4/relacion_ctas_bancarias_prods_esps.pdf'
         );
+
+        /*  $cuar_trimestre =array(
+            'Analisis de las Principales Variaciones y Adecuaciones al Presupuesto' => 'sevac_/2019/t4/Analisis_de_las_Principales_Variac_y_Adec_del_Ppto.pdf',
+            'Analisis de los Recursos Federales Etiquetados por Financiamientos' => 'sevac_/2019/t4/Analisis_de_los_recursos_federales_por_fte_de_financiamiento.pdf',
+            'Aplicación del Presupuesto Total por Rubros'  => 'sevac_/2019/t4/Aplicacion_del_presupuesto_Total_por_Rubros.pdf',
+            'Cierre Anual 2019'  => 'sevac_/2019/t4/Cierre_Anual_2019.pdf',
+            'Comparativo de Analisis del Presupuesto por Objeto del Gasto'  => 'sevac_/2019/t4/ComparativoAnalisis_del_Ppto_por_Objeto_del_Gasto.pdf',
+            'Endeudamiento Neto'  => 'sevac_/2019/t4/endeudamiento_neto.pdf',
+            'Analitico de Partidas por Clasificacion Administrativa'  => 'sevac_/2019/t4/EP-01_Analitico_de_Partidas_por_Clasificacion_Administrativa.pdf',
+            'Ingresos Estatales'  => 'sevac_/2019/t4/EP-1A01_Ingresos_Estatales.pdf',
+            'Por Capitulos Concepto por Partidas Generica y Especifica'  => 'sevac_/2019/t4/EP-03_por_Capitulos_Partida_Generica_y_Partida_Especifica.pdf',
+            'Resumen Tipo de Gasto y Partida'  => 'sevac_/2019/t4/EP-08_Resumen_Tipo_de_Gasto_y_Partida.pdf',
+            'Fondo General de Participaciones' => 'sevac_/2019/t4/EP-5811_Fondo_General_de_Participaciones.pdf',
+            'Impuesto a la Venta Final de Gasolina y Diesel' => 'sevac_/2019/t4/EP-5817_Impuesto_a_la_Venta_Final_de_Gasolina_y_Diesel.pdf',
+            'Otros Recursos ISR Participable Estatal' => 'sevac_/2019/t4/EP-5818_Otros_Recursos_ISR_Participable_Estatal.pdf',
+            'Otros Subsidios' => 'sevac_/2019/t4/EP-5932_Otros_Subsidios.pdf',
+            'Estado Analitico de Ingresos' => 'sevac_/2019/t4/estado_analitico_ingresos.pdf',
+            'Formato del Ejercicio y Destino de Gasto Federalizado y Reintegros' => 'sevac_/2019/t4/Formato_del_Ejercicio_y_Destino_de_Gasto_Federalizado_y_Reintegros.pdf',
+            'Guia de Cumplimiento de la LDF' => 'sevac_/2019/t4/GuiadeCumplimientodelaLDF.pdf',
+            'Intereses de la Deuda' => 'sevac_/2019/t4/Intereses_de_la_Deuda.pdf',
+            'Clasificacion por Objeto del Gasto' => 'sevac_/2019/t4/LDF_6a_Clasificacion_por_Objeto_del_Gasto_Capitulos_y_Conceptos.pdf',
+            'Clasificacion Administrativa' => 'sevac_/2019/t4/LDF_6b_Clasificacion_Administrativa.pdf',
+            'Clasificacion Funcional' => 'sevac_/2019/t4/LDF_6c_Clasificacion_Funcional_Finalidad_y_Funcion.pdf',
+            'Clasificacion de Servicios Personales por Categoria' => 'sevac_/2019/t4/LDF_6d_Clasificación_de_Servicios_Personales_por_Categoria.pdf',
+            'Programas y Proyectos de Inversion' => 'sevac_/2019/t4/Programas_y_Proyectos_de_Inversion.pdf',
+            'Clasificacion Objeto Gasto' => 'sevac_/2019/t4/RPA_1_Clasificacion_Objeto_Gasto_Capitulos_Conceptos.pdf',
+            'Clasificacion Economica Tipo Gasto' => 'sevac_/2019/t4/RPA_2_Clasificacion_Economica_Tipo__Gasto.pdf',
+            'Clasificacion Administrativa Organismo' => 'sevac_/2019/t4/RPA_3_Clasificacion_Administrativa_Organismo.pdf',
+            'Clasificacion Administrativa Poderes' => 'sevac_/2019/t4/RPA_4_Clasificacion_Administrativa_Poderes.pdf',
+            'Clasificacion Administrativa Entidades' => 'sevac_/2019/t4/RPA_5_Clasificacion_Administrativa_Entidades.pdf',
+            'Clasificacion Funcional Funcion' => 'sevac_/2019/t4/RPA_6_Clasificacion_Funcional_Finalidad_Funcion.pdf',
+            'Gasto por Categoria Programatica' => 'sevac_/2019/t4/RPA_7_Gasto_por_Categoria_Programatica.pdf'
+
+
+        );*/
 
 
         $prim_trimestre2018 =array(
@@ -339,7 +378,7 @@ class CuentapublicaController extends Controller
             'Estado Analitico con Clasificacion Funcional' => 'sevac_/2018_/t3/D.3.5 EdoAnaliticoconClasificacionFuncional.pdf',
             'Endeudamiento Neto' => 'sevac_/2018_/t3/D.3.6 Endeudamiento Neto.pdf',
             'Intereses de la Deuda' => 'sevac_/2018_/t3/D.3.7 Intereses de la Deuda.pdf',
-            'Gasto por Categoria Programatica' => 'sevac_/2018_/t3/D.4.1 Gto x Categoria Programatica.pdf', 
+            'Gasto por Categoria Programatica' => 'sevac_/2018_/t3/D.4.1 Gto x Categoria Programatica.pdf',
             'Indicadores de Resultados' => 'sevac_/2018_/t3/D.4.2 Indicadores de Resultados.pdf',
             'Programación y Proyectos de Inversion' => 'sevac_/2018_/t3/D.4.3 Prog y Proyectos de Inversion.pdf'
         );
@@ -349,7 +388,7 @@ class CuentapublicaController extends Controller
 
     }
 
-        
+
 
     public function avisosprivacidad()
     {
@@ -362,7 +401,7 @@ class CuentapublicaController extends Controller
         $avisos_ejecutiva =array(
             'Area de Infórmatica' => 'avisos_privacidad/integral/AVISO_INTEGRAL_INFORMATICA.pdf',
         );
-        
+
         $avisos_juridico =array(
             'Unidad Juridica' => 'avisos_privacidad/integral/AVISO_INTEGRAL_JURIDICO.pdf',
             'Unidad de Transparencia (Derecho ARCO)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_ARCO_TRANSP.pdf',
@@ -371,18 +410,18 @@ class CuentapublicaController extends Controller
 
         $avisos_administrativa =array(
             'Departamento de Recursos Financieros (CDFI)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_FINANCIERO.pdf',
-            'Departamento de Recursos Humanos (Nomina)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_RH_NOMINA_DE PAGO.pdf',            
-            'Departamento de Recursos Humanos (Expediente Unico del Personal)' => 'avisos_privacidad/integral/AVISO_INTE_RH_EXPE_U.P.pdf',            
-            'Departamento de Recursos Humanos (Sistema de Registro de Asistencia)' => 'avisos_privacidad/integral/AVISO_INTE_RH_REGISTRO_DE_ASISTENCIA.pdf',            
-            'Departamento de Recursos Materiales (Proveedores)' => 'avisos_privacidad/integral/MATERIALES_AVISO_INTEGRAL_REGISTRO_DE_PROVEEDORES.pdf',            
-            'Departamento de Recursos Materiales (Resguardos)' => 'avisos_privacidad/integral/MATERIALES_AVISO_INTEGRAL_RESGUARDOS_MOBILIARIO.pdf',            
+            'Departamento de Recursos Humanos (Nomina)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_RH_NOMINA_DE PAGO.pdf',
+            'Departamento de Recursos Humanos (Expediente Unico del Personal)' => 'avisos_privacidad/integral/AVISO_INTE_RH_EXPE_U.P.pdf',
+            'Departamento de Recursos Humanos (Sistema de Registro de Asistencia)' => 'avisos_privacidad/integral/AVISO_INTE_RH_REGISTRO_DE_ASISTENCIA.pdf',
+            'Departamento de Recursos Materiales (Proveedores)' => 'avisos_privacidad/integral/MATERIALES_AVISO_INTEGRAL_REGISTRO_DE_PROVEEDORES.pdf',
+            'Departamento de Recursos Materiales (Resguardos)' => 'avisos_privacidad/integral/MATERIALES_AVISO_INTEGRAL_RESGUARDOS_MOBILIARIO.pdf',
             'Departamento de Recursos Materiales (Registro de Visitas)' => 'avisos_privacidad/integral/MATERIALES_AVISO_INTE_REGISTRO_DE_VISITANTES.pdf'
         );
-        
+
         $avisos_planeacion =array(
             'Dirección de Planeación' => 'avisos_privacidad/integral/AVISO_INTEGRAL_PLANEACION.pdf',
-        );    
-          
+        );
+
         $avisos_vinculacion =array(
             'Dirección de Vinculacion' => '',
             'Direccion de Vinculación con el Sector Productivo' => 'avisos_privacidad/integral/AVISO_INTEGRAL_VINC._CONVENIOS_SEC_PROD..pdf',
@@ -393,7 +432,7 @@ class CuentapublicaController extends Controller
         $avisos_tecnica =array(
             'Departamento de Gestión Academica (Instructores)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_TECNICA_ACADEMICA_VALIDACIÓN_DEL_PERSONAL_TECNICA_ACADEMICA.pdf',
             'Departamento de Certificación y Control' => 'avisos_privacidad/integral/AVISO_INTEGRAL_TECNICA_A_CONTROL_ESCOLAR_TECNICA_A..pdf',
-            
+
         );
 
         $avisos_comisaria =array(
@@ -417,14 +456,14 @@ class CuentapublicaController extends Controller
 
         $simplificados_administrativa =array(
             'Departamento de Recursos Financieros (CDFI)' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_FINANCIERO.pdf',
-            'Departamento de Recursos Humanos (Nomina)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_RH_NOMINA_DE_PAGO.pdf',            
-            'Departamento de Recursos Humanos (Expediente Unico del Personal)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_RH_EXPE_U.P.pdf',            
-            'Departamento de Recursos Humanos (Sistema de Registro de Asistencia)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_RH_REGISTRO_DE_ASISTENCIA.pdf',            
-            'Departamento de Recursos Materiales (Proveedores)' => 'avisos_privacidad/simplificado/MATERIALES_AVISO_SIMPLI_REGISTRO_DE_PROVEEDORES.pdf',            
-            'Departamento de Recursos Materiales (Resguardos)' => 'avisos_privacidad/simplificado/MATERIALES_AVISO_SIMPLI_RESGUARDO_MOBILIARIO.pdf',            
+            'Departamento de Recursos Humanos (Nomina)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_RH_NOMINA_DE_PAGO.pdf',
+            'Departamento de Recursos Humanos (Expediente Unico del Personal)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_RH_EXPE_U.P.pdf',
+            'Departamento de Recursos Humanos (Sistema de Registro de Asistencia)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_RH_REGISTRO_DE_ASISTENCIA.pdf',
+            'Departamento de Recursos Materiales (Proveedores)' => 'avisos_privacidad/simplificado/MATERIALES_AVISO_SIMPLI_REGISTRO_DE_PROVEEDORES.pdf',
+            'Departamento de Recursos Materiales (Resguardos)' => 'avisos_privacidad/simplificado/MATERIALES_AVISO_SIMPLI_RESGUARDO_MOBILIARIO.pdf',
             'Departamento de Recursos Materiales (Registro de Visitas)' => 'avisos_privacidad/simplificado/MATERIALES_AVISO_SIMPLI_REGISTRO_DE_VISITANTES.pdf'
         );
-        
+
         $simplificados_planeacion =array(
             'Dirección de Planeación' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_PLANEACION.pdf'
         );
@@ -445,7 +484,7 @@ class CuentapublicaController extends Controller
             'Comisaria Pública' => 'avisos_privacidad/simplificado/SIMPLI_COMISARIA.pdf'
         );
 
-        
+
 
         return view('pages.avisosprivacidad', ['avis_inte' =>$avisos_integrales, 'unejec' => $avisos_ejecutiva, 'unjuri' => $avisos_juridico, 'diradm' => $avisos_administrativa,
         'dirplan' => $avisos_planeacion, 'dirvincula' => $avisos_vinculacion, 'dirtacad' => $avisos_tecnica, 'comi' => $avisos_comisaria, 'avis_simpl' => $avisos_simplificados, 'simejec' => $simplificados_ejecutiva, 'simjuri' => $simplificados_juridico, 'simadmi' => $simplificados_administrativa,
@@ -455,7 +494,7 @@ class CuentapublicaController extends Controller
     public function Integridad()
     {
         $conduc_codigos =array(
-            'Codigo de Conducta ICATECH' => 'codigos_conducta/códigodeconductaicatech.pdf', 
+            'Codigo de Conducta ICATECH' => 'codigos_conducta/códigodeconductaicatech.pdf',
         );
 
         $honesti_codigos =array(
@@ -481,7 +520,7 @@ class CuentapublicaController extends Controller
         $protocolodeatencion_codigo =array(
             'Protocolo de Atención de Quejas y Denuncias'=> 'codigos_conducta/protocolo-de-atencion-a-denuncias.pdf',
         );
-       
+
         return view('pages.Integridad', ['codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo, 'convocatorias' =>$convocatorias_codigo, 'protocolo' =>$protocolodeatencion_codigo]);
     }
     public function planarchivo()
@@ -497,8 +536,8 @@ class CuentapublicaController extends Controller
     public function transparenciaicatech()
     {
     }
-   
-    
+
+
     /**
      * Show the form for creating a new resource.
      *
