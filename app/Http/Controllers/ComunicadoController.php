@@ -73,7 +73,7 @@ class ComunicadoController extends Controller
                 } else {
                     return Redirect::to("/error-cargar-comunicado");
                 }
-                
+
 
                 $saveComunicado->titulo = trim($request->titulo);
                 $saveComunicado->imagen = trim($imagenUrl);
@@ -159,15 +159,15 @@ class ComunicadoController extends Controller
     }
 
     /*
-     * Método para mostrar el formulario de captura 
+     * Método para mostrar el formulario de captura
      */
     public function getform(){
         return view('pages.formulario_comunicado');
     }
     /**
-     * 
-     * 
-     * 
+     *
+     *
+     *
      */
     public function getnews() {
         $comunicados = new Comunidado();
@@ -178,7 +178,7 @@ class ComunicadoController extends Controller
 
     protected function antiScript($contenido)
     {
-        $pattern = '/script.*?\/script/ius'; 
+        $pattern = '/script.*?\/script/ius';
         $safecontenido = preg_replace($pattern, '', $contenido) ? preg_replace('/script.*?\/script/ius', '', $contenido) : $contenido; // elimina cualquier tipo de ataque con script
         if (strcmp($contenido, $safecontenido) !== 0)
         {

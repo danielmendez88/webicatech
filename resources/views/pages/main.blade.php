@@ -9,11 +9,16 @@
 			<div class="masonry-grid-item col-sm-8 col-md-16 col-lg-7 g-mb-30">
 				<div class="col-md-12 col-sm-4 endeos-unslider">
 					<ul class="rslides" id="slider1">
-						<li><img src="../../Imagenes Pagina/2.jpg" alt=""></li>
-						<li><img src="../../Imagenes Pagina/1.jpg" alt=""></li>
-						<li><img src="../../Imagenes Pagina/4.jpg" alt=""></li>
-						<li><img src="../../Imagenes Pagina/5.jpg" alt=""></li>
-						<li><img src="../../Imagenes Pagina/3.jpg" alt=""></li>
+                        <li><img src="../../Imagenes Pagina/1.jpeg" alt=""></li>
+                        <li><img src="../../Imagenes Pagina/2.jpg" alt=""></li>
+                        <li><img src="../../Imagenes Pagina/3.jpeg" alt=""></li>
+                        <li><img src="../../Imagenes Pagina/4.jpg" alt=""></li>
+                        <li><img src="../../Imagenes Pagina/5.jpeg" alt=""></li>
+                        <li><img src="../../Imagenes Pagina/6.jpg" alt=""></li>
+                        <li><img src="../../Imagenes Pagina/7.jpeg" alt=""></li>
+                        <li><img src="../../Imagenes Pagina/8.jpg" alt=""></li>
+                        <li><img src="../../Imagenes Pagina/9.jpeg" alt=""></li>
+                        <li><img src="../../Imagenes Pagina/10.jpg" alt=""></li>
 					</ul>
 				</div>
 			</div>
@@ -29,18 +34,18 @@
 						<ul class="vc_list">
 							@foreach ($new_all as $noticias)
 								<li>
-									<p><h3>{{ $noticias->titulo }}</h3></p> 
+									<p><h3>{{ $noticias->titulo }}</h3></p>
 									<p>{!! html_entity_decode($noticias->resumen) !!} [...]</p>
 									<a target="_blank" href="comunicado-detalle/{{ base64_encode($noticias->id) }}/{{ $noticias->url }}"><b>Leer Más...</b></a>
 								</li>
-							@endforeach							
+							@endforeach
 						</ul>
 					</div>
 				</div>
 				<!--div contenedor END-->
 			</div>
 		</div>
-		<!--grids end-->		
+		<!--grids end-->
 	</div>
 	<div class="container g-pt-25">
 		<div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
@@ -106,7 +111,7 @@
 			</div>
 	</div>
 
-			
+
 	<!--banners-->
 	<div class="container g-pt-25">
 		<div class="u-heading-v2-5--bottom g-brd-primary g-mb-50 text-left">
@@ -114,17 +119,17 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-8 col-sm-6">
-					<h3>Facebook<hr class="red"></h3>	
-				<div class="fb-page" 
-					data-href="https://www.facebook.com/Icatech-Chiapas-475079282568212/" 
-					data-tabs="timeline" 
-					data-width="500" 
-					data-height="" 
-					data-small-header="true" 
-					data-adapt-container-width="true" 
-					data-hide-cover="false" 
+					<h3>Facebook<hr class="red"></h3>
+				<div class="fb-page"
+					data-href="https://www.facebook.com/Icatech-Chiapas-475079282568212/"
+					data-tabs="timeline"
+					data-width="500"
+					data-height=""
+					data-small-header="true"
+					data-adapt-container-width="true"
+					data-hide-cover="false"
 					data-show-facepile="true">
-						<blockquote cite="https://www.facebook.com/Icatech-Chiapas-475079282568212/" class="fb-xfbml-parse-ignore">		
+						<blockquote cite="https://www.facebook.com/Icatech-Chiapas-475079282568212/" class="fb-xfbml-parse-ignore">
 							<a href="https://www.facebook.com/Icatech-Chiapas-475079282568212/">
 								Icatech
 							</a>
@@ -133,21 +138,21 @@
 			</div>
 			<!---->
 			<div class="col-xs-8 col-sm-6">
-			<h3>Twitter<hr class="red"></h3> 
-			<a class="twitter-timeline" 
-				data-width="500" 
+			<h3>Twitter<hr class="red"></h3>
+			<a class="twitter-timeline"
+				data-width="500"
 				data-height="550"
-				 href="https://twitter.com/IcatechOficial?ref_src=twsrc%5Etfw">Tweets by IcatechOficial</a> 
+				 href="https://twitter.com/IcatechOficial?ref_src=twsrc%5Etfw">Tweets by IcatechOficial</a>
 				 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
 				 </script>
 			</div>
 			<!---->
-			
-		</div>								
+
+		</div>
 	</div>
 	<!--redes sociales END-->
 
-	
+
 
 	<html lang="en">
 
@@ -178,8 +183,8 @@
 						     </video>
 						 </a>
 					 </div>
-                 
-					
+
+
                 </form>
 			</div>
 			<div class="modal-footer">
@@ -193,6 +198,6 @@
 
 </html>
 
-	
+
 
 @stop
