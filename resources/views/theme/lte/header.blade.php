@@ -29,6 +29,6 @@
 
 
 	<section class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll dzsprx-readyall loaded" data-options="{direction: &quot;normal&quot;, settings_mode_oneelement_max_offset: &quot;150&quot;}" style="height: 380px">
-		<div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-img-hero g-bg-bluegray-opacity-0_3--after " style="height: 100%; background-image: url('{{asset('/Imagenes Pagina/covid19_icatech.png')}}'); transform: translate3d(0px, 0px, 0px);">
+		<div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-img-hero g-bg-bluegray-opacity-0_3--after " style="height: 100%; background-image: url('{{asset('/Imagenes Pagina/covid19_icatech.jpeg')}}'); background-size: 1108px 380px; transform: translate3d(0px, 0px, 0px);">
 		</div>
 	</section>
