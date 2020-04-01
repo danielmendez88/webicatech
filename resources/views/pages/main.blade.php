@@ -154,7 +154,7 @@
 
 
 
-	<html lang="en">
+	<!--<html lang="en">
 
 		<head>
 
@@ -174,12 +174,12 @@
             	     <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
  					 </div>
-	             <div class="modal-body">
+	     <div class="modal-body">
              <form>
                 	 <div class="">
 					     <a target="_blank" href="https://www.facebook.com/Icatech-Chiapas-475079282568212/">
 							 <video class="video-fluid z-depth-1" autoplay muted loop>
-								<source src="../../Imagenes Pagina/videoicatechpop.mp4" type="video/mp4" />
+								<source src="../../Imagenes Pagina/video_icatech.mp4" type="video/mp4" />
 						     </video>
 						 </a>
 					 </div>
@@ -190,13 +190,13 @@
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
 			</div>
-        </div>
-    </div>
-</div>
+       	 </div>
+   		 </div>
+		</div>
 
-</body>
+		</body>
 
-</html>
+		</html>-->
 
 
 

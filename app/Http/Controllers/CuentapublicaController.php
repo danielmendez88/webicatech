@@ -193,8 +193,12 @@ class CuentapublicaController extends Controller
 
         );
 
+        $lic_federales4 =array(
+            '-Acta de Aclaración de Dudas' => 'licitaciones_/federal/aclaraciondedudas_ICATECH_ICTP_001_2020.pdf'
+        );
 
-        return view('pages.licitaciones', ['licfed'=> $lic_federales, 'licfed2'=> $lic_federales2, 'licfed3'=> $lic_federales3]);
+
+        return view('pages.licitaciones', ['licfed'=> $lic_federales, 'licfed2'=> $lic_federales2, 'licfed3'=> $lic_federales3, 'licfed4'=> $lic_federales4]);
     }
 
     public function sevac()
