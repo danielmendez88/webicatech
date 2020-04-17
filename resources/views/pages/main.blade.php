@@ -12,11 +12,11 @@
                         <li><img src="../../Imagenes Pagina/1.jpeg" alt=""></li>
                         <li><img src="../../Imagenes Pagina/2.jpg" alt=""></li>
                         <li><img src="../../Imagenes Pagina/3.jpeg" alt=""></li>
-                        <li><img src="../../Imagenes Pagina/4.jpg" alt=""></li>
+                        <li><img src="../../Imagenes Pagina/4.jpeg" alt=""></li>
                         <li><img src="../../Imagenes Pagina/5.jpeg" alt=""></li>
-                        <li><img src="../../Imagenes Pagina/6.jpg" alt=""></li>
+                        <li><img src="../../Imagenes Pagina/6.jpeg" alt=""></li>
                         <li><img src="../../Imagenes Pagina/7.jpeg" alt=""></li>
-                        <li><img src="../../Imagenes Pagina/8.jpg" alt=""></li>
+                        <li><img src="../../Imagenes Pagina/8.jpeg" alt=""></li>
                         <li><img src="../../Imagenes Pagina/9.jpeg" alt=""></li>
                         <li><img src="../../Imagenes Pagina/10.jpg" alt=""></li>
 					</ul>
