@@ -155,50 +155,41 @@
 
 						<script>
 							$(function() {
-								$(".rslides").responsiveSlides();
+                                $(".rslides").responsiveSlides();
 							});
 
-						  $(document).on('ready', function () {
+                            $(document).on('ready', function () {
 
-                              $('div .smartmarquee').smartmarquee();
+                                $('div .smartmarquee').smartmarquee();
 
-						    	$.HSCore.components.HSHeader.init($('#js-header'));
-						    	$.HSCore.helpers.HSHamburgers.init('.hamburger');
+                                    $.HSCore.components.HSHeader.init($('#js-header'));
+                                    $.HSCore.helpers.HSHamburgers.init('.hamburger');
 
-							    $('.js-mega-menu').HSMegaMenu({
-							      event: 'hover',
-							      pageContainer: $('.container'),
-							      breakpoint: 991
-							    });
+                                    $('.js-mega-menu').HSMegaMenu({
+                                    event: 'hover',
+                                    pageContainer: $('.container'),
+                                    breakpoint: 991
+                                    });
 
-							    $.HSCore.components.HSDropdown.init($('[data-dropdown-target]'), {
-							      afterOpen: function () {
-							        $(this).find('input[type="search"]').focus();
-							      }
-							    });
+                                    $.HSCore.components.HSDropdown.init($('[data-dropdown-target]'), {
+                                    afterOpen: function () {
+                                        $(this).find('input[type="search"]').focus();
+                                    }
+                                    });
 
-							    $.HSCore.components.HSPopup.init('.js-fancybox');
-							    $.HSCore.components.HSCarousel.init('.js-carousel');
-							    $.HSCore.components.HSGoTo.init('.js-go-to');
+                                    $.HSCore.components.HSPopup.init('.js-fancybox');
+                                    $.HSCore.components.HSCarousel.init('.js-carousel');
+                                    $.HSCore.components.HSGoTo.init('.js-go-to');
 
-							    /*$('.slider_unidades').unslider({
-									speed: 800,
-									delay: 4000,
-									keys: true,
-									dots: true,
-									fluid: true
-								});*/
-								 // Slideshow 1
-
-								$('.carousel').carousel({
-								  interval: 3000
-								})
-						  });
+                                    $('.carousel').carousel({
+                                    interval: 3000
+                                    })
+                            });
 						</script>
 						<!--prueba!-->
-						<!--<script>
-							document.getElementById('vid').play();
-						</script>-->
+						<script>
+							// document.getElementById('vid').play();
+						</script>
 						<script>
 
 							$(document).ready(function(){

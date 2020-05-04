@@ -76,7 +76,7 @@ Route::get('/transparenciaicatech', 'CuentapublicaController@transparenciaicatec
 // prospectos
 Route::get('/prospectosalumnos', 'ProspectosController@index');
 // TRANSPARENCIA
-	Route::get('/planarchivo', 'CuentapublicaController@planarchivo');
+Route::get('/planarchivo', 'CuentapublicaController@planarchivo');
 
 
 

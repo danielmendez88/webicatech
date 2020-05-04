@@ -1,11 +1,9 @@
 $(function(){
-    $('input[type=text]').val (function(){
-        console.log(this.value);
-        return this.value.toUpperCase();
+    $('input[type=text]').keyup(function(){
+        this.value = this.value.toUpperCase();
     })
 
-    $('textarea').val(function(){
-        console.log("hola");
-        return this.value.toUpperCase();
+    $('textarea').keyup(function(){
+        this.value = this.value.toUpperCase();
     })
 });

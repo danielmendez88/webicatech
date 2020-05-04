@@ -6,12 +6,6 @@ $(document).ready(function (){
 		dots: true,
 		fluid: true
     });
-    $('input[type=text]').val(function(){
-        return this.value.toUpperCase();
-    })
-
-    console.log("hola");
-    alert("HI"+$.ui.version);
 
     $("#fecha_nacimiento").datepicker({
         changeMonth: true,
