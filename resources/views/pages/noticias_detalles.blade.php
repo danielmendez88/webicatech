@@ -21,7 +21,7 @@
                     <ul class="list-inline g-font-size-12 mb-0">
                         <li class="list-inline-item g-mb-10">
                             <a href="" class="u-tags-v1 g-color-black g-bg-black-opacity-0_1 g-bg-morado--hover g-color-white--hover g-rounded-50 g-py-4 g-px-15">
-                            </a>    
+                            </a>
                         </li>
                     </ul>
                 </article>

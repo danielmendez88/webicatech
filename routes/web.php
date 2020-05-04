@@ -11,6 +11,11 @@
 |
 */
 
+// REGISTRO DE ASPIRANTES
+Route::get('/aspirante', 'AlumnoController@create')->name('aspirante.crear');
+Route::post('/aspirante/save', 'AlumnoController@store')->name('alumnos.save');
+
+
 Route::get('/', 'ComunicadoController@index');
 // CONOCENOS
 Route::get('/conocenos', function(){
@@ -48,7 +53,7 @@ Route::get('/sevac', 'CuentapublicaController@sevac');
 
 //SEVAC 2018
 Route::get('/sevac2018', 'CuentapublicaController@sevac_2018');
-	
+
 //NORMATIVIDAD
 Route::get('/normatividad', 'CuentapublicaController@normatividad');
 //CUENTA PUBLICA
@@ -73,7 +78,7 @@ Route::get('/prospectosalumnos', 'ProspectosController@index');
 // TRANSPARENCIA
 	Route::get('/planarchivo', 'CuentapublicaController@planarchivo');
 
-	
+
 
 Auth::routes();
 
@@ -88,6 +93,6 @@ Route::get('listadotransparencia', function () {
 });
 // nueva ruta para el controlador transparencia/
  //PLANEACION NUEVA PAGINA/
- 
- 
+
+
 

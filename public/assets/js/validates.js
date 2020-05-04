@@ -7,6 +7,7 @@ $(function() {
     //         return false;
     //     }
     // });
+
     $("#registercomunicado").validate({
         // crear reglas de validación
         rules: {
