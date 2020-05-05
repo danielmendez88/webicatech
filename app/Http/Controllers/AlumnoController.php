@@ -62,6 +62,7 @@ class AlumnoController extends Controller
                 'municipio' => 'required',
                 'estado_civil' => 'required',
                 'discapacidad' => 'required',
+                'g-recaptcha-response' => 'required|captcha',
             ]);
             if ($validator->fails()) {
                 # devolvemos un error
