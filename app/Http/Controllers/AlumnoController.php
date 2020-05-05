@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
 use PDF;
 use GuzzleHttp;
-use Guzzle\Http\Client;
+use GuzzleHttp\Client;
 use GuzzleHttp\Subscriber\Oauth\Oauth1;
 
 class AlumnoController extends Controller
@@ -26,7 +26,7 @@ class AlumnoController extends Controller
         $municipios = $municipio->all();
         $estados = $estado->all();*/
         // return view('sid', compact('municipios', 'estados'));
-        $client = new \GuzzleHttp\Client();
+        $client = new Client();
         $response = $client->request('GET', 'https://www.sivyc.icatech.gob.mx/api/municipios');
         $datam = json_decode($response->getBody());
 
