@@ -27,10 +27,10 @@ class AlumnoController extends Controller
         $estados = $estado->all();*/
         // return view('sid', compact('municipios', 'estados'));
         $client = new Client();
-        $response = $client->request('GET', 'https://www.sivyc.icatech.gob.mx/api/municipios');
+        $response = $client->request('GET', 'https://www.sivyc.icatech.gob.mx/api/municipios', ['verify' => false]);
         $datam = json_decode($response->getBody());
 
-        $response = $client->request('GET', 'https://www.sivyc.icatech.gob.mx/api/estados');
+        $response = $client->request('GET', 'https://www.sivyc.icatech.gob.mx/api/estados', ['verify' => false]);
         $datae = json_decode($response->getBody());
         return view('pages.aspirante', compact('datae','datam')) ;
     }
