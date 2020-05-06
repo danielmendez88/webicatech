@@ -149,7 +149,14 @@
                         <script src="{{asset("assets/js/aspirante.js")}}"></script>
                         <script src="{{asset("assets/js/uppercase.js")}}"></script>
                         <script src="{{asset("assets/js/validate.js")}}"></script>
-                        <script src='https://www.google.com/recaptcha/api.js'></script>
+                        <script src="https://www.google.com/recaptcha/api.js?render=6LfGAPMUAAAAAM-J9Jh2mkGudMfWWsspVIIw-YQb"></script>
+                        <script>
+                            $(function () {
+                               grecaptcha.ready(function () {
+                                   grecaptcha.execute('6LfGAPMUAAAAAM-J9Jh2mkGudMfWWsspVIIw-YQb', {action: 'homepage'});
+                               });
+                            });
+                        </script>
 
 						<!--plug in facebook-->
 						<div id="fb-root"></div>
