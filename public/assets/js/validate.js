@@ -64,7 +64,8 @@ $('#form_sid').validate({
         },
         discapacidad: {
             required: true
-        }
+        },
+
     },
     messages: {
         nombre: {
@@ -111,7 +112,8 @@ $('#form_sid').validate({
         },
         discapacidad: {
             required: 'Por favor seleccione una opción'
-        }
+        },
+
     }
 });
 });

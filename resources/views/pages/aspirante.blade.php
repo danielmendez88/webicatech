@@ -2,6 +2,8 @@
 <!--generado por Daniel Méndez-->
 @section('title', 'Solicitud de Inscripción | ICATECH')
 <!--contenido-->
+<link rel="stylesheet" href="{{asset("assets/css/legend.css")}}">
+
 @section('content')
     <div class="container g-pt-50">
         @if ($errors->any())
@@ -20,7 +22,7 @@
         <div style="text-align: center;">
             <h4><b>DATOS PERSONALES</b></h4>
         </div>
-        <form method="POST" id="form_sid" action="{{ route('alumnos.save') }}">
+        <form method="POST" id="form_sid" action="{{ route('alumnos.save') }}" onsubmit="miFuncion()">
             @csrf
             <div class="form-row">
                 <!--nombre aspirante-->
@@ -128,17 +130,31 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
-                <label class="col-md-4 control-label">Captcha</label>
-                <div class="col-md-6">
-                    {!! app('captcha')->display() !!}
-                    @if ($errors->has('g-recaptcha-response'))
-                    <span class="help-block">
-                        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
-                    </span>
-                @endif
+            <div class="form-row">
+                <div class="form-group col-md-1">
+                        <label class="a">
+                        <input id="condicion" name="condicion" type="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+
+                </div>
+                <div class="d form-group col-md-8">
+                    <small>Con fundamento en el TÍTULO TERCERO de la Ley de Protección de Datos Personales en Posesión de Sujetos
+                        Obligados del Estado de Chiapas, se requiere a los alumnos para que manifiesten su consentimiento mediante
+                        escrito dirigido a la Unidad de Transparencia del ICATECH para el acceso, rectificación, cancelación y
+                        oposición al tratamiento de los datos personales que le conciernen; en el entendido de que su omisión a
+                        desahogar dicho requerimiento establecerá su consentimiento tácito para que dicha información sea de
+                        carácter pública con base en lo establecido en la Ley de Protección de Datos Personales en Posesión de
+                        Sujetos Obligados del Estado de Chiapas y la Ley de Transparencia y Acceso a la Información Pública para
+                        el Estado de Chiapas.
+                        <br><br> Puede consultar los Avisos de Privacidad Respectivos  <a href='https://www.icatech.gob.mx/avisos-de-privacidad' target="blank">AQUI</a>
+                    </small>
                 </div>
             </div>
+            <div class="text-center">
+                <div id="captcha" name="captcha" class="g-recaptcha" data-sitekey="6Le3cfMUAAAAAP8r_yP1-QdqUTbs9aSLKuctenHs"></div>
+            </div>
+            <br/>
             <br>
             <!--botones de enviar y retroceder-->
             <div class="row">
@@ -147,7 +163,7 @@
                         <a class="btn btn-danger" href="{{URL::previous()}}">Regresar</a>
                     </div>
                     <div class="pull-right">
-                        <button type="submit" class="btn btn-primary" >Guardar</button>
+                        <button class="btn btn-primary" type="submit">Guardar</button>
                     </div>
                 </div>
             </div>

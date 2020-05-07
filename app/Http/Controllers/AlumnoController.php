@@ -62,7 +62,6 @@ class AlumnoController extends Controller
                 'municipio' => 'required',
                 'estado_civil' => 'required',
                 'discapacidad' => 'required',
-                'g-recaptcha-response' => 'required|captcha',
             ]);
             if ($validator->fails()) {
                 # devolvemos un error
@@ -71,25 +70,39 @@ class AlumnoController extends Controller
                         ->withErrors($validator)
                         ->withInput();
             } else {
-                dd($request);
-               /* $AlumnoPreseleccion = new Alumnopre;
-                $AlumnoPreseleccion->nombre = $request->nombre;
-                $AlumnoPreseleccion->apellidoPaterno = $request->apellidoPaterno;
-                $AlumnoPreseleccion->apellidoMaterno = $request->apellidoMaterno;
-                $AlumnoPreseleccion->sexo = $request->sexo;
-                $AlumnoPreseleccion->curp = $request->curp;
-                $AlumnoPreseleccion->fecha_nacimiento = $AlumnoPreseleccion->setFechaNacAttribute($request->fecha_nacimiento);
-                $AlumnoPreseleccion->telefono = $request->telefono;
-                $AlumnoPreseleccion->domicilio = $request->domicilio;
-                $AlumnoPreseleccion->colonia = $request->colonia;
-                $AlumnoPreseleccion->cp = $request->cp;
-                $AlumnoPreseleccion->estado = $request->estado;
-                $AlumnoPreseleccion->municipio = $request->municipio;
-                $AlumnoPreseleccion->estado_civil = $request->estado_civil;
-                $AlumnoPreseleccion->discapacidad = $request->discapacidad;
+                $client = new \GuzzleHttp\Client(['verify' => false]);
 
-                $AlumnoPreseleccion->save();*/
-                // redireccionamos con un mensaje de éxito
+                dd("paso");
+
+                $data   = [
+                        "nombre" => trim($this->antiScript($request->nombre)),
+                        "apellidoPaterno" => trim($this->antiScript($request->apellidoPaterno)),
+                        "apellidoMaterno" => trim($this->antiScript($request->apellidoMaterno)),
+                        "sexo" => trim($this->antiScript($request->sexo)),
+                        "curp" => trim($this->antiScript($request->curp)),
+                        "fecha_nacimiento" => trim($this->antiScript($request->fecha_nacimiento)),
+                        "telefono" => trim($this->antiScript($request->telefono)),
+                        "domicilio" => trim($this->antiScript($request->domicilio)),
+                        "colonia" => trim($this->antiScript($request->colonia)),
+                        "cp" => trim($this->antiScript($request->cp)),
+                        "estado" => trim($this->antiScript($request->estado)),
+                        "municipio" => trim($this->antiScript($request->municipio)),
+                        "estado_civil" => trim($this->antiScript($request->estado_civil)),
+                        "discapacidad"=> trim($this->antiScript($request->discapacidad))
+                ];
+
+                $response = $client->request('POST', 'https://www.sivyc.icatech.gob.mx/api/alumnopre', [
+                    'form_params' => $data,
+                ]);
+
+
+
+               // $response = $client->post("/api/alumnopre", $data, ['verify' => false],);
+
+                //echo $response->getBody();
+
+
+
                 return redirect('/aspirante')->with('success', 'Nuevo Alumno Agregado Exitosamente!');
             }
 
@@ -114,5 +127,17 @@ class AlumnoController extends Controller
         $pdf = PDF::loadView('layouts.pdfpages.registroalumno');
 
         return $pdf->stream('registro.pdf');
+    }
+
+    protected function antiScript($contenido)
+    {
+        $pattern = '/script.*?\/script/ius';
+        $safecontenido = preg_replace($pattern, '', $contenido) ? preg_replace('/script.*?\/script/ius', '', $contenido) : $contenido; // elimina cualquier tipo de ataque con script
+        if (strcmp($contenido, $safecontenido) !== 0)
+        {
+            $safecontenido = NULL;
+        }
+
+        return $safecontenido;
     }
 }

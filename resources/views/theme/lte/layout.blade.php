@@ -50,7 +50,10 @@
 					<link rel="stylesheet" href="{{asset("assets/css/style.css")}}">
 					<link rel="stylesheet" href="{{asset("assets/css/principal.css")}}">
                     <link rel="stylesheet" type="text/css" href="{{asset("assets/css/slider_unidad.css")}}">
-					<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+                    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+                    <!-- Recaptcha -->
+                    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 					 <!-- Icons -->
                      <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -149,19 +152,26 @@
                         <script src="{{asset("assets/js/aspirante.js")}}"></script>
                         <script src="{{asset("assets/js/uppercase.js")}}"></script>
                         <script src="{{asset("assets/js/validate.js")}}"></script>
-                        <script src="https://www.google.com/recaptcha/api.js?render=6LfGAPMUAAAAAM-J9Jh2mkGudMfWWsspVIIw-YQb"></script>
-                        <script>
-                            $(function () {
-                               grecaptcha.ready(function () {
-                                   grecaptcha.execute('6LfGAPMUAAAAAM-J9Jh2mkGudMfWWsspVIIw-YQb', {action: 'homepage'});
-                               });
-                            });
-                        </script>
 
 						<!--plug in facebook-->
 						<div id="fb-root"></div>
 						<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=2084976248184121&autoLogAppEvents=1"></script>
-						<!--plug in facebook END-->
+                        <!--plug in facebook END-->
+
+                        <script>
+                            function miFuncion() {
+                              var response = grecaptcha.getResponse();
+
+                              if(response.length == 0){
+                                alert("Captcha no verificado")
+                              }
+                              if ($('#condicion').is(":unchecked")) {
+                                alert("Por Favor Indica que Aceptas Los avisos de Privacidad");
+                                form.condicion.focus();
+                                return false;
+                              }
+                            }
+                          </script>
 
 
 						<script>
