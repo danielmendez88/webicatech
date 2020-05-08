@@ -443,6 +443,11 @@ class CuentapublicaController extends Controller
             'Comisaria Pública' => 'avisos_privacidad/integral/INTEGRAL_COMISARIA.pdf'
         );
 
+        $avisos_cursos =array(
+            'Cursos' => 'avisos_privacidad/integral/aviso_integral_de_cursos.pdf'
+        );
+
+
         $avisos_simplificados =array(
             'ICATECH' => 'avisos_privacidad/simplificado/AVISO_SMPLIFICADO_ICATECH.pdf',
             'Dirección General' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_DIRECCION_G..pdf'
@@ -488,11 +493,15 @@ class CuentapublicaController extends Controller
             'Comisaria Pública' => 'avisos_privacidad/simplificado/SIMPLI_COMISARIA.pdf'
         );
 
+        $simplificados_cursos =array(
+            'Cursos' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_DE_CURSO.pdf'
+        );
+
 
 
         return view('pages.avisosprivacidad', ['avis_inte' =>$avisos_integrales, 'unejec' => $avisos_ejecutiva, 'unjuri' => $avisos_juridico, 'diradm' => $avisos_administrativa,
         'dirplan' => $avisos_planeacion, 'dirvincula' => $avisos_vinculacion, 'dirtacad' => $avisos_tecnica, 'comi' => $avisos_comisaria, 'avis_simpl' => $avisos_simplificados, 'simejec' => $simplificados_ejecutiva, 'simjuri' => $simplificados_juridico, 'simadmi' => $simplificados_administrativa,
-        'simplan' => $simplificados_planeacion, 'simvincu' => $simplificados_vinculacion, 'simacad' => $simplificados_academica, 'simcomi' =>$simplificados_comisaria]);
+        'simplan' => $simplificados_planeacion, 'simvincu' => $simplificados_vinculacion, 'simacad' => $simplificados_academica, 'simcomi' =>$simplificados_comisaria, 'aviscurso' =>$avisos_cursos, 'simcurso' => $simplificados_cursos]);
     }
 
     public function Integridad()
