@@ -1,5 +1,5 @@
 @extends("theme.convocatorias.layout")
-@section('title', 'Conocenos | Icatech')
+@section('title', 'Convocatoria Instructores Externos | Icatech')
 
 @section('content')
 <!-- PAGINA -->
@@ -56,7 +56,7 @@
         <div class="masonry-grid row  row-eq-twelve">
             <div class="masonry-grid-item col-sm-12 col-md-12 col-lg-12 g-mb-30">
                 <!--tabla-->
-                <table class="table">
+                <table class="table" id="tblconvocatoria">
                     <thead class="thead-dark">
                       <tr>
                         <th scope="col">CURSO</th>

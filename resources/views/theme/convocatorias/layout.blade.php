@@ -42,6 +42,7 @@
         <link rel="stylesheet" href="{{asset("assets/css/principal.css")}}">
         <link rel="stylesheet" type="text/css" href="{{asset("assets/css/slider_unidad.css")}}">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="{{ asset("assets/stacktable/stacktable.css")}}">
 
         <!-- Recaptcha -->
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -89,10 +90,10 @@
             <script src="{{asset("assets/js/aspirante.js")}}"></script>
             <script src="{{asset("assets/js/uppercase.js")}}"></script>
             <script src="{{asset("assets/js/validate.js")}}"></script>
+            <script src="{{ asset("assets/stacktable/stacktable.js") }}"></script>
 
-            <!--plug in facebook-->
-            <div id="fb-root"></div>
-            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=2084976248184121&autoLogAppEvents=1"></script>
-            <!--plug in facebook END-->
+            <script>
+                $('#tblconvocatoria').stacktable({myClass:'table'});
+           </script>
     </body>
 </html>
