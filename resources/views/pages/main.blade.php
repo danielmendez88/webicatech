@@ -104,8 +104,8 @@
 					<a href="/transparencia" target=""><img src="Imagenes Pagina/banner icatechtransparencia4.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="/planarchivo" target=""><img src="Imagenes Pagina/programa_anual_icatech.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="/avisos-de-privacidad" target=""><img src="Imagenes Pagina/avisodeprivacidad2.jpg" width="500px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="/normatividad" target=""><img src="Imagenes Pagina/normatividad2.jpg" width="370px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-
+                    <a href="/normatividad" target=""><img src="Imagenes Pagina/normatividad2.jpg" width="370px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{route('convocatoria.instructores_externos')}}" target="_blank"><img src="Imagenes Pagina/convocatoria_banner.jpeg" width="500px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					</marquee>
 				</p>
 			</div>
