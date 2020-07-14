@@ -1,4 +1,4 @@
-/* 
+/*
 Theme Name: Dependencias de Gobierno del Estado de Chiapas
 Template Theme URI: https://chiapas.gob.mx
 Author: Secretaría de Salud
@@ -54,7 +54,7 @@ Version: 1.0
 .u-block-hover:hover .g-color-accent--hover, .g-color-accent--hover:hover {
     color: #B09A5B !important;
 }
-  
+
 .g-parent:hover .g-color-accent--parent-hover {
 color: #B09A5B !important;
 }
@@ -96,8 +96,16 @@ color: #B09A5B !important;
   position: absolute;
   right: 0;
   bottom: 0;
-  min-width: 100%; 
+  min-width: 100%;
   min-height: 100%;
+}
+
+#red_corners {
+    border-radius: 25px;
+    background: 'red';
+    padding: 20px;
+    width: 200px;
+    height: 150px;
 }
 
 ol {text-align: justify}
