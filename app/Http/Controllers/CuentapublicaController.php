@@ -227,6 +227,34 @@ class CuentapublicaController extends Controller
 
     public function sevac()
     {
+        $prim_trimestre2020 =array(
+            'Estado Analitico de Deuda y de Otros Pasivos' => 'sevac_/2020/1t/estado_analitico_de_deuda_otros_pasivos.pdf',
+            'Estado Analitico del Activo' => 'sevac_/2020/1t/estado_analitico_del_activo.pdf',
+            'Estado de Actividades' => 'sevac_/2020/1t/estado_de_actividades.pdf',
+            'Estado de Cambios en Situación Financiera' => 'sevac_/2020/1t/estado_de_cambios_en_situacion_financiera.pdf',
+            'Estado de Flujos de Efectivo' => 'sevac_/2020/1t/estado_de_flujos_de_efectivo.pdf',
+            'Estado de Situación Financiera' => 'sevac_/2020/1t/estado_de_situacion_financiera.pdf',
+            'Estado de Variación de Hacienda Pública' => 'sevac_/2020/1t/estado_de_variacion_de_hacienda_publica.pdf',
+            'Informe Sobre Pasivos Contingentes' => 'sevac_/2020/1t/informe_sobre_pasivos_contingentes.pdf',
+            'Notas a los Estados Financieros' => 'sevac_/2020/1t/notas_a_los_estados_financieros.pdf',
+            'Relación de Cuentas Bancarias Productivas Especificas' => 'sevac_/2020/1t/relacion_de_cuentas_bancarias_productivas_especificas.pdf'
+
+        );
+
+        $segun_trimestre2020 =array(
+            'Estado Analitico de Deuda y de Otros Pasivos' => 'sevac_/2020/2t/estado_analitico_de_la_deuda_y_otros_pasivos.pdf',
+            'Estado Analitico del Activo por Rubros' => 'sevac_/2020/2t/estado_analitico_del_activo_por_rubros.pdf',
+            'Estado de Actividades por Rubros' => 'sevac_/2020/2t/estado_de_actividades_por_rubros.pdf',
+            'Estado de Cambios en Situación Financiera' => 'sevac_/2020/2t/estado_de_cambios_en_la_situacion_financiera.pdf',
+            'Estado de Flujos de Efectivo' => 'sevac_/2020/2t/estado_de_flujo_de_efectivo.pdf',
+            'Estado de Situación Financiera por Rubros' => 'sevac_/2020/2t/estado_de_situacion_financiera_por_rubros.pdf',
+            'Estado de Variación en la Hacienda Pública' => 'sevac_/2020/2t/estado_de_variacion_en_la_hacienda_publica.pdf',
+            'Informe Sobre Pasivos Contingentes' => 'sevac_/2020/2t/informe_sobre_pasivos_contingentes.pdf',
+            'Notas a los Estados Financieros' => 'sevac_/2020/2t/notas_a_los_estados_financieros.pdf'
+            
+
+        );
+
         $prim_trimestre =array(
             'Montos pagados por concepto de ayudas y subsidios' => 'sevac_/2019/t1/D.1.11 Montos pagados por concepto de ayudas y subsidios.pdf',
             'Estado de Actividades' => 'sevac_/2019/t1/D.2.1 Estado de Actividades.pdf',
@@ -412,7 +440,7 @@ class CuentapublicaController extends Controller
         );
 
 
-        return view('pages.sevac', ['primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018]);
+        return view('pages.sevac', ['primtrim2020' => $prim_trimestre2020, 'segundtrim2020' => $segun_trimestre2020, 'primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018]);
 
     }
 
