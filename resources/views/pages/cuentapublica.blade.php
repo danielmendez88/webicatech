@@ -133,7 +133,7 @@
                                        <i class="fa fa-minus"></i>
                                        </span>
                                          <span class="g-pa-20">
-                                               Información Presupuestal 2 Trimestre 2040
+                                               Información Presupuestal 2 Trimestre 2020
                                           </span>
                                     </a>
                                    </h5>
