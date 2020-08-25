@@ -244,7 +244,11 @@ class CuentapublicaController extends Controller
             'Estado Analitico con Clasificación Funcional' => 'sevac_/2020/1t/estado_analitico_con_clasific_funcional.pdf',
             'Estado Analitico con Clasificación por Objeto del Gasto' => 'sevac_/2020/1t/estado_analitico_con_clasificacion_por_objeto_del_gasto.pdf',
             'Estado Analitico con Clasificación Economica por tipo de Gasto' => 'sevac_/2020/1t/estado_analitico_con_clasificacion_economica_por_tipo_de_gasto.pdf',
-            'Estado Analitico con Clasificación Administrativa' => 'sevac_/2020/1t/estado_analitico_con_clasificacion_administrativa.pdf'
+            'Estado Analitico con Clasificación Administrativa' => 'sevac_/2020/1t/estado_analitico_con_clasificacion_administrativa.pdf',
+            'Endeudamiento Neto' => 'sevac_/2020/1t/endeudamiento_neto.pdf',
+            'Estado Analitico de los Ingresos' => 'sevac_/2020/1t/estado_analitico_de_los_ingresos.pdf',
+            'Formato del Ejercicio y Destino de Gasto Federalizado y Reintegros' => 'sevac_/2020/1t/formato_del_ejercicio_y_destino_de_gasto_federalizado_y_reintegros.pdf',
+            'Intereses de la Deuda' => 'sevac_/2020/1t/intereses_de_la_deuda.pdf'
 
         );
 
@@ -264,7 +268,11 @@ class CuentapublicaController extends Controller
             'Estado Analitico con Clasificación por Objeto del Gasto' => 'sevac_/2020/2t/estado_analitico_con_clasificacion_por_objeto_del_gasto.pdf',
             'Gasto por Categoria Programatica' => 'sevac_/2020/2t/gto_por_categoria_programatica.pdf',
             'Indicadores de Resultados' => 'sevac_/2020/2t/indicadores_de_resultados.pdf',
-            'Programas y Proyectos de Inversión' => 'sevac_/2020/2t/programas_y_proyectos_de_inversion.pdf'
+            'Programas y Proyectos de Inversión' => 'sevac_/2020/2t/programas_y_proyectos_de_inversion.pdf',
+            'Endeudamiento Neto' => 'sevac_/2020/2t/endeudamiento_neto.pdf',
+            'Estado Analitico de Ingresos' => 'sevac_/2020/2t/estado_analitico_de_ingresos.pdf',
+            'Formato del Ejercicio y Destino de Gasto Federalizado y Reintegros' => 'sevac_/2020/2t/formato_del_ejercicio_y_destino_de_gasto_federalizado_y_reintegros.pdf',
+            'Intereses de la Deuda' => 'sevac_/2020/2t/intereses_de_la_deuda.pdf'
             
 
         );
