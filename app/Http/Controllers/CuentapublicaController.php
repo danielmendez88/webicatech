@@ -244,12 +244,12 @@ class CuentapublicaController extends Controller
             'Estado Analitico con Clasificación Funcional' => 'sevac_/2020/1t/estado_analitico_con_clasific_funcional.pdf',
             'Estado Analitico con Clasificación por Objeto del Gasto' => 'sevac_/2020/1t/estado_analitico_con_clasificacion_por_objeto_del_gasto.pdf',
             'Estado Analitico con Clasificación Economica por tipo de Gasto' => 'sevac_/2020/1t/estado_analitico_con_clasificacion_economica_por_tipo_de_gasto.pdf',
-            'Estado Analitico con Clasificación Administrativa' => 'sevac_/2020/1t/estado_analitico_con_clasificacion_administrativa.pdf',
+            'Estado Analitico por Clasificación Administrativa' => 'sevac_/2020/1t/estado_analitico_por_clasificacion_administrativa.pdf',
             'Endeudamiento Neto' => 'sevac_/2020/1t/endeudamiento_neto.pdf',
             'Estado Analitico de los Ingresos' => 'sevac_/2020/1t/estado_analitico_de_los_ingresos.pdf',
             'Formato del Ejercicio y Destino de Gasto Federalizado y Reintegros' => 'sevac_/2020/1t/formato_del_ejercicio_y_destino_de_gasto_federalizado_y_reintegros.pdf',
             'Intereses de la Deuda' => 'sevac_/2020/1t/intereses_de_la_deuda.pdf',
-            'Monto Pagados por Ayudas y Subsidios' => 'sevac_/2020/1t/monto_pagados_por_ayudas_y_subsidios.pdf'
+            'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2020/1t/monto_pagados_por_ayudas_y_subsidios.pdf'
 
 
         );
@@ -265,7 +265,7 @@ class CuentapublicaController extends Controller
             'Informe Sobre Pasivos Contingentes' => 'sevac_/2020/2t/informe_sobre_pasivos_contingentes.pdf',
             'Notas a los Estados Financieros' => 'sevac_/2020/2t/notas_a_los_estados_financieros.pdf',
             'Estado Analitico con Clasificación Funcional' => 'sevac_/2020/2t/estado_analitico_con_clasific_funcional.pdf',
-            'Estado Analitico con Clasificación Administrativa' => 'sevac_/2020/2t/estado_analitico_con_clasificacion_administrativa.pdf',
+            'Estado Analitico por Clasificación Administrativa' => 'sevac_/2020/2t/estado_analitico_por_clasificacion_administrativa.pdf',
             'Estado Analitico con Clasificación Economica por Tipo de Gasto ' => 'sevac_/2020/2t/estado_analitico_con_clasificacion_economica_por_tipo_de_gasto.pdf',
             'Estado Analitico con Clasificación por Objeto del Gasto' => 'sevac_/2020/2t/estado_analitico_con_clasificacion_por_objeto_del_gasto.pdf',
             'Gasto por Categoria Programatica' => 'sevac_/2020/2t/gto_por_categoria_programatica.pdf',
@@ -274,7 +274,8 @@ class CuentapublicaController extends Controller
             'Endeudamiento Neto' => 'sevac_/2020/2t/endeudamiento_neto.pdf',
             'Estado Analitico de Ingresos' => 'sevac_/2020/2t/estado_analitico_de_ingresos.pdf',
             'Formato del Ejercicio y Destino de Gasto Federalizado y Reintegros' => 'sevac_/2020/2t/formato_del_ejercicio_y_destino_de_gasto_federalizado_y_reintegros.pdf',
-            'Intereses de la Deuda' => 'sevac_/2020/2t/intereses_de_la_deuda.pdf'
+            'Intereses de la Deuda' => 'sevac_/2020/2t/intereses_de_la_deuda.pdf',
+            'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2020/2t/montos_pagados_por_ayudas_y_subsidios.pdf'
             
 
         );
