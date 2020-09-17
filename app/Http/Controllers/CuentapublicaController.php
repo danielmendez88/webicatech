@@ -248,7 +248,9 @@ class CuentapublicaController extends Controller
             'Endeudamiento Neto' => 'sevac_/2020/1t/endeudamiento_neto.pdf',
             'Estado Analitico de los Ingresos' => 'sevac_/2020/1t/estado_analitico_de_los_ingresos.pdf',
             'Formato del Ejercicio y Destino de Gasto Federalizado y Reintegros' => 'sevac_/2020/1t/formato_del_ejercicio_y_destino_de_gasto_federalizado_y_reintegros.pdf',
-            'Intereses de la Deuda' => 'sevac_/2020/1t/intereses_de_la_deuda.pdf'
+            'Intereses de la Deuda' => 'sevac_/2020/1t/intereses_de_la_deuda.pdf',
+            'Monto Pagados por Ayudas y Subsidios' => 'sevac_/2020/1t/monto_pagados_por_ayudas_y_subsidios.pdf'
+
 
         );
 
