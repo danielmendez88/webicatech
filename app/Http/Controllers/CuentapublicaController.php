@@ -218,7 +218,8 @@ class CuentapublicaController extends Controller
         );
 
         $lic_federales4 =array(
-            '-Acta de Aclaración de Dudas' => 'licitaciones_/federal/aclaraciondedudas_ICATECH_ICTP_001_2020.pdf'
+            '-Acta de Aclaración de Dudas' => 'licitaciones_/federal/aclaraciondedudas_ICATECH_ICTP_001_2020.pdf',
+            '-Acta de Cancelación' => 'licitaciones_/federal/acta_de_cancelacion.pdf'
         );
 
 
