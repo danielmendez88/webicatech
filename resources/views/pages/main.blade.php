@@ -109,7 +109,7 @@
 			</div>
 	 </div>
 
-	 //Consulta ciudadana
+	 
 	 <div class="container g-pt-25">
 		 <div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
 			<h2 class="u-heading-v2__title text-uppercase g-font-weight-300 mb-0">Consulta ciudadana / Plataforma Nacional de Transparencia </h2>
