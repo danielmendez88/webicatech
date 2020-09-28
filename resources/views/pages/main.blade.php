@@ -103,11 +103,38 @@
 					<a href="/transparencia" target=""><img src="Imagenes Pagina/banner icatechtransparencia4.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="/planarchivo" target=""><img src="Imagenes Pagina/programa_anual_icatech.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="/avisos-de-privacidad" target=""><img src="Imagenes Pagina/avisodeprivacidad2.jpg" width="500px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/normatividad" target=""><img src="Imagenes Pagina/normatividad2.jpg" width="370px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="/normatividad" target=""><img src="Imagenes Pagina/normatividad2.jpg" width="370px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					</marquee>
 				</p>
 			</div>
-	</div>
+	 </div>
+
+	 //Consulta ciudadana
+	 <div class="container g-pt-25">
+		 <div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
+			<h2 class="u-heading-v2__title text-uppercase g-font-weight-300 mb-0">Consulta ciudadana / Plataforma Nacional de Transparencia </h2>
+		 </div>
+				<div class="masonry-grid row g-mb-0 row-eq-height">
+			     <div class="masonry-grid-sizer col-sm-12">
+			     </div>
+				     <div class="masonry-grid-item col-sm-6 col-md-6 col-lg-6 g-mb-30">
+				         <div class="about-image">
+					         <div class="image">
+						<a target="_blank" href="http://consultapublicamx.inai.org.mx:8080/vut-web/?idSujetoObigadoParametro=1184&amp;idEntidadParametro=07&amp;idSectorParametro=21"><img src="Imagenes Pagina/banner_consulta.jpg" alt="Banner" class="img-thumbnail"></a><br><br>
+							 </div>
+				         </div>
+				     </div>
+			<!--div-->
+			<div class="masonry-grid-item col-sm-6 col-md-6 col-lg-6 g-mb-30">
+				<div class="about-image">
+					<div class="image">
+						<a target="_blank" href="https://www.plataformadetransparencia.org.mx/web/guest/inicio"><img src="Imagenes Pagina/banner_pnt.jpg" alt="About Images" class="img-thumbnail"></a><br><br>
+					</div>
+				</div>
+			</div>			
+		         </div>
+	 </div>
+	 
 
 
 	<!--banners-->
