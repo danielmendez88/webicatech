@@ -39,6 +39,18 @@ class CuentapublicaController extends Controller
             'Formatos Armonizados Conac' => 'cuenta_publica/st2020/presupuestal/conac2t2020.pdf',
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/st2020/presupuestal/ldf2t2020.pdf'
         );
+        $inf_financiera3t20 = array(   
+            'Bienes Patrimoniales' => 'cuenta_publica/tt2020/financiera/bienes_patrimoniales.pdf',
+            'Formatos de Analisis' => 'cuenta_publica/tt2020/financiera/formatos_complementarios.pdf',
+            'Formatos Armonizados Conac' => 'cuenta_publica/tt2020/financiera/formatos_armonizados_conac.pdf',
+            'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/tt2020/financiera/formatos_ley_de_disciplina_financiera.pdf'
+        );
+        $inf_presupuestal3t20 = array( 
+            'Información Presupuestaria' => 'cuenta_publica/tt2020/presupuestal/pptal3er2020.pdf',
+            'Formato Analisis Funcional' => 'cuenta_publica/tt2020/presupuestal/funcional3er2020.pdf',
+            'Formatos Armonizados Conac' => 'cuenta_publica/tt2020/presupuestal/conac3er2020.pdf',
+            'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/tt2020/presupuestal/ldf3er2020.pdf'
+        );
         $inf_financiera = array(
             'Bienes Patrimoniales' => 'cuenta_publica/pt2019/financiera/bienespatrimoniales.pdf',
             'Formatos de Analisis' => 'cuenta_publica/pt2019/financiera/formatosanalisis.pdf',
@@ -145,7 +157,7 @@ class CuentapublicaController extends Controller
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/2018/ct2018/presupuestal/ldf.pdf'
         );
 
-        return view('pages.cuentapublica', ['infin1t20'=> $inf_financiera20, 'infpre1t20'=> $inf_presupuestal20, 'infin2t20'=> $inf_financiera2t20, 'infpre2t20'=> $inf_presupuestal2t20, 'infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3,
+        return view('pages.cuentapublica', ['infin1t20'=> $inf_financiera20, 'infpre1t20'=> $inf_presupuestal20, 'infin2t20'=> $inf_financiera2t20, 'infpre2t20'=> $inf_presupuestal2t20, 'infin3t20'=> $inf_financiera3t20, 'infpre3t20'=> $inf_presupuestal3t20,'infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3,
         'infFin4'=>$inf_financiera4,'infPre4'=>$inf_presupuestal4,'inffin18'=> $inf_financiera18, 'infpres18'=> $inf_presupuestal18, 'inffin182t'=> $inf_financiera182t, 'infpres182t'=> $inf_presupuestal182t, 'inffint183t'=> $inf_financiera183t, 'infpres183t'=> $inf_presupuestal183t,
         'inffin184t'=> $inf_financiera184t, 'infpres184t'=> $inf_presupuestal184t]);
 
@@ -277,6 +289,21 @@ class CuentapublicaController extends Controller
             'Formato del Ejercicio y Destino de Gasto Federalizado y Reintegros' => 'sevac_/2020/2t/formato_del_ejercicio_y_destino_de_gasto_federalizado_y_reintegros.pdf',
             'Intereses de la Deuda' => 'sevac_/2020/2t/intereses_de_la_deuda.pdf',
             'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2020/2t/montos_pagados_por_ayudas_y_subsidios.pdf'
+            
+
+        );
+
+        $tercer_trimestre2020 =array(
+            'Estado Analitico de Deuda y de Otros Pasivos' => 'sevac_/2020/3t/estado_analitico_de_deuda_otros_pasivos.pdf',
+            'Estado Analitico del Activo por Rubros' => 'sevac_/2020/3t/estado_analitico_del_activo_por_rubros.pdf',
+            'Estado de Actividades por Rubros' => 'sevac_/2020/3t/estado_de_actividades_por_rubros.pdf',
+            'Estado de Cambios en Situación Financiera' => 'sevac_/2020/3t/estado_de_cambios_en_situacion_financiera_por_rubros.pdf',
+            'Estado de Flujos de Efectivo' => 'sevac_/2020/3t/estado_de_flujo_de_efectivo_por_rubros.pdf',
+            'Estado de Situación Financiera por Rubros' => 'sevac_/2020/3t/estado_de_situacion_financiera_por_rubros.pdf',
+            'Estado de Variación en la Hacienda Pública' => 'sevac_/2020/3t/estado_de_variacion_en_hacienda_publica.pdf',
+            'Informe Sobre Pasivos Contingentes' => 'sevac_/2020/3t/informe_sobre_pasivos_contigentes.pdf',
+            'Notas a los Estados Financieros' => 'sevac_/2020/3t/notas_a_estados_financieros_.pdf',            
+            'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2020/3t/montos_pagados_por_ayudas_y_subsidios.pdf'
             
 
         );
@@ -466,7 +493,7 @@ class CuentapublicaController extends Controller
         );
 
 
-        return view('pages.sevac', ['primtrim2020' => $prim_trimestre2020, 'segundtrim2020' => $segun_trimestre2020, 'primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018]);
+        return view('pages.sevac', ['primtrim2020' => $prim_trimestre2020, 'segundtrim2020' => $segun_trimestre2020, 'tercertrim2020' => $tercer_trimestre2020, 'primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018]);
 
     }
 

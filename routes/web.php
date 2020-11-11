@@ -42,6 +42,10 @@ Route::get('/detalles-noticias', function(){
 Route::get( '/transparencia', function(){
 	return view('pages.transparencia');
 });
+// revista
+Route::get( '/revista', function(){
+	return view('pages.revista');
+});
 // AVISOS DE PRIVACIDAD
 Route::get( '/avisos-de-privacidad', 'CuentapublicaController@avisosprivacidad');
 
@@ -64,6 +68,7 @@ Route::get('directorio',function(){
 });
 //Integridad
 Route::get('/Integridad', 'CuentapublicaController@Integridad');
+
 // Comunicado detalle
 Route::get('/comunicado-detalle/{id}/{slug}', 'ComunicadoController@show');
 //INSTRUCTORES
