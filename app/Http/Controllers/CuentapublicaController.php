@@ -208,6 +208,9 @@ class CuentapublicaController extends Controller
 
     public function licitaciones()
     {
+        $lic_estatales =array(            
+            '- Acta de Apertura de Propuestas Tecnicas y economicas' =>'licitaciones_/estatal/licitacion_ estatal.pdf',
+        );
         $lic_federales =array(
             '- Acta de Junta de Aclaración de Dudas' => 'licitaciones_/federal/acta_de_aclaracion_de_dudas3 .pdf',
             '- Acta de Apertura de Propuestas Técnicas y Económicas' => 'licitaciones_/federal/acta_de_apertura_de_propuestas.pdf',
@@ -235,7 +238,7 @@ class CuentapublicaController extends Controller
         );
 
 
-        return view('pages.licitaciones', ['licfed'=> $lic_federales, 'licfed2'=> $lic_federales2, 'licfed3'=> $lic_federales3, 'licfed4'=> $lic_federales4]);
+        return view('pages.licitaciones', ['licest'=> $lic_estatales, 'licfed'=> $lic_federales, 'licfed2'=> $lic_federales2, 'licfed3'=> $lic_federales3, 'licfed4'=> $lic_federales4]);
     }
 
     public function sevac()
