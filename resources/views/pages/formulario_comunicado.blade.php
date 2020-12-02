@@ -3,17 +3,22 @@
 
 @section('content')
 <section class="container g-py-40 g-pt-40 g-pb-0">
-    <div class="col-sm-12">
-        <div class="alert  alert-info alert-dismissible fade show" role="alert">
-            <span class="badge badge-pill badge-info">Información</span> El formulario de captura para agregar comunicados.
-        </div>
-    </div>
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div> <br>
+    @endif
         
     <div class="content mt-3">
         <div class="animated fadeIn">
             <div class="row">
                 <div class="col-lg-6">
-                    <form action="{{ url('/noticias-save') }}" method="post" id="registercomunicado" enctype="multipart/form-data">
+                    <form action="{{ route('comunicados.save')}}" method="post" id="registercomunicado" enctype="multipart/form-data">
                         @csrf
                         <div class="card">
                             <div class="card-header">
