@@ -612,7 +612,15 @@ class CuentapublicaController extends Controller
             'Protocolo de Atención de Quejas y Denuncias'=> 'codigos_conducta/protocolo-de-atencion-a-denuncias.pdf',
         );
 
-        return view('pages.Integridad', ['codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo, 'convocatorias' =>$convocatorias_codigo, 'protocolo' =>$protocolodeatencion_codigo]);
+        $informeanual_codigo = array(
+            'Informe Anual de Actividades 2020'=> 'codigos_conducta/informe_anual2020.pdf',
+        );
+
+        $protocolo2_codigo = array(
+            'Protocolo para la Prevención, Atención y Sanción del Hostigamiento Sexual y Acoso sexual.'=> 'codigos_conducta/protocolo.pdf',
+        );
+
+        return view('pages.Integridad', ['protocoloprevencion' =>$protocolo2_codigo, 'codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo, 'convocatorias' =>$convocatorias_codigo, 'informe' => $informeanual_codigo, 'protocolo' =>$protocolodeatencion_codigo]);
     }
     public function planarchivo()
     {
