@@ -121,7 +121,6 @@
 				</p>
 			</div>
 	 </div>
-
 	 
 	 <div class="container g-pt-25">
 		 <div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
