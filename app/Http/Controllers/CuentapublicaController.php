@@ -40,16 +40,16 @@ class CuentapublicaController extends Controller
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/st2020/presupuestal/ldf2t2020.pdf'
         );
         $inf_financiera3t20 = array(   
-            'Bienes Patrimoniales' => 'cuenta_publica/tt2020/financiera/bienes_patrimoniales.pdf',
-            'Formatos de Analisis' => 'cuenta_publica/tt2020/financiera/formatos_complementarios.pdf',
-            'Formatos Armonizados Conac' => 'cuenta_publica/tt2020/financiera/formatos_armonizados_conac.pdf',
-            'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/tt2020/financiera/formatos_ley_de_disciplina_financiera.pdf'
+            'Bienes Patrimoniales' => 'cuenta_publica/tt2020/financiera/1bienes_patrimoniales.pdf',
+            'Formatos de Analisis' => 'cuenta_publica/tt2020/financiera/1formatos_complementarios.pdf',
+            'Formatos Armonizados Conac' => 'cuenta_publica/tt2020/financiera/1formatos_armonizados_conac.pdf',
+            'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/tt2020/financiera/1formatos_ley_de_disciplina_financiera.pdf'
         );
         $inf_presupuestal3t20 = array( 
-            'Información Presupuestaria' => 'cuenta_publica/tt2020/presupuestal/pptal3er2020.pdf',
-            'Formato Analisis Funcional' => 'cuenta_publica/tt2020/presupuestal/funcional3er2020.pdf',
-            'Formatos Armonizados Conac' => 'cuenta_publica/tt2020/presupuestal/conac3er2020.pdf',
-            'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/tt2020/presupuestal/ldf3er2020.pdf'
+            'Información Presupuestaria' => 'cuenta_publica/tt2020/presupuestal/1pptal3er2020.pdf',
+            'Formato Analisis Funcional' => 'cuenta_publica/tt2020/presupuestal/1funcional3er2020.pdf',
+            'Formatos Armonizados Conac' => 'cuenta_publica/tt2020/presupuestal/1conac3er2020.pdf',
+            'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/tt2020/presupuestal/1ldf3er2020.pdf'
         );
         $inf_financiera = array(
             'Bienes Patrimoniales' => 'cuenta_publica/pt2019/financiera/bienespatrimoniales.pdf',
