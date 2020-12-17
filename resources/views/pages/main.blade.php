@@ -48,6 +48,19 @@
 		<!--grids end-->
 	</div>
 	<div class="container g-pt-25">
+		<!--revista icatech-->
+		<div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
+			<h2 class="u-heading-v2__title text-uppercase g-font-weight-300 mb-0">REVISTA ICATECH</h2>
+		</div>
+		<div class="masonry-grid-item col-sm-6 col-md-6 col-lg-6 g-mb-30">
+			<div class="about-image">
+				<div class="image">
+					<a target="_blank" href="/revista"><img src="revista_icatech/revista1.jpeg" alt="Banner" class="img-thumbnail"></a><br><br>
+				</div>
+			</div>
+			</div>
+		<!--fin revista icatech end-->
+
 		<div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
 			<h2 class="u-heading-v2__title text-uppercase g-font-weight-300 mb-0">Videoteca</h2>
 		</div>

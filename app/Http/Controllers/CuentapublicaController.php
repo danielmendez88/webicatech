@@ -157,7 +157,7 @@ class CuentapublicaController extends Controller
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/2018/ct2018/presupuestal/ldf.pdf'
         );
 
-        return view('pages.cuentapublica', ['infin1t20'=> $inf_financiera20, 'infpre1t20'=> $inf_presupuestal20, 'infin2t20'=> $inf_financiera2t20, 'infpre2t20'=> $inf_presupuestal2t20, 'infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3,
+        return view('pages.cuentapublica', ['infin1t20'=> $inf_financiera20, 'infpre1t20'=> $inf_presupuestal20, 'infin2t20'=> $inf_financiera2t20, 'infpre2t20'=> $inf_presupuestal2t20, 'infin3t20'=> $inf_financiera3t20, 'infpre3t20'=> $inf_presupuestal3t20, 'infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3,
         'infFin4'=>$inf_financiera4,'infPre4'=>$inf_presupuestal4,'inffin18'=> $inf_financiera18, 'infpres18'=> $inf_presupuestal18, 'inffin182t'=> $inf_financiera182t, 'infpres182t'=> $inf_presupuestal182t, 'inffint183t'=> $inf_financiera183t, 'infpres183t'=> $inf_presupuestal183t,
         'inffin184t'=> $inf_financiera184t, 'infpres184t'=> $inf_presupuestal184t]);
 
