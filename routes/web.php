@@ -45,7 +45,7 @@ Route::get( '/transparencia', function(){
 // revista
 Route::get( '/revista', function(){
 	return view('pages.revista');
-});
+})->name('revista');
 // AVISOS DE PRIVACIDAD
 Route::get( '/avisos-de-privacidad', 'CuentapublicaController@avisosprivacidad');
 

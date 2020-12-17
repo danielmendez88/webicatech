@@ -55,7 +55,7 @@
 		<div class="masonry-grid-item col-sm-6 col-md-6 col-lg-6 g-mb-30">
 			<div class="about-image">
 				<div class="image">
-					<a target="_blank" href="/revista"><img src="revista_icatech/revista1.jpeg" alt="Banner" class="img-thumbnail"></a><br><br>
+					<a target="_blank" href="{{ route('revista') }}"><img src="revista_icatech/revista1.jpeg" alt="Banner" class="img-thumbnail"></a><br><br>
 				</div>
 			</div>
 			</div>
