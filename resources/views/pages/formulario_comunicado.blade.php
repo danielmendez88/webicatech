@@ -13,7 +13,7 @@
         <div class="animated fadeIn">
             <div class="row">
                 <div class="col-lg-6">
-                    <form action="{{ url('/noticias-save') }}" method="post" id="registercomunicado" enctype="multipart/form-data">
+                    <form action="{{ route('comunicados.save')}}" method="post" id="registercomunicado" enctype="multipart/form-data">
                         @csrf
                         <div class="card">
                             <div class="card-header">
@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="cc-payment" class="control-label mb-1">url</label>
-                                    <input id="url" name="url" type="text" class="form-control" aria-required="true">
+                                    <input id="url" name="url" type="text" class="form-control urlinput" aria-required="true">
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-danger btn-sm">

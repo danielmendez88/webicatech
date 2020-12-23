@@ -1,3 +1,7 @@
 /*input[type=text], select, textarea {
     text-transform: uppercase;
 }*/
+
+.urlinput {
+    text-transform: lowercase;
+}
