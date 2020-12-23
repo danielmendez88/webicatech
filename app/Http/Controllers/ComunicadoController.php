@@ -65,7 +65,7 @@ class ComunicadoController extends Controller
                 if ($request->hasFile('imagen_comunicado')) {
                     # si se encuentra la imagen comenzamos a subirlo...
                     $file = $request->file('imagen_comunicado'); # obtenemos el archivo
-                    $tamanio = $file->getClientSize(); #obtener el tamaño del archivo del cliente
+                    $tamanio = $file->getSize(); #obtener el tamaño del archivo del cliente
                     $extensionImagen = $file->getClientOriginalExtension(); // extension de la imagen
                     $imagenFile = trim(str_slug($request->url, '-')) . "." . $extensionImagen; // nombre de la imagen al momento de subirla
                     $request->file('imagen_comunicado')->storeAs('/uploadFiles/', $imagenFile); // guardamos el archivo en la carpeta storage
