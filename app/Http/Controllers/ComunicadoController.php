@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\File;
 use Redirect,Response;
 use App\Models\Comunidado;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class ComunicadoController extends Controller
 {
@@ -190,8 +191,7 @@ class ComunicadoController extends Controller
      */
     public function getnews() {
         $comunicados = new Comunidado();
-        $newsAll = $comunicados::WHERE('confirmado', true)->latest()->paginate(7);
-        $newsAll->withPath('comunicado/url');
+        $newsAll = $comunicados::WHERE('confirmado', true)->paginate(7);
         return view('pages.news', compact('newsAll'));
     }
 
