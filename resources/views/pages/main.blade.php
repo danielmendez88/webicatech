@@ -18,7 +18,19 @@
                         <li><img src="../../Imagenes Pagina/6.jpeg" alt=""></li>                        
                         <li><img src="../../Imagenes Pagina/8.jpeg" alt=""></li>
                         <li><img src="../../Imagenes Pagina/9.jpeg" alt=""></li>
-                        <li><img src="../../Imagenes Pagina/10.png" alt=""></li>
+						<li><img src="../../Imagenes Pagina/10.png" alt=""></li>
+						<li><img src="../../Imagenes Pagina/12.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/13.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/14.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/15.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/16.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/17.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/18.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/19.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/20.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/21.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/22.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/23.jpeg" alt=""></li>
 					</ul>
 				</div>
 			</div>
