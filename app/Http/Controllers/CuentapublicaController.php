@@ -637,8 +637,11 @@ class CuentapublicaController extends Controller
         $directorioconse_codigo = array(
             'DIRECTORIO DEL CONSEJERO'=> 'codigos_conducta/directorio_consejeros.pdf',
         );
+        $directorioasesores_codigo = array(
+            'DIRECTORIO DE ASESORES'=> 'codigos_conducta/directorio_asesores.pdf',
+        );
 
-        return view('pages.Integridad', ['directorioconsejero' => $directorioconse_codigo, 'protocoloprevencion' =>$protocolo2_codigo, 'protocoloactuacion' =>$protocolo3_codigo, 'codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo, 'convocatorias' =>$convocatorias_codigo, 'informe' => $informeanual_codigo, 'protocolo' =>$protocolodeatencion_codigo]);
+        return view('pages.Integridad', ['directorioasesor' => $directorioasesores_codigo,'directorioconsejero' => $directorioconse_codigo, 'protocoloprevencion' =>$protocolo2_codigo, 'protocoloactuacion' =>$protocolo3_codigo, 'codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo, 'convocatorias' =>$convocatorias_codigo, 'informe' => $informeanual_codigo, 'protocolo' =>$protocolodeatencion_codigo]);
     }
     public function planarchivo()
     {
