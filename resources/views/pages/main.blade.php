@@ -71,7 +71,7 @@
 				</div>
 			</div>
 			</div>
-		<!--fin revista icatech end-->
+		<!--fin revista icatech end-->	
 
 		<div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
 			<h2 class="u-heading-v2__title text-uppercase g-font-weight-300 mb-0">Videoteca</h2>
@@ -122,9 +122,11 @@
 			<div class="about-text">
 				<p>
 					<marquee behavior="alternate">
+					
                     <a href="https://www.chiapas.gob.mx/media/plan-desarrollo-2019/Plan-Estatal-de-Desarrollo-Chiapas-2019-2024.pdf" target="_new"><img src="Imagenes Pagina/banner-plan.png" width="600px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="{{route('convocatoria.instructores_externos')}}" target="_blank"><img src="Imagenes Pagina/convocatoria_pagina.jpeg" width="500px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/Integridad" target=""><img src="Imagenes Pagina/bannericatechintegridad.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a target="_blank" href="https://ijech.chiapas.gob.mx/parlamentojuvenil2021" target=""><img src="Imagenes Pagina/parla_juvenil.jpeg" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="/Integridad" target=""><img src="Imagenes Pagina/bannericatechintegridad.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="/transparencia" target=""><img src="Imagenes Pagina/banner icatechtransparencia4.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="/planarchivo" target=""><img src="Imagenes Pagina/programa_anual_icatech.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="/avisos-de-privacidad" target=""><img src="Imagenes Pagina/avisodeprivacidad2.jpg" width="500px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
