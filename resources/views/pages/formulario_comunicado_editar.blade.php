@@ -1,5 +1,5 @@
 @extends("theme.lte.layout_news")
-@section('title', 'Icatech | Agregar comunicado')
+@section('title', 'Icatech | EDITAR COMUNICADOS')
 
 
 @section('content')
@@ -14,32 +14,33 @@
         </div><br />
     @endif
     <div style="text-align: center;">
-        <h3><b>REDACTAR COMUNICADO</b></h3>
+        <h3><b>EDITAR COMUNICADO</b></h3>
     </div>
     <hr style="border-color:dimgray">
-    <form action="{{ route('comunicados.save')}}" method="post" id="registercomunicado" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('comunicado.modificar.update', ['id' => base64_encode($detalles->id) ])}}" method="post" id="frmcursoscatalogo" enctype="multipart/form-data">
         @csrf
+        @method('PUT')
         <div class="form-row">
             <!--TITULO LOCALIDAD-->
             <div class="form-group col-md-8">
                 <label for="titulo " class="control-label">TIULO</label>
-                <input id="titulo" name="titulo" type="text" class="form-control" aria-required="true" autocomplete="off">
+                <input id="titulo" name="titulo" type="text" value="{{ $detalles->titulo }}" class="form-control" aria-required="true" autocomplete="off">
             </div>
             
             <div class="form-group col-md-4">
                 <label for="apellidoPaterno" class="control-label">LOCALIDAD</label>
-                <input id="localizacion" name="localizacion" type="text" class="form-control" aria-required="true" autocomplete="off">
+                <input id="localizacion" name="localizacion" type="text" value="{{ $detalles->localizacion }}" class="form-control" aria-required="true" autocomplete="off">
             </div>
             <!-- TITULO LOCALIDAD  END -->
         </div>
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label for="cc-payment" class="control-label mb-1">CATEGORÍA</label>
-                <input id="categoria" name="categoria" type="text" class="form-control" aria-required="true" autocomplete="off">
+                <input id="categoria" name="categoria" type="text" value="{{ $detalles->categorias }}" class="form-control" aria-required="true" autocomplete="off">
             </div>
             <div class="form-group col-md-4">
                 <label for="cc-payment" class="control-label mb-1">URL</label>
-                <input id="url" name="url" type="text" class="form-control" aria-required="true" autocomplete="off">
+                <input id="url" name="url" type="text" class="form-control" value="{{ $detalles->url }}" aria-required="true" autocomplete="off">
             </div>
             <div class="form-group col-md-4">
                 <label for="cc-payment" class="control-label mb-1">IMAGEN</label>
@@ -50,7 +51,7 @@
             <!-- domicilio -->
             <div class="form-group col-md-12">
                 <label for="cc-payment" class="control-label mb-1">CONTENIDO</label>
-                <textarea name="contenido" id="contenido" cols="30" rows="10" class="form-control" aria-required="true"></textarea> 
+                <textarea name="contenido" id="contenido" cols="30" rows="10" class="form-control" aria-required="true">{{ $detalles->contenido }}</textarea> 
             </div>
         </div>
         <!--botones de enviar y retroceder-->
@@ -61,8 +62,8 @@
                 </div>
                 <div class="pull-right">
                     <button class="btn btn-success" type="submit">
-                        <i class="fa fa-paper-plane"></i>
-                        GENERAR COMUNICADO
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        MODIFICAR COMUNICADO
                     </button>
                 </div>
             </div>

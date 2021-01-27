@@ -31,6 +31,9 @@ Route::get('/oferta-educativa', 'CursoController@index')->name('oferta-educativa
 Route::get('/noticias', 'ComunicadoController@index');
 Route::post('/noticias-save', 'ComunicadoController@store')->name('comunicados.save');
 Route::get('/nuevo-comunicado', 'ComunicadoController@getform');
+Route::get('/comunicado/modificar/{id}', 'ComunicadoController@edit')->name('comunicado.modificar.show');
+Route::put('/comunicado/modificar/update/{id}', 'ComunicadoController@update')->name('comunicado.modificar.update');
+Route::get('/comunicado/detalle/{id}', 'ComunicadoController@showdetails')->name('comunicado.detalle.show');
 // agregar el indice principal de comunicados
 Route::get('/comunicado', 'ComunicadoController@getnews')->name('comunicado.index');
 // NOTICIAS DETALLES

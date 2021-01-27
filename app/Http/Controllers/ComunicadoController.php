@@ -65,7 +65,7 @@ class ComunicadoController extends Controller
                 $saveComunicado = new Comunidado();
                 $saveComunicado->titulo = trim($request->titulo);
                 $saveComunicado->localizacion = trim($request->localizacion);
-                $saveComunicado->contenido = trim(strip_tags($safecontent,'<p><a><br>'));
+                $saveComunicado->contenido = trim($request->contenido);
                 $saveComunicado->categorias = trim($request->categoria);
                 $saveComunicado->resumen = trim(strip_tags($saferes,'<p><a><br>'));
                 $saveComunicado->confirmado = true;
@@ -98,13 +98,13 @@ class ComunicadoController extends Controller
                     $arreglo_comunicado = [
                         'imagen' => $url_imagen_comunicado
                     ];
-                }
 
-                // vamos a actualizar el registro con el arreglo que trae diferentes variables y carga de archivos
-                DB::table('comunicados')->WHERE('id', $lasIdComunicado)->update($arreglo_comunicado);
+                    // vamos a actualizar el registro con el arreglo que trae diferentes variables y carga de archivos
+                    DB::table('comunicados')->WHERE('id', $lasIdComunicado)->update($arreglo_comunicado);
 
-                // limpiamos el arreglo
-                unset($arreglo_comunicado);
+                    // limpiamos el arreglo
+                    unset($arreglo_comunicado);
+                } 
 
                 return redirect()->route('comunicado.index')->with('success', 'Comunicado Agregado éxitosamente.');
             }
@@ -127,7 +127,7 @@ class ComunicadoController extends Controller
         $iddecode = base64_decode($id);
         //dd($iddecode);
         //$detatelle = new Comunidado();
-        $detatelle = Comunidado::SELECT('titulo', 'imagen', 'fecha_publicacion', 'localizacion', 'contenido', 'categorias', 'url', 'resumen')
+        $detatelle = Comunidado::SELECT('titulo', 'imagen', 'fecha_publicacion', 'localizacion', 'contenido', 'categorias', 'url', 'resumen', 'id')
                     ->WHERE('id', '=', $iddecode)
                     ->get();
         $titulo = $detatelle[0]->titulo;
@@ -140,7 +140,33 @@ class ComunicadoController extends Controller
         $categorias = $detatelle[0]->categorias;
         $url = $detatelle[0]->url;
         $resumen = $detatelle[0]->resumen;
-        return view('pages.noticias_detalles', compact('titulo', 'imagen', 'fecha_pub', 'localizacion', 'contenido', 'categorias', 'url', 'resumen'))
+        $identificador = $detatelle[0]->id;
+        return view('pages.noticias_detalles', compact('titulo', 'imagen', 'fecha_pub', 'localizacion', 'contenido', 'categorias', 'url', 'resumen', 'identificador'))
+            ->withArticle($detatelle);
+    }
+
+    public function showdetails($id)
+    {
+        $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+        //el comunicado exacto
+        $iddecode = base64_decode($id);
+        //dd($iddecode);
+        //$detatelle = new Comunidado();
+        $detatelle = Comunidado::SELECT('titulo', 'imagen', 'fecha_publicacion', 'localizacion', 'contenido', 'categorias', 'url', 'resumen', 'id')
+                    ->WHERE('id', '=', $iddecode)
+                    ->get();
+        $titulo = $detatelle[0]->titulo;
+        $imagen = $detatelle[0]->imagen;
+        $fecha = \Carbon\Carbon::parse($detatelle[0]->fecha_publicacion);
+        $mes = $meses[($fecha->format('n')) - 1];
+        $fecha_pub = $fecha->format('d') . ' de ' . $mes . ' de ' . $fecha->format('Y');
+        $localizacion = $detatelle[0]->localizacion;
+        $contenido = $detatelle[0]->contenido;
+        $categorias = $detatelle[0]->categorias;
+        $url = $detatelle[0]->url;
+        $resumen = $detatelle[0]->resumen;
+        $identificador = $detatelle[0]->id;
+        return view('pages.comunicados_detalle', compact('titulo', 'imagen', 'fecha_pub', 'localizacion', 'contenido', 'categorias', 'url', 'resumen', 'identificador'))
             ->withArticle($detatelle);
     }
 
@@ -152,7 +178,13 @@ class ComunicadoController extends Controller
      */
     public function edit($id)
     {
-        //
+        // edicion
+        $iddecode = base64_decode($id);
+        $detalles = DB::table('comunicados')
+                    ->select('titulo', 'imagen', 'fecha_publicacion', 'localizacion', 'contenido', 'categorias', 'url', 'resumen', 'id')
+                    ->where('id', $iddecode)->first();
+
+        return view('pages.formulario_comunicado_editar', compact('detalles'));
     }
 
     /**
@@ -164,7 +196,57 @@ class ComunicadoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //ACTUALIZAR REGISTROS
+        if (isset($id)) {
+            $ids = base64_decode($id);
+            # funcion antiscript
+            $safecontent = $this->antiScript($request->contenido);
+            $saferes = substr($safecontent, 0, 140);
+            # code...
+            $array_update = [
+                'titulo' => trim($request->titulo),
+                'localizacion' => trim($request->localizacion),
+                'contenido' => trim($request->contenido),
+                'categorias' => trim($request->categoria),
+                'resumen' => trim(strip_tags($saferes,'<p><a><br>')),
+                'url' => str_slug($request->url, '-'),
+            ];
+
+            DB::table('comunicados')->WHERE('id', $ids)->UPDATE($array_update);
+
+            if ($request->hasFile('imagen_comunicado')) {
+                #obtenemos el valor del comunicado
+                $imagen_guardada = DB::table('comunicados')->WHERE('id', $ids)->VALUE('imagen');
+                // checamos que no sea nulo
+                if (!is_null($imagen_guardada)) {
+                    # si no está nulo checamos que no esté vacio
+                    if (!empty($imagen_guardada)) {
+                        # si no está vacio
+                        $docImagen = explode("/",$imagen_guardada, 5);
+                        if (Storage::exists($docImagen[4])) {
+                            # checamos si hay un documento de ser así procedemos a eliminarlo
+                            Storage::delete($docImagen[4]);
+                        }
+                    }
+                }
+
+                $imagen_comunicado_save = $request->file('imagen_comunicado'); # obtenemos el archivo
+                $url_imagen_comunicado = $this->uploadFile($imagen_comunicado_save, $ids, 'imagen_comunicado'); #invocamos el método
+                // creamos un arreglo
+                $arreglo_comunicado = [
+                    'imagen' => $url_imagen_comunicado
+                ];
+
+                // vamos a actualizar el registro con el arreglo que trae diferentes variables y carga de archivos
+                DB::table('comunicados')->WHERE('id', $ids)->update($arreglo_comunicado);
+
+                // limpiamos el arreglo
+                unset($arreglo_comunicado);
+            }
+
+            return redirect()->route('comunicado.index')
+                ->with('success', sprintf('COMUNICADO %s  MODIFICADO EXTIOSAMENTE!', $request->titulo));
+        }
     }
 
     /**

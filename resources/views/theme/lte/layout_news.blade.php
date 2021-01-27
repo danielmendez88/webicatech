@@ -40,7 +40,7 @@
         <link rel="stylesheet" href="{{asset("assets/css/principal.css")}}">
         <link rel="stylesheet" type="text/css" href="{{asset("assets/css/slider_unidad.css")}}">
         <link rel="stylesheet" href="{{asset("assets/css/trumbowyg.min.css")}}">
-
+        @yield("content_script_css")
         <!-- Icons -->
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
         
@@ -84,7 +84,6 @@
             <script src="{{asset("assets/js/components/hs.popup.js")}}"></script>
             <script src="{{asset("assets/js/components/hs.carousel.js")}}"></script>
             <script src="{{asset("assets/js/components/hs.go-to.js")}}"></script>
-            <script src="{{asset("assets/js/functions.js")}}"></script>
             <script src="{{asset("assets/js/responsiveslides.js")}}"></script>
             <script src="{{asset("assets/js/validates.js")}}"></script>
             <script src="{{asset("assets/js/scripts/jquery.smartmarquee.js")}}"></script>
@@ -94,59 +93,8 @@
             <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=2084976248184121&autoLogAppEvents=1"></script>
             <!--plug in facebook END-->
             <!--plug trumbowyg-->
-            <script src="{{asset("assets/vendor/trumbowyg/dist/trumbowyg.min.js")}}"></script>
-            <script src="{{asset("assets/vendor/Trumbowyg/dist/plugins/cleanpaste/trumbowyg.cleanpaste.min.js")}}"></script>
             <!--plug trumbowyg END-->
-
-
-            
-            <script>
-                $(function() {
-                    $(".rslides").responsiveSlides();
-                });
-
-              $(document).on('ready', function () {
-
-                  $('div .smartmarquee').smartmarquee();
-
-                    $.HSCore.components.HSHeader.init($('#js-header'));
-                    $.HSCore.helpers.HSHamburgers.init('.hamburger');
-            
-                    $('.js-mega-menu').HSMegaMenu({
-                      event: 'hover',
-                      pageContainer: $('.container'),
-                      breakpoint: 991
-                    });
-            
-                    $.HSCore.components.HSDropdown.init($('[data-dropdown-target]'), {
-                      afterOpen: function () {
-                        $(this).find('input[type="search"]').focus();
-                      }
-                    });
-            
-                    $.HSCore.components.HSPopup.init('.js-fancybox');
-                    $.HSCore.components.HSCarousel.init('.js-carousel');				    
-                    $.HSCore.components.HSGoTo.init('.js-go-to');
-
-                    /*$('.slider_unidades').unslider({
-                        speed: 800,              
-                        delay: 4000,              
-                        keys: true,              
-                        dots: true,               
-                        fluid: true          
-                    });*/
-                     // Slideshow 1
-
-                    $('.carousel').carousel({
-                      interval: 3000
-                    })
-                    $('#contenido').trumbowyg();
-              });
-            </script>
-            <script>
-                document.getElementById('vid').play();
-            </script>	
-
+            @yield('script_content_js')
             
     </body>
 </html>
