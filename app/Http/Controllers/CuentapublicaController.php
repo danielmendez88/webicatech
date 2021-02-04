@@ -199,9 +199,12 @@ class CuentapublicaController extends Controller
             'Manual de Organizacion -Organigramas y Funciones Parte 2' => 'normatividad_/manuales/organizacion/organigramas_y_funciones_2.pdf',
             'Manual de Organizacion -Glosario de Terminos de Trabajo' => 'normatividad_/manuales/organizacion/glosario_de_terminos_y_trabajo.pdf'
         );
+        $diario_oficialicatech =array(
+            'Diario Oficial "ICATECH"'=> 'normatividad_/lineamientos/decreto_lineamientos_icatech.pdf'
+        );
 
 
-        return view('pages.normatividad', ['deccrea'=> $dec_decretos, 'reglam'=> $reg_reglamentos, 'manual'=> $man_induccion,
+        return view('pages.normatividad', ['deccrea'=> $dec_decretos, 'manual'=> $diario_oficialicatech, 'reglam'=> $reg_reglamentos, 'manual'=> $man_induccion,
         'manualproc'=> $manu_procedimientos, 'manualorga'=> $manu_organizacion,]);
 
     }
