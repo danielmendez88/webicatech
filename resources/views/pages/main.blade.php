@@ -26,7 +26,7 @@
 				<!--div contenedor-->
 				<div class="verticalCarousel">
 					<div class="verticalCarouselHeader">
-					<a href="/comunicado">
+					<a href="javascript:;">
 						<h3>COMUNICADOS</h3>
 					</a>
 					</div>
