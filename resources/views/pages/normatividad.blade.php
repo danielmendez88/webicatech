@@ -215,7 +215,7 @@
                          <div id="accordion-07-body-06" class="collapse" role="tabpanel" aria-labelledby="accordion-07-heading-06" data-parent="#accordion-07">
                            <div class="u-accordion__body g-bg-gray-light-v5 g-px-50 g-py-30">
                             <ul class="list-unstyled">
-                              @foreach ($manual as $key => $value)
+                              @foreach ($manual_lineamientos as $key => $value)
                                 <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
                                   <div class="d-flex justify-content-start">
                                     <h6 class="g-font-weight-600 g-color-black">{{ $key }}</h6>
