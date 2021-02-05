@@ -200,11 +200,11 @@ class CuentapublicaController extends Controller
             'Manual de Organizacion -Glosario de Terminos de Trabajo' => 'normatividad_/manuales/organizacion/glosario_de_terminos_y_trabajo.pdf'
         );
         $diario_oficialicatech =array(
-            'Diario Oficial "ICATECH"'=> 'normatividad_/lineamientos/decreto_lineamientos_icatech.pdf'
+            'Diario Oficial "ICATECH"'=> 'normatividad_/reglamentos/decreto_lineamientos_icatech.pdf'
         );
 
 
-        return view('pages.normatividad', ['deccrea'=> $dec_decretos, 'manual'=> $diario_oficialicatech, 'reglam'=> $reg_reglamentos, 'manual'=> $man_induccion,
+        return view('pages.normatividad', ['deccrea'=> $dec_decretos, 'manual_lineamientos'=> $diario_oficialicatech, 'reglam'=> $reg_reglamentos, 'manual'=> $man_induccion,
         'manualproc'=> $manu_procedimientos, 'manualorga'=> $manu_organizacion,]);
 
     }
