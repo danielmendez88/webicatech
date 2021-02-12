@@ -125,6 +125,7 @@
 					
                     <a href="https://www.chiapas.gob.mx/media/plan-desarrollo-2019/Plan-Estatal-de-Desarrollo-Chiapas-2019-2024.pdf" target="_new"><img src="Imagenes Pagina/banner-plan.png" width="600px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="{{route('convocatoria.instructores_externos')}}" target="_blank"><img src="Imagenes Pagina/convocatoria_pagina.jpeg" width="500px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a target="_blank" href="Imagenes Pagina/juventudes_de_palabra.pdf" target=""><img src="Imagenes Pagina/juventudes_depalabra.jpg" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a target="_blank" href="https://ijech.chiapas.gob.mx/parlamentojuvenil2021" target=""><img src="Imagenes Pagina/parla_juvenil.jpeg" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a target="_blank" href="Imagenes Pagina/convocatoria_ secjoven_2021.pdf" target=""><img src="Imagenes Pagina/convocatoria_secjoven.jpeg" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a target="_blank" href="Imagenes Pagina/convocatoria_el_viejo_y_lamar.pdf" target=""><img src="Imagenes Pagina/convocatoria_elviejo_mar.jpg" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
