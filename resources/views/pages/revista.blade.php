@@ -46,6 +46,24 @@
 				</div>
             </article>
         </div>   
+        <div class="masonry-grid-item col-sm-6 col-md-6 col-lg-3 g-mb-30">
+            <br><article class="masonry-white-caption u-shadow-v32 u-shadow-v21--hover g-transition-0_3 h-100 g-rounded-top-7 g-rounded-bottom-7">
+                <a href="https://es.calameo.com/read/006616031b505342244bf" target="_blank" class="masonry-img-square">
+                    <img class="img-fluid" src="revista_icatech/revista_febrero.jpg" alt="Revista Icatech">
+                </a>
+				<div class="g-pa-20 g-rounded-bottom-5 text-center">
+					<h2 class="h5 mb-3">
+					    <a class="u-link-v5  g-font-weight-600 g-color-accent--hover g-text-underline--hover" href="https://es.calameo.com/read/006616031b505342244bf" target="_blank">
+					    Segunda Edición, Febrero 2021 Revista ICATECH <br>
+                        </a>                        
+                        <br><a class="" href="revista_icatech/revista_febrero.pdf" target="_blank"><button class="button button1">Descargar</button></a>
+                        <a class="" href="https://es.calameo.com/read/006616031b505342244bf" target="_blank"> <button class="button button2">Leer</button> 
+                        </a>
+
+			        </h2>
+				</div>
+            </article>
+        </div>  
                     
         <div class="masonry-grid-item col-sm-6 col-md-6 col-lg-3 g-mb-30">
             <br><article class="masonry-white-caption u-shadow-v32 u-shadow-v21--hover g-transition-0_3 h-100 g-rounded-top-5 g-rounded-bottom-5">
