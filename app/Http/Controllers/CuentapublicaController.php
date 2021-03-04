@@ -215,33 +215,12 @@ class CuentapublicaController extends Controller
             '- Acta de Apertura de Propuestas Tecnicas y economicas' =>'licitaciones_/estatal/licitacion_ estatal.pdf',
         );
         $lic_federales =array(
-            '- Acta de Junta de Aclaración de Dudas' => 'licitaciones_/federal/acta_de_aclaracion_de_dudas3 .pdf',
-            '- Acta de Apertura de Propuestas Técnicas y Económicas' => 'licitaciones_/federal/acta_de_apertura_de_propuestas.pdf',
-            '- Acta de Fallo' =>'licitaciones_/federal/acta_de_fallo.pdf',
+            '- ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONOMICAS' => 'licitaciones_/federal/Icatech-ICTP0012021.pdf'            
         );
 
-        $lic_federales2 =array(
-            '- Acta de Junta de Aclaración de Dudas' => 'licitaciones_/federal/acta_de_jaictp-002_2019.pdf',
-            '- Acta de Apertura de Propuestas Técnicas y Económicas' => 'licitaciones_/federal/acta_de_apertura_propuestas_icatech_ictp_002_2019.pdf',
-            '- Acta Circunstanciada 001' => 'licitaciones_/federal/acta_circunstanciada_ictp-002_2019.pdf',
-            '- Acta de Fallo' => 'licitaciones_/federal/fallo_icatech_ictp-002_2019.pdf',
-        );
+        
 
-        $lic_federales3 =array(
-            '- Acta de Junta de Aclaración de Dudas' => 'licitaciones_/federal/acta_de_jaictp-003_2019.pdf',
-            '- Acta de Apertura de Propuestas Técnicas y Económicas' => 'licitaciones_/federal/acta_de_apertura_propuestas_icatech_ictp_003_2019.pdf',
-            '- Acta Circunstanciada 002' => 'licitaciones_/federal/acta_circunstanciada_ictp-003_2019.pdf',
-            '- Acta de Fallo' => 'licitaciones_/federal/fallo_icatech-ictp-003_2019.pdf'
-
-        );
-
-        $lic_federales4 =array(
-            '-Acta de Aclaración de Dudas' => 'licitaciones_/federal/aclaraciondedudas_ICATECH_ICTP_001_2020.pdf',
-            '-Acta de Cancelación' => 'licitaciones_/federal/acta_de_cancelacion.pdf'
-        );
-
-
-        return view('pages.licitaciones', ['licest'=> $lic_estatales, 'licfed'=> $lic_federales, 'licfed2'=> $lic_federales2, 'licfed3'=> $lic_federales3, 'licfed4'=> $lic_federales4]);
+        return view('pages.licitaciones', ['licest'=> $lic_estatales, 'licfed'=> $lic_federales]);
     }
 
     public function sevac()
