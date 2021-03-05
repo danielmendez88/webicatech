@@ -211,6 +211,9 @@ class CuentapublicaController extends Controller
 
     public function licitaciones()
     {
+        $lic_estatales =array(            
+            '- Acta de Apertura de Propuestas Tecnicas y economicas' =>'licitaciones_/estatal/licitacion_ estatal.pdf',
+        );
         $lic_federales =array(
             '- ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONOMICAS' => 'licitaciones_/federal/Icatech-ICTP0012021.pdf'            
         );
