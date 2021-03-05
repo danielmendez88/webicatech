@@ -47,8 +47,9 @@
 													
 							<!--<p>Vinculos a los diferentes portales de Transparencia Nacionales y Estatales</p>-->
 							<p><a href="http://inicio.inai.org.mx/SitePages/ifai.aspx" title="Inai" target="_blank"><img src="Imagenes Pagina/inai.png" alt="Inai" width="150" height="55"><span></span></a>&nbsp;&nbsp;
-							<a href="https://www.plataformadetransparencia.org.mx/web/guest/inicio" title="PnT" target="_blank"><img src="Imagenes Pagina/pnt.png" alt="Pnt" width="150" height="55"><span></span></a>&nbsp;&nbsp;
 							<a href="http://www.iaipchiapas.org.mx/" title="Iaip" target="_blank"><img src="Imagenes Pagina/iaip.png" alt="Pnt" width="150" height="55"><span></span></a>&nbsp;&nbsp;
+							<a href="http://consultapublicamx.inai.org.mx:8080/vut-web/?idSujetoObigadoParametro=1184&amp;idEntidadParametro=07&amp;idSectorParametro=21" title="Consulta Ciudadana" target="_blank"><img src="Imagenes Pagina/banner_consulta.jpg" alt="Pnt" width="150" height="55"><span></span></a>&nbsp;&nbsp;
+							<a href="https://www.plataformadetransparencia.org.mx/web/guest/inicio" title="PNT" target="_blank"><img src="Imagenes Pagina/banner_pnt.jpg" alt="Pnt" width="150" height="55"><span></span></a>&nbsp;&nbsp;
 							<a href="https://www.plataformadetransparencia.org.mx/web/guest/sac" title="Ssci" target="_blank"><img src="Imagenes Pagina/sisai.png" alt="Pnt" width="150" height="55"><span></span></a>&nbsp;&nbsp;
 							<a href="https://www.plataformadetransparencia.org.mx/web/guest/inicio?p_p_id=58&p_p_lifecycle=1&p_p_state=maximized&p_p_mode=view&_58_struts_action=%2Flogin%2Fcreate_account" title="Sipot" target="_blank"><img src="Imagenes Pagina/sipot.png" alt="Pnt" width="150" height="55"><span></span></a>&nbsp;
 						  </p></div>

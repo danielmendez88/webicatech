@@ -10,15 +10,27 @@
 				<div class="col-md-12 col-sm-4 endeos-unslider">
 					<ul class="rslides" id="slider1">
                         <li><img src="../../Imagenes Pagina/1.jpeg" alt=""></li>
-                        <li><img src="../../Imagenes Pagina/2.jpg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/2.jpg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/11.png" alt=""></li>
                         <li><img src="../../Imagenes Pagina/3.jpeg" alt=""></li>
                         <li><img src="../../Imagenes Pagina/4.jpeg" alt=""></li>
                         <li><img src="../../Imagenes Pagina/5.jpeg" alt=""></li>
-                        <li><img src="../../Imagenes Pagina/6.jpeg" alt=""></li>
-                        <li><img src="../../Imagenes Pagina/7.jpeg" alt=""></li>
+                        <li><img src="../../Imagenes Pagina/6.jpeg" alt=""></li>                        
                         <li><img src="../../Imagenes Pagina/8.jpeg" alt=""></li>
                         <li><img src="../../Imagenes Pagina/9.jpeg" alt=""></li>
-                        <li><img src="../../Imagenes Pagina/10.jpg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/10.png" alt=""></li>
+						<li><img src="../../Imagenes Pagina/12.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/13.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/14.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/15.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/16.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/17.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/18.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/19.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/20.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/21.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/22.jpeg" alt=""></li>
+						<li><img src="../../Imagenes Pagina/23.jpeg" alt=""></li>
 					</ul>
 				</div>
 			</div>
@@ -48,6 +60,19 @@
 		<!--grids end-->
 	</div>
 	<div class="container g-pt-25">
+		<!--revista icatech-->
+		<div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
+			<h2 class="u-heading-v2__title text-uppercase g-font-weight-300 mb-0">REVISTA ICATECH</h2>
+		</div>
+		<div class="masonry-grid-item col-sm-1 col-md-1 col-lg-5 g-mb-30">
+				<div class="about-image">
+					<div class="image">
+						<a target="_blank" href="{{ route('revista') }}"><img src="revista_icatech/revista_icat_2021.jpeg" alt="Banner" class="img-thumbnail"></a><br><br>
+					</div>
+				</div>
+				</div>
+		<!--fin revista icatech end-->	
+
 		<div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
 			<h2 class="u-heading-v2__title text-uppercase g-font-weight-300 mb-0">Videoteca</h2>
 		</div>
@@ -97,17 +122,50 @@
 			<div class="about-text">
 				<p>
 					<marquee behavior="alternate">
+					
                     <a href="https://www.chiapas.gob.mx/media/plan-desarrollo-2019/Plan-Estatal-de-Desarrollo-Chiapas-2019-2024.pdf" target="_new"><img src="Imagenes Pagina/banner-plan.png" width="600px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="{{route('convocatoria.instructores_externos')}}" target="_blank"><img src="Imagenes Pagina/convocatoria_pagina.jpeg" width="500px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/Integridad" target=""><img src="Imagenes Pagina/bannericatechintegridad.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a target="_blank" href="Imagenes Pagina/catalogo_2020.pdf" target=""><img src="Imagenes Pagina/catalogo_cursos.jpeg" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="{{route('convocatoria.instructores_externos')}}" target="_blank"><img src="Imagenes Pagina/convocatoria_pagina.jpeg" width="500px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="https://www.fedenet.org.mx/registro.aspx" target=""><img src="Imagenes Pagina/delito_electoral2.jpg" width="350px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a target="_blank" href="Imagenes Pagina/juventudes_de_palabra.pdf" target=""><img src="Imagenes Pagina/juventudes_depalabra.jpg" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a target="_blank" href="https://ijech.chiapas.gob.mx/parlamentojuvenil2021" target=""><img src="Imagenes Pagina/parla_juvenil.jpeg" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a target="_blank" href="Imagenes Pagina/convocatoria_ secjoven_2021.pdf" target=""><img src="Imagenes Pagina/convocatoria_secjoven.jpeg" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a target="_blank" href="Imagenes Pagina/convocatoria_el_viejo_y_lamar.pdf" target=""><img src="Imagenes Pagina/convocatoria_elviejo_mar.jpg" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a target="_blank" href="Imagenes Pagina/calendario_icatech.pdf" target=""><img src="Imagenes Pagina/calendario.jpeg" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="/Integridad" target=""><img src="Imagenes Pagina/bannericatechintegridad.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="/transparencia" target=""><img src="Imagenes Pagina/banner icatechtransparencia4.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="/planarchivo" target=""><img src="Imagenes Pagina/programa_anual_icatech.png" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="/avisos-de-privacidad" target=""><img src="Imagenes Pagina/avisodeprivacidad2.jpg" width="500px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/normatividad" target=""><img src="Imagenes Pagina/normatividad2.jpg" width="370px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="/normatividad" target=""><img src="Imagenes Pagina/normatividad2.jpg" width="370px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					</marquee>
 				</p>
 			</div>
-	</div>
+	 </div>
+	 
+	 <div class="container g-pt-25">
+		 <div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
+			<h2 class="u-heading-v2__title text-uppercase g-font-weight-300 mb-0">Consulta ciudadana / Plataforma Nacional de Transparencia </h2>
+		 </div>
+				<div class="masonry-grid row g-mb-0 row-eq-height">
+			     <div class="masonry-grid-sizer col-sm-12">
+			     </div>
+				     <div class="masonry-grid-item col-sm-6 col-md-6 col-lg-6 g-mb-30">
+				         <div class="about-image">
+					         <div class="image">
+						<a target="_blank" href="http://consultapublicamx.inai.org.mx:8080/vut-web/?idSujetoObigadoParametro=1184&amp;idEntidadParametro=07&amp;idSectorParametro=21"><img src="Imagenes Pagina/banner_consulta.jpg" alt="Banner" class="img-thumbnail"></a><br><br>
+							 </div>
+				         </div>
+				     </div>
+			<!--div-->
+			<div class="masonry-grid-item col-sm-6 col-md-6 col-lg-6 g-mb-30">
+				<div class="about-image">
+					<div class="image">
+						<a target="_blank" href="https://www.plataformadetransparencia.org.mx/web/guest/inicio"><img src="Imagenes Pagina/banner_pnt.jpg" alt="About Images" class="img-thumbnail"></a><br><br>
+					</div>
+				</div>
+			</div>			
+		         </div>
+	 </div>
+	 
 
 
 	<!--banners-->

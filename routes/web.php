@@ -45,6 +45,10 @@ Route::get('/detalles-noticias', function(){
 Route::get( '/transparencia', function(){
 	return view('pages.transparencia');
 });
+// revista
+Route::get( '/revista', function(){
+	return view('pages.revista');
+})->name('revista');
 // AVISOS DE PRIVACIDAD
 Route::get( '/avisos-de-privacidad', 'CuentapublicaController@avisosprivacidad');
 
@@ -78,8 +82,7 @@ Route::get('/cursos/{id}/{categoria}', 'CursoController@show')->name('cursos');
 Route::get('/transparenciaicatech', 'CuentapublicaController@transparenciaicatech');
 // prospectos
 Route::get('/prospectosalumnos', 'ProspectosController@index');
-// TRANSPARENCIA
-Route::get('/planarchivo', 'CuentapublicaController@planarchivo');
+
 // convocatorias
 Route::get('/convocatorias/instructores-externos', 'ConvocatoriasController@instructores_externos')->name('convocatoria.instructores_externos');
 

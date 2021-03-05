@@ -15,6 +15,42 @@ class CuentapublicaController extends Controller
     public function index()
     {
         // aqui vamos a crear nuestro arreglo
+        $inf_financiera20 = array(
+            'Bienes Patrimoniales' => 'cuenta_publica/pt2020/financiera/bienes_patrimoniales.pdf',
+            'Formatos de Analisis' => 'cuenta_publica/pt2020/financiera/formatos_de_analisis.pdf',
+            'Formatos Armonizados Conac' => 'cuenta_publica/pt2020/financiera/formatos_armonizados.pdf',
+            'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/pt2020/financiera/formatos_ley_de_transparencia.pdf'
+        );
+        $inf_presupuestal20 = array(
+            'Información Presupuestaria' => 'cuenta_publica/pt2020/presupuestal/pptal1er2020.pdf',
+            'Formato Analisis Funcional' => 'cuenta_publica/pt2020/presupuestal/afuncional1er2020.pdf',
+            'Formatos Armonizados Conac' => 'cuenta_publica/pt2020/presupuestal/conac1er2020.pdf',
+            'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/pt2020/presupuestal/ldf1er2020.pdf'
+        );
+        $inf_financiera2t20 = array(
+            'Bienes Patrimoniales' => 'cuenta_publica/st2020/financiera/bienes_patrimoniales.pdf',
+            'Formatos de Analisis' => 'cuenta_publica/st2020/financiera/formatos_analisis.pdf',
+            'Formatos Armonizados Conac' => 'cuenta_publica/st2020/financiera/formatos_armonisados_conac.pdf',
+            'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/st2020/financiera/formatos_ley_transparencia.pdf'
+        );
+        $inf_presupuestal2t20 = array(
+            'Información Presupuestaria' => 'cuenta_publica/st2020/presupuestal/pptal2t2020.pdf',
+            'Formato Analisis Funcional' => 'cuenta_publica/st2020/presupuestal/funcional2t2020.pdf',
+            'Formatos Armonizados Conac' => 'cuenta_publica/st2020/presupuestal/conac2t2020.pdf',
+            'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/st2020/presupuestal/ldf2t2020.pdf'
+        );
+        $inf_financiera3t20 = array(
+            'Bienes Patrimoniales' => 'cuenta_publica/tt2020/financiera/1bienes_patrimoniales.pdf',
+            'Formatos de Analisis' => 'cuenta_publica/tt2020/financiera/1formatos_complementarios.pdf',
+            'Formatos Armonizados Conac' => 'cuenta_publica/tt2020/financiera/1formatos_armonizados_conac.pdf',
+            'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/tt2020/financiera/1formatos_ley_de_disciplina_financiera.pdf'
+        );
+        $inf_presupuestal3t20 = array(
+            'Información Presupuestaria' => 'cuenta_publica/tt2020/presupuestal/1pptal3er2020.pdf',
+            'Formato Analisis Funcional' => 'cuenta_publica/tt2020/presupuestal/1funcional3er2020.pdf',
+            'Formatos Armonizados Conac' => 'cuenta_publica/tt2020/presupuestal/1conac3er2020.pdf',
+            'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/tt2020/presupuestal/1ldf3er2020.pdf'
+        );
         $inf_financiera = array(
             'Bienes Patrimoniales' => 'cuenta_publica/pt2019/financiera/bienespatrimoniales.pdf',
             'Formatos de Analisis' => 'cuenta_publica/pt2019/financiera/formatosanalisis.pdf',
@@ -121,7 +157,7 @@ class CuentapublicaController extends Controller
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/2018/ct2018/presupuestal/ldf.pdf'
         );
 
-        return view('pages.cuentapublica', ['infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3,
+        return view('pages.cuentapublica', ['infin1t20'=> $inf_financiera20, 'infpre1t20'=> $inf_presupuestal20, 'infin2t20'=> $inf_financiera2t20, 'infpre2t20'=> $inf_presupuestal2t20, 'infin3t20'=> $inf_financiera3t20, 'infpre3t20'=> $inf_presupuestal3t20, 'infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3,
         'infFin4'=>$inf_financiera4,'infPre4'=>$inf_presupuestal4,'inffin18'=> $inf_financiera18, 'infpres18'=> $inf_presupuestal18, 'inffin182t'=> $inf_financiera182t, 'infpres182t'=> $inf_presupuestal182t, 'inffint183t'=> $inf_financiera183t, 'infpres183t'=> $inf_presupuestal183t,
         'inffin184t'=> $inf_financiera184t, 'infpres184t'=> $inf_presupuestal184t]);
 
@@ -163,46 +199,85 @@ class CuentapublicaController extends Controller
             'Manual de Organizacion -Organigramas y Funciones Parte 2' => 'normatividad_/manuales/organizacion/organigramas_y_funciones_2.pdf',
             'Manual de Organizacion -Glosario de Terminos de Trabajo' => 'normatividad_/manuales/organizacion/glosario_de_terminos_y_trabajo.pdf'
         );
+        $diario_oficialicatech =array(
+            'Diario Oficial "ICATECH"'=> 'normatividad_/reglamentos/decreto_lineamientos_icatech.pdf'
+        );
 
 
-        return view('pages.normatividad', ['deccrea'=> $dec_decretos, 'reglam'=> $reg_reglamentos, 'manual'=> $man_induccion,
+        return view('pages.normatividad', ['deccrea'=> $dec_decretos, 'manual_lineamientos'=> $diario_oficialicatech, 'reglam'=> $reg_reglamentos, 'manual'=> $man_induccion,
         'manualproc'=> $manu_procedimientos, 'manualorga'=> $manu_organizacion,]);
 
     }
 
     public function licitaciones()
     {
+        $lic_estatales =array(            
+            '- Acta de Apertura de Propuestas Tecnicas y economicas' =>'licitaciones_/estatal/licitacion_ estatal.pdf',
+        );
         $lic_federales =array(
-            '- Acta de Junta de Aclaración de Dudas' => 'licitaciones_/federal/acta_de_aclaracion_de_dudas3 .pdf',
-            '- Acta de Apertura de Propuestas Técnicas y Económicas' => 'licitaciones_/federal/acta_de_apertura_de_propuestas.pdf',
-            '- Acta de Fallo' =>'licitaciones_/federal/acta_de_fallo.pdf',
+            '- ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONOMICAS' => 'licitaciones_/federal/Icatech-ICTP0012021.pdf'            
         );
 
-        $lic_federales2 =array(
-            '- Acta de Junta de Aclaración de Dudas' => 'licitaciones_/federal/acta_de_jaictp-002_2019.pdf',
-            '- Acta de Apertura de Propuestas Técnicas y Económicas' => 'licitaciones_/federal/acta_de_apertura_propuestas_icatech_ictp_002_2019.pdf',
-            '- Acta Circunstanciada 001' => 'licitaciones_/federal/acta_circunstanciada_ictp-002_2019.pdf',
-            '- Acta de Fallo' => 'licitaciones_/federal/fallo_icatech_ictp-002_2019.pdf',
-        );
+        
 
-        $lic_federales3 =array(
-            '- Acta de Junta de Aclaración de Dudas' => 'licitaciones_/federal/acta_de_jaictp-003_2019.pdf',
-            '- Acta de Apertura de Propuestas Técnicas y Económicas' => 'licitaciones_/federal/acta_de_apertura_propuestas_icatech_ictp_003_2019.pdf',
-            '- Acta Circunstanciada 002' => 'licitaciones_/federal/acta_circunstanciada_ictp-003_2019.pdf',
-            '- Acta de Fallo' => 'licitaciones_/federal/fallo_icatech-ictp-003_2019.pdf'
-
-        );
-
-        $lic_federales4 =array(
-            '-Acta de Aclaración de Dudas' => 'licitaciones_/federal/aclaraciondedudas_ICATECH_ICTP_001_2020.pdf'
-        );
-
-
-        return view('pages.licitaciones', ['licfed'=> $lic_federales, 'licfed2'=> $lic_federales2, 'licfed3'=> $lic_federales3, 'licfed4'=> $lic_federales4]);
+        return view('pages.licitaciones', ['licest'=> $lic_estatales, 'licfed'=> $lic_federales]);
     }
 
     public function sevac()
     {
+        $prim_trimestre2020 =array(
+            'Estado Analitico de Deuda y de Otros Pasivos' => 'sevac_/2020/1t/estado_analitico_de_deuda_otros_pasivos.pdf',
+            'Estado Analitico del Activo' => 'sevac_/2020/1t/estado_analitico_del_activo.pdf',
+            'Estado de Actividades' => 'sevac_/2020/1t/estado_de_actividades.pdf',
+            'Estado de Cambios en Situación Financiera' => 'sevac_/2020/1t/estado_de_cambios_en_situacion_financiera.pdf',
+            'Estado de Flujos de Efectivo' => 'sevac_/2020/1t/estado_de_flujos_de_efectivo.pdf',
+            'Estado de Situación Financiera' => 'sevac_/2020/1t/estado_de_situacion_financiera.pdf',
+            'Estado de Variación de Hacienda Pública' => 'sevac_/2020/1t/estado_de_variacion_de_hacienda_publica.pdf',
+            'Informe Sobre Pasivos Contingentes' => 'sevac_/2020/1t/informe_sobre_pasivos_contingentes.pdf',
+            'Notas a los Estados Financieros' => 'sevac_/2020/1t/notas_a_los_estados_financieros.pdf',
+            'Relación de Cuentas Bancarias Productivas Especificas' => 'sevac_/2020/1t/relacion_de_cuentas_bancarias_productivas_especificas.pdf',
+            'Programas y Proyectos de Inversion' => 'sevac_/2020/1t/programas_y_proyectos_de_inversion.pdf',
+            'Indicadores de Resultados' => 'sevac_/2020/1t/indicadores_de_resultados.pdf',
+            'Gasto por Categoria Programatica' => 'sevac_/2020/1t/gasto_por_categoria_programatica.pdf',
+            'Estado Analitico con Clasificación Funcional' => 'sevac_/2020/1t/estado_analitico_con_clasific_funcional.pdf',
+            'Estado Analitico con Clasificación por Objeto del Gasto' => 'sevac_/2020/1t/estado_analitico_con_clasificacion_por_objeto_del_gasto.pdf',
+            'Estado Analitico con Clasificación Economica por tipo de Gasto' => 'sevac_/2020/1t/estado_analitico_con_clasificacion_economica_por_tipo_de_gasto.pdf',
+            'Estado Analitico por Clasificación Administrativa' => 'sevac_/2020/1t/estado_analitico_por_clasificacion_administrativa.pdf',
+            'Endeudamiento Neto' => 'sevac_/2020/1t/endeudamiento_neto.pdf',
+            'Estado Analitico de los Ingresos' => 'sevac_/2020/1t/estado_analitico_de_los_ingresos.pdf',
+            'Formato del Ejercicio y Destino de Gasto Federalizado y Reintegros' => 'sevac_/2020/1t/formato_del_ejercicio_y_destino_de_gasto_federalizado_y_reintegros.pdf',
+            'Intereses de la Deuda' => 'sevac_/2020/1t/intereses_de_la_deuda.pdf',
+            'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2020/1t/monto_pagados_por_ayudas_y_subsidios.pdf'
+
+
+        );
+
+        $segun_trimestre2020 =array(
+            'Estado Analitico de Deuda y de Otros Pasivos' => 'sevac_/2020/2t/estado_analitico_de_la_deuda_y_otros_pasivos.pdf',
+            'Estado Analitico del Activo por Rubros' => 'sevac_/2020/2t/estado_analitico_del_activo_por_rubros.pdf',
+            'Estado de Actividades por Rubros' => 'sevac_/2020/2t/estado_de_actividades_por_rubros.pdf',
+            'Estado de Cambios en Situación Financiera' => 'sevac_/2020/2t/estado_de_cambios_en_la_situacion_financiera.pdf',
+            'Estado de Flujos de Efectivo' => 'sevac_/2020/2t/estado_de_flujo_de_efectivo.pdf',
+            'Estado de Situación Financiera por Rubros' => 'sevac_/2020/2t/estado_de_situacion_financiera_por_rubros.pdf',
+            'Estado de Variación en la Hacienda Pública' => 'sevac_/2020/2t/estado_de_variacion_en_la_hacienda_publica.pdf',
+            'Informe Sobre Pasivos Contingentes' => 'sevac_/2020/2t/informe_sobre_pasivos_contingentes.pdf',
+            'Notas a los Estados Financieros' => 'sevac_/2020/2t/notas_a_los_estados_financieros.pdf',
+            'Estado Analitico con Clasificación Funcional' => 'sevac_/2020/2t/estado_analitico_con_clasific_funcional.pdf',
+            'Estado Analitico por Clasificación Administrativa' => 'sevac_/2020/2t/estado_analitico_por_clasificacion_administrativa.pdf',
+            'Estado Analitico con Clasificación Economica por Tipo de Gasto ' => 'sevac_/2020/2t/estado_analitico_con_clasificacion_economica_por_tipo_de_gasto.pdf',
+            'Estado Analitico con Clasificación por Objeto del Gasto' => 'sevac_/2020/2t/estado_analitico_con_clasificacion_por_objeto_del_gasto.pdf',
+            'Gasto por Categoria Programatica' => 'sevac_/2020/2t/gto_por_categoria_programatica.pdf',
+            'Indicadores de Resultados' => 'sevac_/2020/2t/indicadores_de_resultados.pdf',
+            'Programas y Proyectos de Inversión' => 'sevac_/2020/2t/programas_y_proyectos_de_inversion.pdf',
+            'Endeudamiento Neto' => 'sevac_/2020/2t/endeudamiento_neto.pdf',
+            'Estado Analitico de Ingresos' => 'sevac_/2020/2t/estado_analitico_de_ingresos.pdf',
+            'Formato del Ejercicio y Destino de Gasto Federalizado y Reintegros' => 'sevac_/2020/2t/formato_del_ejercicio_y_destino_de_gasto_federalizado_y_reintegros.pdf',
+            'Intereses de la Deuda' => 'sevac_/2020/2t/intereses_de_la_deuda.pdf',
+            'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2020/2t/montos_pagados_por_ayudas_y_subsidios.pdf'
+
+
+        );
+
         $prim_trimestre =array(
             'Montos pagados por concepto de ayudas y subsidios' => 'sevac_/2019/t1/D.1.11 Montos pagados por concepto de ayudas y subsidios.pdf',
             'Estado de Actividades' => 'sevac_/2019/t1/D.2.1 Estado de Actividades.pdf',
@@ -388,7 +463,7 @@ class CuentapublicaController extends Controller
         );
 
 
-        return view('pages.sevac', ['primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018]);
+        return view('pages.sevac', ['primtrim2020' => $prim_trimestre2020, 'segundtrim2020' => $segun_trimestre2020, 'primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018]);
 
     }
 
@@ -534,7 +609,24 @@ class CuentapublicaController extends Controller
             'Protocolo de Atención de Quejas y Denuncias'=> 'codigos_conducta/protocolo-de-atencion-a-denuncias.pdf',
         );
 
-        return view('pages.Integridad', ['codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo, 'convocatorias' =>$convocatorias_codigo, 'protocolo' =>$protocolodeatencion_codigo]);
+        $informeanual_codigo = array(
+            'Informe Anual de Actividades 2020'=> 'codigos_conducta/informe_anual2020.pdf',
+        );
+
+        $protocolo2_codigo = array(
+            'Protocolo para la Prevención, Atención y Sanción del Hostigamiento Sexual y Acoso sexual.'=> 'codigos_conducta/protocolo.pdf',
+        );
+        $protocolo3_codigo = array(
+            'Protocolo de Actuación de los Comités de Ética y de Prevención de Conflictos de Interés en la Atención de Presuntos Actos de Discriminación'=> 'codigos_conducta/protocolo_actuacion.pdf',
+        );
+        $directorioconse_codigo = array(
+            'DIRECTORIO DEL CONSEJERO'=> 'codigos_conducta/directorio_consejeros.pdf',
+        );
+        $directorioasesores_codigo = array(
+            'DIRECTORIO DE ASESORES'=> 'codigos_conducta/directorio_asesores.pdf',
+        );
+
+        return view('pages.Integridad', ['directorioasesor' => $directorioasesores_codigo,'directorioconsejero' => $directorioconse_codigo, 'protocoloprevencion' =>$protocolo2_codigo, 'protocoloactuacion' =>$protocolo3_codigo, 'codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo, 'convocatorias' =>$convocatorias_codigo, 'informe' => $informeanual_codigo, 'protocolo' =>$protocolodeatencion_codigo]);
     }
     public function planarchivo()
     {

@@ -73,6 +73,7 @@ class ComunicadoController extends Controller
                 $saveComunicado->fecha_publicacion = Carbon::now();
                 $saveComunicado->save();
 
+                #obtener ultimo id
                 $lasIdComunicado = $saveComunicado->id;
 
                 if ($request->hasFile('imagen_comunicado')) {
@@ -272,8 +273,7 @@ class ComunicadoController extends Controller
      */
     public function getnews() {
         $comunicados = new Comunidado();
-        $newsAll = $comunicados::WHERE('confirmado', true)->latest()->paginate(7);
-        $newsAll->withPath('comunicado/url');
+        $newsAll = $comunicados::WHERE('confirmado', true)->paginate(7);
         return view('pages.news', compact('newsAll'));
     }
 
@@ -294,8 +294,8 @@ class ComunicadoController extends Controller
      */
     protected function uploadFile($file, $id, $name)
     {
-        // $tamanio = $file->getSize(); #obtener el tamaño del archivo del cliente
-        $tamanio = $file->getClientSize(); #obtener el tamaño del archivo del cliente
+        $tamanio = $file->getSize(); #obtener el tamaño del archivo del cliente
+        //$tamanio = $file->getClientSize(); #obtener el tamaño del archivo del cliente
         $extensionFile = $file->getClientOriginalExtension(); // extension de la imagen
         # nuevo nombre del archivo
         $documentFile = trim($name."_".date('YmdHis')."_".$id.".".$extensionFile);
