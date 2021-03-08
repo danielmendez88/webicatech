@@ -21,31 +21,31 @@ class CuentapublicaController extends Controller
             'Formatos Armonizados Conac' => 'cuenta_publica/pt2020/financiera/formatos_armonizados.pdf',
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/pt2020/financiera/formatos_ley_de_transparencia.pdf'
         );
-        $inf_presupuestal20 = array( 
+        $inf_presupuestal20 = array(
             'Información Presupuestaria' => 'cuenta_publica/pt2020/presupuestal/pptal1er2020.pdf',
             'Formato Analisis Funcional' => 'cuenta_publica/pt2020/presupuestal/afuncional1er2020.pdf',
             'Formatos Armonizados Conac' => 'cuenta_publica/pt2020/presupuestal/conac1er2020.pdf',
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/pt2020/presupuestal/ldf1er2020.pdf'
         );
-        $inf_financiera2t20 = array(   
+        $inf_financiera2t20 = array(
             'Bienes Patrimoniales' => 'cuenta_publica/st2020/financiera/bienes_patrimoniales.pdf',
             'Formatos de Analisis' => 'cuenta_publica/st2020/financiera/formatos_analisis.pdf',
             'Formatos Armonizados Conac' => 'cuenta_publica/st2020/financiera/formatos_armonisados_conac.pdf',
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/st2020/financiera/formatos_ley_transparencia.pdf'
         );
-        $inf_presupuestal2t20 = array( 
+        $inf_presupuestal2t20 = array(
             'Información Presupuestaria' => 'cuenta_publica/st2020/presupuestal/pptal2t2020.pdf',
             'Formato Analisis Funcional' => 'cuenta_publica/st2020/presupuestal/funcional2t2020.pdf',
             'Formatos Armonizados Conac' => 'cuenta_publica/st2020/presupuestal/conac2t2020.pdf',
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/st2020/presupuestal/ldf2t2020.pdf'
         );
-        $inf_financiera3t20 = array(   
+        $inf_financiera3t20 = array(
             'Bienes Patrimoniales' => 'cuenta_publica/tt2020/financiera/1bienes_patrimoniales.pdf',
             'Formatos de Analisis' => 'cuenta_publica/tt2020/financiera/1formatos_complementarios.pdf',
             'Formatos Armonizados Conac' => 'cuenta_publica/tt2020/financiera/1formatos_armonizados_conac.pdf',
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/tt2020/financiera/1formatos_ley_de_disciplina_financiera.pdf'
         );
-        $inf_presupuestal3t20 = array( 
+        $inf_presupuestal3t20 = array(
             'Información Presupuestaria' => 'cuenta_publica/tt2020/presupuestal/1pptal3er2020.pdf',
             'Formato Analisis Funcional' => 'cuenta_publica/tt2020/presupuestal/1funcional3er2020.pdf',
             'Formatos Armonizados Conac' => 'cuenta_publica/tt2020/presupuestal/1conac3er2020.pdf',
@@ -157,7 +157,7 @@ class CuentapublicaController extends Controller
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/2018/ct2018/presupuestal/ldf.pdf'
         );
 
-        return view('pages.cuentapublica', ['infin1t20'=> $inf_financiera20, 'infpre1t20'=> $inf_presupuestal20, 'infin2t20'=> $inf_financiera2t20, 'infpre2t20'=> $inf_presupuestal2t20, 'infin3t20'=> $inf_financiera3t20, 'infpre3t20'=> $inf_presupuestal3t20,'infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3,
+        return view('pages.cuentapublica', ['infin1t20'=> $inf_financiera20, 'infpre1t20'=> $inf_presupuestal20, 'infin2t20'=> $inf_financiera2t20, 'infpre2t20'=> $inf_presupuestal2t20, 'infin3t20'=> $inf_financiera3t20, 'infpre3t20'=> $inf_presupuestal3t20, 'infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3,
         'infFin4'=>$inf_financiera4,'infPre4'=>$inf_presupuestal4,'inffin18'=> $inf_financiera18, 'infpres18'=> $inf_presupuestal18, 'inffin182t'=> $inf_financiera182t, 'infpres182t'=> $inf_presupuestal182t, 'inffint183t'=> $inf_financiera183t, 'infpres183t'=> $inf_presupuestal183t,
         'inffin184t'=> $inf_financiera184t, 'infpres184t'=> $inf_presupuestal184t]);
 
@@ -217,10 +217,13 @@ class CuentapublicaController extends Controller
         $lic_federales =array(
             '- ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONOMICAS' => 'licitaciones_/federal/Icatech-ICTP0012021.pdf'            
         );
+        $lic_federal_acta_circunstanciada = array(
+            '- ACTA CIRCUNSTANCIADA 01' => 'licitaciones_/federal/ACTA_CIRCUNSTANCIADA_NO_01.pdf'
+        );
 
         
 
-        return view('pages.licitaciones', ['licest'=> $lic_estatales, 'licfed'=> $lic_federales]);
+        return view('pages.licitaciones', ['licest'=> $lic_estatales, 'licfed'=> $lic_federales, 'licfedcircuns' => $lic_federal_acta_circunstanciada]);
     }
 
     public function sevac()
@@ -274,7 +277,7 @@ class CuentapublicaController extends Controller
             'Formato del Ejercicio y Destino de Gasto Federalizado y Reintegros' => 'sevac_/2020/2t/formato_del_ejercicio_y_destino_de_gasto_federalizado_y_reintegros.pdf',
             'Intereses de la Deuda' => 'sevac_/2020/2t/intereses_de_la_deuda.pdf',
             'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2020/2t/montos_pagados_por_ayudas_y_subsidios.pdf'
-            
+
 
         );
 

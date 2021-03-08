@@ -4,6 +4,11 @@
 @section('content')
 <!--seccion-->
     <section class="container g-py-40 g-pt-40 g-pb-0">
+        @if (Session::has('success'))
+            <div class="alert alert-success">
+                {{ Session::get('success') }}
+            </div>
+        @endif
         <div class="row">
             <div class="col-md-9">
                 <h1 class="d-block g-mb-3 g-font-size-18 g-color-primary g-font-weight-500 g-font-secondary">Noticias</h1>
@@ -31,7 +36,7 @@
                         
                         <div class="col-md-9">
                             <h3 class="g-color-gray-dark-v3 g-font-weight-500 mb-3 g-font-secondary" style="font-size:1.1rem">
-                                <a href="comunicado-detalle/{{ base64_encode($itemNews->id) }}/{{ $itemNews->url }}">
+                                <a href="{{ route('comunicado.detalle.show', ['id' => base64_encode($itemNews->id) ]) }}">
                                   {{ $itemNews->titulo }}
                                 </a>
                             </h3>

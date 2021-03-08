@@ -1,5 +1,19 @@
 @extends("theme.lte.layout_news")
 @section('title', "Icatech | $titulo")
+@section('content_script_css')
+    <style>
+        .btn-circle-sm {
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            font-size: 0.9rem;
+        }
+        .btn-circle i {
+            position: relative;
+            top: -1px;
+        }
+    </style>
+@endsection
 
 @section('content')
     <section class="container g-py-40 g-pt-40 g-pb-0">
@@ -27,6 +41,9 @@
                 </article>
             </div>
             <div class="col-lg-4 g-mb-30 g-mb-0--lg">
+                <a href="{{ route('comunicado.modificar.show', ['id' => base64_encode($identificador)]) }}" class="btn btn-danger btn-circle m-1 btn-circle-sm" data-toggle="tooltip" data-placement="top" title="EDITAR COMUNICADO">
+                    <i class="fa fa-keyboard-o" aria-hidden="true"></i>
+                </a>
             </div>
         </div>
     </section>

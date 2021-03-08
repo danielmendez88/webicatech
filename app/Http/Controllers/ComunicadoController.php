@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\File;
 use Redirect,Response;
 use App\Models\Comunidado;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class ComunicadoController extends Controller
 {
@@ -55,30 +56,16 @@ class ComunicadoController extends Controller
                 'url' => 'required'
             ]);
             if ($validator->fails()) {
-                # code...
-                return Redirect::to("/error-cargar-comunicado");
+                # si la validación falla, volvemos a la página anterior mandando los mensajes de error
+                return redirect()->back()->withErrors($validator)->withInput();
             } else {
                 # code...
                 $safecontent = $this->antiScript($request->contenido);
                 $saferes = substr($safecontent, 0, 140);
                 $saveComunicado = new Comunidado();
-                if ($request->hasFile('imagen_comunicado')) {
-                    # si se encuentra la imagen comenzamos a subirlo...
-                    $file = $request->file('imagen_comunicado'); # obtenemos el archivo
-                    $tamanio = $file->getClientSize(); #obtener el tamaño del archivo del cliente
-                    $extensionImagen = $file->getClientOriginalExtension(); // extension de la imagen
-                    $imagenFile = trim(str_slug($request->url, '-')) . "." . $extensionImagen; // nombre de la imagen al momento de subirla
-                    $request->file('imagen_comunicado')->storeAs('/uploadFiles/', $imagenFile); // guardamos el archivo en la carpeta storage
-                    $imagenUrl = Storage::url('/uploadFiles/'.$imagenFile); // obtenemos la url donde se encuentra el archivo almacenado en el servidor.
-                } else {
-                    return Redirect::to("/error-cargar-comunicado");
-                }
-
-
                 $saveComunicado->titulo = trim($request->titulo);
-                $saveComunicado->imagen = trim($imagenUrl);
                 $saveComunicado->localizacion = trim($request->localizacion);
-                $saveComunicado->contenido = trim(strip_tags($safecontent,'<p><a><br>'));
+                $saveComunicado->contenido = trim($request->contenido);
                 $saveComunicado->categorias = trim($request->categoria);
                 $saveComunicado->resumen = trim(strip_tags($saferes,'<p><a><br>'));
                 $saveComunicado->confirmado = true;
@@ -86,7 +73,40 @@ class ComunicadoController extends Controller
                 $saveComunicado->fecha_publicacion = Carbon::now();
                 $saveComunicado->save();
 
-                return Redirect::to("/administrador/registro-personal")->withSuccess('Personal Agregado éxitosamente.');
+                #obtener ultimo id
+                $lasIdComunicado = $saveComunicado->id;
+
+                if ($request->hasFile('imagen_comunicado')) {
+                    #obtenemos el valor del comunicado
+                    $imagen_guardada = DB::table('comunicados')->WHERE('id', $lasIdComunicado)->VALUE('imagen');
+                    // checamos que no sea nulo
+                    if (!is_null($imagen_guardada)) {
+                        # si no está nulo checamos que no esté vacio
+                        if (!empty($imagen_guardada)) {
+                            # si no está vacio
+                            $docImagen = explode("/",$imagen_guardada, 5);
+                            if (Storage::exists($docImagen[4])) {
+                                # checamos si hay un documento de ser así procedemos a eliminarlo
+                                Storage::delete($docImagen[4]);
+                            }
+                        }
+                    }
+
+                    $imagen_comunicado_save = $request->file('imagen_comunicado'); # obtenemos el archivo
+                    $url_imagen_comunicado = $this->uploadFile($imagen_comunicado_save, $lasIdComunicado, 'imagen_comunicado'); #invocamos el método
+                    // creamos un arreglo
+                    $arreglo_comunicado = [
+                        'imagen' => $url_imagen_comunicado
+                    ];
+
+                    // vamos a actualizar el registro con el arreglo que trae diferentes variables y carga de archivos
+                    DB::table('comunicados')->WHERE('id', $lasIdComunicado)->update($arreglo_comunicado);
+
+                    // limpiamos el arreglo
+                    unset($arreglo_comunicado);
+                } 
+
+                return redirect()->route('comunicado.index')->with('success', 'Comunicado Agregado éxitosamente.');
             }
         } catch (Exception $e) {
             //throw $th;
@@ -107,7 +127,7 @@ class ComunicadoController extends Controller
         $iddecode = base64_decode($id);
         //dd($iddecode);
         //$detatelle = new Comunidado();
-        $detatelle = Comunidado::SELECT('titulo', 'imagen', 'fecha_publicacion', 'localizacion', 'contenido', 'categorias', 'url', 'resumen')
+        $detatelle = Comunidado::SELECT('titulo', 'imagen', 'fecha_publicacion', 'localizacion', 'contenido', 'categorias', 'url', 'resumen', 'id')
                     ->WHERE('id', '=', $iddecode)
                     ->get();
         $titulo = $detatelle[0]->titulo;
@@ -120,7 +140,33 @@ class ComunicadoController extends Controller
         $categorias = $detatelle[0]->categorias;
         $url = $detatelle[0]->url;
         $resumen = $detatelle[0]->resumen;
-        return view('pages.noticias_detalles', compact('titulo', 'imagen', 'fecha_pub', 'localizacion', 'contenido', 'categorias', 'url', 'resumen'))
+        $identificador = $detatelle[0]->id;
+        return view('pages.noticias_detalles', compact('titulo', 'imagen', 'fecha_pub', 'localizacion', 'contenido', 'categorias', 'url', 'resumen', 'identificador'))
+            ->withArticle($detatelle);
+    }
+
+    public function showdetails($id)
+    {
+        $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+        //el comunicado exacto
+        $iddecode = base64_decode($id);
+        //dd($iddecode);
+        //$detatelle = new Comunidado();
+        $detatelle = Comunidado::SELECT('titulo', 'imagen', 'fecha_publicacion', 'localizacion', 'contenido', 'categorias', 'url', 'resumen', 'id')
+                    ->WHERE('id', '=', $iddecode)
+                    ->get();
+        $titulo = $detatelle[0]->titulo;
+        $imagen = $detatelle[0]->imagen;
+        $fecha = \Carbon\Carbon::parse($detatelle[0]->fecha_publicacion);
+        $mes = $meses[($fecha->format('n')) - 1];
+        $fecha_pub = $fecha->format('d') . ' de ' . $mes . ' de ' . $fecha->format('Y');
+        $localizacion = $detatelle[0]->localizacion;
+        $contenido = $detatelle[0]->contenido;
+        $categorias = $detatelle[0]->categorias;
+        $url = $detatelle[0]->url;
+        $resumen = $detatelle[0]->resumen;
+        $identificador = $detatelle[0]->id;
+        return view('pages.comunicados_detalle', compact('titulo', 'imagen', 'fecha_pub', 'localizacion', 'contenido', 'categorias', 'url', 'resumen', 'identificador'))
             ->withArticle($detatelle);
     }
 
@@ -132,7 +178,13 @@ class ComunicadoController extends Controller
      */
     public function edit($id)
     {
-        //
+        // edicion
+        $iddecode = base64_decode($id);
+        $detalles = DB::table('comunicados')
+                    ->select('titulo', 'imagen', 'fecha_publicacion', 'localizacion', 'contenido', 'categorias', 'url', 'resumen', 'id')
+                    ->where('id', $iddecode)->first();
+
+        return view('pages.formulario_comunicado_editar', compact('detalles'));
     }
 
     /**
@@ -144,7 +196,57 @@ class ComunicadoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //ACTUALIZAR REGISTROS
+        if (isset($id)) {
+            $ids = base64_decode($id);
+            # funcion antiscript
+            $safecontent = $this->antiScript($request->contenido);
+            $saferes = substr($safecontent, 0, 140);
+            # code...
+            $array_update = [
+                'titulo' => trim($request->titulo),
+                'localizacion' => trim($request->localizacion),
+                'contenido' => trim($request->contenido),
+                'categorias' => trim($request->categoria),
+                'resumen' => trim(strip_tags($saferes,'<p><a><br>')),
+                'url' => str_slug($request->url, '-'),
+            ];
+
+            DB::table('comunicados')->WHERE('id', $ids)->UPDATE($array_update);
+
+            if ($request->hasFile('imagen_comunicado')) {
+                #obtenemos el valor del comunicado
+                $imagen_guardada = DB::table('comunicados')->WHERE('id', $ids)->VALUE('imagen');
+                // checamos que no sea nulo
+                if (!is_null($imagen_guardada)) {
+                    # si no está nulo checamos que no esté vacio
+                    if (!empty($imagen_guardada)) {
+                        # si no está vacio
+                        $docImagen = explode("/",$imagen_guardada, 5);
+                        if (Storage::exists($docImagen[4])) {
+                            # checamos si hay un documento de ser así procedemos a eliminarlo
+                            Storage::delete($docImagen[4]);
+                        }
+                    }
+                }
+
+                $imagen_comunicado_save = $request->file('imagen_comunicado'); # obtenemos el archivo
+                $url_imagen_comunicado = $this->uploadFile($imagen_comunicado_save, $ids, 'imagen_comunicado'); #invocamos el método
+                // creamos un arreglo
+                $arreglo_comunicado = [
+                    'imagen' => $url_imagen_comunicado
+                ];
+
+                // vamos a actualizar el registro con el arreglo que trae diferentes variables y carga de archivos
+                DB::table('comunicados')->WHERE('id', $ids)->update($arreglo_comunicado);
+
+                // limpiamos el arreglo
+                unset($arreglo_comunicado);
+            }
+
+            return redirect()->route('comunicado.index')
+                ->with('success', sprintf('COMUNICADO %s  MODIFICADO EXTIOSAMENTE!', $request->titulo));
+        }
     }
 
     /**
@@ -171,8 +273,7 @@ class ComunicadoController extends Controller
      */
     public function getnews() {
         $comunicados = new Comunidado();
-        $newsAll = $comunicados::WHERE('confirmado', true)->latest()->paginate(7);
-        $newsAll->withPath('comunicado/url');
+        $newsAll = $comunicados::WHERE('confirmado', true)->paginate(7);
         return view('pages.news', compact('newsAll'));
     }
 
@@ -186,5 +287,20 @@ class ComunicadoController extends Controller
         }
 
         return $safecontenido;
+    }
+
+    /**
+     * creamos un método que nos ayude a cargar un archivo al servidor de una manera fácil
+     */
+    protected function uploadFile($file, $id, $name)
+    {
+        $tamanio = $file->getSize(); #obtener el tamaño del archivo del cliente
+        //$tamanio = $file->getClientSize(); #obtener el tamaño del archivo del cliente
+        $extensionFile = $file->getClientOriginalExtension(); // extension de la imagen
+        # nuevo nombre del archivo
+        $documentFile = trim($name."_".date('YmdHis')."_".$id.".".$extensionFile);
+        $file->storeAs('/uploadFiles/comunicados/'.$id, $documentFile); // guardamos el archivo en la carpeta storage
+        $documentUrl = Storage::url('/uploadFiles/comunicados/'.$id."/".$documentFile); // obtenemos la url donde se encuentra el archivo almacenado en el servidor.
+        return $documentUrl;
     }
 }
