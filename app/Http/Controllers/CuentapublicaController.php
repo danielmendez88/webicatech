@@ -212,15 +212,17 @@ class CuentapublicaController extends Controller
     public function licitaciones()
     {
         $lic_estatales =array(            
-            '- Acta de Apertura de Propuestas Tecnicas y economicas' =>'licitaciones_/estatal/licitacion_ estatal.pdf',
+            '- Acta de Apertura de Propuestas Tecnicas y economicas' =>'licitaciones_/estatal/licitacion_ estatal.pdf'
         );
         $lic_federales =array(
-            '- ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONOMICAS' => 'licitaciones_/federal/Icatech-ICTP0012021.pdf'            
+            '- ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONOMICAS' => 'licitaciones_/federal/Icatech-ICTP0012021.pdf'          
+            
         );
         $lic_federal_acta_circunstanciada = array(
-            '- ACTA CIRCUNSTANCIADA 01' => 'licitaciones_/federal/ACTA_CIRCUNSTANCIADA_NO_01.pdf'
+            '- ACTA CIRCUNSTANCIADA 01' => 'licitaciones_/federal/ACTA_CIRCUNSTANCIADA_NO_01.pdf',
+            '- ACTA DE FALLO' => 'licitaciones_/federal/acta_de_fallo.pdf'
+            
         );
-
         
 
         return view('pages.licitaciones', ['licest'=> $lic_estatales, 'licfed'=> $lic_federales, 'licfedcircuns' => $lic_federal_acta_circunstanciada]);
