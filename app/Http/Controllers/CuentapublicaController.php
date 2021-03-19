@@ -220,13 +220,17 @@ class CuentapublicaController extends Controller
         );
         $lic_federal_acta_circunstanciada = array(
             '- ACTA CIRCUNSTANCIADA 01' => 'licitaciones_/federal/ACTA_CIRCUNSTANCIADA_NO_01.pdf',
-            '- ACTA DE FALLO' => 'licitaciones_/federal/acta_de_fallo.pdf',
-            '- ACTA DE APERTURA DE PROPUESTAS TECNICAS Y ECONOMICAS' => 'licitaciones_/federal/ACTA_APERTURA_PROPUESTAS.pdf'
+            '- ACTA DE FALLO' => 'licitaciones_/federal/acta_de_fallo.pdf'
+            
             
         );
         
+        $lic_federal_apertura = array(
+            '- ACTA DE APERTURA DE PROPUESTAS TECNICAS Y ECONOMICAS' => 'licitaciones_/federal/ACTA_APERTURA_PROPUESTAS.pdf'
+        );
+        
 
-        return view('pages.licitaciones', ['licest'=> $lic_estatales, 'licfed'=> $lic_federales, 'licfedcircuns' => $lic_federal_acta_circunstanciada]);
+        return view('pages.licitaciones', ['acfallo' => $lic_federal_apertura, 'licest'=> $lic_estatales, 'licfed'=> $lic_federales, 'licfedcircuns' => $lic_federal_acta_circunstanciada]);
     }
 
     public function sevac()
