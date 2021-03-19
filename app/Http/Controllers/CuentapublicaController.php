@@ -220,7 +220,8 @@ class CuentapublicaController extends Controller
         );
         $lic_federal_acta_circunstanciada = array(
             '- ACTA CIRCUNSTANCIADA 01' => 'licitaciones_/federal/ACTA_CIRCUNSTANCIADA_NO_01.pdf',
-            '- ACTA DE FALLO' => 'licitaciones_/federal/acta_de_fallo.pdf'
+            '- ACTA DE FALLO' => 'licitaciones_/federal/acta_de_fallo.pdf',
+            '- ACTA DE APERTURA DE PROPUESTAS TECNICAS Y ECONOMICAS' => 'licitaciones_/federal/ACTA_APERTURA_PROPUESTAS.pdf'
             
         );
         
