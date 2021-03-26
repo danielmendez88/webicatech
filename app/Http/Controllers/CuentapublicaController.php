@@ -491,6 +491,7 @@ class CuentapublicaController extends Controller
 
         $avisos_ejecutiva =array(
             'Area de Infórmatica' => 'avisos_privacidad/integral/AVISO_INTEGRAL_INFORMATICA.pdf',
+            'Area de Mercadotecnia' => 'avisos_privacidad/integral/AVISO_INTEGRAL_MERCADOTECNICA.pdf'
         );
 
         $avisos_juridico =array(
@@ -514,7 +515,7 @@ class CuentapublicaController extends Controller
         );
 
         $avisos_vinculacion =array(
-            'Dirección de Vinculacion' => '',
+            'Dirección de Vinculacion' => 'avisos_privacidad/integral/AVISO_INTEGRAL_DIR_VINCULACION.pdf',
             'Direccion de Vinculación con el Sector Productivo' => 'avisos_privacidad/integral/AVISO_INTEGRAL_VINC._CONVENIOS_SEC_PROD..pdf',
             'Dirección de Vinculación Seguimiento a Egresados' => 'avisos_privacidad/integral/AVISO_INTEGRAL_VINC._SEGUIMIENTO_EGRESADOS_VINCULACION.pdf'
 
@@ -522,18 +523,13 @@ class CuentapublicaController extends Controller
 
         $avisos_tecnica =array(
             'Departamento de Gestión Academica (Instructores)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_TECNICA_ACADEMICA_VALIDACIÓN_DEL_PERSONAL_TECNICA_ACADEMICA.pdf',
-            'Departamento de Certificación y Control' => 'avisos_privacidad/integral/AVISO_INTEGRAL_TECNICA_A_CONTROL_ESCOLAR_TECNICA_A..pdf',
+            'Departamento de Certificación y Control' => 'avisos_privacidad/integral/AVISO_INTEGRAL_TECNICA_A_CONTROL_ESCOLAR_TECNICA_A..pdf'
 
         );
 
         $avisos_comisaria =array(
             'Comisaria Pública' => 'avisos_privacidad/integral/INTEGRAL_COMISARIA.pdf'
         );
-
-        $avisos_cursos =array(
-            'Cursos' => 'avisos_privacidad/integral/aviso_integral_de_cursos.pdf'
-        );
-
 
         $avisos_simplificados =array(
             'ICATECH' => 'avisos_privacidad/simplificado/AVISO_SMPLIFICADO_ICATECH.pdf',
@@ -542,6 +538,7 @@ class CuentapublicaController extends Controller
 
         $simplificados_ejecutiva =array(
             'Area de Infórmatica' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_INFORMATICA.pdf',
+            'Area de Mercadotecnia' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_MERCADOTECNICA.pdf'
         );
 
         $simplificados_juridico =array(
@@ -565,7 +562,7 @@ class CuentapublicaController extends Controller
         );
 
         $simplificados_vinculacion =array(
-            'Dirección de Vinculacion' => '',
+            'Dirección de Vinculacion' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_DIR._VINCULACION.pdf',
             'Direccion de Vinculación con el Sector Productivo' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_VINC._CONVENIOS_SEC_PROD.pdf',
             'Dirección de Vinculación Seguimiento a Egresados' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_VINC.seguimiento_egresados_SEC_PROD.pdf'
 
@@ -580,15 +577,10 @@ class CuentapublicaController extends Controller
             'Comisaria Pública' => 'avisos_privacidad/simplificado/SIMPLI_COMISARIA.pdf'
         );
 
-        $simplificados_cursos =array(
-            'Cursos' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_DE_CURSO.pdf'
-        );
-
-
-
+        
         return view('pages.avisosprivacidad', ['avis_inte' =>$avisos_integrales, 'unejec' => $avisos_ejecutiva, 'unjuri' => $avisos_juridico, 'diradm' => $avisos_administrativa,
         'dirplan' => $avisos_planeacion, 'dirvincula' => $avisos_vinculacion, 'dirtacad' => $avisos_tecnica, 'comi' => $avisos_comisaria, 'avis_simpl' => $avisos_simplificados, 'simejec' => $simplificados_ejecutiva, 'simjuri' => $simplificados_juridico, 'simadmi' => $simplificados_administrativa,
-        'simplan' => $simplificados_planeacion, 'simvincu' => $simplificados_vinculacion, 'simacad' => $simplificados_academica, 'simcomi' =>$simplificados_comisaria, 'aviscurso' =>$avisos_cursos, 'simcurso' => $simplificados_cursos]);
+        'simplan' => $simplificados_planeacion, 'simvincu' => $simplificados_vinculacion, 'simacad' => $simplificados_academica, 'simcomi' =>$simplificados_comisaria]);
     }
 
     public function Integridad()
