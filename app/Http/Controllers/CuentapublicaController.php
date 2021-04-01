@@ -215,9 +215,13 @@ class CuentapublicaController extends Controller
             '- ACTA DE APERTURA DE PROPUESTAS TECNICAS Y ECONOMICAS' => 'licitaciones_/federal/ACTA_APERTURA_PROPUESTAS.pdf',
             '- ACTA DE FALLO' => 'licitaciones_/federal/FALLO_ICTP-001-2021_2DO.PROCEDIMIENTO .pdf'
         );
+
+        $lic_convocatoria = array(
+            ' PRESENCIAL ICATECH-LPN/001/2021 (TIEMPOS RECORTADOS)' => 'licitaciones_/federal/ICATECH-LPN0012021.pdf'
+        );
         
 
-        return view('pages.licitaciones', ['acfallo' => $lic_federal_apertura]);
+        return view('pages.licitaciones', ['acfallo' => $lic_federal_apertura, 'convocatorias_' => $lic_convocatoria,]);
     }
 
     public function sevac()
