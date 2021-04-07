@@ -217,7 +217,8 @@ class CuentapublicaController extends Controller
         );
 
         $lic_convocatoria = array(
-            ' PRESENCIAL ICATECH-LPN/001/2021 (TIEMPOS RECORTADOS)' => 'licitaciones_/federal/ICATECH-LPN0012021.pdf'
+            ' PRESENCIAL ICATECH-LPN/001/2021 (TIEMPOS RECORTADOS)' => 'licitaciones_/federal/ICATECH-LPN0012021.pdf',
+            ' PRESENCIAL ICATECH-LPN/001/2021 (TIEMPOS RECORTADOS) COMPRANET LA-907081961-E3-2021' => 'licitaciones_/federal/aclaracion_de_dudas_LPN_001_2021.pdf'
         );
         
 
