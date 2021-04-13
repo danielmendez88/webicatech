@@ -51,6 +51,12 @@ class CuentapublicaController extends Controller
             'Formatos Armonizados Conac' => 'cuenta_publica/tt2020/presupuestal/1conac3er2020.pdf',
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/tt2020/presupuestal/1ldf3er2020.pdf'
         );
+        $inf_financiera4t20 = array(
+            
+        );
+        $inf_presupuestal4t20 = array(
+            'Información Presupuestaria' => 'cuenta_publica/ct2020/presupuestal/informacionppt4t2020.pdf'            
+        );
         $inf_financiera = array(
             'Bienes Patrimoniales' => 'cuenta_publica/pt2019/financiera/bienespatrimoniales.pdf',
             'Formatos de Analisis' => 'cuenta_publica/pt2019/financiera/formatosanalisis.pdf',
@@ -157,9 +163,16 @@ class CuentapublicaController extends Controller
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/2018/ct2018/presupuestal/ldf.pdf'
         );
 
-        return view('pages.cuentapublica', ['infin1t20'=> $inf_financiera20, 'infpre1t20'=> $inf_presupuestal20, 'infin2t20'=> $inf_financiera2t20, 'infpre2t20'=> $inf_presupuestal2t20, 'infin3t20'=> $inf_financiera3t20, 'infpre3t20'=> $inf_presupuestal3t20, 'infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3,
+        $inf_disciplina1t21 =array(
+            'Clasificación por objeto del gasto, Capitulo y Concepto ESC' => 'cuenta_publica/ley_disciplinafinanciera2021/1t2021/LDF6aClasificaciOnporObjetodelGastoCapituloyConceptoEsc.pdf',
+            'Clasificación Administrativa ESC' => 'cuenta_publica/ley_disciplinafinanciera2021/1t2021/LDF6bClasificaciOnAdministrativaEsc.pdf',
+            'Clasificación Funcional, Finalidad y Función ESC' => 'cuenta_publica/ley_disciplinafinanciera2021/1t2021/LDF6cClasificaciOnFuncionalFinalidadyFunciónEsc.pdf',
+            'Clasificación de Servicios Personales por Categorias ESC' => 'cuenta_publica/ley_disciplinafinanciera2021/1t2021/LDF6dClasificaciOndeServiciosPersonalesporCategorIaEsc.pdf'
+        );
+
+        return view('pages.cuentapublica', ['disci1t21'=> $inf_disciplina1t21, 'infin1t20'=> $inf_financiera20, 'infpre1t20'=> $inf_presupuestal20, 'infin2t20'=> $inf_financiera2t20, 'infpre2t20'=> $inf_presupuestal2t20, 'infin3t20'=> $inf_financiera3t20, 'infpre3t20'=> $inf_presupuestal3t20, 'infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3,
         'infFin4'=>$inf_financiera4,'infPre4'=>$inf_presupuestal4,'inffin18'=> $inf_financiera18, 'infpres18'=> $inf_presupuestal18, 'inffin182t'=> $inf_financiera182t, 'infpres182t'=> $inf_presupuestal182t, 'inffint183t'=> $inf_financiera183t, 'infpres183t'=> $inf_presupuestal183t,
-        'inffin184t'=> $inf_financiera184t, 'infpres184t'=> $inf_presupuestal184t]);
+        'inffin184t'=> $inf_financiera184t, 'infpres184t'=> $inf_presupuestal184t, 'inffinan4t'=> $inf_financiera4t20, 'infpresu4t'=> $inf_presupuestal4t20]);
 
 
     }
@@ -218,7 +231,8 @@ class CuentapublicaController extends Controller
 
         $lic_convocatoria = array(
             ' PRESENCIAL ICATECH-LPN/001/2021 (TIEMPOS RECORTADOS)' => 'licitaciones_/federal/ICATECH-LPN0012021.pdf',
-            ' PRESENCIAL ICATECH-LPN/001/2021 (TIEMPOS RECORTADOS) COMPRANET LA-907081961-E3-2021' => 'licitaciones_/federal/aclaracion_de_dudas_LPN_001_2021.pdf'
+            ' PRESENCIAL ICATECH-LPN/001/2021 (TIEMPOS RECORTADOS) COMPRANET LA-907081961-E3-2021' => 'licitaciones_/federal/aclaracion_de_dudas_LPN_001_2021.pdf',
+            ' ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONÓMICAS, ICATECH-LPN/001/2021 (TIEMPOS RECORTADOS), COMPRANET LA-907081961-E3-2021' => 'licitaciones_/federal/acta_de_apertura_lpn.pdf'
         );
         
 
