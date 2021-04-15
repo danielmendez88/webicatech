@@ -505,96 +505,96 @@ class CuentapublicaController extends Controller
     {
 
         $avisos_integrales =array(
-            'ICATECH' => 'avisos_privacidad/integral/AVISO_INTEGRAL_ICATECH.pdf',
-            'Dirección General' => 'avisos_privacidad/integral/AVISO_INTEGRAL_DIRECCION_G..pdf'
+            'ICATECH' => 'avisos_privacidad/integral/AVISO_INTEGRALICATECH.pdf',
+            'Dirección General' => 'avisos_privacidad/integral/AVISO_INTEGRAL_DIRECCIONG..pdf'
         );
 
         $avisos_ejecutiva =array(
-            'Area de Infórmatica' => 'avisos_privacidad/integral/AVISO_INTEGRAL_INFORMATICA.pdf',
-            'Area de Mercadotecnia' => 'avisos_privacidad/integral/AVISO_INTEGRAL_MERCADOTECNICA.pdf'
+            'Area de Infórmatica' => 'avisos_privacidad/integral/AVISO_INTEGRALINFORMATICA.pdf',
+            'Area de Mercadotecnia' => 'avisos_privacidad/integral/AVISO_INTEGRALMERCADOTECNICA.pdf'
         );
 
         $avisos_juridico =array(
-            'Unidad Juridica' => 'avisos_privacidad/integral/AVISO_INTEGRAL_JURIDICO.pdf',
-            'Unidad de Transparencia (Derecho ARCO)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_ARCO_TRANSP.pdf',
-            'Unidad de Transparencia' => 'avisos_privacidad/integral/AVISO_INTEGRAL_SOLICITUDES_TRANSP.pdf'
+            'Unidad Juridica' => 'avisos_privacidad/integral/AVISO_INTEGRALJURIDICO.pdf',
+            'Unidad de Transparencia (Derecho ARCO)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_ARCOTRANSP.pdf',
+            'Unidad de Transparencia' => 'avisos_privacidad/integral/AVISO_INTEGRAL_SOLICITUDESTRANSP.pdf'
         );
 
         $avisos_administrativa =array(
-            'Departamento de Recursos Financieros (CDFI)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_FINANCIERO.pdf',
-            'Departamento de Recursos Humanos (Nomina)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_RH_NOMINA_DE PAGO.pdf',
-            'Departamento de Recursos Humanos (Expediente Unico del Personal)' => 'avisos_privacidad/integral/AVISO_INTE_RH_EXPE_U.P.pdf',
-            'Departamento de Recursos Humanos (Sistema de Registro de Asistencia)' => 'avisos_privacidad/integral/AVISO_INTE_RH_REGISTRO_DE_ASISTENCIA.pdf',
-            'Departamento de Recursos Materiales (Proveedores)' => 'avisos_privacidad/integral/MATERIALES_AVISO_INTEGRAL_REGISTRO_DE_PROVEEDORES.pdf',
-            'Departamento de Recursos Materiales (Resguardos)' => 'avisos_privacidad/integral/MATERIALES_AVISO_INTEGRAL_RESGUARDOS_MOBILIARIO.pdf',
-            'Departamento de Recursos Materiales (Registro de Visitas)' => 'avisos_privacidad/integral/MATERIALES_AVISO_INTE_REGISTRO_DE_VISITANTES.pdf'
+            'Departamento de Recursos Financieros (CDFI)' => 'avisos_privacidad/integral/AVISO_INTEGRALFINANCIERO.pdf',
+            'Departamento de Recursos Humanos (Nomina)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_RH_NOMINA_DEPAGO.pdf',
+            'Departamento de Recursos Humanos (Expediente Unico del Personal)' => 'avisos_privacidad/integral/AVISO_INTE_RH_EXPEU.P.pdf',
+            'Departamento de Recursos Humanos (Sistema de Registro de Asistencia)' => 'avisos_privacidad/integral/AVISO_INTE_RH_REGISTRO_DEASISTENCIA.pdf',
+            'Departamento de Recursos Materiales (Proveedores)' => 'avisos_privacidad/integral/MATERIALES_AVISO_INTEGRAL_REGISTRO_DEPROVEEDORES.pdf',
+            'Departamento de Recursos Materiales (Resguardos)' => 'avisos_privacidad/integral/MATERIALES_AVISO_INTEGRAL_RESGUARDOSMOBILIARIO.pdf',
+            'Departamento de Recursos Materiales (Registro de Visitas)' => 'avisos_privacidad/integral/MATERIALES_AVISO_INTE_REGISTRO_DEVISITANTES.pdf'
         );
 
         $avisos_planeacion =array(
-            'Dirección de Planeación' => 'avisos_privacidad/integral/AVISO_INTEGRAL_PLANEACION.pdf',
+            'Dirección de Planeación' => 'avisos_privacidad/integral/AVISO_INTEGRALPLANEACION.pdf',
         );
 
         $avisos_vinculacion =array(
-            'Dirección de Vinculacion' => 'avisos_privacidad/integral/AVISO_INTEGRAL_DIR_VINCULACION.pdf',
-            'Direccion de Vinculación con el Sector Productivo' => 'avisos_privacidad/integral/AVISO_INTEGRAL_VINC._CONVENIOS_SEC_PROD..pdf',
-            'Dirección de Vinculación Seguimiento a Egresados' => 'avisos_privacidad/integral/AVISO_INTEGRAL_VINC._SEGUIMIENTO_EGRESADOS_VINCULACION.pdf'
+            'Dirección de Vinculacion' => 'avisos_privacidad/integral/AVISO_INTEGRAL_DIRVINCULACION.pdf',
+            'Direccion de Vinculación con el Sector Productivo' => 'avisos_privacidad/integral/AVISO_INTEGRAL_VINC._CONVENIOS_SECPROD..pdf',
+            'Dirección de Vinculación Seguimiento a Egresados' => 'avisos_privacidad/integral/AVISO_INTEGRAL_VINC._SEGUIMIENTO_EGRESADOSVINCULACION.pdf'
 
         );
 
         $avisos_tecnica =array(
-            'Departamento de Gestión Academica (Instructores)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_TECNICA_ACADEMICA_VALIDACIÓN_DEL_PERSONAL_TECNICA_ACADEMICA.pdf',
-            'Departamento de Certificación y Control' => 'avisos_privacidad/integral/AVISO_INTEGRAL_TECNICA_A_CONTROL_ESCOLAR_TECNICA_A..pdf'
+            'Departamento de Gestión Academica (Instructores)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_TECNICA_ACADEMICA_VALIDACIÓN_DEL_PERSONAL_TECNICAACADEMICA.pdf',
+            'Departamento de Certificación y Control' => 'avisos_privacidad/integral/AVISO_INTEGRAL_TECNICA_A_CONTROL_ESCOLAR_TECNICAA..pdf'
 
         );
 
         $avisos_comisaria =array(
-            'Comisaria Pública' => 'avisos_privacidad/integral/INTEGRAL_COMISARIA.pdf'
+            'Comisaria Pública' => 'avisos_privacidad/integral/INTEGRALCOMISARIA.pdf'
         );
 
         $avisos_simplificados =array(
-            'ICATECH' => 'avisos_privacidad/simplificado/AVISO_SMPLIFICADO_ICATECH.pdf',
-            'Dirección General' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_DIRECCION_G..pdf'
+            'ICATECH' => 'avisos_privacidad/simplificado/AVISO_SMPLIFICADOICATECH.pdf',
+            'Dirección General' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_DIRECCIONG..pdf'
         );
 
         $simplificados_ejecutiva =array(
-            'Area de Infórmatica' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_INFORMATICA.pdf',
-            'Area de Mercadotecnia' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_MERCADOTECNICA.pdf'
+            'Area de Infórmatica' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADOINFORMATICA.pdf',
+            'Area de Mercadotecnia' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADOMERCADOTECNICA.pdf'
         );
 
         $simplificados_juridico =array(
-            'Unidad Juridica' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_JURIDICO.pdf',
-            'Unidad de Transparencia (Derecho ARCO)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_ARCO_TRANSP.pdf',
-            'Unidad de Transparencia' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_SOLICITUDES_TRANSP.pdf'
+            'Unidad Juridica' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADOJURIDICO.pdf',
+            'Unidad de Transparencia (Derecho ARCO)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_ARCOTRANSP.pdf',
+            'Unidad de Transparencia' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_SOLICITUDESTRANSP.pdf'
         );
 
         $simplificados_administrativa =array(
-            'Departamento de Recursos Financieros (CDFI)' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_FINANCIERO.pdf',
-            'Departamento de Recursos Humanos (Nomina)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_RH_NOMINA_DE_PAGO.pdf',
-            'Departamento de Recursos Humanos (Expediente Unico del Personal)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_RH_EXPE_U.P.pdf',
-            'Departamento de Recursos Humanos (Sistema de Registro de Asistencia)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_RH_REGISTRO_DE_ASISTENCIA.pdf',
-            'Departamento de Recursos Materiales (Proveedores)' => 'avisos_privacidad/simplificado/MATERIALES_AVISO_SIMPLI_REGISTRO_DE_PROVEEDORES.pdf',
-            'Departamento de Recursos Materiales (Resguardos)' => 'avisos_privacidad/simplificado/MATERIALES_AVISO_SIMPLI_RESGUARDO_MOBILIARIO.pdf',
-            'Departamento de Recursos Materiales (Registro de Visitas)' => 'avisos_privacidad/simplificado/MATERIALES_AVISO_SIMPLI_REGISTRO_DE_VISITANTES.pdf'
+            'Departamento de Recursos Financieros (CDFI)' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADOFINANCIERO.pdf',
+            'Departamento de Recursos Humanos (Nomina)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_RH_NOMINA_DEPAGO.pdf',
+            'Departamento de Recursos Humanos (Expediente Unico del Personal)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_RH_EXPEU.P.pdf',
+            'Departamento de Recursos Humanos (Sistema de Registro de Asistencia)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_RH_REGISTRO_DEASISTENCIA.pdf',
+            'Departamento de Recursos Materiales (Proveedores)' => 'avisos_privacidad/simplificado/MATERIALES_AVISO_SIMPLI_REGISTRO_DEPROVEEDORES.pdf',
+            'Departamento de Recursos Materiales (Resguardos)' => 'avisos_privacidad/simplificado/MATERIALES_AVISO_SIMPLI_RESGUARDOMOBILIARIO.pdf',
+            'Departamento de Recursos Materiales (Registro de Visitas)' => 'avisos_privacidad/simplificado/MATERIALES_AVISO_SIMPLI_REGISTRO_DEVISITANTES.pdf'
         );
 
         $simplificados_planeacion =array(
-            'Dirección de Planeación' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_PLANEACION.pdf'
+            'Dirección de Planeación' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADOPLANEACION.pdf'
         );
 
         $simplificados_vinculacion =array(
-            'Dirección de Vinculacion' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_DIR._VINCULACION.pdf',
-            'Direccion de Vinculación con el Sector Productivo' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_VINC._CONVENIOS_SEC_PROD.pdf',
-            'Dirección de Vinculación Seguimiento a Egresados' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_VINC.seguimiento_egresados_SEC_PROD.pdf'
+            'Dirección de Vinculacion' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_DIR.VINCULACION.pdf',
+            'Direccion de Vinculación con el Sector Productivo' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_VINC._CONVENIOS_SECPROD.pdf',
+            'Dirección de Vinculación Seguimiento a Egresados' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_VINC.seguimiento_egresados_SECPROD.pdf'
 
         );
 
         $simplificados_academica =array(
-            'Departamento de Gestión Academica (Instructores)' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_TECNICA_ACADEMICA_VALIDACIÓN_DEL_PERSONAL_TECNICA_ACADEMICA.pdf',
-            'Departamento de Certificación y Control' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_TECNICA_ACADEMICACONTROL_ESCOLAR_TECNICA_A..pdf'
+            'Departamento de Gestión Academica (Instructores)' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_TECNICA_ACADEMICA_VALIDACIÓN_DEL_PERSONAL_TECNICAACADEMICA.pdf',
+            'Departamento de Certificación y Control' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_TECNICA_ACADEMICACONTROL_ESCOLAR_TECNICAA..pdf'
         );
 
         $simplificados_comisaria =array(
-            'Comisaria Pública' => 'avisos_privacidad/simplificado/SIMPLI_COMISARIA.pdf'
+            'Comisaria Pública' => 'avisos_privacidad/simplificado/SIMPLICOMISARIA.pdf'
         );
 
         
