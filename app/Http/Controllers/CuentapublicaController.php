@@ -235,9 +235,13 @@ class CuentapublicaController extends Controller
             ' ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONÓMICAS, ICATECH-LPN/001/2021 (TIEMPOS RECORTADOS), COMPRANET LA-907081961-E3-2021' => 'licitaciones_/federal/acta_de_apertura_lpn.pdf',
             ' ACTA DE FALLO' => 'licitaciones_/federal/acta_de_fallo_presencial.pdf'
         );
+
+        $lic_federal_presencial = array(
+            '- EVENTO DE PRESENTACIÓN Y APERTURA DE PROPUESTAS DE LA INVITACIÓN A CUANDO MENOS TRES PERSONAS, NACIONAL, PRESENCIAL, ICATECH-ICTP/002/2021' => 'licitaciones_/federal/acta_apertura_presentacion_apertura_propuestas.pdf'            
+        );
         
 
-        return view('pages.licitaciones', ['acfallo' => $lic_federal_apertura, 'convocatorias_' => $lic_convocatoria,]);
+        return view('pages.licitaciones', ['acfallo' => $lic_federal_apertura, 'convocatorias_' => $lic_convocatoria, 'ictp002' => $lic_federal_presencial]);
     }
 
     public function sevac()
@@ -536,10 +540,9 @@ class CuentapublicaController extends Controller
             'Comisaria Pública' => 'avisos_privacidad/integral/INTEGRALCOMISARIA.pdf'
         );
 
-        $avisos_cursos =array(
-            'Cursos' => 'avisos_privacidad/integral/aviso_integral_de_cursos.pdf'
+        $integrales_cursos =array(
+            'Comisaria Pública' => 'avisos_privacidad/integral/CURSOS.pdf'
         );
-
 
         $avisos_simplificados =array(
             'ICATECH' => 'avisos_privacidad/simplificado/AVISO_SMPLIFICADOICATECH.pdf',
@@ -588,12 +591,11 @@ class CuentapublicaController extends Controller
         );
 
         $simplificados_cursos =array(
-            'Cursos' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_DE_CURSO.pdf'
+            'Impartición de Cursos' => 'avisos_privacidad/simplificado/CURSOS.pdf'
         );
 
-
-
-        return view('pages.avisosprivacidad', ['avis_inte' =>$avisos_integrales, 'unejec' => $avisos_ejecutiva, 'unjuri' => $avisos_juridico, 'diradm' => $avisos_administrativa,
+        
+        return view('pages.avisosprivacidad', ['avis_inte' => $avisos_integrales, 'inte_cursos' => $integrales_cursos,'simpli_cursos' => $simplificados_cursos, 'unejec' => $avisos_ejecutiva, 'unjuri' => $avisos_juridico, 'diradm' => $avisos_administrativa,
         'dirplan' => $avisos_planeacion, 'dirvincula' => $avisos_vinculacion, 'dirtacad' => $avisos_tecnica, 'comi' => $avisos_comisaria, 'avis_simpl' => $avisos_simplificados, 'simejec' => $simplificados_ejecutiva, 'simjuri' => $simplificados_juridico, 'simadmi' => $simplificados_administrativa,
         'simplan' => $simplificados_planeacion, 'simvincu' => $simplificados_vinculacion, 'simacad' => $simplificados_academica, 'simcomi' =>$simplificados_comisaria, 'aviscurso' =>$avisos_cursos, 'simcurso' => $simplificados_cursos]);
     }
