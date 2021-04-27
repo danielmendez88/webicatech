@@ -237,7 +237,8 @@ class CuentapublicaController extends Controller
         );
 
         $lic_federal_presencial = array(
-            '- EVENTO DE PRESENTACIÓN Y APERTURA DE PROPUESTAS DE LA INVITACIÓN A CUANDO MENOS TRES PERSONAS, NACIONAL, PRESENCIAL, ICATECH-ICTP/002/2021' => 'licitaciones_/federal/acta_apertura_presentacion_apertura_propuestas.pdf'            
+            '- EVENTO DE PRESENTACIÓN Y APERTURA DE PROPUESTAS DE LA INVITACIÓN A CUANDO MENOS TRES PERSONAS, NACIONAL, PRESENCIAL, ICATECH-ICTP/002/2021' => 'licitaciones_/federal/acta_apertura_presentacion_apertura_propuestas.pdf',  
+            '- ACTA DE FALLO' => 'licitaciones_/federal/ACTA_DE_FALLO_TINTAS.pdf'          
         );
         
 
