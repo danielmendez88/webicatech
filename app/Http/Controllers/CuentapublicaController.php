@@ -678,7 +678,7 @@ class CuentapublicaController extends Controller
     public function transparencia()
     {
         $programactividades_codigo = array(
-            'PROGRAMA ANUAL DE ACTIVIDADES 2020'=> 'archivtransparencia/INFORME_PADA_2020.pdf',
+            'INFORME DEL PADA 2020'=> 'archivtransparencia/INFORME_PADA_2020.pdf',
             'PROGRAMA ANUAL DE ACTIVIDADES 2021'=> 'archivtransparencia/INFORME_PADA_2021.pdf'
         );
 
