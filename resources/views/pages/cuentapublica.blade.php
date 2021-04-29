@@ -345,6 +345,80 @@
                                   </div>
                                   <!--fin informacion presupuestal 3 trimestre 2020!-->
 
+                                  <b><h5>CUARTO TRIMESTRE 2020</h5></b><br>
+                    <!--información financiera 3 trimestre 2020!-->
+                    <div class="card rounded-0 g-brd-none">
+                       <div id="accordion-07-heading-08" class="u-accordion__header g-pa-0" role="tab">
+                       <h5 class="mb-0 g-font-size-default g-font-weight-700 g-pa-20a mb-0">
+                           <a class="collapsed d-flex g-color-main g-text-underline--none--hover" href="#accordion-07-body-08" data-toggle="collapse" data-parent="#accordion-07" aria-expanded="false" aria-controls="accordion-07-body-08">
+                            <span class="u-accordion__control-icon g-brd-right g-brd-gray-light-v4 g-color-primary text-center g-pa-20">
+                             <i class="fa fa-plus"></i>
+                             <i class="fa fa-minus"></i>
+                            </span>
+                               <span class="g-pa-20">
+                                Información Financiera 4 Trimestre 2020
+                               </span>
+                           </a>
+                       </h5>
+                       </div>
+                         <div id="accordion-07-body-08" class="collapse" role="tabpanel" aria-labelledby="accordion-07-heading-08" data-parent="#accordion-07">
+                          <div class="u-accordion__body g-bg-gray-light-v5 g-px-50 g-py-30">
+                           <ul class="list-unstyled">
+                             @foreach ($inffinan4t as $key => $value)
+                              <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
+                                <div class="d-flex justify-content-start">
+                                 <h5 class="g-font-weight-600 g-color-black">{{ $key }}</h5>
+                                </div>
+                                     <div class="d-flex justify-content-between">
+                                         <ul class="u-list-inline"></ul>
+                                           <div class="align-self-center">
+                                             <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
+                                           </div>
+                                     </div>
+                              </li>
+                             @endforeach
+                           </ul>
+                           </div>
+                         </div>
+                   </div>
+                                  <!--fin información financiera 3 trimestre bueno!-->
+                              <!--informacion presupuestal 3 Trimestre 2020!-->
+                              <div class="card rounded-0 g-brd-none">
+                                  <div id="accordion-07-heading-09" class="u-accordion__header g-pa-0" role="tab">
+                                   <h5 class="mb-0 g-font-size-default g-font-weight-700 g-pa-20a mb-0">
+                                    <a class="collapsed d-flex g-color-main g-text-underline--none--hover" href="#accordion-07-body-09" data-toggle="collapse" data-parent="#accordion-07" aria-expanded="false" aria-controls="accordion-07-body-09">
+                                     <span class="u-accordion__control-icon g-brd-right g-brd-gray-light-v4 g-color-primary text-center g-pa-20">
+                                       <i class="fa fa-plus"></i>
+                                       <i class="fa fa-minus"></i>
+                                       </span>
+                                         <span class="g-pa-20">
+                                               Información Presupuestal 4 Trimestre 2020
+                                          </span>
+                                    </a>
+                                   </h5>
+                                  </div>
+                                       <div id="accordion-07-body-09" class="collapse" role="tabpanel" aria-labelledby="accordion-07-heading-09" data-parent="#accordion-07">
+                                         <div class="u-accordion__body g-bg-gray-light-v5 g-px-50 g-py-30">
+                                          <ul class="list-unstyled">
+                                            @foreach ($infpresu4t as $key => $value)
+                                              <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
+                                                <div class="d-flex justify-content-start">
+                                                  <h5 class="g-font-weight-600 g-color-black">{{ $key }}</h5>
+                                                </div>
+                                                  <div class="d-flex justify-content-between">
+                                                    <ul class="u-list-inline"></ul>
+                                                    <div class="align-self-center">
+                                                      <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
+                                                    </div>
+                                                  </div>
+                                              </li>
+                                             @endforeach
+                                          </ul>
+                                          </div>
+                                        </div>
+                                  </div>
+                                  <!--fin informacion presupuestal 3 trimestre 2020!-->
+
                 <br><br><b><h4>INFORMACION DE LA CUENTA PUBLICA 2019</h4></b><br>
                     <b><h5>PRIMER TRIMESTRE 2019</h5></b><br>
 
@@ -423,100 +497,13 @@
                         </div>
                         <!--fin informacion presupuestal!-->
 
-                    <br><b><h5>SEGUNDO TRIMESTRE 2019</h5></b><br>
+                      <br><b><h5>SEGUNDO TRIMESTRE 2019</h5></b><br>
 
                         <!--informacion financiera!-->
-                    <div class="card rounded-0 g-brd-none">
-                        <div id="accordion-07-heading-12" class="u-accordion__header g-pa-0" role="tab">
-                        <h5 class="mb-0 g-font-size-default g-font-weight-700 g-pa-20a mb-0">
-                          <a class="collapsed d-flex g-color-main g-text-underline--none--hover" href="#accordion-07-body-12" data-toggle="collapse" data-parent="#accordion-07" aria-expanded="false" aria-controls="accordion-07-body-12">
-                          <span class="u-accordion__control-icon g-brd-right g-brd-gray-light-v4 g-color-primary text-center g-pa-20">
-                            <i class="fa fa-plus"></i>
-                            <i class="fa fa-minus"></i>
-                          </span>
-                          <span class="g-pa-20">
-                              Información Financiera 2019
-                          </span>
-                          </a>
-                        </h5>
-                        </div>
-                        <div id="accordion-07-body-12" class="collapse" role="tabpanel" aria-labelledby="accordion-07-heading-12" data-parent="#accordion-07">
-                        <div class="u-accordion__body g-bg-gray-light-v5 g-px-50 g-py-30">
-                          <ul class="list-unstyled">
-                              @foreach ($infFin2 as $key => $value)
-                              <!--Area de Informatica-->
-                              <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
-                                <div class="d-flex justify-content-start">
-                                  <h5 class="g-font-weight-600 g-color-black">{{ $key }}</h5>
-
-                                </div>
-                                <div class="d-flex justify-content-between">
-                                  <ul class="u-list-inline">
-
-                                  </ul>
-                                  <div class="align-self-center">
-                                    <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
-                                  </div>
-                                </div>
-                              </li>
-                            @endforeach
-                          </ul>
-
-                        </div>
-                        </div>
-                      </div>
-                        <!--fin informacion financiera!-->
-
-                    <!--informacion presupuestal!-->
-
-                    <div class="card rounded-0 g-brd-none">
-                        <div id="accordion-07-heading-13" class="u-accordion__header g-pa-0" role="tab">
-                        <h5 class="mb-0 g-font-size-default g-font-weight-700 g-pa-20a mb-0">
-                          <a class="collapsed d-flex g-color-main g-text-underline--none--hover" href="#accordion-07-body-13" data-toggle="collapse" data-parent="#accordion-07" aria-expanded="false" aria-controls="accordion-07-body-13">
-                          <span class="u-accordion__control-icon g-brd-right g-brd-gray-light-v4 g-color-primary text-center g-pa-20">
-                            <i class="fa fa-plus"></i>
-                            <i class="fa fa-minus"></i>
-                          </span>
-                          <span class="g-pa-20">
-                              Información Presupuestal 2019
-                          </span>
-                          </a>
-                        </h5>
-                        </div>
-                        <div id="accordion-07-body-13" class="collapse" role="tabpanel" aria-labelledby="accordion-07-heading-13" data-parent="#accordion-07">
-                        <div class="u-accordion__body g-bg-gray-light-v5 g-px-50 g-py-30">
-                          <ul class="list-unstyled">
-                              @foreach ($infPre2 as $key => $value)
-                              <!--Area de Informatica-->
-                              <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
-                                <div class="d-flex justify-content-start">
-                                  <h5 class="g-font-weight-600 g-color-black">{{ $key }}</h5>
-
-                                </div>
-                                <div class="d-flex justify-content-between">
-                                  <ul class="u-list-inline">
-
-                                  </ul>
-                                  <div class="align-self-center">
-                                    <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
-                                  </div>
-                                </div>
-                              </li>
-                            @endforeach
-                          </ul>
-
-                        </div>
-                        </div>
-                      </div>
-                      <!--fin informacion presupuestal!-->
-
-                      <br><b><h5>TERCER TRIMESTRE 2019</h5></b><br>
-
-                      <!--informacion financiera!-->
                       <div class="card rounded-0 g-brd-none">
-                          <div id="accordion-07-heading-14" class="u-accordion__header g-pa-0" role="tab">
+                        <div id="accordion-07-heading-12" class="u-accordion__header g-pa-0" role="tab">
                           <h5 class="mb-0 g-font-size-default g-font-weight-700 g-pa-20a mb-0">
-                            <a class="collapsed d-flex g-color-main g-text-underline--none--hover" href="#accordion-07-body-14" data-toggle="collapse" data-parent="#accordion-07" aria-expanded="false" aria-controls="accordion-07-body-14">
+                            <a class="collapsed d-flex g-color-main g-text-underline--none--hover" href="#accordion-07-body-12" data-toggle="collapse" data-parent="#accordion-07" aria-expanded="false" aria-controls="accordion-07-body-12">
                             <span class="u-accordion__control-icon g-brd-right g-brd-gray-light-v4 g-color-primary text-center g-pa-20">
                               <i class="fa fa-plus"></i>
                               <i class="fa fa-minus"></i>
@@ -526,20 +513,20 @@
                             </span>
                             </a>
                           </h5>
-                          </div>
-                          <div id="accordion-07-body-14" class="collapse" role="tabpanel" aria-labelledby="accordion-07-heading-14" data-parent="#accordion-07">
+                        </div>
+                        <div id="accordion-07-body-12" class="collapse" role="tabpanel" aria-labelledby="accordion-07-heading-12" data-parent="#accordion-07">
                           <div class="u-accordion__body g-bg-gray-light-v5 g-px-50 g-py-30">
                             <ul class="list-unstyled">
-                                @foreach ($infFin3 as $key => $value)
+                                @foreach ($infFin2 as $key => $value)
                                 <!--Area de Informatica-->
                                 <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
                                   <div class="d-flex justify-content-start">
                                     <h5 class="g-font-weight-600 g-color-black">{{ $key }}</h5>
-  
+
                                   </div>
                                   <div class="d-flex justify-content-between">
                                     <ul class="u-list-inline">
-  
+
                                     </ul>
                                     <div class="align-self-center">
                                       <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
@@ -548,11 +535,97 @@
                                 </li>
                               @endforeach
                             </ul>
-  
-                          </div>
+
                           </div>
                         </div>
-                          <!--fin informacion financiera!-->
+                      </div>
+                        <!--fin informacion financiera!-->
+
+                      <!--informacion presupuestal!-->
+
+                      <div class="card rounded-0 g-brd-none">
+                        <div id="accordion-07-heading-13" class="u-accordion__header g-pa-0" role="tab">
+                          <h5 class="mb-0 g-font-size-default g-font-weight-700 g-pa-20a mb-0">
+                            <a class="collapsed d-flex g-color-main g-text-underline--none--hover" href="#accordion-07-body-13" data-toggle="collapse" data-parent="#accordion-07" aria-expanded="false" aria-controls="accordion-07-body-13">
+                            <span class="u-accordion__control-icon g-brd-right g-brd-gray-light-v4 g-color-primary text-center g-pa-20">
+                              <i class="fa fa-plus"></i>
+                              <i class="fa fa-minus"></i>
+                            </span>
+                            <span class="g-pa-20">
+                                Información Presupuestal 2019
+                            </span>
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="accordion-07-body-13" class="collapse" role="tabpanel" aria-labelledby="accordion-07-heading-13" data-parent="#accordion-07">
+                          <div class="u-accordion__body g-bg-gray-light-v5 g-px-50 g-py-30">
+                            <ul class="list-unstyled">
+                                @foreach ($infPre2 as $key => $value)
+                                <!--Area de Informatica-->
+                                <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
+                                  <div class="d-flex justify-content-start">
+                                    <h5 class="g-font-weight-600 g-color-black">{{ $key }}</h5>
+
+                                  </div>
+                                  <div class="d-flex justify-content-between">
+                                    <ul class="u-list-inline">
+
+                                    </ul>
+                                    <div class="align-self-center">
+                                      <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
+                                    </div>
+                                  </div>
+                                </li>
+                              @endforeach
+                            </ul>
+
+                          </div>
+                        </div>
+                      </div>
+                      <!--fin informacion presupuestal!-->
+
+                      <br><b><h5>TERCER TRIMESTRE 2019</h5></b><br>
+
+                      <!--informacion financiera!-->
+                      <div class="card rounded-0 g-brd-none">
+                          <div id="accordion-07-heading-14" class="u-accordion__header g-pa-0" role="tab">
+                            <h5 class="mb-0 g-font-size-default g-font-weight-700 g-pa-20a mb-0">
+                              <a class="collapsed d-flex g-color-main g-text-underline--none--hover" href="#accordion-07-body-14" data-toggle="collapse" data-parent="#accordion-07" aria-expanded="false" aria-controls="accordion-07-body-14">
+                              <span class="u-accordion__control-icon g-brd-right g-brd-gray-light-v4 g-color-primary text-center g-pa-20">
+                                <i class="fa fa-plus"></i>
+                                <i class="fa fa-minus"></i>
+                              </span>
+                              <span class="g-pa-20">
+                                  Información Financiera 2019
+                              </span>
+                              </a>
+                            </h5>
+                          </div>
+                          <div id="accordion-07-body-14" class="collapse" role="tabpanel" aria-labelledby="accordion-07-heading-14" data-parent="#accordion-07">
+                            <div class="u-accordion__body g-bg-gray-light-v5 g-px-50 g-py-30">
+                              <ul class="list-unstyled">
+                                @foreach ($infFin3 as $key => $value)
+                                  <!--Area de Informatica-->
+                                  <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
+                                      <div class="d-flex justify-content-start">
+                                        <h5 class="g-font-weight-600 g-color-black">{{ $key }}</h5>
+      
+                                      </div>
+                                      <div class="d-flex justify-content-between">
+                                        <ul class="u-list-inline">
+      
+                                        </ul>
+                                        <div class="align-self-center">
+                                          <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
+                                        </div>
+                                      </div>
+                                  </li>
+                                @endforeach
+                              </ul>
+                            </div>
+                          </div>
+                      </div>
+                      <!--fin informacion financiera!-->
 
 
 
