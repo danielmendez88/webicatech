@@ -95,7 +95,7 @@
                   <i class="fa fa-minus"></i>
                 </span>
                 <span class="g-pa-20">
-                    Dirección Juridica
+                  Unidad Jurídica
                 </span>
                 </a>
               </h5>
@@ -458,7 +458,7 @@
                          <i class="fa fa-minus"></i>
                        </span>
                        <span class="g-pa-20">
-                           Dirección Jurica
+                        Unidad Jurídica
                        </span>
                        </a>
                      </h5>
