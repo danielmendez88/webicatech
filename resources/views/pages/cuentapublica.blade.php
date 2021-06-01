@@ -1182,7 +1182,7 @@
 
                                 </ul>
                                 <div class="align-self-center">
-                                  <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
+                                  <a href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
                                 </div>
                               </div>
                             </li>
