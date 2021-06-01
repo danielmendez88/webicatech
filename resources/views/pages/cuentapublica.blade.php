@@ -331,6 +331,20 @@
                                               <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
                                                 <div class="d-flex justify-content-start">
                                                   <h5 class="g-font-weight-600 g-color-black">{{ $key }}</h5>
+                                                </div>
+                                                  <div class="d-flex justify-content-between">
+                                                    <ul class="u-list-inline"></ul>
+                                                    <div class="align-self-center">
+                                                      <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
+                                                    </div>
+                                                  </div>
+                                              </li>
+                                             @endforeach
+                                          </ul>
+                                          </div>
+                                        </div>
+                                  </div>
+                                  <!--fin informacion presupuestal 3 trimestre 2020!-->
 
                                   <b><h5>CUARTO TRIMESTRE 2020</h5></b><br>
                     <!--información financiera 3 trimestre 2020!-->
