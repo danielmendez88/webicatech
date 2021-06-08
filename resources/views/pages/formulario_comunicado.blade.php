@@ -18,7 +18,8 @@
     </div>
     <hr style="border-color:dimgray">
     <form action="{{ route('comunicados.save')}}" method="post" id="registercomunicado" enctype="multipart/form-data">
-        @csrf
+        @csrf {{-- modificaciones --}}
+        
         <div class="form-row">
             <!--TITULO LOCALIDAD-->
             <div class="form-group col-md-8">
@@ -80,3 +81,4 @@
     });
 </script>
 @endsection
+{{-- modificaciones --}}
