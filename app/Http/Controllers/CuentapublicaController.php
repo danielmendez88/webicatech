@@ -51,6 +51,12 @@ class CuentapublicaController extends Controller
             'Formatos Armonizados Conac' => 'cuenta_publica/tt2020/presupuestal/1conac3er2020.pdf',
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/tt2020/presupuestal/1ldf3er2020.pdf'
         );
+        $inf_financiera4t20 = array(
+            
+        );
+        $inf_presupuestal4t20 = array(
+            'Información Presupuestaria' => 'cuenta_publica/ct2020/presupuestal/informacionppt4t2020.pdf'            
+        );
         $inf_financiera = array(
             'Bienes Patrimoniales' => 'cuenta_publica/pt2019/financiera/bienespatrimoniales.pdf',
             'Formatos de Analisis' => 'cuenta_publica/pt2019/financiera/formatosanalisis.pdf',
@@ -76,10 +82,10 @@ class CuentapublicaController extends Controller
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/st2019/presupuestal/leydisciplinafinanciera.pdf'
         );
         $inf_financiera3 = array(
-            'Bienes Patrimoniales' => 'cuenta_publica/tt2019/financiera/BIENESPATRIMONIALES.pdf',
-            'Formatos de Analisis' => 'cuenta_publica/tt2019/financiera/FORMATOSDEANALISIS.pdf',
-            'Formatos Armonizados Conac' =>'cuenta_publica/tt2019/financiera/ARMONIZADOSCONAC.pdf',
-            'Formatos Ley de Disciplina Financiera' =>'cuenta_publica/tt2019/financiera/LEYDEDISCIPLINAFINANCIERA.pdf'
+            'Bienes Patrimoniales' => 'cuenta_publica/tt2019/financiera/bienes_patrimoniales.pdf',
+            'Formatos de Analisis' => 'cuenta_publica/tt2019/financiera/formatos_de_analisis.pdf',
+            'Formatos Armonizados Conac' =>'cuenta_publica/tt2019/financiera/formatos_armonizadosconac.pdf',
+            'Formatos Ley de Disciplina Financiera' =>'cuenta_publica/tt2019/financiera/formatos_ley_de_disciplina_financiera.pdf'
         );
         $inf_presupuestal3 = array(
             'Información Presupuestaria' => 'cuenta_publica/tt2019/presupuestal/pptal.pdf',
@@ -157,9 +163,27 @@ class CuentapublicaController extends Controller
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/2018/ct2018/presupuestal/ldf.pdf'
         );
 
-        return view('pages.cuentapublica', ['infin1t20'=> $inf_financiera20, 'infpre1t20'=> $inf_presupuestal20, 'infin2t20'=> $inf_financiera2t20, 'infpre2t20'=> $inf_presupuestal2t20, 'infin3t20'=> $inf_financiera3t20, 'infpre3t20'=> $inf_presupuestal3t20, 'infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3,
+        $inf_disciplina1t21 =array(
+            'Clasificación por objeto del gasto, Capitulo y Concepto ESC' => 'cuenta_publica/ley_disciplinafinanciera2021/1t2021/LDF6aClasificaciOnporObjetodelGastoCapituloyConceptoEsc.pdf',
+            'Clasificación Administrativa ESC' => 'cuenta_publica/ley_disciplinafinanciera2021/1t2021/LDF6bClasificaciOnAdministrativaEsc.pdf',
+            'Clasificación Funcional, Finalidad y Función ESC' => 'cuenta_publica/ley_disciplinafinanciera2021/1t2021/LDF6cClasificaciOnFuncionalFinalidadyFunciónEsc.pdf',
+            'Clasificación de Servicios Personales por Categorias ESC' => 'cuenta_publica/ley_disciplinafinanciera2021/1t2021/LDF6dClasificaciOndeServiciosPersonalesporCategorIaEsc.pdf'
+        );
+        $inf_financiera1t21 =array(
+            'Bienes Patrimoniales' => 'cuenta_publica/pt2021/financiera/bienes_patrimoniales.pdf',
+            'Formatos Complementarios' => 'cuenta_publica/pt2021/financiera/formatos_complementarios.pdf',
+            'Clasificación Funcional, Finalidad y Función ESC' => 'cuenta_publica/pt2021/financiera/formatos_armonizados_conac.pdf',
+            'Clasificación de Servicios Personales por Categorias ESC' => 'cuenta_publica/pt2021/financiera/formatos_ley_de_disciplina_financiera.pdf'
+        );
+        $inf_presupuestal1t21 =array(
+            'Analisis Funcional' => 'cuenta_publica/pt2021/presupuestal/analisis_funciona1ertrimestre2021.pdf',
+            'Formatos Armonizados Conac' => 'cuenta_publica/pt2021/presupuestal/formatosarmonizadosconac1ertrimestre2021.pdf',
+            'Información Presupuestal' => 'cuenta_publica/pt2021/presupuestal/Informacion_pptal1ertrimestre2021.pdf'
+        );
+
+        return view('pages.cuentapublica', ['finan1t21'=> $inf_financiera1t21, 'presu1t21'=> $inf_presupuestal1t21, 'disci1t21'=> $inf_disciplina1t21, 'infin1t20'=> $inf_financiera20, 'infpre1t20'=> $inf_presupuestal20, 'infin2t20'=> $inf_financiera2t20, 'infpre2t20'=> $inf_presupuestal2t20, 'infin3t20'=> $inf_financiera3t20, 'infpre3t20'=> $inf_presupuestal3t20, 'infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3,
         'infFin4'=>$inf_financiera4,'infPre4'=>$inf_presupuestal4,'inffin18'=> $inf_financiera18, 'infpres18'=> $inf_presupuestal18, 'inffin182t'=> $inf_financiera182t, 'infpres182t'=> $inf_presupuestal182t, 'inffint183t'=> $inf_financiera183t, 'infpres183t'=> $inf_presupuestal183t,
-        'inffin184t'=> $inf_financiera184t, 'infpres184t'=> $inf_presupuestal184t]);
+        'inffin184t'=> $inf_financiera184t, 'infpres184t'=> $inf_presupuestal184t, 'inffinan4t'=> $inf_financiera4t20, 'infpresu4t'=> $inf_presupuestal4t20]);
 
 
     }
@@ -172,7 +196,7 @@ class CuentapublicaController extends Controller
         );
 
         $reg_reglamentos = array(
-            'Reglamento Interior 2018' => 'normatividad_/reglamentos/reglamento_interior2018.pdf'
+            'Reglamento Interior 2018' => 'normatividad_/reglamentos/reglamento_interno2018.pdf'
         );
 
         $man_induccion =array(
@@ -210,20 +234,29 @@ class CuentapublicaController extends Controller
     }
 
     public function licitaciones()
-    {
-        $lic_estatales =array(            
-            '- Acta de Apertura de Propuestas Tecnicas y economicas' =>'licitaciones_/estatal/licitacion_ estatal.pdf',
+    {               
+        $lic_federal_apertura = array(
+            '- ACTA DE APERTURA DE PROPUESTAS TECNICAS Y ECONOMICAS' => 'licitaciones_/federal/ACTA_APERTURA_PROPUESTAS.pdf',
+            '- ACTA DE FALLO' => 'licitaciones_/federal/FALLO_ICTP-001-2021_2DO.PROCEDIMIENTO .pdf'
         );
-        $lic_federales =array(
-            '- ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONOMICAS' => 'licitaciones_/federal/Icatech-ICTP0012021.pdf'            
+
+        $lic_convocatoria = array(
+            ' PRESENCIAL ICATECH-LPN/001/2021 (TIEMPOS RECORTADOS)' => 'licitaciones_/federal/ICATECH-LPN0012021.pdf',
+            ' PRESENCIAL ICATECH-LPN/001/2021 (TIEMPOS RECORTADOS) COMPRANET LA-907081961-E3-2021' => 'licitaciones_/federal/aclaracion_de_dudas_LPN_001_2021.pdf',
+            ' ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONÓMICAS, ICATECH-LPN/001/2021 (TIEMPOS RECORTADOS), COMPRANET LA-907081961-E3-2021' => 'licitaciones_/federal/acta_de_apertura_lpn.pdf',
+            ' ACTA DE FALLO' => 'licitaciones_/federal/acta_de_fallo_presencial.pdf'
         );
         $lic_federal_acta_circunstanciada = array(
             '- ACTA CIRCUNSTANCIADA 01' => 'licitaciones_/federal/ACTA_CIRCUNSTANCIADA_NO_01.pdf'
         );
 
+        $lic_federal_presencial = array(
+            '- EVENTO DE PRESENTACIÓN Y APERTURA DE PROPUESTAS DE LA INVITACIÓN A CUANDO MENOS TRES PERSONAS, NACIONAL, PRESENCIAL, ICATECH-ICTP/002/2021' => 'licitaciones_/federal/acta_apertura_presentacion_apertura_propuestas.pdf',  
+            '- ACTA DE FALLO' => 'licitaciones_/federal/ACTA_DE_FALLO_TINTAS.pdf'          
+        );
         
 
-        return view('pages.licitaciones', ['licest'=> $lic_estatales, 'licfed'=> $lic_federales, 'licfedcircuns' => $lic_federal_acta_circunstanciada]);
+        return view('pages.licitaciones', ['acfallo' => $lic_federal_apertura, 'convocatorias_' => $lic_convocatoria, 'ictp002' => $lic_federal_presencial]);
     }
 
     public function sevac()
@@ -278,6 +311,21 @@ class CuentapublicaController extends Controller
             'Intereses de la Deuda' => 'sevac_/2020/2t/intereses_de_la_deuda.pdf',
             'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2020/2t/montos_pagados_por_ayudas_y_subsidios.pdf'
 
+
+        );
+
+        $tercer_trimestre2020 =array(
+            'Estado Analitico de Deuda y de Otros Pasivos' => 'sevac_/2020/3t/estado_analitico_de_deuda_otros_pasivos.pdf',
+            'Estado Analitico del Activo por Rubros' => 'sevac_/2020/3t/estado_analitico_del_activo_por_rubros.pdf',
+            'Estado de Actividades por Rubros' => 'sevac_/2020/3t/estado_de_actividades_por_rubros.pdf',
+            'Estado de Cambios en Situación Financiera' => 'sevac_/2020/3t/estado_de_cambios_en_situacion_financiera_por_rubros.pdf',
+            'Estado de Flujos de Efectivo' => 'sevac_/2020/3t/estado_de_flujo_de_efectivo_por_rubros.pdf',
+            'Estado de Situación Financiera por Rubros' => 'sevac_/2020/3t/estado_de_situacion_financiera_por_rubros.pdf',
+            'Estado de Variación en la Hacienda Pública' => 'sevac_/2020/3t/estado_de_variacion_en_hacienda_publica.pdf',
+            'Informe Sobre Pasivos Contingentes' => 'sevac_/2020/3t/informe_sobre_pasivos_contigentes.pdf',
+            'Notas a los Estados Financieros' => 'sevac_/2020/3t/notas_a_estados_financieros_.pdf',            
+            'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2020/3t/montos_pagados_por_ayudas_y_subsidios.pdf'
+            
 
         );
 
@@ -389,8 +437,6 @@ class CuentapublicaController extends Controller
             'Clasificacion Administrativa Entidades' => 'sevac_/2019/t4/RPA_5_Clasificacion_Administrativa_Entidades.pdf',
             'Clasificacion Funcional Funcion' => 'sevac_/2019/t4/RPA_6_Clasificacion_Funcional_Finalidad_Funcion.pdf',
             'Gasto por Categoria Programatica' => 'sevac_/2019/t4/RPA_7_Gasto_por_Categoria_Programatica.pdf'
-
-
         );*/
 
 
@@ -464,10 +510,22 @@ class CuentapublicaController extends Controller
             'Indicadores de Resultados' => 'sevac_/2018_/t3/D.4.2 Indicadores de Resultados.pdf',
             'Programación y Proyectos de Inversion' => 'sevac_/2018_/t3/D.4.3 Prog y Proyectos de Inversion.pdf'
         );
+        $primer_trimestre2021 =array(
+            'Estado de Situación Financiera' => 'sevac_/2021/1t/1estado_de_situacion_financiera_por_rubros.pdf',
+            'Estado de Actividades' => 'sevac_/2021/1t/2estado_de_actividades_por_rubros.pdf',
+            'Estado de Variacion en la Hacienda Pública' => 'sevac_/2021/1t/3estado_de_variacion_en_la_hacienda_publica_por_rubros.pdf',
+            'Estado de Cambios en la Situación Financiera' => 'sevac_/2021/1t/4estado_de_cambios_en_la_situacion_financiera_por_rubros.pdf',
+            'Estado de Flujos de Efectivo' => 'sevac_/2021/1t/5estado_de_flujos_de_efectivo_por_rubros.pdf',
+            'Estado Analitico del Activo' => 'sevac_/2021/1t/6estado_analitico_del_activo_por_rubros.pdf',
+            'Estado Analitico de la Deuda y Otros Pasivos' => 'sevac_/2021/1t/7estado_analitico_de_la_deuda_y_otros_pasivos_por_rubros.pdf',
+            'Informe Sobre Pasivos Contingentes' => 'sevac_/2021/1t/8informe_sobre_pasivos_contingentes.pdf',
+            'Notas a los Estados Financieros' => 'sevac_/2021/1t/9notas_a_los_estados_financieros.pdf',
+            'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2021/1t/10montos_pagados_por_ayudas_y_subsidios.pdf'
+        );
 
 
-        return view('pages.sevac', ['primtrim2020' => $prim_trimestre2020, 'segundtrim2020' => $segun_trimestre2020, 'primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018]);
-
+        return view('pages.sevac', ['primtrim2021' => $primer_trimestre2021, 'primtrim2020' => $prim_trimestre2020, 'segundtrim2020' => $segun_trimestre2020, 'tercertrim2020' => $tercer_trimestre2020, 'primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018]);
+        //comentario
     }
 
 
@@ -475,111 +533,58 @@ class CuentapublicaController extends Controller
     public function avisosprivacidad()
     {
 
-        $avisos_integrales =array(
-            'ICATECH' => 'avisos_privacidad/integral/AVISO_INTEGRAL_ICATECH.pdf',
-            'Dirección General' => 'avisos_privacidad/integral/AVISO_INTEGRAL_DIRECCION_G..pdf'
+        $avisos_integrales2021 =array(
+            'ICATECH' => 'avisos_privacidad/integral/1_ICATECH.pdf',
+            'Dirección General' => 'avisos_privacidad/integral/2_DIRECCION_GENERAL.pdf',
+            'Area de Infórmatica' => 'avisos_privacidad/integral/3_INFORMATICA.pdf',
+            'Area de Mercadotecnia' => 'avisos_privacidad/integral/4_MERCADOTECNIA.pdf',
+            'Unidad Juridica' => 'avisos_privacidad/integral/5_UNIDAD_JURIDICA.pdf',
+            'Unidad de Transparencia (Derecho ARCO)' => 'avisos_privacidad/integral/6_UNIDAD_DE_TRANSPARENCIA_DERECHO_ARCO.pdf',
+            'Unidad de Transparencia' => 'avisos_privacidad/integral/7_UNIDAD_DE_TRANSPARENCIA.pdf',
+            'Departamento de Recursos Financieros (CDFI)' => 'avisos_privacidad/integral/8_RECURSOS_FINANCIEROS.pdf',
+            'Departamento de Recursos Humanos (Nomina)' => 'avisos_privacidad/integral/9_RECURSOS_HUMANOS_NOMIDA.pdf',
+            'Departamento de Recursos Humanos (Expediente Unico del Personal)' => 'avisos_privacidad/integral/10_RECURSOS_HUMANOS_EXPEDIENTE_UNICO_DE_PERSONAL.pdf',
+            'Departamento de Recursos Humanos (Sistema de Registro de Asistencia)' => 'avisos_privacidad/integral/11_RECURSOS_HUMANOS_SISTEMA_DE_REGISTRO_DE_ASISTENCIA.pdf',
+            'Departamento de Recursos Materiales (Proveedores)' => 'avisos_privacidad/integral/12_RECUROS_MATERIALES_PROVEEDORES.pdf',
+            'Departamento de Recursos Materiales (Resguardos)' => 'avisos_privacidad/integral/13_RECURSOS_MATERIALES_RESGUARDOS.pdf',
+            'Departamento de Recursos Materiales (Registro de Visitas)' => 'avisos_privacidad/integral/14_RECURSOS_MATERIALES_RESGISTRO_DE_VISITAS.pdf',
+            'Dirección de Planeación' => 'avisos_privacidad/integral/15_DIRECCION_DE_PLANEACION.pdf',
+            'Dirección de Vinculacion' => 'avisos_privacidad/integral/16_DIRECCION_DE_VINCULACION.pdf',
+            'Direccion de Vinculación con el Sector Productivo' => 'avisos_privacidad/integral/17_DIRECCION_DE_VINCULACION_CONVENIOS.pdf',
+            'Dirección de Vinculación Seguimiento a Egresados' => 'avisos_privacidad/integral/18_DIRECCION_DE_VINCULACION_SEGUIMIENTO_A_EGRESADOS.pdf',
+            'Departamento de Gestión Academica (Instructores)' => 'avisos_privacidad/integral/19_DIRECCION_TECNICA_ACADEMICA_INSTRUCTORES.pdf',
+            'Departamento de Certificación y Control' => 'avisos_privacidad/integral/20_DIRECCION_TECNICA_ACADEMICA_CERTIFICACION_Y_CONTROL.pdf',
+            'Comisaria Pública' => 'avisos_privacidad/integral/21_COMISARIA.pdf',
+            'Imparticion de Cursos' => 'avisos_privacidad/integral/22_CURSOS.pdf'
+        );            
+       
+        $avisos_simplificados2021 =array(
+            'ICATECH' => 'avisos_privacidad/simplificado/1_ICATECH.pdf',
+            'Dirección General' => 'avisos_privacidad/simplificado/2_DIRECCION_GENERAL.pdf',
+            'Area de Infórmatica' => 'avisos_privacidad/simplificado/3_INFORMATICA.pdf',
+            'Area de Mercadotecnia' => 'avisos_privacidad/simplificado/4_MERCADOTECNIA.pdf',
+            'Unidad Juridica' => 'avisos_privacidad/simplificado/5_UNIDAD_JURIDICA.pdf',
+            'Unidad de Transparencia (Derecho ARCO)' => 'avisos_privacidad/simplificado/6_UNIDAD_DE_TRANSPARENCIA_DERECHO_ARCO.pdf',
+            'Unidad de Transparencia' => 'avisos_privacidad/simplificado/7_UNIDAD_DE_TRANSPARENCIA.pdf',
+            'Departamento de Recursos Financieros (CDFI)' => 'avisos_privacidad/simplificado/8_RECURSOS_FINANCIEROS.pdf',
+            'Departamento de Recursos Humanos (Nomina)' => 'avisos_privacidad/simplificado/9_RECURSOS_HUMANOS_NOMINA.pdf',
+            'Departamento de Recursos Humanos (Expediente Unico del Personal)' => 'avisos_privacidad/simplificado/10_RECURSOS_HUMANOS_EXPEDIENTE_UNICO_DE_PERSONAL.pdf',
+            'Departamento de Recursos Humanos (Sistema de Registro de Asistencia)' => 'avisos_privacidad/simplificado/11_RECURSOS_HUMANOS_SISTEMA_DE_REGISTRO_DE_ASISTENCIA.pdf',
+            'Departamento de Recursos Materiales (Proveedores)' => 'avisos_privacidad/simplificado/12_RECURSOS_MATERIALES_PROVEEDORES.pdf',
+            'Departamento de Recursos Materiales (Resguardos)' => 'avisos_privacidad/simplificado/13_RECURSOS_MATERIALES_RESGUARDO.pdf',
+            'Departamento de Recursos Materiales (Registro de Visitas)' => 'avisos_privacidad/simplificado/14_RECURSOS_MATERIALES_REGISTRO_DE_VSITAS.pdf',
+            'Dirección de Planeación' => 'avisos_privacidad/simplificado/15_DIRECCION_DE_PLANEACION.pdf',
+            'Dirección de Vinculacion' => 'avisos_privacidad/simplificado/16_DIRECCION_DE_VINCULACION.pdf',
+            'Direccion de Vinculación con el Sector Productivo' => 'avisos_privacidad/simplificado/17_DIRECCION_DE_VINCULACION_CONVENIO.pdf',
+            'Dirección de Vinculación Seguimiento a Egresados' => 'avisos_privacidad/simplificado/18_DIRECCION_DE_VINCULACION_SEGUIMIENTO_A_EGRESADOS.pdf',
+            'Departamento de Gestión Academica (Instructores)' => 'avisos_privacidad/simplificado/19 _DIRECCION_TECNICA_ACADEMICA_INSTRUCTORES.pdf',
+            'Departamento de Certificación y Control' => 'avisos_privacidad/simplificado/20_DIRECCION_TECNICA_ACADEMICA_CERTIFICACION_Y_CONTROL.pdf',
+            'Comisaria Pública' => 'avisos_privacidad/simplificado/21_COMISARIA.pdf',
+            'Impartición de Cursos' => 'avisos_privacidad/simplificado/22_CURSOS.pdf'
         );
 
-        $avisos_ejecutiva =array(
-            'Area de Infórmatica' => 'avisos_privacidad/integral/AVISO_INTEGRAL_INFORMATICA.pdf',
-        );
-
-        $avisos_juridico =array(
-            'Unidad Juridica' => 'avisos_privacidad/integral/AVISO_INTEGRAL_JURIDICO.pdf',
-            'Unidad de Transparencia (Derecho ARCO)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_ARCO_TRANSP.pdf',
-            'Unidad de Transparencia' => 'avisos_privacidad/integral/AVISO_INTEGRAL_SOLICITUDES_TRANSP.pdf'
-        );
-
-        $avisos_administrativa =array(
-            'Departamento de Recursos Financieros (CDFI)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_FINANCIERO.pdf',
-            'Departamento de Recursos Humanos (Nomina)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_RH_NOMINA_DE PAGO.pdf',
-            'Departamento de Recursos Humanos (Expediente Unico del Personal)' => 'avisos_privacidad/integral/AVISO_INTE_RH_EXPE_U.P.pdf',
-            'Departamento de Recursos Humanos (Sistema de Registro de Asistencia)' => 'avisos_privacidad/integral/AVISO_INTE_RH_REGISTRO_DE_ASISTENCIA.pdf',
-            'Departamento de Recursos Materiales (Proveedores)' => 'avisos_privacidad/integral/MATERIALES_AVISO_INTEGRAL_REGISTRO_DE_PROVEEDORES.pdf',
-            'Departamento de Recursos Materiales (Resguardos)' => 'avisos_privacidad/integral/MATERIALES_AVISO_INTEGRAL_RESGUARDOS_MOBILIARIO.pdf',
-            'Departamento de Recursos Materiales (Registro de Visitas)' => 'avisos_privacidad/integral/MATERIALES_AVISO_INTE_REGISTRO_DE_VISITANTES.pdf'
-        );
-
-        $avisos_planeacion =array(
-            'Dirección de Planeación' => 'avisos_privacidad/integral/AVISO_INTEGRAL_PLANEACION.pdf',
-        );
-
-        $avisos_vinculacion =array(
-            'Dirección de Vinculacion' => '',
-            'Direccion de Vinculación con el Sector Productivo' => 'avisos_privacidad/integral/AVISO_INTEGRAL_VINC._CONVENIOS_SEC_PROD..pdf',
-            'Dirección de Vinculación Seguimiento a Egresados' => 'avisos_privacidad/integral/AVISO_INTEGRAL_VINC._SEGUIMIENTO_EGRESADOS_VINCULACION.pdf'
-
-        );
-
-        $avisos_tecnica =array(
-            'Departamento de Gestión Academica (Instructores)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_TECNICA_ACADEMICA_VALIDACIÓN_DEL_PERSONAL_TECNICA_ACADEMICA.pdf',
-            'Departamento de Certificación y Control' => 'avisos_privacidad/integral/AVISO_INTEGRAL_TECNICA_A_CONTROL_ESCOLAR_TECNICA_A..pdf',
-
-        );
-
-        $avisos_comisaria =array(
-            'Comisaria Pública' => 'avisos_privacidad/integral/INTEGRAL_COMISARIA.pdf'
-        );
-
-        $avisos_cursos =array(
-            'Cursos' => 'avisos_privacidad/integral/aviso_integral_de_cursos.pdf'
-        );
-
-
-        $avisos_simplificados =array(
-            'ICATECH' => 'avisos_privacidad/simplificado/AVISO_SMPLIFICADO_ICATECH.pdf',
-            'Dirección General' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_DIRECCION_G..pdf'
-        );
-
-        $simplificados_ejecutiva =array(
-            'Area de Infórmatica' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_INFORMATICA.pdf',
-        );
-
-        $simplificados_juridico =array(
-            'Unidad Juridica' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_JURIDICO.pdf',
-            'Unidad de Transparencia (Derecho ARCO)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_ARCO_TRANSP.pdf',
-            'Unidad de Transparencia' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_SOLICITUDES_TRANSP.pdf'
-        );
-
-        $simplificados_administrativa =array(
-            'Departamento de Recursos Financieros (CDFI)' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_FINANCIERO.pdf',
-            'Departamento de Recursos Humanos (Nomina)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_RH_NOMINA_DE_PAGO.pdf',
-            'Departamento de Recursos Humanos (Expediente Unico del Personal)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_RH_EXPE_U.P.pdf',
-            'Departamento de Recursos Humanos (Sistema de Registro de Asistencia)' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_RH_REGISTRO_DE_ASISTENCIA.pdf',
-            'Departamento de Recursos Materiales (Proveedores)' => 'avisos_privacidad/simplificado/MATERIALES_AVISO_SIMPLI_REGISTRO_DE_PROVEEDORES.pdf',
-            'Departamento de Recursos Materiales (Resguardos)' => 'avisos_privacidad/simplificado/MATERIALES_AVISO_SIMPLI_RESGUARDO_MOBILIARIO.pdf',
-            'Departamento de Recursos Materiales (Registro de Visitas)' => 'avisos_privacidad/simplificado/MATERIALES_AVISO_SIMPLI_REGISTRO_DE_VISITANTES.pdf'
-        );
-
-        $simplificados_planeacion =array(
-            'Dirección de Planeación' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_PLANEACION.pdf'
-        );
-
-        $simplificados_vinculacion =array(
-            'Dirección de Vinculacion' => '',
-            'Direccion de Vinculación con el Sector Productivo' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_VINC._CONVENIOS_SEC_PROD.pdf',
-            'Dirección de Vinculación Seguimiento a Egresados' => 'avisos_privacidad/simplificado/AVISO_SIMPLI_VINC.seguimiento_egresados_SEC_PROD.pdf'
-
-        );
-
-        $simplificados_academica =array(
-            'Departamento de Gestión Academica (Instructores)' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_TECNICA_ACADEMICA_VALIDACIÓN_DEL_PERSONAL_TECNICA_ACADEMICA.pdf',
-            'Departamento de Certificación y Control' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_TECNICA_ACADEMICACONTROL_ESCOLAR_TECNICA_A..pdf'
-        );
-
-        $simplificados_comisaria =array(
-            'Comisaria Pública' => 'avisos_privacidad/simplificado/SIMPLI_COMISARIA.pdf'
-        );
-
-        $simplificados_cursos =array(
-            'Cursos' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_DE_CURSO.pdf'
-        );
-
-
-
-        return view('pages.avisosprivacidad', ['avis_inte' =>$avisos_integrales, 'unejec' => $avisos_ejecutiva, 'unjuri' => $avisos_juridico, 'diradm' => $avisos_administrativa,
-        'dirplan' => $avisos_planeacion, 'dirvincula' => $avisos_vinculacion, 'dirtacad' => $avisos_tecnica, 'comi' => $avisos_comisaria, 'avis_simpl' => $avisos_simplificados, 'simejec' => $simplificados_ejecutiva, 'simjuri' => $simplificados_juridico, 'simadmi' => $simplificados_administrativa,
-        'simplan' => $simplificados_planeacion, 'simvincu' => $simplificados_vinculacion, 'simacad' => $simplificados_academica, 'simcomi' =>$simplificados_comisaria, 'aviscurso' =>$avisos_cursos, 'simcurso' => $simplificados_cursos]);
+        
+        return view('pages.avisosprivacidad', ['avisos_integrales' => $avisos_integrales2021, 'avisos_simplificados' => $avisos_simplificados2021]);
     }
 
     public function Integridad()
@@ -641,8 +646,15 @@ class CuentapublicaController extends Controller
 
     }
 
-    public function transparenciaicatech()
+    public function transparencia()
     {
+        $programactividades_codigo = array(
+            'INFORME DEL PROGRAMA ANUAL DE ACTIVIDADES "PADA" 2020'=> 'archivtransparencia/INFORME_PADA_2020.pdf',
+            'PROGRAMA ANUAL DE ACTIVIDADES "PADA 2021"'=> 'archivtransparencia/INFORME_PADA_2021.pdf'
+        );
+
+        return view('pages.transparencia', ['informepada' =>$programactividades_codigo]);
+
     }
 
 

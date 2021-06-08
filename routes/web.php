@@ -42,9 +42,7 @@ Route::get('/detalles-noticias', function(){
 	return view('micrositios.noticiasdetalle', compact('param'));
 });
 // TRANSPARENCIA
-Route::get( '/transparencia', function(){
-	return view('pages.transparencia');
-});
+Route::get( '/transparencia', 'CuentapublicaController@transparencia');
 // revista
 Route::get( '/revista', function(){
 	return view('pages.revista');
