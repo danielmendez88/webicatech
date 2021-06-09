@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <title>@yield('title', 'Instituto de Capacitación y Vinculación Tecnológica del Estado de Chiapas | Icatech')</title>
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="{{asset("assets/vendor/bootstrap/bootstrap.min.css") }}">
+	<link rel="stylesheet" href="{{asset("assets/vendor/bootstrap/offcanvas.css")}}">
+    <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+
+					<!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="{{asset("assets/fonts/font-awesome/css/font-awesome.min.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/vendor/icon-line-pro/style.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/vendor/icon-line/css/simple-line-icons.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/vendor/icon-hs/style.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/vendor/hamburgers/hamburgers.min.css")}}">
+
+    <link rel="stylesheet" href="{{asset("assets/css/unify-core.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/css/unify-components.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/css/unify-globals.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/css/custom.css")}}">
+    <link rel="stylesheet" href="{{ asset("assets/css/layout.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/slick/slick-theme.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/slick/slick.css") }}">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+</head>
+<body style="margin: 0px;">
+        @include("theme.main.header")
+    {{-- SECCION MENU --}}
+        @include("theme.main.menu")
+    {{-- SECCION MENU END --}}
+    
+    {{-- CONTENIDO --}}
+        @yield('contenido')
+    {{-- CONTENIDO END --}}
+    {{-- FOOTER --}}
+        @include('theme.main.footer')
+    {{-- FOOTER END --}}
+    
+    {{-- CONTENIDO DEL SCRIPT JS --}}
+    <script src="{{asset("assets/vendor/jquery/jquery.min.js")}}"></script>
+    <script src="{{asset("assets/vendor/jquery-migrate/jquery-migrate.min.js")}}"></script>
+    <script src="{{asset("assets/js/ticker.js")}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="{{ asset("assets/js/slick.min.js") }}"></script>
+    <script src="{{ asset("assets/js/slick.js") }}"></script>
+
+    <script src="{{asset("assets/js/uppercase.js")}}"></script>
+    {{-- CONTENIDO DEL SCRIPT JS --}}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.lazy').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+                fade: true,
+            });
+        });
+    </script>
+    {{-- YIELD SCRIPT --}}
+    @yield('contentScriptJs')
+    {{-- YIELD SCRIPT END --}}
+</body>
+</html>
