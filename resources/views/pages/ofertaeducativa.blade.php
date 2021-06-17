@@ -13,7 +13,7 @@
 				</div>	
 			@endforeach
 		</div>
-		<img src="Imagenes Pagina/requisitos-icatech.png" alt="requisitos" class="img-responsive" width="100%">
+		<img src="{{ asset('Imagenes Pagina/requisitos_icatech.jpeg') }}" alt="requisitos" class="img-responsive" width="100%">
 		<br><br>
 	</div>
 
