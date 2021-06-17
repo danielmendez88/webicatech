@@ -24,7 +24,7 @@
                                                 <tr>
                                                    
                                                     <td><center><a target="_blank"href="codigos_conducta/codigodeetica.pdf" ><img src="Imagenes Pagina/CODIGODEHONESTIDAD.jpg" class="img-thumbnail"><h3></h3></a></center></td>
-                                                    <td><center><a target="_blank"href="codigos_conducta/códigodeconductaicatech.pdf"><img src="Imagenes Pagina/codigo_deconducta.jpg" class="img-thumbnail"><h3></h3></a></center></td>
+                                                    <td><center><a target="_blank"href="{{ asset('codigos_conducta/codigo_de_conducta.pdf') }}"><img src="Imagenes Pagina/codigo_deconducta.jpg" class="img-thumbnail"><h3></h3></a></center></td>
                                                     
                                                 </tr>
                                                 
