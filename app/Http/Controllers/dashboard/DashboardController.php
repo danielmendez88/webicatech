@@ -18,6 +18,10 @@ use App\Models\Pages;
 class DashboardController extends Controller
 {
     use CatTrait;
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *

@@ -4,6 +4,7 @@
  * estas rutas son cargadas en el RouteServiceProvider
  * DESARROLLADOR POR MIS. DANIEL MÉNDEZ CRUZ
  */
+Auth::routes(['register' => false]);
 
  Route::get('/principal', 'principal\MainController@index')->name('principal');
 

@@ -96,7 +96,7 @@
                         <label for="upload_image">
                             <img src="{{ asset('assets/img/bg/bg-img1.png') }}" id="uploaded_image" class="img-responsive img-circle" />
                             <div class="overlay">
-                                <div class="text">Click to Change Profile Image</div>
+                                <div class="text">Click para cambiar la imagen de perfil</div>
                             </div>
                             <input type="file" name="image" class="image" id="upload_image" style="display:none" />
                         </label>
@@ -119,10 +119,10 @@
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Ubicación</label>
                             <div class="col-sm-9">
-                                <select class="form-control">
-                                    <option>-- SELECCIONE LA UBICACIÓN --</option>
-                                    @foreach ($arrayUbicacion as $itemarrayubicacion)
-                                        <option value="{{ $itemarrayubicacion }}">{{ $itemarrayubicacion }}</option>
+                                <select class="form-control" id="catbanner" name="catbanner">
+                                    <option value="">-- SELECCIONE LA UBICACIÓN --</option>
+                                    @foreach ($catBanner as $itemarrayubicacion)
+                                        <option value="{{ $itemarrayubicacion->id }}">{{ $itemarrayubicacion->nombre_ubicacion }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -146,9 +146,7 @@
           <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title">Cortar la Imagen antes de subir</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                  </button>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                   <div class="img-container">
@@ -164,7 +162,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" id="crop" class="btn btn-primary">Cortar</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
                 </div>
           </div>
         </div>
@@ -266,14 +264,20 @@
                     reader.readAsDataURL(blob);
                     reader.onloadend = function(){
                         var base64data = reader.result;
+                        var titulo = $("#titulo").val();
+                        var fechaTermino = $("#fecha_termino").val();
+                        var bannerstatus = $("#catbanner").val();
+                        var pubActivo = ($('#activo').is(':checked'))  ? true : false;
                         $.ajax({
-                            url:'upload.php',
+                            url:"{{ route('uploadbanner') }}",
                             method:'POST',
-                            data:{image:base64data},
+                            data:{image:base64data, _token: "{{ csrf_token() }}", activo: pubActivo, banner: bannerstatus, _fecha: fechaTermino, _titulo:titulo },
                             success:function(data)
                             {
-                                $modal.modal('hide');
-                                $('#uploaded_image').attr('src', data);
+                                // $modal.modal('hide');
+                                // $('#uploaded_image').attr('src', data);
+                                console.log(data);
+                                alert(data);
                             }
                         });
                     };

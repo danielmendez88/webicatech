@@ -7,8 +7,8 @@
             <div class="dot-indicator bg-success"></div>
           </div>
           <div class="text-wrapper">
-            <p class="profile-name">Allen Moreno</p>
-            <p class="designation">Premium user</p>
+            <p class="profile-name">{{ Auth::user()->name }}</p>
+            <p class="designation">{{ Auth::user()->email }}</p>
           </div>
         </a>
       </li>
@@ -29,6 +29,12 @@
         <a class="nav-link" href="{{ route('main_form_banner') }}">
           <i class="menu-icon typcn typcn-th-large-outline"></i>
           <span class="menu-title">Administrador de Banner</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('main_user_index') }}">
+          <i class="menu-icon typcn typcn-th-large-outline"></i>
+          <span class="menu-title">Administrador de Usuarios</span>
         </a>
       </li>
       @foreach ($allcategories as $items)

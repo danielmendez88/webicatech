@@ -7,17 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('Plantilla de tablero de Administración')</title>
+    <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap-5.0.1/css/bootstrap.css') }}">
     {{-- estilos layouts --}}
     <link rel="stylesheet" href="{{ asset('assets/css_/dashboard/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css_/shared/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css_/dashboard/table.css') }}">
     {{-- estilos layouts END --}}
     {{-- estilos vendor --}}
-    <link rel="stylesheet" href="{{ asset('assets/vendors/iconfonts/mdi/materialdesignicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendors/iconfonts/flag-icons-css/flag-icon.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/vendors/iconfonts/ionicons/ionicons.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendors/iconfonts/ionicons/dist/css/ionicons.min.css') }}">
     {{-- estilos vendor END --}}
-    <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap-5.0.1/css/bootstrap.css') }}">
     
     {{-- iconos --}}
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="{{ asset('assets/vendors/fontawesome-free/css/all.css') }}">
     @yield('contentSyles')
 </head>
-<body>
+<body id="page-top">
     {{-- CONTENEDOR DE SCROLLER --}}
     <div class="container-scroller">
         {{-- SECCIONES NAV--}}
@@ -73,6 +73,12 @@
                 {{-- FINAL DEL ENCABEZADO DEL TITULO DE LA PÁGINA --}}
                 @yield('contenido')
               </div>
+              {{-- Scroll to Top Button --}}
+                <a class="scroll-to-top rounded" href="#page-top">
+                  <i class="fas fa-angle-up"></i>
+                </a>
+              {{-- Scroll to Top Button END --}}
+              
               {{-- SECCION CONTENEDOR PIE DE PÁGINA --}}
               @include('theme.dashboard.footer')
               {{-- SECCION CONTENEDOR PIE DE PAGINA END --}}
@@ -84,9 +90,32 @@
     </div>
     {{-- CONTENEDOR DE SCROLLER END --}}
     {{-- SECCIÓN DE CONTENIDO JAVASCRIPT --}}
-    <script src="{{asset("assets/vendor/jquery/jquery.min.js")}}"></script>
+    <script src="{{asset('assets/vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{ asset('assets/vendor/bootstrap-5.0.1/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js_/dashboard/dashboard.js') }}"></script>
-    <script src="{{ asset('assets/vendor/bootstrap-5.0.1/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('assets/js_/shared/off-canvas.js') }}"></script>
+    <script src="{{ asset('assets/js_/init-scripts/bundle/vendor.bundle.addons.js') }}"></script>
+    <script src="{{ asset('assets/js_/init-scripts/bundle/vendor.bundle.base.js') }}"></script>
+    <script src="{{ asset('assets/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+    <script type="text/javascript">
+    $(document).on('scroll', function() {
+      var scrollDistance = $(this).scrollTop();
+      if (scrollDistance > 100) {
+        $('.scroll-to-top').fadeIn();
+      } else {
+        $('.scroll-to-top').fadeOut();
+      }
+    });
+
+    // Smooth scrolling using jQuery easing
+    $(document).on('click', 'a.scroll-to-top', function(e) {
+      var $anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: ($($anchor.attr('href')).offset().top)
+      }, 150, 'easeInOutExpo');
+      e.preventDefault();
+    });
+    </script>
     {{-- SECCIÓN DE CONTENIDO JAVASCRIPT --}}
     @yield('contentScriptJs')
 </body>

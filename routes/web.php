@@ -1,5 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+  
+use App\Http\Controllers\Auth\AuthController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,6 +14,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/login','LoginController@show_login_form')->name('login');
+Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
+
+Auth::routes(['register' => false]);
 
 // REGISTRO DE ASPIRANTES
 Route::get('/aspirante', 'AlumnoController@create')->name('aspirante.crear');
@@ -102,3 +110,7 @@ Route::get('listadotransparencia', function () {
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-input[type=text], select, textarea {
-    /*text-transform: lowercase; */
-=======
 /*input[type=text], select, textarea {
     text-transform: uppercase;
 }*/
 
 .urlinput {
     text-transform: lowercase;
->>>>>>> 5613a52795f926e869bf240e9ff2cd1b048f9f34
 }

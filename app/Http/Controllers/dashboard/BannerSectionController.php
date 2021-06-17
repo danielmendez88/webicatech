@@ -10,6 +10,10 @@ use App\Traits\uploadFileTrait;
  * imports
  */
 use App\Traits\CatTrait;
+use App\Models\CatBanner;
+use App\Models\Banner;
+use Illuminate\Database\QueryException;
+use Response;
 
 class BannerSectionController extends Controller
 {
@@ -23,14 +27,10 @@ class BannerSectionController extends Controller
     {
         $allcategories = $this->allCategories();
         // redirigir al administrador principal
-        $arrayUbicacion = [
-            'banner_principal' => 'Banner Principal',
-            'banner_secundario' => 'Banner Secundario',
-            'revista' => 'Revista',
-            'video_teca' => 'Videoteca',
-            'transparencia' => 'Transparencia'
-        ];
-        return view('theme.dashboard.forms.formadminbanner', compact('allcategories', 'arrayUbicacion'));
+        // inicializar el módelo
+        $catalogoBanner = new CatBanner;
+        $catBanner = $catalogoBanner->select('id','nombre_ubicacion')->where('activo', true)->get();
+        return view('theme.dashboard.forms.formadminbanner', compact('allcategories', 'catBanner'));
     }
 
     /**
@@ -52,7 +52,34 @@ class BannerSectionController extends Controller
     public function store(Request $request)
     {
         // se procede a guardar el banner en la base de datos url
-
+        // utilizamos una funcion try catch
+        try {
+            //si se entra al método se tiene que ingresar el registro
+            if (isset($_POST['image'])) {
+                # si se ha inicializado el valor de la imagen entra en el siguiente paso
+                $imagen = $_POST['image'];
+                $fecha = $_POST['_fecha'];
+                $titulo = $_POST['_titulo'];
+                $banner = $_POST['banner'];
+                $data = $_POST['activo'];
+                /**
+                 * empezamos a utilizar el arreglo
+                 */
+                $image_array_1 = explode(";", $imagen);
+                /**
+                 * obtenemos el siguiente arreglo de la matriz que se genero anteriormente
+                 */
+                $image_array_2 = explode(",", $image_array_1[1]);
+                /**
+                 * decodificamos la imagen
+                 */
+                $imagendecodificada = base64_decode($image_array_2[1]);
+                return Response::json($banner);
+            }
+        } catch (QueryException $th) {
+            //manda una excepcion sql
+            return back()->with('error', $th->getMessage());
+        }
     }
 
     /**
@@ -86,7 +113,6 @@ class BannerSectionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
     }
 
     /**

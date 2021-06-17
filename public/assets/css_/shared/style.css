@@ -9841,4 +9841,72 @@ ul {
 
 /*-------------------------------------------------------------------*/
 
+.scroll-to-top {
+  position:fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  text-align: center;
+  color: #fff;
+  background: rgba(57, 58, 68, 0.5);
+  line-height: 46px;
+}
+
+.scroll-to-top:focus, .scroll-to-top:hover {
+  color: white;
+}
+
+.scroll-to-top:hover {
+  background: #5a5c69;
+}
+
+.scroll-to-top i {
+  font-weight: 800;
+}
+.rounded-sm {
+  border-radius: 0.2rem !important;
+}
+
+.rounded {
+  border-radius: 0.35rem !important;
+}
+
+.rounded-top {
+  border-top-left-radius: 0.35rem !important;
+  border-top-right-radius: 0.35rem !important;
+}
+
+.rounded-right {
+  border-top-right-radius: 0.35rem !important;
+  border-bottom-right-radius: 0.35rem !important;
+}
+
+.rounded-bottom {
+  border-bottom-right-radius: 0.35rem !important;
+  border-bottom-left-radius: 0.35rem !important;
+}
+
+.rounded-left {
+  border-top-left-radius: 0.35rem !important;
+  border-bottom-left-radius: 0.35rem !important;
+}
+
+.rounded-lg {
+  border-radius: 0.3rem !important;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.rounded-pill {
+  border-radius: 50rem !important;
+}
+
+.rounded-0 {
+  border-radius: 0 !important;
+}
+
 /*# sourceMappingURL=style.css.map */

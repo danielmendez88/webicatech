@@ -99,14 +99,14 @@
               </div>
             </li>
             <li class="nav-item dropdown d-none d-xl-inline-block user-dropdown">
-              <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                 <img class="img-xs rounded-circle" src="{{ asset('assets/img/images/profile.png') }}" alt="Profile image"/> 
               </a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
                   <img class="img-md rounded-circle" src="{{ asset('assets/img/images/profile.png') }}" alt="Profile image">
-                  <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
-                  <p class="font-weight-light text-muted mb-0">allenmoreno@gmail.com</p>
+                  <p class="mb-1 mt-3 font-weight-semibold">{{ Auth::user()->name }}</p>
+                  <p class="font-weight-light text-muted mb-0">{{ Auth::user()->email }}</p>
                 </div>
                 <a class="dropdown-item">Mi Perfil <span class="badge badge-pill badge-danger">1</span><i class="dropdown-item-icon ti-dashboard"></i></a>
                 <a class="dropdown-item">Actividad<i class="dropdown-item-icon ti-location-arrow"></i></a>
