@@ -47,7 +47,7 @@
 				 <i class="fa fa-minus"></i>
 				 </span>
 				   <span class="g-pa-20">
-					Programa Anual de Actividades
+					PLAN ANUAL DE DESARROLLO ARCHIVISTICO
 					</span>
 			  </a>
 			 </h5>
