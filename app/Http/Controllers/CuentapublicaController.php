@@ -591,7 +591,7 @@ class CuentapublicaController extends Controller
     public function Integridad()
     {
         $conduc_codigos =array(
-            'Codigo de Conducta ICATECH' => 'codigos_conducta/códigodeconductaicatech.pdf',
+            'Codigo de Conducta ICATECH' => 'codigos_conducta/codigo_de_conducta.pdf',
         );
 
         $honesti_codigos =array(
@@ -603,7 +603,7 @@ class CuentapublicaController extends Controller
         );
 
         $directorio_codigo =array(
-            'DIRECTORIO COMITÉ DE ÉTICA Y DE PREVENCIÓN DE CONFLICTO DE INTERÉS' => 'codigos_conducta/directorio.pdf',
+            'DIRECTORIO COMITÉ DE ÉTICA Y DE PREVENCIÓN DE CONFLICTO DE INTERÉS' => 'codigos_conducta/directorio1.pdf',
         );
 
         $plandetrabajo_codigo =array(
