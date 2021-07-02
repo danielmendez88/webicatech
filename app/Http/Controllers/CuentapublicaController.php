@@ -548,10 +548,11 @@ class CuentapublicaController extends Controller
             'Departamento de Recursos Materiales (Proveedores)' => 'avisos_privacidad/integral/12_RECUROS_MATERIALES_PROVEEDORES.pdf',
             'Departamento de Recursos Materiales (Resguardos)' => 'avisos_privacidad/integral/13_RECURSOS_MATERIALES_RESGUARDOS.pdf',
             'Departamento de Recursos Materiales (Registro de Visitas)' => 'avisos_privacidad/integral/14_RECURSOS_MATERIALES_RESGISTRO_DE_VISITAS.pdf',
-            'Dirección de Planeación' => 'avisos_privacidad/integral/15_DIRECCION_DE_PLANEACION.pdf',
-            'Dirección de Vinculacion' => 'avisos_privacidad/integral/16_DIRECCION_DE_VINCULACION.pdf',
-            'Direccion de Vinculación con el Sector Productivo' => 'avisos_privacidad/integral/17_DIRECCION_DE_VINCULACION_CONVENIOS.pdf',
-            'Dirección de Vinculación Seguimiento a Egresados' => 'avisos_privacidad/integral/18_DIRECCION_DE_VINCULACION_SEGUIMIENTO_A_EGRESADOS.pdf',
+            'Departamento de Organizacion y Evaluacion' => 'avisos_privacidad/integral/15_DIRECCION_DE_PLANEACION.pdf',
+            'Departamento de Vinculación Social y Empresarial' => 'avisos_privacidad/integral/16_DIRECCION_DE_VINCULACION.pdf',
+            'Departamento de Vinculación para la Competitividad (firma de convenios)' => 'avisos_privacidad/integral/17_DIRECCION_DE_VINCULACION_CONVENIOS.pdf',
+            'Departamento de Vinculación para la Competitividad (Seguimiento de Egresados)' => 'avisos_privacidad/integral/18-Aviso_de_Privacidad_Integral_Seguimiento_Egresados.pdf',
+            'Departamento de Vinculación Gubernamental' => 'avisos_privacidad/integral/23-Departamento_de vinculación_gubernamental.pdf',
             'Departamento de Gestión Academica (Instructores)' => 'avisos_privacidad/integral/19_DIRECCION_TECNICA_ACADEMICA_INSTRUCTORES.pdf',
             'Departamento de Certificación y Control' => 'avisos_privacidad/integral/20_DIRECCION_TECNICA_ACADEMICA_CERTIFICACION_Y_CONTROL.pdf',
             'Comisaria Pública' => 'avisos_privacidad/integral/21_COMISARIA.pdf',
@@ -573,10 +574,11 @@ class CuentapublicaController extends Controller
             'Departamento de Recursos Materiales (Proveedores)' => 'avisos_privacidad/simplificado/12_RECURSOS_MATERIALES_PROVEEDORES.pdf',
             'Departamento de Recursos Materiales (Resguardos)' => 'avisos_privacidad/simplificado/13_RECURSOS_MATERIALES_RESGUARDO.pdf',
             'Departamento de Recursos Materiales (Registro de Visitas)' => 'avisos_privacidad/simplificado/14_RECURSOS_MATERIALES_REGISTRO_DE_VSITAS.pdf',
-            'Dirección de Planeación' => 'avisos_privacidad/simplificado/15_DIRECCION_DE_PLANEACION.pdf',
-            'Dirección de Vinculacion' => 'avisos_privacidad/simplificado/16_DIRECCION_DE_VINCULACION.pdf',
-            'Direccion de Vinculación con el Sector Productivo' => 'avisos_privacidad/simplificado/17_DIRECCION_DE_VINCULACION_CONVENIO.pdf',
-            'Dirección de Vinculación Seguimiento a Egresados' => 'avisos_privacidad/simplificado/18_DIRECCION_DE_VINCULACION_SEGUIMIENTO_A_EGRESADOS.pdf',
+            'Departamento de Organizacion y Evaluacion' => 'avisos_privacidad/simplificado/15_DIRECCION_DE_PLANEACION.pdf',
+            'Departamento de Vinculación Social y Empresarial' => 'avisos_privacidad/simplificado/16_DIRECCION_DE_VINCULACION.pdf',
+            'Departamento de Vinculación para la Competitividad (firma de convenios)' => 'avisos_privacidad/simplificado/17_DIRECCION_DE_VINCULACION_CONVENIO.pdf',
+            'Departamento de Vinculación para la Competitividad (Seguimiento de Egresados)' => 'avisos_privacidad/simplificado/18_aviso_simplificado_seguimiento_egresados.pdf',
+            'Departamento de Vinculación Gubernamental' => 'avisos_privacidad/simplificado/23_AVISO_SIMPLIFICADO_GUBERNAMENTAL.pdf',
             'Departamento de Gestión Academica (Instructores)' => 'avisos_privacidad/simplificado/19 _DIRECCION_TECNICA_ACADEMICA_INSTRUCTORES.pdf',
             'Departamento de Certificación y Control' => 'avisos_privacidad/simplificado/20_DIRECCION_TECNICA_ACADEMICA_CERTIFICACION_Y_CONTROL.pdf',
             'Comisaria Pública' => 'avisos_privacidad/simplificado/21_COMISARIA.pdf',
@@ -590,7 +592,7 @@ class CuentapublicaController extends Controller
     public function Integridad()
     {
         $conduc_codigos =array(
-            'Codigo de Conducta ICATECH' => 'codigos_conducta/códigodeconductaicatech.pdf',
+            'Codigo de Conducta ICATECH' => 'codigos_conducta/codigo_de_conducta.pdf',
         );
 
         $honesti_codigos =array(
@@ -602,7 +604,7 @@ class CuentapublicaController extends Controller
         );
 
         $directorio_codigo =array(
-            'DIRECTORIO COMITÉ DE ÉTICA Y DE PREVENCIÓN DE CONFLICTO DE INTERÉS' => 'codigos_conducta/directorio.pdf',
+            'DIRECTORIO COMITÉ DE ÉTICA Y DE PREVENCIÓN DE CONFLICTO DE INTERÉS' => 'codigos_conducta/directorio1.pdf',
         );
 
         $plandetrabajo_codigo =array(
@@ -649,8 +651,8 @@ class CuentapublicaController extends Controller
     public function transparencia()
     {
         $programactividades_codigo = array(
-            'INFORME DEL PROGRAMA ANUAL DE ACTIVIDADES "PADA" 2020'=> 'archivtransparencia/INFORME_PADA_2020.pdf',
-            'PROGRAMA ANUAL DE ACTIVIDADES "PADA 2021"'=> 'archivtransparencia/INFORME_PADA_2021.pdf'
+            'Informe del Plan Anual de Desarrollo Archivístico “PADA” 2020'=> 'archivtransparencia/INFORME_PADA_2020.pdf',
+            'Plan Anual de Desarrollo Archivístico “PADA” 2021'=> 'archivtransparencia/INFORME_PADA_2021.pdf'
         );
 
         return view('pages.transparencia', ['informepada' =>$programactividades_codigo]);
