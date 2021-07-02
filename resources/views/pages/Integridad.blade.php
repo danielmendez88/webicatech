@@ -501,7 +501,7 @@
                                 <i class="fa fa-minus"></i>
                             </span>
                             <span class="g-pa-20">
-                                Directorio de Asesores.
+                               "Cero Tolerancia" a las conductas de Hostigamiento Sexual y Acoso Sexual
                             </span>
                         </a>
                     </h5>
