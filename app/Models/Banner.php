@@ -11,7 +11,7 @@ class Banner extends Model
 
     protected $table =  'banner';
 
-    protected $fillable = ['id', 'nombre', 'activo', 'path', 'tipo_archivo', 'slug', 'id_catbanner', 'fecha_termino'];
+    protected $fillable = ['id', 'nombre', 'activo', 'path', 'tipo_archivo', 'slug', 'id_catbanner', 'fecha_termino', 'href', 'youtubeid', 'documento'];
 
     protected $hidden = ['created_at', 'updated_at'];
 

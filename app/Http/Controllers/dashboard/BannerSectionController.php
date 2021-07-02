@@ -4,7 +4,7 @@ namespace App\Http\Controllers\dashboard;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Traits\uploadFileTrait;
+use App\Traits\uploadImageTrait;
 
 /**
  * imports
@@ -14,10 +14,12 @@ use App\Models\CatBanner;
 use App\Models\Banner;
 use Illuminate\Database\QueryException;
 use Response;
+use App\Traits\uploadFileTrait;
+use Illuminate\Support\Facades\DB;
 
 class BannerSectionController extends Controller
 {
-    use CatTrait;
+    use CatTrait, uploadImageTrait, uploadFileTrait;
     /**
      * Display a listing of the resource.
      *
@@ -31,6 +33,19 @@ class BannerSectionController extends Controller
         $catalogoBanner = new CatBanner;
         $catBanner = $catalogoBanner->select('id','nombre_ubicacion')->where('activo', true)->get();
         return view('theme.dashboard.forms.formadminbanner', compact('allcategories', 'catBanner'));
+    }
+
+    public function main_banner(){
+        $allcategories = $this->allCategories();
+        /**
+         * catalogo de banner
+         */
+        $catalogoBanner = new CatBanner;
+        $catBanner = $catalogoBanner->select('id','nombre_ubicacion')->where('activo', true)->get();
+        /**
+         * redireccionar a vista
+         */
+        return view('theme.dashboard.contenido.main_banner_index', compact('allcategories', 'catBanner'));
     }
 
     /**
@@ -51,30 +66,127 @@ class BannerSectionController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->all());
         // se procede a guardar el banner en la base de datos url
         // utilizamos una funcion try catch
+        /**
+        * validacion de los campos
+        */
+
+        $validatedData = $request->validate([
+            'titulo' => 'required',
+            'catbanner' => 'required',
+        ], [
+            'titulo.required' => 'El título es requerido',
+            'catbanner.required' => 'El banner es requerido',
+        ]);
+
+        $titulo = $_POST['titulo']; // SI
+
         try {
             //si se entra al método se tiene que ingresar el registro
-            if (isset($_POST['image'])) {
-                # si se ha inicializado el valor de la imagen entra en el siguiente paso
-                $imagen = $_POST['image'];
-                $fecha = $_POST['_fecha'];
-                $titulo = $_POST['_titulo'];
-                $banner = $_POST['banner'];
-                $data = $_POST['activo'];
+
+            if (!empty($titulo)) {
+                # si hay título se prosigue
+                $fecha = $_POST['fecha_termino'];
+                $activo = $_POST['activo'];
+                $cat_banner = $_POST['catbanner'];
+
+                if (!empty($fecha)) {
+                    # si la fecha no es vacia se procede a tratarla para modificarla
+                    $dateFormated = explode('/', $fecha);
+                    $date = $dateFormated[2].'-'.$dateFormated[1].'-'.$dateFormated[0];
+                } else {
+                    # si la fecha está vacia tenemos a enviarla en null
+                    $date = '';
+                }
+                $habilitado = (empty($activo) ? false : true);
+                // se trabaja insertando el dato en la base de datos y subiendo el archivo al servidor
+                $tituloimagen = str_replace(" ", "_", $this->eliminar_acentos($titulo));
                 /**
-                 * empezamos a utilizar el arreglo
+                 * comprobar el banner
                  */
-                $image_array_1 = explode(";", $imagen);
+                switch ($cat_banner) {
+                    case 3:
+                        # checamos el banner revista
+                        /**
+                        * obtener valores de una consulta de tipo de banner
+                        */
+                        $urlref = $_POST['url_pagina'];
+                        parse_str(parse_url($urlref, PHP_URL_QUERY), $my_array_of_vars);
+                        $pivote = true;
+                    break;
+                    case 4:
+                        # checamos el banner videoteca
+                        $urlref = $_POST['url_pagina'];
+                        $pivote = false;
+                    break;
+                    
+                    default:
+                        # code...
+                        $urlref = '';
+                        $pivote = false;
+                    break;
+                }
+
+                $bannerCreate = new Banner;
+                $bannerCreate->nombre = $titulo;
+                $bannerCreate->slug = strtolower($tituloimagen);
+                $bannerCreate->activo = $habilitado;
+                $bannerCreate->fecha_termino = $date;
+                $bannerCreate->id_catbanner = $cat_banner;
+                $bannerCreate->href = $urlref;
+                $bannerCreate->youtubeid = (isset($my_array_of_vars['v']) ? $my_array_of_vars['v'] : '');
+                $bannerCreate->save();
+                // #obtener el último id insertado
+                $lastId = $bannerCreate->id;
                 /**
-                 * obtenemos el siguiente arreglo de la matriz que se genero anteriormente
+                 * checamos el pivote
                  */
-                $image_array_2 = explode(",", $image_array_1[1]);
+                if ($pivote == true) {
+                    # si la variable es verdadero subimos el archivo
+                    if ($request->hasFile('archivo_revista')) {
+                        # obtenemos el valor del comunicado
+                        $documento_revista = Banner::where('id', $lastId)->value('documento');
+                        // checamos que no sea nulo
+                        if (!is_null($documento_revista)) {
+                            # si no está nulo checamos que no esté vacio
+                            if (!empty($documento_revista)) {
+                                # si no está vacio
+                                $docRevista = explode("/",$documento_revista, 5);
+                                 if (Storage::exists($docRevista[4])) {
+                                     # checamos si hay un documento de ser así procedemos a eliminarlo
+                                     Storage::delete($docRevista[4]);
+                                 }
+                            }
+                        }
+         
+                        $remplazartitulodocumento = strtolower($tituloimagen);
+         
+                        $archivo_revista = $request->file('archivo_revista'); # obtenemos el archivo
+                        $url_archivo = $this->uploadFile($archivo_revista, $lastId, $remplazartitulodocumento , 'documento_revista'); #invocamos el método
+                        // creamos un arreglo
+                        $array_documento = [
+                            'documento' => $url_archivo
+                        ];
+         
+                        // vamos a actualizar el registro con el arreglo que trae diferentes variables y carga de archivos
+                        Banner::WHERE('id', $lastId)->update($array_documento);
+         
+                        // limpiamos el arreglo
+                        unset($array_documento);
+                        
+                    }
+                }
+
                 /**
-                 * decodificamos la imagen
-                 */
-                $imagendecodificada = base64_decode($image_array_2[1]);
-                return Response::json($banner);
+                * redireccionamos
+                */
+                return redirect()->route('main_form_banner')->with('success', 'Banner Agregado Éxitosamente!');
+
+            } else {
+                # si no hay titulo se manda un mensaje de error
+                return back()->with('error', 'No hay título para este banner');
             }
         } catch (QueryException $th) {
             //manda una excepcion sql
@@ -91,6 +203,14 @@ class BannerSectionController extends Controller
     public function show($id)
     {
         //
+        $allcategories = $this->allCategories();
+        $idCategoria = base64_decode($id);
+        /**
+         * consulta - query
+         */
+        $banner_by_id = Banner::select('banner.path', 'banner.nombre', 'banner.tipo_archivo', 'banner.documento', 'banner.id', 'banner.youtubeid', 'catalogo_banner.codigo', 'catalogo_banner.nombre_ubicacion')->join('catalogo_banner', 'catalogo_banner.id', '=', 'banner.id_catbanner')
+                        ->where('banner.id_catbanner', $idCategoria)->get();
+        return view('theme.dashboard.contenido.banner', compact('banner_by_id', 'allcategories', 'idCategoria'));
     }
 
     /**
@@ -99,9 +219,18 @@ class BannerSectionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, $idBan)
     {
-        //
+        $allcategories = $this->allCategories();
+        // obtenemos el id
+        $idBanner = base64_decode($id);
+        $idCat = base64_decode($idBan);
+        /**
+         * generamos una consulta que nos traiga uno registro
+         */
+        $getBanner_ = Banner::select('catalogo_banner.codigo', 'banner.path', 'banner.nombre')->join('catalogo_banner', 'catalogo_banner.id', '=', 'banner.id_catbanner')
+                      ->where('banner.id', $idBanner)->first();
+        return view('theme.dashboard.forms.bannereditform', compact('idBanner', 'allcategories', 'getBanner_', 'idCat'));
     }
 
     /**
@@ -115,6 +244,52 @@ class BannerSectionController extends Controller
     {
     }
 
+    public function storefromajax(Request $request){
+        if (isset($_POST['image'])) {
+            # si hay una petición se procede a ingresar en la parte del código que nos permitirá guardar el registro
+            $idban = base64_decode($request->get('idBanner'));
+            /**
+             * decodificamos la imagen a procesar
+             */
+            $imagen = $_POST['image'];
+            $image = str_replace('data:image/png;base64,', '', $imagen);
+            $image = str_replace(' ', '+', $image);
+            $extension = explode('/', mime_content_type($imagen))[1];
+            $image_decode = base64_decode($image);
+            /**
+             * obtener el código
+             */
+            $bannerById = DB::table('banner')
+                ->select('catalogo_banner.codigo', 'banner.slug')
+                ->join('catalogo_banner', 'catalogo_banner.id', '=', 'banner.id_catbanner')
+                ->where('banner.id', $idban)
+                ->first();
+            /**
+             * guardar la imagen y retornar la url dónde se guarda
+             */
+            $url_imagen = $this->uploadImage($image_decode, $idban, $bannerById->slug, $extension, $bannerById->codigo);
+            /**
+             * actualizar el registro -  creamos un arreglo
+             */
+            $array_img = [
+                'path' => $url_imagen,
+                'tipo_archivo' => $extension
+            ];
+            // actualizamos registro
+            Banner::findOrfail($idban)->update($array_img);
+            // limpiamos el arreglo
+            unset($array_img);
+            // enviado respuesta positiva
+            $positive_response = 'OK';
+            return Response::json($positive_response);
+
+        } else {
+            # mensaje de error - no hay banner
+            return Response::json('Error');
+        }
+        // return Response::json($request->all());
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -125,4 +300,49 @@ class BannerSectionController extends Controller
     {
         //
     }
+    /**
+     * eliminar caracteres especiales
+     */
+    private function eliminar_acentos($cadena){
+		
+		//Reemplazamos la A y a
+		$cadena = str_replace(
+		array('Á', 'À', 'Â', 'Ä', 'á', 'à', 'ä', 'â', 'ª'),
+		array('A', 'A', 'A', 'A', 'a', 'a', 'a', 'a', 'a'),
+		$cadena
+		);
+
+		//Reemplazamos la E y e
+		$cadena = str_replace(
+		array('É', 'È', 'Ê', 'Ë', 'é', 'è', 'ë', 'ê'),
+		array('E', 'E', 'E', 'E', 'e', 'e', 'e', 'e'),
+		$cadena );
+
+		//Reemplazamos la I y i
+		$cadena = str_replace(
+		array('Í', 'Ì', 'Ï', 'Î', 'í', 'ì', 'ï', 'î'),
+		array('I', 'I', 'I', 'I', 'i', 'i', 'i', 'i'),
+		$cadena );
+
+		//Reemplazamos la O y o
+		$cadena = str_replace(
+		array('Ó', 'Ò', 'Ö', 'Ô', 'ó', 'ò', 'ö', 'ô'),
+		array('O', 'O', 'O', 'O', 'o', 'o', 'o', 'o'),
+		$cadena );
+
+		//Reemplazamos la U y u
+		$cadena = str_replace(
+		array('Ú', 'Ù', 'Û', 'Ü', 'ú', 'ù', 'ü', 'û'),
+		array('U', 'U', 'U', 'U', 'u', 'u', 'u', 'u'),
+		$cadena );
+
+		//Reemplazamos la N, n, C y c
+		$cadena = str_replace(
+		array('Ñ', 'ñ', 'Ç', 'ç'),
+		array('N', 'n', 'C', 'c'),
+		$cadena
+		);
+		
+		return $cadena;
+	}
 }

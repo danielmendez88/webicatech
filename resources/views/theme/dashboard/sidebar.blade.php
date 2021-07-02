@@ -26,7 +26,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('main_form_banner') }}">
+        <a class="nav-link" href="{{ route('main_index_banner') }}">
           <i class="menu-icon typcn typcn-th-large-outline"></i>
           <span class="menu-title">Administrador de Banner</span>
         </a>

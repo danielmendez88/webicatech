@@ -56,6 +56,11 @@
 		  transform: translate(-50%, -50%);
 		  text-align: center;
 		}
+    .error {
+            color: red;
+            background-color: #FFFFFF;
+            padding-top: 10px;
+    }
   </style>
 @endsection
 
@@ -70,7 +75,7 @@
             <div class="card">
               <div class="card-body">
                 <h4 class="card-title">Administrador de Banner</h4>
-                <form class="form-sample" id="formSubcategoria" method="POST" action="{{ route('fileUploadPost') }}" enctype="multipart/form-data">
+                <form class="form-sample" id="formSubcategoria" method="POST" action="{{ route('save_post_banner') }}" enctype="multipart/form-data">
                   @csrf
                   <div class="row">
                     <div class="col-md-6">
@@ -78,6 +83,9 @@
                         <label class="col-sm-3 col-form-label">Título</label>
                         <div class="col-sm-9">
                           <input type="text" class="form-control" id="titulo" name="titulo"/>
+                          @if ($errors->has('titulo'))
+                            <span class="text-danger">{{ $errors->first('titulo') }}</span>
+                          @endif
                         </div>
                       </div>
                     </div>
@@ -85,7 +93,7 @@
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Fecha de Termino</label>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control" id="fecha_termino" name="fecha_termino"/>
+                          <input type="text" class="form-control" id="fecha_termino" name="fecha_termino" autocomplete="false"/>
                         </div>
                       </div>
                     </div>
@@ -93,15 +101,36 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group row">
-                        <label for="upload_image">
-                            <img src="{{ asset('assets/img/bg/bg-img1.png') }}" id="uploaded_image" class="img-responsive img-circle" />
-                            <div class="overlay">
-                                <div class="text">Click para cambiar la imagen de perfil</div>
-                            </div>
-                            <input type="file" name="image" class="image" id="upload_image" style="display:none" />
-                        </label>
+                          <label class="col-sm-3 col-form-label">Ubicación</label>
+                          <div class="col-sm-9">
+                              <select class="form-control" id="catbanner" name="catbanner">
+                                  <option value="">-- SELECCIONE LA UBICACIÓN --</option>
+                                  @foreach ($catBanner as $itemarrayubicacion)
+                                      <option value="{{ $itemarrayubicacion->id }}">{{ $itemarrayubicacion->nombre_ubicacion }}</option>
+                                  @endforeach
+                              </select>
+                          </div>
                       </div>
                     </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Archivo Revista</label>
+                        <div class="col-sm-9">
+                          <input class="form-control" type="file" id="archivo_revista" name="archivo_revista" disabled="true">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Url de la Página</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="url_pagina" name="url_pagina" disabled="true"/>
+                        </div>
+                      </div>
+                    </div>
+                    {{-- url --}}
                     <div class="col-md-6">
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Publicar</label>
@@ -112,29 +141,17 @@
                             </div>
                         </div>
                       </div>
+                      {{-- <button type="submit" class="btn btn-success mr-2">Enviar</button> --}}
+                      <button type="submit" class="btn btn-success">
+                        <i class="fas fa-paper-plane fa-lg"></i> Enviar
+                      </button>
+                      <button type="button" class="btn btn-danger">
+                        <i class="fas fa-window-close fa-lg"></i>
+                        Cancelar
+                      </button>
                     </div>
+                    {{-- url END --}}
                   </div>
-                  <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Ubicación</label>
-                            <div class="col-sm-9">
-                                <select class="form-control" id="catbanner" name="catbanner">
-                                    <option value="">-- SELECCIONE LA UBICACIÓN --</option>
-                                    @foreach ($catBanner as $itemarrayubicacion)
-                                        <option value="{{ $itemarrayubicacion->id }}">{{ $itemarrayubicacion->nombre_ubicacion }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-                            <button type="submit" class="btn btn-success mr-2">Enviar</button>
-                            <button type="button" class="btn btn-danger">Cancelar</button>
-                      </div>
-                  </div>
-                  {{-- <input type="hidden" name="idcategoria" id="idcategoria" value="{{ $id }}">
-                  <input type="hidden" name="page_content" id="page_content" value="{{ $pagecontent }}">
-                  <input type="hidden" name="slug" id="slug" value="{{ $slug }}">
-                  <input type="hidden" name="idapartado" id="idapartado" value="{{ $idapartado }}"> --}}
                 </form>
               </div>
             </div>
@@ -173,25 +190,6 @@
         <strong>Bien Hecho!</strong> {{ $message }}
       </div>
     @endif
-    {{-- @if (count($query) > 0)
-      <div class="row">
-        <div class="col-12 grid-margin">
-          <div class="card-columns">
-            @foreach ($query as $itemquery)
-              <div class="card text-center">
-                <a href="{{ $itemquery->ruta_archivo }}" download target="_blank">
-                  <img src="{{ asset('assets/img/gif/product_image_not_found.gif') }}" width="100%" class="card-img-top" alt="..." height="200px">
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">{{ $itemquery->nombre }}</h5>
-                  <p class="card-text">{{ $itemquery->titulo_documento }}.</p>
-                </div>
-              </div>
-            @endforeach
-          </div>
-        </div>
-      </div>
-    @endif --}}
 @endsection
 
 @section('contentScriptJs')
@@ -207,83 +205,40 @@
             $.datepicker.setDefaults( $.datepicker.regional[ "es" ] );
             $('#fecha_termino').datepicker();
 
-            var $modal = $('#modal');
-
-            var image = document.getElementById('sample_image');
-
-            var cropper;
-
-            $('#upload_image').change(function(event){
-                var files = event.target.files;
-
-                var done = function(url){
-                    image.src = url;
-                    $modal.modal('show');
-                };
-
-                if(files && files.length > 0)
-                {
-                    reader = new FileReader();
-                    reader.onload = function(event)
-                    {
-                        done(reader.result);
-                    };
-                    reader.readAsDataURL(files[0]);
-                }
+            $('#catbanner').on('change', function(e){
+              var optionSelected = $("option:selected", this);
+              // switcheamos la variable
+              switch (optionSelected.val()) {
+                case '3':
+                    $('#archivo_revista').prop("disabled", false);
+                    $( "#url_pagina" ).prop( "disabled", false );
+                  break;
+                case '4':
+                    // hablitiar url input
+                    $('#archivo_revista').prop("disabled", true);
+                    $( "#url_pagina" ).prop( "disabled", false );
+                  break;
+                default:
+                    // deshabilitar url
+                    $('#archivo_revista').prop("disabled", true);
+                    $( "#url_pagina" ).prop( "disabled", true );
+                  break;
+              }
             });
 
-            $modal.on('shown.bs.modal', function() {
-                cropper = new Cropper(image, {
-                    
-                    crop(event){
-                        console.log(event.detail.x);
-                        console.log(event.detail.y);
-                        console.log("ancho "+ event.detail.width);
-                        console.log("alto " + event.detail.height);
-                        console.log(event.detail.rotate);
-                        console.log(event.detail.scaleX);
-                        console.log(event.detail.scaleY);
-                    },
-                    viewMode: 0,
-                    preview:'.preview'
-                });
-            }).on('hidden.bs.modal', function(){
-                cropper.destroy();
-                cropper = null;
+            /*
+            * Validar formulario con jquery validate
+            */
+            $('#formSubcategoria').validate({
+              rules: {
+                titulo: { required: true },
+                catbanner: { required: true}
+              },
+              messages: {
+                titulo: { required: "Titulo Requerido" },
+                catbanner: { required: "Seleccione una Opción" }
+              }
             });
-
-            $('#crop').click(function(){
-                canvas = cropper.getCroppedCanvas({
-                    width:400,
-                    height:400
-            });
-
-                canvas.toBlob(function(blob){
-                    url = URL.createObjectURL(blob);
-                    var reader = new FileReader();
-                    reader.readAsDataURL(blob);
-                    reader.onloadend = function(){
-                        var base64data = reader.result;
-                        var titulo = $("#titulo").val();
-                        var fechaTermino = $("#fecha_termino").val();
-                        var bannerstatus = $("#catbanner").val();
-                        var pubActivo = ($('#activo').is(':checked'))  ? true : false;
-                        $.ajax({
-                            url:"{{ route('uploadbanner') }}",
-                            method:'POST',
-                            data:{image:base64data, _token: "{{ csrf_token() }}", activo: pubActivo, banner: bannerstatus, _fecha: fechaTermino, _titulo:titulo },
-                            success:function(data)
-                            {
-                                // $modal.modal('hide');
-                                // $('#uploaded_image').attr('src', data);
-                                console.log(data);
-                                alert(data);
-                            }
-                        });
-                    };
-                });
-            });
-
         });
     </script>
 @endsection

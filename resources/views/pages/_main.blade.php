@@ -5,7 +5,7 @@
     {{-- CORTINILLA DE NOTICIAS --}}
         <div class="ticker-container">
             <div class="ticker-caption">
-            <p>Últimas Noticias</p>
+            <p>Comunicados</p>
             </div>
             <ul>
             <div>
@@ -102,22 +102,30 @@
               <div class="row">
                 <div class="col-sm-12">
                   <section class="lazy slider" data-sizes="50vw">
-                    <div>
-                      <img data-lazy="{{ asset('/sitio/banner_pnt.jpg') }}" data-srcset="{{ asset('/sitio/banner_pnt.jpg') }} 960w" data-sizes="100vw" aria-hidden="true">
-                    </div>
-                    <div>
-                      <img data-lazy="{{ asset('/sitio/bannernormatividad.jpg') }}" data-srcset="{{ asset('/sitio/bannernormatividad.jpg') }} 650w, {{ asset('/sitio/bannernormatividad.jpg') }} 960w" data-sizes="100vw" aria-hidden="true">
-                    </div>
-                    <div>
-                      <img data-lazy="{{ asset('/sitio/banner-plan.png') }}"  data-srcset="{{ asset('/sitio/banner-plan.png') }} 650w, {{ asset('/sitio/banner-plan.png') }} 960w" data-sizes="100vw" aria-hidden="true">
-                    </div>
-                    <div>
-                      <img data-lazy="{{ asset('/sitio/banner_pnt.jpg') }}"  data-srcset="{{ asset('/sitio/banner_pnt.jpg') }} 650w, {{ asset('/sitio/banner_pnt.jpg') }} 960w" data-sizes="100vw" aria-hidden="true">
-                    </div>
-                    <div>
-                      <!-- this slide should inherit the sizes attr from the parent slider -->
-                      <img data-lazy="{{ asset('/sitio/calendario_marzo_2021.jpeg') }}"  data-srcset="{{ asset('/sitio/calendario_marzo_2021.jpeg') }} 650w, {{ asset('/sitio/calendario_marzo_2021.jpeg') }} 960w">
-                    </div>
+                    @if (count($bsecundario) > 0)
+                        @foreach ($bsecundario as $itembannersecundario)
+                          <div>
+                            <img data-lazy="{{ $itembannersecundario->path }}" data-srcset="{{ asset('/sitio/banner_pnt.jpg') }} 960w" data-sizes="100vw" aria-hidden="true">
+                          </div>
+                        @endforeach
+                    @else
+                      <div>
+                        <img data-lazy="{{ asset('/sitio/banner_pnt.jpg') }}" data-srcset="{{ asset('/sitio/banner_pnt.jpg') }} 960w" data-sizes="100vw" aria-hidden="true">
+                      </div>
+                      <div>
+                        <img data-lazy="{{ asset('/sitio/bannernormatividad.jpg') }}" data-srcset="{{ asset('/sitio/bannernormatividad.jpg') }} 650w, {{ asset('/sitio/bannernormatividad.jpg') }} 960w" data-sizes="100vw" aria-hidden="true">
+                      </div>
+                      <div>
+                        <img data-lazy="{{ asset('/sitio/banner-plan.png') }}"  data-srcset="{{ asset('/sitio/banner-plan.png') }} 650w, {{ asset('/sitio/banner-plan.png') }} 960w" data-sizes="100vw" aria-hidden="true">
+                      </div>
+                      <div>
+                        <img data-lazy="{{ asset('/sitio/banner_pnt.jpg') }}"  data-srcset="{{ asset('/sitio/banner_pnt.jpg') }} 650w, {{ asset('/sitio/banner_pnt.jpg') }} 960w" data-sizes="100vw" aria-hidden="true">
+                      </div>
+                      <div>
+                        <!-- this slide should inherit the sizes attr from the parent slider -->
+                        <img data-lazy="{{ asset('/sitio/calendario_marzo_2021.jpeg') }}"  data-srcset="{{ asset('/sitio/calendario_marzo_2021.jpeg') }} 650w, {{ asset('/sitio/calendario_marzo_2021.jpeg') }} 960w">
+                      </div>
+                    @endif
                   </section>
                 </div>
               </div>
@@ -132,27 +140,49 @@
             {{-- SECCIÓN DE INDICE REVISTA END --}}
             {{-- SECCION DE PAGOS Y APLICACIONES --}}
               <div class="row">
-                <div class="col-sm-4">
-                  <div class="profile-card-2">
-                    <img src="{{ asset('revista_icatech/revista_febrero.jpg') }}" class="img img-responsive">
-                    <div class="profile-username">REVISTA DIGITAL</div>
-                    <div class="profile-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="profile-card-2">
-                    <img src="{{ asset('revista_icatech/revista1_2021.jpeg') }}" class="img img-responsive">
-                    <div class="profile-username">REVISTA DIGITAL</div>
-                    <div class="profile-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="profile-card-2">
-                      <img src="{{ asset('revista_icatech/revista_2.png') }}" class="img img-responsive">
+                @if (count($brevista) > 0)
+                  @foreach ($brevista as $itemrevista)
+                    <div class="col-sm-4">
+                      <div class="profile-card-2">
+                        <img src="{{ $itemrevista->path }}" class="img img-responsive">
+                        <div class="profile-username">REVISTA DIGITAL</div>
+                        <div class="profile-icons">
+                          <a href="#">
+                            <i class="fa fa-facebook"></i>
+                          </a>
+                          <a href="#">
+                            <i class="fa fa-twitter"></i>
+                          </a>
+                          <a href="#">
+                            <i class="fa fa-linkedin"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  @endforeach
+                @else
+                  <div class="col-sm-4">
+                    <div class="profile-card-2">
+                      <img src="{{ asset('revista_icatech/revista_febrero.jpg') }}" class="img img-responsive">
                       <div class="profile-username">REVISTA DIGITAL</div>
                       <div class="profile-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                    </div>
                   </div>
-                </div>
+                  <div class="col-sm-4">
+                    <div class="profile-card-2">
+                      <img src="{{ asset('revista_icatech/revista1_2021.jpeg') }}" class="img img-responsive">
+                      <div class="profile-username">REVISTA DIGITAL</div>
+                      <div class="profile-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="profile-card-2">
+                        <img src="{{ asset('revista_icatech/revista_2.png') }}" class="img img-responsive">
+                        <div class="profile-username">REVISTA DIGITAL</div>
+                        <div class="profile-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                    </div>
+                  </div>
+                @endif
               </div>
             {{-- SECCION DE PAGOS Y APLICACIONES END--}}
             {{-- SECCIÓN INDICE VIDEOTECA --}}
@@ -167,6 +197,53 @@
             {{-- SECCIÓN DEL VIDEO --}}
             @include('pages.video_player')
             {{-- SECCIÓN DEL VIDEO END --}}
+            {{-- SECCIÓN TRANSPARENCIA --}}
+            <div class="col-sm-12">
+              <div class="comunicados">
+                <p>TRANSPARENCIA</p>
+                <div class="separador"></div>
+              </div>
+            </div>
+            {{-- SECCIÓN TRANSPARENCIA --}}
+            {{-- TRANSPARENCIA --}}
+            <div class="row">
+              @if (count($btransparencia) > 0)
+                  @foreach ($collection as $item)
+                    <div class="masonry-grid-item col-sm-6 col-md-6 col-lg-6 g-mb-30">
+                      <div class="about-image">
+                        <div class="image">
+                          <a target="_blank" href="{{ $item->href }}">
+                            <img src="{{ $item->path }}" alt="{{ $item->slug }}" class="img-thumbnail">
+                          </a>
+                          <br>
+                        </div>
+                      </div>
+                    </div> 
+                  @endforeach
+              @else
+                <div class="masonry-grid-item col-sm-6 col-md-6 col-lg-6 g-mb-30">
+                  <div class="about-image">
+                    <div class="image">
+                      <a target="_blank" href="https://www.plataformadetransparencia.org.mx/web/guest/inicio">
+                        <img src="Imagenes Pagina/banner_pnt.jpg" alt="About Images" class="img-thumbnail">
+                      </a>
+                      <br>
+                    </div>
+                  </div>
+                </div>
+                <div class="masonry-grid-item col-sm-6 col-md-6 col-lg-6 g-mb-30">
+                  <div class="about-image">
+                    <div class="image">
+                      <a target="_blank" href="https://www.plataformadetransparencia.org.mx/web/guest/inicio">
+                        <img src="Imagenes Pagina/banner_pnt.jpg" alt="About Images" class="img-thumbnail">
+                      </a>
+                      <br>
+                    </div>
+                  </div>
+                </div>
+              @endif
+            </div>
+            {{-- TRANSPARENCIA --}}
             
             <br>
         </div>

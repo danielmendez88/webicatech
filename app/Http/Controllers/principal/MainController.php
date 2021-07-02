@@ -4,9 +4,12 @@ namespace App\Http\Controllers\principal;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Banner;
+use App\Traits\bannerTrait;
 
 class MainController extends Controller
 {
+    use bannerTrait;
     /**
      * Display a listing of the resource.
      *
@@ -14,8 +17,13 @@ class MainController extends Controller
      */
     public function index()
     {
-        //
-        return view('inicio');
+        $bprincipal = $this->getBanner('banner_principal');
+        $btransparencia = $this->getBanner('transparencia');
+        $bsecundario = $this->getBanner('banner_secundario');
+        $brevista = $this->getBanner('revista');
+        $bvideoteca = $this->getBanner('videoteca');
+        // se tiene que hacer una carga de los registros
+        return view('inicio', compact('bprincipal', 'btransparencia', 'bsecundario', 'brevista', 'bvideoteca'));
     }
 
     public function noticias(){

@@ -21,10 +21,14 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/dashboard/admin/add/subcategoria/{slug}/{pagecontent}/{id}/{idapartado}', 'dashboard\DinamycSectionController@show')->name('form_add_subcateogires');
     Route::post('file-upload', 'dashboard\DinamycSectionController@fileUploadPost')->name('fileUploadPost');
     Route::get('/dashboard/admin/form/banner', 'dashboard\BannerSectionController@index')->name('main_form_banner');
-    Route::post('file-banner-upload', 'dashboard\BannerSectionController@store')->name('uploadbanner');
+    Route::post('file-banner-upload', 'dashboard\BannerSectionController@storefromajax')->name('storefromajax');
     Route::get('/dashboard/admin/user/index', 'dashboard\UserController@index')->name('main_user_index');
     Route::get('/dashboard/admin/user/list', 'dashboard\UserController@list')->name('add_new_user');
     Route::post('/dashboard/admin/user/store', 'dashboard\UserController@store')->name('new_user_store');
     Route::get('/dashboard/admin/usuario/{id}', 'dashboard\UserController@show')->name('edit_user_setting');
     Route::put('/dashboard/admin/user-update/{id}', 'dashboard\UserController@update')->name('edit_user_update');
+    Route::get('/dashboard/admin/banner/index', 'dashboard\BannerSectionController@main_banner')->name('main_index_banner');
+    Route::get('/dashboard/banner/categoria/{id}', 'dashboard\BannerSectionController@show')->name('select_category');
+    Route::post('/save/post/banner', 'dashboard\BannerSectionController@store')->name('save_post_banner');
+    Route::get('/dashboad/banner/edit/{id}/{idBan}', 'dashboard\BannerSectionController@edit')->name('edit_form_banner');
 });
