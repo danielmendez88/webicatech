@@ -64,10 +64,10 @@
 		<div class="u-heading-v2-5--bottom g-brd-primary g-mb-30 text-left">
 			<h2 class="u-heading-v2__title text-uppercase g-font-weight-300 mb-0">REVISTA ICATECH</h2>
 		</div>
-		<div class="masonry-grid-item col-sm-1 col-md-1 col-lg-5 g-mb-30">
+		<div class="masonry-grid-item col-sm-1 col-md-1 col-lg-4 g-mb-30">
 				<div class="about-image">
 					<div class="image">
-						<a target="_blank" href="{{ route('revista') }}"><img src="revista_icatech/revista_icat_2021.jpeg" alt="Banner" class="img-thumbnail"></a><br><br>
+						<a target="_blank" href="{{ route('revista') }}"><img src="revista_icatech/revistajunio.jpeg" alt="Banner" class="img-thumbnail"></a><br><br>
 					</div>
 				</div>
 				</div>
