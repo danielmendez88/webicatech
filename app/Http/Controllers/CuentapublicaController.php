@@ -52,6 +52,10 @@ class CuentapublicaController extends Controller
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/tt2020/presupuestal/1ldf3er2020.pdf'
         );
         $inf_financiera4t20 = array(
+            'Bienes Patrimoniales' => 'cuenta_publica/ct2020/financiera/bienes_patrimoniales.pdf',
+            'Formatos de Analisis' => 'cuenta_publica/ct2020/financiera/formatos_complementarios.pdf',
+            'Formatos Armonizados Conac' => 'cuenta_publica/ct2020/financiera/formatos_armonizados_conac.pdf',
+            'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/ct2020/financiera/formatos_ley_de_disciplina_financiera.pdf'
             
         );
         $inf_presupuestal4t20 = array(
@@ -170,10 +174,10 @@ class CuentapublicaController extends Controller
             'Clasificación de Servicios Personales por Categorias ESC' => 'cuenta_publica/ley_disciplinafinanciera2021/1t2021/LDF6dClasificaciOndeServiciosPersonalesporCategorIaEsc.pdf'
         );
         $inf_financiera1t21 =array(
-            'Bienes Patrimoniales' => 'cuenta_publica/pt2021/financiera/bienes_patrimoniales.pdf',
-            'Formatos Complementarios' => 'cuenta_publica/pt2021/financiera/formatos_complementarios.pdf',
-            'Clasificación Funcional, Finalidad y Función ESC' => 'cuenta_publica/pt2021/financiera/formatos_armonizados_conac.pdf',
-            'Clasificación de Servicios Personales por Categorias ESC' => 'cuenta_publica/pt2021/financiera/formatos_ley_de_disciplina_financiera.pdf'
+            'Bienes Patrimoniales' => 'cuenta_publica/pt2021/financiera/bienes_patrimoniales1.pdf',
+            'Formatos Complementarios' => 'cuenta_publica/pt2021/financiera/formatos_complementarios1.pdf',
+            'Clasificación Funcional, Finalidad y Función ESC' => 'cuenta_publica/pt2021/financiera/formatos_armonizados_CONAC.pdf',
+            'Clasificación de Servicios Personales por Categorias ESC' => 'cuenta_publica/pt2021/financiera/formatos_ley_de_disciplina_financiera1.pdf'
         );
         $inf_presupuestal1t21 =array(
             'Analisis Funcional' => 'cuenta_publica/pt2021/presupuestal/analisis_funciona1ertrimestre2021.pdf',
@@ -509,21 +513,33 @@ class CuentapublicaController extends Controller
             'Indicadores de Resultados' => 'sevac_/2018_/t3/D.4.2 Indicadores de Resultados.pdf',
             'Programación y Proyectos de Inversion' => 'sevac_/2018_/t3/D.4.3 Prog y Proyectos de Inversion.pdf'
         );
+        $cuarto_trimestre2020 =array(
+            'Estado de Situación Financiera' => 'sevac_/2020/4t/1estado_de_situacion_financiera_por_rubros.pdf',
+            'Estado de Actividades' => 'sevac_/2020/4t/2estado_de_actividades_por_rubros.pdf',
+            'Estado de Variacion en la Hacienda Pública' => 'sevac_/2020/4t/3estado_de_variacion_en_la_hacienda_publica_por_rubros.pdf',
+            'Estado de Cambios en la Situación Financiera' => 'sevac_/2020/4t/4estado_de_cambios_en_la_situacion_financiera_por_rubros.pdf',
+            'Estado de Flujos de Efectivo' => 'sevac_/2020/4t/5estado_de_flujos_de_efectivo_por_rubros.pdf',
+            'Estado Analitico del Activo' => 'sevac_/2020/4t/6estado_analitico_del_activo_por_rubros.pdf',
+            'Estado Analitico de la Deuda y Otros Pasivos' => 'sevac_/2020/4t/7estado_analitico_de_la_deuda_y_otros_pasivos_por_rubros.pdf',
+            'Informe Sobre Pasivos Contingentes' => 'sevac_/2020/4t/8informe_sobre_pasivos_contingentes.pdf',
+            'Notas a los Estados Financieros' => 'sevac_/2020/4t/9notas_a_los_estados_financieros.pdf',
+            'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2020/4t/10montos_pagados_por_ayudas_y_subsidios.pdf'
+        );
         $primer_trimestre2021 =array(
-            'Estado de Situación Financiera' => 'sevac_/2021/1t/1estado_de_situacion_financiera_por_rubros.pdf',
-            'Estado de Actividades' => 'sevac_/2021/1t/2estado_de_actividades_por_rubros.pdf',
-            'Estado de Variacion en la Hacienda Pública' => 'sevac_/2021/1t/3estado_de_variacion_en_la_hacienda_publica_por_rubros.pdf',
-            'Estado de Cambios en la Situación Financiera' => 'sevac_/2021/1t/4estado_de_cambios_en_la_situacion_financiera_por_rubros.pdf',
-            'Estado de Flujos de Efectivo' => 'sevac_/2021/1t/5estado_de_flujos_de_efectivo_por_rubros.pdf',
-            'Estado Analitico del Activo' => 'sevac_/2021/1t/6estado_analitico_del_activo_por_rubros.pdf',
-            'Estado Analitico de la Deuda y Otros Pasivos' => 'sevac_/2021/1t/7estado_analitico_de_la_deuda_y_otros_pasivos_por_rubros.pdf',
-            'Informe Sobre Pasivos Contingentes' => 'sevac_/2021/1t/8informe_sobre_pasivos_contingentes.pdf',
-            'Notas a los Estados Financieros' => 'sevac_/2021/1t/9notas_a_los_estados_financieros.pdf',
-            'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2021/1t/10montos_pagados_por_ayudas_y_subsidios.pdf'
+            'Estado de Situación Financiera' => 'sevac_/2021/1t/1_estado_de_situacion_flnanciera_por_rubros.pdf',
+            'Estado de Actividades' => 'sevac_/2021/1t/2_estado_de_actividades_por_rubros.pdf',
+            'Estado de Variacion en la Hacienda Pública' => 'sevac_/2021/1t/3_estado_de_variacion_en_la_hacienda_publica_por_rubros.pdf',
+            'Estado de Cambios en la Situación Financiera' => 'sevac_/2021/1t/4_estado_de_cambios_en_la_situacion_financiera_por_rubros.pdf',
+            'Estado de Flujos de Efectivo' => 'sevac_/2021/1t/5_estado_de_flujos_de_efectivo_por_rubros.pdf',
+            'Estado Analitico del Activo' => 'sevac_/2021/1t/6_estado_analitico_del_activo_por_rubros.pdf',
+            'Estado Analitico de la Deuda y Otros Pasivos' => 'sevac_/2021/1t/7_estado_analitico_de_la_deuda_y_otros_pasivos_por_rubros.pdf',
+            'Informe Sobre Pasivos Contingentes' => 'sevac_/2021/1t/8_informe_sobre_pasivos_contingentes.pdf',
+            'Notas a los Estados Financieros' => 'sevac_/2021/1t/9_notas_a_los_estados_financieros.pdf',
+            'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2021/1t/10_montos_pagados_por_ayudas_y_subsidios.pdf'
         );
 
 
-        return view('pages.sevac', ['primtrim2021' => $primer_trimestre2021, 'primtrim2020' => $prim_trimestre2020, 'segundtrim2020' => $segun_trimestre2020, 'tercertrim2020' => $tercer_trimestre2020, 'primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018]);
+        return view('pages.sevac', ['cuartotrim2020' => $cuarto_trimestre2020, 'primtrim2021' => $primer_trimestre2021, 'primtrim2020' => $prim_trimestre2020, 'segundtrim2020' => $segun_trimestre2020, 'tercertrim2020' => $tercer_trimestre2020, 'primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018]);
         //comentario
     }
 
