@@ -171,7 +171,11 @@ class CuentapublicaController extends Controller
             'Clasificación por objeto del gasto, Capitulo y Concepto ESC' => 'cuenta_publica/ley_disciplinafinanciera2021/1t2021/LDF6aClasificaciOnporObjetodelGastoCapituloyConceptoEsc.pdf',
             'Clasificación Administrativa ESC' => 'cuenta_publica/ley_disciplinafinanciera2021/1t2021/LDF6bClasificaciOnAdministrativaEsc.pdf',
             'Clasificación Funcional, Finalidad y Función ESC' => 'cuenta_publica/ley_disciplinafinanciera2021/1t2021/LDF6cClasificaciOnFuncionalFinalidadyFunciónEsc.pdf',
-            'Clasificación de Servicios Personales por Categorias ESC' => 'cuenta_publica/ley_disciplinafinanciera2021/1t2021/LDF6dClasificaciOndeServiciosPersonalesporCategorIaEsc.pdf'
+            'Clasificación de Servicios Personales por Categorias ESC' => 'cuenta_publica/ley_disciplinafinanciera2021/1t2021/LDF6dClasificaciOndeServiciosPersonalesporCategorIaEsc.pdf',
+            'Formatos LDF' => 'cuenta_publica/ley_disciplinafinanciera2021/1t2021/FormatosLDF6a-6b-6c-6d1erTrimestre.pdf'
+        );
+        $inf_disciplina2t21 =array(
+            'Formatos LDF' => 'cuenta_publica/ley_disciplinafinanciera2021/2t2021/formatosLDF6a-6b-6c-6d2otrimestre.pdf'
         );
         $inf_financiera1t21 =array(
             'Bienes Patrimoniales' => 'cuenta_publica/pt2021/financiera/bienes_patrimoniales1.pdf',
@@ -184,8 +188,11 @@ class CuentapublicaController extends Controller
             'Formatos Armonizados Conac' => 'cuenta_publica/pt2021/presupuestal/formatosarmonizadosconac1ertrimestre2021.pdf',
             'Información Presupuestal' => 'cuenta_publica/pt2021/presupuestal/Informacion_pptal1ertrimestre2021.pdf'
         );
+        $inf_presupuestal2t21 =array(
+            'Formatos Armonizados Conac ' => 'cuenta_publica/st2021/presupuestal/formatosCONAC7y132o.trimestre2021.pdf'
+        );
 
-        return view('pages.cuentapublica', ['finan1t21'=> $inf_financiera1t21, 'presu1t21'=> $inf_presupuestal1t21, 'disci1t21'=> $inf_disciplina1t21, 'infin1t20'=> $inf_financiera20, 'infpre1t20'=> $inf_presupuestal20, 'infin2t20'=> $inf_financiera2t20, 'infpre2t20'=> $inf_presupuestal2t20, 'infin3t20'=> $inf_financiera3t20, 'infpre3t20'=> $inf_presupuestal3t20, 'infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3,
+        return view('pages.cuentapublica', ['presu2t21'=> $inf_presupuestal2t21,'finan1t21'=> $inf_financiera1t21, 'presu1t21'=> $inf_presupuestal1t21, 'disci1t21'=> $inf_disciplina1t21, 'disci2t21'=> $inf_disciplina2t21, 'infin1t20'=> $inf_financiera20, 'infpre1t20'=> $inf_presupuestal20, 'infin2t20'=> $inf_financiera2t20, 'infpre2t20'=> $inf_presupuestal2t20, 'infin3t20'=> $inf_financiera3t20, 'infpre3t20'=> $inf_presupuestal3t20, 'infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3,
         'infFin4'=>$inf_financiera4,'infPre4'=>$inf_presupuestal4,'inffin18'=> $inf_financiera18, 'infpres18'=> $inf_presupuestal18, 'inffin182t'=> $inf_financiera182t, 'infpres182t'=> $inf_presupuestal182t, 'inffint183t'=> $inf_financiera183t, 'infpres183t'=> $inf_presupuestal183t,
         'inffin184t'=> $inf_financiera184t, 'infpres184t'=> $inf_presupuestal184t, 'inffinan4t'=> $inf_financiera4t20, 'infpresu4t'=> $inf_presupuestal4t20]);
 
