@@ -26,6 +26,13 @@ trait bannerTrait {
                 ->take(6)
                 ->get();
                 break;
+            case 'banner_secundario':
+                # consulta para banner secundario
+                $query =  Banner::select('banner.id', 'banner.nombre', 'banner.activo', 'banner.path', 'banner.tipo_archivo', 'banner.slug', 'catalogo_banner.nombre_ubicacion', 'banner.href')
+                ->join('catalogo_banner', 'catalogo_banner.id', '=', 'banner.id_catbanner')
+                ->where([['banner.activo','=', true],['catalogo_banner.codigo','=', $codigo]])
+                ->get();
+                break;
             default:
                 # query por defecto
                 $query =  Banner::select('banner.id', 'banner.nombre', 'banner.activo', 'banner.path', 'banner.tipo_archivo', 'banner.slug', 'catalogo_banner.nombre_ubicacion', 'banner.href')

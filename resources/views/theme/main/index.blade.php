@@ -12,7 +12,7 @@
     <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
 
 					<!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="{{asset("assets/fonts/font-awesome/css/font-awesome.min.css")}}">
+    <link rel="stylesheet" href="{{ asset('assets/vendors/fontawesome-free/css/all.css') }}">
     <link rel="stylesheet" href="{{asset("assets/vendor/icon-line-pro/style.css")}}">
     <link rel="stylesheet" href="{{asset("assets/vendor/icon-line/css/simple-line-icons.css")}}">
     <link rel="stylesheet" href="{{asset("assets/vendor/icon-hs/style.css")}}">
@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="{{ asset("assets/css/slick/slick-theme.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/css/slick/slick.css") }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- yield script css --}}
+    @yield('csscontent')
+    {{-- yield script css --}}
 </head>
 <body style="margin: 0px;">
         @include("theme.main.header")

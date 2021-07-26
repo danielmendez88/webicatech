@@ -8,21 +8,29 @@
             <p>Comunicados</p>
             </div>
             <ul>
-            <div>
-                <li><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In diam risus, venenatis ut sodales in, tristique sed tellus. &ndash; <a href="#">Leer Más</a></span></li>
-            </div>
-            <div>
-                <li><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In diam risus, venenatis ut sodales in, tristique sed tellus. &ndash; <a href="#">Leer Más</a></span></li>
-            </div>
-            <div>
-                <li><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In diam risus. &ndash; <a href="#">Leer Más</a></span></li>
-            </div>
-            <div>
-                <li><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. &ndash; <a href="#">Leer Más</a></span></li>
-            </div>
-            <div>
-                <li><span>Lorem ipsum dolor sit amet. &ndash; <a href="#">Leer Más</a></span></li>
-            </div>
+              @if (count($comunicado_cintilla) > 0)
+                  @foreach ($comunicado_cintilla as $item_cintilla)
+                  <div>
+                    <li><span>{{ $item_cintilla->titulo }} &nbsp;&nbsp;<a href="#">Leer Más</a></span></li>
+                  </div> 
+                  @endforeach
+              @else
+                <div>
+                  <li><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In diam risus, venenatis ut sodales in, tristique sed tellus. &ndash; <a href="#">Leer Más</a></span></li>
+                </div>
+                <div>
+                    <li><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In diam risus, venenatis ut sodales in, tristique sed tellus. &ndash; <a href="#">Leer Más</a></span></li>
+                </div>
+                <div>
+                    <li><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In diam risus. &ndash; <a href="#">Leer Más</a></span></li>
+                </div>
+                <div>
+                    <li><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. &ndash; <a href="#">Leer Más</a></span></li>
+                </div>
+                <div>
+                    <li><span>Lorem ipsum dolor sit amet. &ndash; <a href="#">Leer Más</a></span></li>
+                </div>
+              @endif
             </ul>
         </div>
     {{-- CORTINILLA DE NOTICIAS END --}}
@@ -39,25 +47,30 @@
               {{-- SECCIÓN DE INDICE COMUNICADOS END --}}
               
               <div class="row">
-                <div class="col-sm-4">
-                  <div class="card-flex text-white card-has-bg click-col" style="background-image:url('{{ asset('comunicados/imagen_comunicado_20210324230854_65.jpg') }}');">
-                     
-                    <div class="card-img-overlay d-flex flex-column">
-                      <div class="card-body">
-                        <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
-                      </div>
-                      <div class="card-footer">
-                        <div class="media">
-                          <div class="media-body">
-                            <small><i class="far fa-clock"></i> October 15, 2020</small>
+                @if (count($comunicados) > 0)
+                    @foreach ($comunicados as $itemComunicados)
+                      <div class="col-sm-4">
+                        <div class="card-flex text-white card-has-bg click-col" style="background-image:url('{{ asset($itemComunicados->imagen) }}');">
+                          
+                          <div class="card-img-overlay d-flex flex-column">
+                            <div class="card-body">
+                              <h4 class="card-title mt-0 "><a class="text-white" herf="#">{{ $itemComunicados->titulo }}</a></h4>
+                            </div>
+                            <div class="card-footer">
+                              <div class="media">
+                                <div class="media-body">
+                                  <small><i class="far fa-clock"></i> {{ $itemComunicados->fecha_publicacion }}</small>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card-flex text-white card-has-bg click-col" style="background-image:url('{{ asset('/comunicados/imagen_comunicado_20210312204012_64.jpg') }}');">
+                      </div> 
+                    @endforeach
+                @else
+                  <div class="col-sm-4">
+                    <div class="card-flex text-white card-has-bg click-col" style="background-image:url('{{ asset('comunicados/imagen_comunicado_20210324230854_65.jpg') }}');">
+                      
                       <div class="card-img-overlay d-flex flex-column">
                         <div class="card-body">
                           <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
@@ -71,23 +84,40 @@
                         </div>
                       </div>
                     </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="card-flex text-white card-has-bg click-col" style="background-image:url('{{ asset('/comunicados/imagen_comunicado_20210310213128_63.jpg') }}');">
-                      <div class="card-img-overlay d-flex flex-column">
-                        <div class="card-body">
-                          <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
-                          <small><i class="far fa-clock"></i> October 15, 2020</small>
-                        </div>
-                        <div class="card-footer">
-                          <div class="media">
-                            <div class="media-body">
+                  </div>
+                  <div class="col-sm-4">
+                      <div class="card-flex text-white card-has-bg click-col" style="background-image:url('{{ asset('/comunicados/imagen_comunicado_20210312204012_64.jpg') }}');">
+                        <div class="card-img-overlay d-flex flex-column">
+                          <div class="card-body">
+                            <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
+                          </div>
+                          <div class="card-footer">
+                            <div class="media">
+                              <div class="media-body">
+                                <small><i class="far fa-clock"></i> October 15, 2020</small>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                   </div>
-                </div>
+                  <div class="col-sm-4">
+                    <div class="card-flex text-white card-has-bg click-col" style="background-image:url('{{ asset('/comunicados/imagen_comunicado_20210310213128_63.jpg') }}');">
+                        <div class="card-img-overlay d-flex flex-column">
+                          <div class="card-body">
+                            <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
+                            <small><i class="far fa-clock"></i> October 15, 2020</small>
+                          </div>
+                          <div class="card-footer">
+                            <div class="media">
+                              <div class="media-body">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                @endif
               </div>
             {{-- SECCIÓN COMUNICADOS END --}}
             {{-- SECCIÓN DE INDICE BANNER --}}
@@ -105,7 +135,7 @@
                     @if (count($bsecundario) > 0)
                         @foreach ($bsecundario as $itembannersecundario)
                           <div>
-                            <img data-lazy="{{ $itembannersecundario->path }}" data-srcset="{{ asset('/sitio/banner_pnt.jpg') }} 960w" data-sizes="100vw" aria-hidden="true">
+                            <img data-lazy="{{ $itembannersecundario->path }}" data-srcset="{{ $itembannersecundario->path }} 960w" data-sizes="100vw" aria-hidden="true">
                           </div>
                         @endforeach
                     @else
