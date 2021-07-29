@@ -6,16 +6,15 @@
     </ol>
     <div class="carousel-inner" role="listbox">
       @if (count($bprincipal) > 0)
-        {{ $key = 0 }}
-          @foreach ($bprincipal as $itembprincipal)
+          @foreach ($bprincipal as $itembprincipal => $principal)
             <!-- Slide One - Set the background image for this slide in the line below -->
-            <div class="carousel-item {{ ($key === 0) ? 'active': '' }}" style="background-image: url('{{ $itembprincipal->path }}')">
+            <div class="carousel-item {{ ($itembprincipal === 0) ? 'active': '' }}" style="background-image: url('{{ $principal->path }}')">
               <div class="carousel-caption d-none d-md-block">
                 <h2 class="display-4"></h2>
                 <p class="lead"></p>
               </div>
             </div>
-            {{ $key++ }}
+
           @endforeach
       @else
           <!-- Slide One - Set the background image for this slide in the line below -->

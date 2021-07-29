@@ -10,6 +10,7 @@ use App\Models\Banner;
 use App\Traits\bannerTrait;
 use App\Models\CatSubcategoria;
 use App\Models\Apartado;
+use App\Models\Categoria;
 /**
  * se utilizaran los controladores y modelos
  */
@@ -106,22 +107,57 @@ class MainController extends Controller
         //
     }
 
-    public function gettransparencia(){
+    public function gettransparencia()
+    {
         /**
          * consulta para obtener las categorias y subcategorias
          */
         $apartados = Apartado::select('apartados.titulo', 'apartados.cat_id')
                         ->where(['apartados.activo' => 1, 'apartados.cat_id' => 14])
                         ->get();
-        $subtransparencia = CatSubcategoria::select('catalogo_subcategoria.nombre', 'catalogo_subcategoria.ruta_archivo', 'catalogo_subcategoria.titulo_documento', 'catalogo_subcategoria.cat_categoria_id', 'catalogo_subcategoria.id')
-                    ->where(['catalogo_subcategoria.cat_categoria_id' => 14, 'catalogo_subcategoria.activo' => 1])
+        $subtransparencia = CatSubcategoria::select('catalogo_subcategoria.nombre', 'catalogo_subcategoria.ruta_archivo', 'catalogo_subcategoria.titulo_documento', 'catalogo_subcategoria.id')
+                    ->join('apartados', 'catalogo_subcategoria.apartados_id', '=', 'apartados.id')
+                    ->join('catalogo_categoria', 'apartados.cat_id', '=', 'catalogo_categoria.id')
+                    ->where(['apartados.cat_id' => 14, 'catalogo_subcategoria.activo' => 1])
                     ->get();
         $bprincipal = $this->getBanner('banner_principal');
         return view('theme.main.transparencia.index', compact('bprincipal', 'subtransparencia', 'apartados'));
     }
 
     public function getnormatividad(){
+        $queryNormatividad = Apartado::select('apartados.id', 'apartados.titulo', 'apartados.descripcion')
+                                ->join('catalogo_categoria', 'apartados.cat_id', '=', 'catalogo_categoria.id')
+                                ->join('pages', 'catalogo_categoria.id', '=', 'pages.categoria_id')
+                                ->where(['apartados.cat_id' => 17, 'catalogo_categoria.activo' => 1])
+                                ->get();
+        /**
+         * subcategoria normatividad
+         */
+        $subQueryNormatividad = CatSubcategoria::select('catalogo_subcategoria.nombre', 'catalogo_subcategoria.ruta_archivo', 'catalogo_subcategoria.apartados_id')
+                                    ->join('apartados', 'catalogo_subcategoria.apartados_id', '=', 'apartados.id')
+                                    ->where(['apartados.cat_id' => 17, 'catalogo_subcategoria.activo' => 1])
+                                    ->get();
         $bprincipal = $this->getBanner('banner_principal');
-        return view('theme.main.normatividad.index', compact('bprincipal'));
+        return view('theme.main.normatividad.index', compact('bprincipal', 'queryNormatividad', 'subQueryNormatividad'));
+    }
+
+    public function getconocenos()
+    {
+        $bprincipal = $this->getBanner('banner_principal');
+        return view('pages.conocenos', compact('bprincipal'));
+    }
+
+    public function getcobertura()
+    {
+        $bprincipal = $this->getBanner('banner_principal');
+        return view('pages.cobertura', compact('bprincipal'));
+    }
+
+    public function getofertaeducativa()
+    {
+        $categoria = new Categoria();
+        $categorias = $categoria::WHERE('id', '!=', 6)->get();
+        $bprincipal = $this->getBanner('banner_principal');
+        return view('pages.ofertaeducativa', compact('bprincipal', 'categorias'));
     }
 }

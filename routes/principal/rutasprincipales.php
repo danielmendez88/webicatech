@@ -12,4 +12,9 @@ Auth::routes(['register' => false]);
  Route::get('/principal/transparencia', 'principal\MainController@gettransparencia')->name('transparencia');
  Route::get('/principal/normatividad', 'principal\MainController@getnormatividad')->name('normatividad');
  Route::get('/principal/comunicados', 'ComunicadoController@getnews')->name('comunicados');
+ Route::get('/principal/integridad', 'CuentapublicaController@getIntegrity')->name('integridad');
+ Route::get('/principal/conocenos', 'principal\MainController@getconocenos')->name('conocenos');
+ Route::get('/principal/cobertura', 'principal\MainController@getcobertura')->name('cobertura');
+ Route::get('/principal/cursos', 'principal\MainController@getofertaeducativa')->name('oferta-educativa');
+ Route::get( '/principal/instructores', 'CursoController@instructores')->name('instructores');
 

@@ -3,9 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+/**
+ * uso tercero imports
+ */
+use App\Traits\bannerTrait;
+use App\Models\CatCategoria;
 
 class CuentapublicaController extends Controller
 {
+    use bannerTrait;
     /**
      * Display a listing of the resource.
      *
@@ -722,5 +728,23 @@ class CuentapublicaController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getIntegrity()
+    {
+        /**
+         * generamos una consulta que traiga toda la información
+         */
+        $apartados = CatCategoria::select('apartados.titulo', 'apartados.id', 'apartados.activo', 'apartados.descripcion', 'catalogo_categoria.id AS catId', 'pages.slug_path', 'pages.page_content', 'catalogo_subcategoria.nombre', 'catalogo_subcategoria.ruta_archivo')
+                    ->join('apartados', 'catalogo_categoria.id', '=', 'apartados.cat_id')
+                    ->join('catalogo_subcategoria', 'apartados.id', '=', 'catalogo_subcategoria.apartados_id')
+                    ->join('pages', 'catalogo_categoria.id', '=', 'pages.categoria_id')
+                    ->where(['apartados.activo' => 1, 'pages.slug_path' => 'integridad'])
+                    ->get();
+        $bprincipal = $this->getBanner('banner_principal');
+        $conduc_codigos =array(
+            'Codigo de Conducta ICATECH' => 'codigos_conducta/códigodeconductaicatech.pdf',
+        );
+        return view('pages.seccion_integridad', compact('bprincipal', 'apartados'), ['codigos1' =>$conduc_codigos,]);
     }
 }

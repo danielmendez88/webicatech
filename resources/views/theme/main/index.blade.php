@@ -39,6 +39,10 @@
     {{-- CONTENIDO --}}
         @yield('contenido')
     {{-- CONTENIDO END --}}
+    {{-- FOOTER DEPENDENCIA --}}
+    @include("theme.main.footer_dependencia")
+    {{-- FOOTER DEPENDENCIA END --}}
+    
     {{-- FOOTER --}}
         @include('theme.main.footer')
     {{-- FOOTER END --}}

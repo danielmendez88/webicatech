@@ -80,7 +80,10 @@ class DinamycSectionController extends Controller
         /**
          * hacer consulta de datos para mostrar una colección
          */
-        $query = CatSubcategoria::select('nombre', 'ruta_archivo', 'titulo_documento')->where(['cat_categoria_id' => $id, 'activo' => 1])->get();
+        $query = CatSubcategoria::select('catalogo_subcategoria.nombre', 'catalogo_subcategoria.ruta_archivo', 'catalogo_subcategoria.titulo_documento')
+                    ->join('apartados', 'catalogo_subcategoria.apartados_id', '=', 'apartados.id')
+                    ->join('catalogo_categoria', 'apartados.cat_id', '=', 'catalogo_categoria.id')
+                    ->where(['catalogo_categoria.id' => $id, 'catalogo_subcategoria.activo' => 1])->get();
         // modificaciones para checar el sistema
         return view('theme.dashboard.forms.formaddsubcategories', compact( 'allcategories', 'slug', 'id', 'pagecontent', 'idapartado', 'query'));
 
@@ -141,7 +144,7 @@ class DinamycSectionController extends Controller
             $subcategorias = new CatSubcategoria;
             $subcategorias->nombre = $request->get('subcategoria');
             $subcategorias->titulo_documento = $request->get('titulo_documento');
-            $subcategorias->cat_categoria_id = $request->get('idcategoria');
+            $subcategorias->apartados_id = $request->get('idapartado');
             $subcategorias->activo = $habilitado;
             $subcategorias->save();
             #obtener el último id insertado

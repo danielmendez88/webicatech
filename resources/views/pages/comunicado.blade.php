@@ -18,12 +18,15 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                            <h5 class="card-title">
-                                <a href="{{ route('comunicado.detalle.show', ['id' => base64_encode($itemNew->id) ]) }}">
+                            <h5 class="card-title"> 
+                                <b>
                                     {{ $itemNew->titulo }}
-                                </a>
+                                </b>
                             </h5>
-                            <p class="card-text">{!! html_entity_decode($itemNew->resumen) !!} [...]</p>
+                            <p class="card-text">{!! html_entity_decode($itemNew->resumen) !!} </p>
+                            <p class="card-text">
+                                <a href="{{ route('comunicado.detalle.show', ['id' => base64_encode($itemNew->id) ]) }}">[Leer Comunicado ...]</a>
+                            </p>
                             <p class="card-text">
                                 <small class="text-muted">
                                     {{ Carbon\Carbon::createFromFormat('Y-m-d', $itemNew->fecha_publicacion)->locale('es_ES')->isoFormat('LL') }}  
