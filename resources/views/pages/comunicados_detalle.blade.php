@@ -41,9 +41,7 @@
                 </article>
             </div>
             <div class="col-lg-4 g-mb-30 g-mb-0--lg">
-                <a href="{{ route('comunicado.modificar.show', ['id' => base64_encode($identificador)]) }}" class="btn btn-danger btn-circle m-1 btn-circle-sm" data-toggle="tooltip" data-placement="top" title="EDITAR COMUNICADO">
-                    <i class="fa fa-keyboard-o" aria-hidden="true"></i>
-                </a>
+                
             </div>
         </div>
     </section>

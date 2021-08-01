@@ -7,6 +7,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 
 class RouteServiceProvider extends ServiceProvider
 {
+    public const HOME = '/home';
     /**
      * This namespace is applied to your controller routes.
      *
@@ -53,7 +54,11 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::middleware('web')
              ->namespace($this->namespace)
-             ->group(base_path('routes/web.php'));
+             ->group(function(){
+                    require base_path('routes/web.php');
+                    require base_path('routes/principal/rutasprincipales.php');
+                    require base_path('routes/dashboard/rutasdashboard.php');
+                });
     }
 
     /**

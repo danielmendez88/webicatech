@@ -6,9 +6,14 @@ use Illuminate\Http\Request;
 use App\Models\Curso;
 use App\Models\Categoria;
 use App\Models\Instructor;
+/**
+ * imports
+ */
+use App\Traits\bannerTrait;
 
 class CursoController extends Controller
 {
+    use bannerTrait;
     /**
      * Display a listing of the resource.
      *
@@ -100,8 +105,9 @@ class CursoController extends Controller
     
     public function instructores()
     {
+        $bprincipal = $this->getBanner('banner_principal');
         $instructor = new Instructor();
-        $instructores = $instructor::all();
-        return view('pages.instructores', compact('instructores'));
+        $instructores = $instructor::paginate(7);
+        return view('pages.instructores', compact('instructores', 'bprincipal'));
     }
 }

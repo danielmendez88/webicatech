@@ -1,4 +1,4 @@
-@extends("theme.lte.layout")
+{{-- @extends("theme.lte.layout")
 @section('title', 'Cobertura | Icatech')
 
 @section('content')
@@ -12,4 +12,38 @@
 	
 		</div>
 </div>
-@stop
+@stop --}}
+
+@extends('theme.main.index')
+
+@section('title', 'Cobertura | Icatech')
+
+@section('csscontent')
+	<style>
+		.maps img{
+			width: 100%;
+			height: 550px;
+			object-fit: cover;
+			object-position: center center;
+		}
+	</style>
+@endsection
+
+{{-- sección del contenido --}}
+@section('contenido')
+	<div class="container-xl">
+		<br>
+		<div class="row">
+			<div class="col-md-12">
+				<img src="{{ asset('Imagenes Pagina/cobertura2.jpg') }}" class="img-responsive" width="100%" style="height: auto;"  alig="center">
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-12 maps">
+				<img src="{{ asset('Imagenes Pagina/mapa.jpg') }}" class="img-thumbnail" width="100%" style="height: auto;" alig="center">
+			</div>
+		</div>
+		<br>
+	</div>
+@endsection

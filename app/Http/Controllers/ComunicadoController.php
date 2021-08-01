@@ -10,9 +10,11 @@ use Redirect,Response;
 use App\Models\Comunidado;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
+use App\Traits\bannerTrait;
 
 class ComunicadoController extends Controller
 {
+    use bannerTrait;
     /**
      * Display a listing of the resource.
      *
@@ -272,9 +274,11 @@ class ComunicadoController extends Controller
      *
      */
     public function getnews() {
+        $bprincipal = $this->getBanner('banner_principal');
         $comunicados = new Comunidado();
-        $newsAll = $comunicados::WHERE('confirmado', true)->paginate(7);
-        return view('pages.news', compact('newsAll'));
+        $newsAll = $comunicados::WHERE('confirmado', true)->latest()->paginate(7);
+        // return view('pages.news', compact('newsAll'));
+        return view('pages.comunicado', compact('bprincipal', 'newsAll'));
     }
 
     protected function antiScript($contenido)
