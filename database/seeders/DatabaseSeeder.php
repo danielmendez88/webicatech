@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
         //     ->count(1)
         //     ->create();
         // $this->call(UsersTableSeeder::class);
-        // $this->call(RolesAndPermissions::class);
-        $this->call(CatBannerSeeder::class);
+        $this->call(RolesAndPermissions::class);
+       // $this->call(CatBannerSeeder::class);
     }
 }

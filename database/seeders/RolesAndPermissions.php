@@ -35,7 +35,7 @@ class RolesAndPermissions extends Seeder
         $role = Role::create(['name' => 'super-admin']);
         $role->givePermissionTo(Permission::all());
         // obtener el usuario
-        $usuario = User::where('id', 3)->first();
+        $usuario = User::where('id', 2)->first();
         // asignamos rol
         $usuario->assignRole('editor-banner');
     }
