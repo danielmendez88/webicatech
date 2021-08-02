@@ -110,7 +110,10 @@
                 </div>
                 <a class="dropdown-item">Mi Perfil <span class="badge badge-pill badge-danger">1</span><i class="dropdown-item-icon ti-dashboard"></i></a>
                 <a class="dropdown-item">Actividad<i class="dropdown-item-icon ti-location-arrow"></i></a>
-                <a class="dropdown-item">Cerrar Sesión<i class="dropdown-item-icon ti-power-off"></i></a>
+                <form action="{{ route('logout') }}" method="post">
+                   @csrf
+                   <a class="dropdown-item" href="javascript:;" onclick="this.closest('form').submit()">Cerrar Sesión<i class="dropdown-item-icon ti-power-off"></i></a>
+                </form>
               </div>
             </li>
           </ul>
