@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
+use Illuminate\Support\Facades\Auth;
 /**
  * imports
  */
@@ -78,5 +80,12 @@ class LoginController extends Controller
     public function show_login_form()
     {
         return view('login');
+    }
+
+    public function logout(Redirector $redirect)
+    {
+        Auth::logout();
+
+        return $redirect->route('dashboard_principal');
     }
 }
