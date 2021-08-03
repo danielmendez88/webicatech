@@ -1,5 +1,22 @@
 @extends('theme.main.index')
 
+@section('title', "Principal | Icatech")
+
+@section('csscontent')
+	<style>
+		a {
+			color: #770723;
+			outline: none;
+		}
+		a:hover {
+			color: #770723;
+			outline: none;
+			text-decoration:none;
+		}
+
+	</style>
+@endsection
+
 @section('contenido')
 
     {{-- CORTINILLA DE NOTICIAS --}}
@@ -11,7 +28,7 @@
               @if (count($comunicado_cintilla) > 0)
                   @foreach ($comunicado_cintilla as $item_cintilla)
                   <div>
-                    <li><span>{{ $item_cintilla->titulo }} &nbsp;&nbsp;<a href="#">Leer Más</a></span></li>
+                    <li><span>{{ $item_cintilla->titulo }} &nbsp;&nbsp;<a href="{{ route('comunicado-detalle', ['id' => base64_encode($item_cintilla->id), 'url' => $item_cintilla->url]) }}" target="_blank">Leer Más</a></span></li>
                   </div> 
                   @endforeach
               @else
@@ -40,7 +57,7 @@
               {{-- SECCIÓN DE INDICE COMUNICADOS --}}
               <div class="col-sm-12">
                 <div class="comunicados">
-                  <p>COMUNICADOS</p>
+                  <a href="{{ route('comunicados') }}"><p>COMUNICADOS</p></a>
                   <div class="separador"></div>
                 </div>
               </div>
@@ -49,23 +66,24 @@
               <div class="row">
                 @if (count($comunicados) > 0)
                     @foreach ($comunicados as $itemComunicados)
+                    <a href="{{ route('comunicado-detalle', ['id' => $itemComunicados->id, 'url' => $itemComunicados->url]) }}">
                       <div class="col-sm-4">
                         <div class="card-flex text-white card-has-bg click-col" style="background-image:url('{{ asset($itemComunicados->imagen) }}');">
-                          
                           <div class="card-img-overlay d-flex flex-column">
                             <div class="card-body">
-                              <h4 class="card-title mt-0 "><a class="text-white" herf="#">{{ $itemComunicados->titulo }}</a></h4>
+                              <h4 class="card-title mt-0 "><a class="text-white" herf="javascript:;">{{ $itemComunicados->titulo }}</a></h4>
                             </div>
                             <div class="card-footer">
                               <div class="media">
                                 <div class="media-body">
-                                  <small><i class="far fa-clock"></i> {{ $itemComunicados->fecha_publicacion }}</small>
+                                  <small><i class="far fa-clock"></i> {{ Carbon\Carbon::createFromFormat('Y-m-d', $itemComunicados->fecha_publicacion)->locale('es_ES')->isoFormat('LL') }}</small>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div> 
+                      </div>
+                    </a>
                     @endforeach
                 @else
                   <div class="col-sm-4">

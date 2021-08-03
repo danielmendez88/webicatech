@@ -124,6 +124,7 @@ class ComunicadoController extends Controller
      */
     public function show($id)
     {
+        $bprincipal = $this->getBanner('banner_principal');
         $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
         //el comunicado exacto
         $iddecode = base64_decode($id);
@@ -143,7 +144,7 @@ class ComunicadoController extends Controller
         $url = $detatelle[0]->url;
         $resumen = $detatelle[0]->resumen;
         $identificador = $detatelle[0]->id;
-        return view('pages.noticias_detalles', compact('titulo', 'imagen', 'fecha_pub', 'localizacion', 'contenido', 'categorias', 'url', 'resumen', 'identificador'))
+        return view('pages.noticias_detalles', compact('titulo', 'imagen', 'fecha_pub', 'localizacion', 'contenido', 'categorias', 'url', 'resumen', 'identificador', 'bprincipal'))
             ->withArticle($detatelle);
     }
 
