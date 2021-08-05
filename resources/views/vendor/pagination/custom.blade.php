@@ -38,7 +38,7 @@
                 </li>
             @else
                 <li class="page-item disabled">
-                    <span>Siguiente</span>
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Siguiente</a>
                 </li>
             @endif
         </ul>

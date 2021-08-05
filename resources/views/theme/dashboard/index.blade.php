@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('Plantilla de tablero de Administración')</title>
+    <title>@yield('title', 'Plantilla de tablero de Administración')</title>
     <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap-5.0.1/css/bootstrap.css') }}">
     {{-- estilos layouts --}}
     <link rel="stylesheet" href="{{ asset('assets/css_/dashboard/style.css') }}">
