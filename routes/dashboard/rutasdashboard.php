@@ -32,4 +32,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/dashboard/banner/categoria/{id}', 'dashboard\BannerSectionController@show')->name('select_category');
     Route::post('/save/post/banner', 'dashboard\BannerSectionController@store')->name('save_post_banner');
     Route::get('/dashboad/banner/edit/{id}/{idBan}', 'dashboard\BannerSectionController@edit')->name('edit_form_banner');
+    Route::get('/dashboard/admin/comunicado/form', 'dashboard\ComunicadoController@create')->name('administrar-comunicado');
+    Route::post('/dashboard/admin/comunicado/store', 'dashboard\ComunicadoController@store')->name('comunicado_store');
+    Route::get('/dashboard/admin/comunicado/index', 'dashboard\ComunicadoController@index')->name('comunicado_indice');
+    Route::get('/dashboard/comunicado/detalle/indice/{id}', 'dashboard\ComunicadoController@show')->name('detalle_comunicado');
 });

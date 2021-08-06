@@ -1,20 +1,24 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\dashboard;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+/**
+ * imports
+ */
+use App\Traits\CatTrait;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use Redirect,Response;
-use App\Models\Comunidado;
-use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
-use App\Traits\bannerTrait;
+use Carbon\Carbon;
+use App\Models\Comunidado;
 
 class ComunicadoController extends Controller
 {
-    use bannerTrait;
+    use CatTrait;
     /**
      * Display a listing of the resource.
      *
@@ -22,11 +26,14 @@ class ComunicadoController extends Controller
      */
     public function index()
     {
-        // este metodo nos dará acceso a todos los datos convenientes
+        //
+        $allcategories = $this->allCategories();
+        /**
+         * comunicado
+         */
         $comunidado = new Comunidado();
-        $new_all = $comunidado::WHERE('confirmado', true)->latest()->limit(5)->get();
-        // return view('', compact);
-        return view('index', compact('new_all'));
+        $comunicados = $comunidado::WHERE('confirmado', true)->latest()->paginate(6);
+        return view('theme.dashboard.contenido.main_comunicado_index', compact('allcategories', 'comunicados'));
     }
 
     /**
@@ -37,6 +44,8 @@ class ComunicadoController extends Controller
     public function create()
     {
         //
+        $allcategories = $this->allCategories();
+        return view('theme.dashboard.forms.formcomunicado', compact('allcategories'));
     }
 
     /**
@@ -47,6 +56,7 @@ class ComunicadoController extends Controller
      */
     public function store(Request $request)
     {
+        //
         try {
             //code...
             $validator = Validator::make($request->all(), [
@@ -108,12 +118,12 @@ class ComunicadoController extends Controller
                     unset($arreglo_comunicado);
                 } 
 
-                return redirect()->route('comunicado.index')->with('success', 'Comunicado Agregado éxitosamente.');
+                return redirect()->route('comunicado_indice')->with('success', 'Comunicado Agregado éxitosamente.');
             }
         } catch (Exception $e) {
-            //throw $th;
+            //manda una excepcion sql
+            return back()->with('error', $e->getMessage());
         }
-
     }
 
     /**
@@ -124,53 +134,30 @@ class ComunicadoController extends Controller
      */
     public function show($id)
     {
-        $bprincipal = $this->getBanner('banner_principal');
+        $idComunicado = base64_decode($id);
+        //
+        $allcategories = $this->allCategories();
+        /**
+         * 
+         */
         $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
-        //el comunicado exacto
-        $iddecode = base64_decode($id);
-        //dd($iddecode);
-        //$detatelle = new Comunidado();
         $detatelle = Comunidado::SELECT('titulo', 'imagen', 'fecha_publicacion', 'localizacion', 'contenido', 'categorias', 'url', 'resumen', 'id')
-                    ->WHERE('id', '=', $iddecode)
-                    ->get();
-        $titulo = $detatelle[0]->titulo;
-        $imagen = $detatelle[0]->imagen;
-        $fecha = \Carbon\Carbon::parse($detatelle[0]->fecha_publicacion);
+                    ->WHERE('id', '=', $idComunicado)
+                    ->first();
+        $titulo = $detatelle->titulo;
+        $imagen = $detatelle->imagen;
+        $fecha = \Carbon\Carbon::parse($detatelle->fecha_publicacion);
         $mes = $meses[($fecha->format('n')) - 1];
         $fecha_pub = $fecha->format('d') . ' de ' . $mes . ' de ' . $fecha->format('Y');
-        $localizacion = $detatelle[0]->localizacion;
-        $contenido = $detatelle[0]->contenido;
-        $categorias = $detatelle[0]->categorias;
-        $url = $detatelle[0]->url;
-        $resumen = $detatelle[0]->resumen;
-        $identificador = $detatelle[0]->id;
-        return view('pages.noticias_detalles', compact('titulo', 'imagen', 'fecha_pub', 'localizacion', 'contenido', 'categorias', 'url', 'resumen', 'identificador', 'bprincipal'))
-            ->withArticle($detatelle);
-    }
+        $localizacion = $detatelle->localizacion;
+        $contenido = $detatelle->contenido;
+        $categorias = $detatelle->categorias;
+        $url = $detatelle->url;
+        $resumen = $detatelle->resumen;
+        $identificador = $detatelle->id;
+        $fechaPub = $detatelle->fecha_publicacion;
 
-    public function showdetails($id)
-    {
-        $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
-        //el comunicado exacto
-        $iddecode = base64_decode($id);
-        //dd($iddecode);
-        //$detatelle = new Comunidado();
-        $detatelle = Comunidado::SELECT('titulo', 'imagen', 'fecha_publicacion', 'localizacion', 'contenido', 'categorias', 'url', 'resumen', 'id')
-                    ->WHERE('id', '=', $iddecode)
-                    ->get();
-        $titulo = $detatelle[0]->titulo;
-        $imagen = $detatelle[0]->imagen;
-        $fecha = \Carbon\Carbon::parse($detatelle[0]->fecha_publicacion);
-        $mes = $meses[($fecha->format('n')) - 1];
-        $fecha_pub = $fecha->format('d') . ' de ' . $mes . ' de ' . $fecha->format('Y');
-        $localizacion = $detatelle[0]->localizacion;
-        $contenido = $detatelle[0]->contenido;
-        $categorias = $detatelle[0]->categorias;
-        $url = $detatelle[0]->url;
-        $resumen = $detatelle[0]->resumen;
-        $identificador = $detatelle[0]->id;
-        return view('pages.comunicados_detalle', compact('titulo', 'imagen', 'fecha_pub', 'localizacion', 'contenido', 'categorias', 'url', 'resumen', 'identificador'))
-            ->withArticle($detatelle);
+        return view('theme.dashboard.contenido.detalle_comunicado', compact('allcategories', 'titulo', 'imagen', 'fechaPub', 'contenido', 'url'));
     }
 
     /**
@@ -181,13 +168,7 @@ class ComunicadoController extends Controller
      */
     public function edit($id)
     {
-        // edicion
-        $iddecode = base64_decode($id);
-        $detalles = DB::table('comunicados')
-                    ->select('titulo', 'imagen', 'fecha_publicacion', 'localizacion', 'contenido', 'categorias', 'url', 'resumen', 'id')
-                    ->where('id', $iddecode)->first();
-
-        return view('pages.formulario_comunicado_editar', compact('detalles'));
+        //
     }
 
     /**
@@ -199,57 +180,7 @@ class ComunicadoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //ACTUALIZAR REGISTROS
-        if (isset($id)) {
-            $ids = base64_decode($id);
-            # funcion antiscript
-            $safecontent = $this->antiScript($request->contenido);
-            $saferes = substr($safecontent, 0, 140);
-            # code...
-            $array_update = [
-                'titulo' => trim($request->titulo),
-                'localizacion' => trim($request->localizacion),
-                'contenido' => trim($request->contenido),
-                'categorias' => trim($request->categoria),
-                'resumen' => trim(strip_tags($saferes,'<p><a><br>')),
-                'url' => str_slug($request->url, '-'),
-            ];
-
-            DB::table('comunicados')->WHERE('id', $ids)->UPDATE($array_update);
-
-            if ($request->hasFile('imagen_comunicado')) {
-                #obtenemos el valor del comunicado
-                $imagen_guardada = DB::table('comunicados')->WHERE('id', $ids)->VALUE('imagen');
-                // checamos que no sea nulo
-                if (!is_null($imagen_guardada)) {
-                    # si no está nulo checamos que no esté vacio
-                    if (!empty($imagen_guardada)) {
-                        # si no está vacio
-                        $docImagen = explode("/",$imagen_guardada, 5);
-                        if (Storage::exists($docImagen[4])) {
-                            # checamos si hay un documento de ser así procedemos a eliminarlo
-                            Storage::delete($docImagen[4]);
-                        }
-                    }
-                }
-
-                $imagen_comunicado_save = $request->file('imagen_comunicado'); # obtenemos el archivo
-                $url_imagen_comunicado = $this->uploadFile($imagen_comunicado_save, $ids, 'imagen_comunicado'); #invocamos el método
-                // creamos un arreglo
-                $arreglo_comunicado = [
-                    'imagen' => $url_imagen_comunicado
-                ];
-
-                // vamos a actualizar el registro con el arreglo que trae diferentes variables y carga de archivos
-                DB::table('comunicados')->WHERE('id', $ids)->update($arreglo_comunicado);
-
-                // limpiamos el arreglo
-                unset($arreglo_comunicado);
-            }
-
-            return redirect()->route('comunicado.index')
-                ->with('success', sprintf('COMUNICADO %s  MODIFICADO EXTIOSAMENTE!', $request->titulo));
-        }
+        //
     }
 
     /**
@@ -261,25 +192,6 @@ class ComunicadoController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    /*
-     * Método para mostrar el formulario de captura
-     */
-    public function getform(){
-        return view('pages.formulario_comunicado');
-    }
-    /**
-     *
-     *
-     *
-     */
-    public function getnews() {
-        $bprincipal = $this->getBanner('banner_principal');
-        $comunicados = new Comunidado();
-        $newsAll = $comunicados::WHERE('confirmado', true)->latest()->paginate(7);
-        // return view('pages.news', compact('newsAll'));
-        return view('pages.comunicado', compact('bprincipal', 'newsAll'));
     }
 
     protected function antiScript($contenido)

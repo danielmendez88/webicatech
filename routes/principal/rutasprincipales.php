@@ -17,4 +17,5 @@ Auth::routes(['register' => false]);
  Route::get('/principal/cobertura', 'principal\MainController@getcobertura')->name('cobertura');
  Route::get('/principal/cursos', 'principal\MainController@getofertaeducativa')->name('oferta-educativa');
  Route::get( '/principal/instructores', 'CursoController@instructores')->name('instructores');
+ Route::get('/principal/comunicado-detalle/{id}/{url}', 'ComunicadoController@show')->name('comunicado-detalle');
 

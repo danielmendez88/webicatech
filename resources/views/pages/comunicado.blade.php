@@ -4,6 +4,17 @@
 {{-- lista de nombre --}}
 @section('title', 'Comunicados | Icatech')
 
+{{-- comunicados --}}
+@section('csscontent')
+	<style>
+		.col-md-4 img {
+            height: 100%;
+		}
+
+	</style>
+@endsection
+{{-- comunicados END --}}
+
 {{-- contenido --}}
 @section('contenido')
     <div class="container-xl">
@@ -11,7 +22,7 @@
         <div class="row">
             <div class="col-12 g-pb-40">
                 @foreach ($newsAll as $itemNew)
-                    <div class="card mb-3" style="max-width: 650px;">
+                    <div class="card mb-3" style="max-width: 750px;">
                         <div class="row g-0">
                         <div class="col-md-4">
                             <img src="{{ $itemNew->imagen }}" alt="{{ $itemNew->titulo }}" class="img-fluid rounded-start">
@@ -25,7 +36,7 @@
                             </h5>
                             <p class="card-text">{!! html_entity_decode($itemNew->resumen) !!} </p>
                             <p class="card-text">
-                                <a href="{{ route('comunicado.detalle.show', ['id' => base64_encode($itemNew->id) ]) }}">[Leer Comunicado ...]</a>
+                                <a href="{{ route('comunicado-detalle', ['id' => base64_encode($itemNew->id), 'url' => $itemNew->url ]) }}" target="_blank">[Leer Comunicado ...]</a>
                             </p>
                             <p class="card-text">
                                 <small class="text-muted">

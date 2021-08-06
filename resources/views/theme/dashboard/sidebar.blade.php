@@ -37,6 +37,12 @@
           <span class="menu-title">Administrador de Usuarios</span>
         </a>
       </li>
+      <li class="nav-item">
+        <a href="{{ route('comunicado_indice') }}" class="nav-link">
+          <i class="menu-icon typcn typcn-th-large-outline"></i>
+          <span class="menu-title">Comunicados</span>
+        </a>
+      </li>
       @foreach ($allcategories as $items)
         <li class="nav-item">
           <a class="nav-link" href="{{ route('dinamic_dashboard_form', [$items->slug_path, $items->page_content, $items->id]) }}">
