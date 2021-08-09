@@ -13,7 +13,37 @@
 			outline: none;
 			text-decoration:none;
 		}
+    .carta a {
+      color: #ffffff;
+			outline: none;
+    }
+    .carta a:hover{
+      color: #ffffff;
+      outline: none;
+			text-decoration:none;
+    }
+    .card img.img-fluid{
+      width: 100%;
+      height: 260px;
+    }
+    .carta {
+      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+      background: no-repeat center center scroll;
+      background-size: cover;
+      border-radius: 2em;
+      overflow: hidden;
+    }
+    .carta img.card-img{
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      background: no-repeat center center scroll;
+      border-radius: 2em;
+    }
 
+    .carta:hover img.card-img {
+      filter: grayscale(100%);
+    }
 	</style>
 @endsection
 
@@ -27,9 +57,9 @@
             <ul>
               @if (count($comunicado_cintilla) > 0)
                   @foreach ($comunicado_cintilla as $item_cintilla)
-                  <div>
-                    <li><span>{{ $item_cintilla->titulo }} &nbsp;&nbsp;<a href="{{ route('comunicado-detalle', ['id' => base64_encode($item_cintilla->id), 'url' => $item_cintilla->url]) }}" target="_blank">Leer Más</a></span></li>
-                  </div> 
+                    <div>
+                      <li><span>{{ $item_cintilla->titulo }} &nbsp;&nbsp;<a href="{{ route('comunicado-detalle', ['id' => base64_encode($item_cintilla->id), 'url' => $item_cintilla->url]) }}" target="_blank">Leer Más</a></span></li>
+                    </div> 
                   @endforeach
               @else
                 <div>
@@ -64,27 +94,21 @@
               {{-- SECCIÓN DE INDICE COMUNICADOS END --}}
               
               <div class="row">
-                @if (count($comunicados) > 0)
-                    @foreach ($comunicados as $itemComunicados)
-                    <a href="{{ route('comunicado-detalle', ['id' => $itemComunicados->id, 'url' => $itemComunicados->url]) }}">
-                      <div class="col-sm-4">
-                        <div class="card-flex text-white card-has-bg click-col" style="background-image:url('{{ asset($itemComunicados->imagen) }}');">
-                          <div class="card-img-overlay d-flex flex-column">
-                            <div class="card-body">
-                              <h4 class="card-title mt-0 "><a class="text-white" herf="javascript:;">{{ $itemComunicados->titulo }}</a></h4>
-                            </div>
-                            <div class="card-footer">
-                              <div class="media">
-                                <div class="media-body">
-                                  <small><i class="far fa-clock"></i> {{ Carbon\Carbon::createFromFormat('Y-m-d', $itemComunicados->fecha_publicacion)->locale('es_ES')->isoFormat('LL') }}</small>
-                                </div>
-                              </div>
-                            </div>
+                @if (count($comunicados) > 0)       
+                  @foreach ($comunicados as $itemComunicados)
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                          <img class="img-fluid" src="{{ asset($itemComunicados->imagen) }}">
+                          <div class="card-body">
+                              <h4 class="card-title">{{ $itemComunicados->titulo }}</h4>
+                              <p class="card-text"><a href="{{ route('comunicado-detalle', ['id' => base64_encode($itemComunicados->id), 'url' => $itemComunicados->url]) }}">Ir al Comunicado</a></p>
                           </div>
-                        </div>
+                          <div class="card-footer">
+                            <small class="text-muted"><i class="fas fa-calendar-alt mr-2"></i> &nbsp;{{ Carbon\Carbon::createFromFormat('Y-m-d', $itemComunicados->fecha_publicacion)->locale('es_ES')->isoFormat('LL') }} </small>
+                          </div>
                       </div>
-                    </a>
-                    @endforeach
+                    </div>
+                  @endforeach
                 @else
                   <div class="col-sm-4">
                     <div class="card-flex text-white card-has-bg click-col" style="background-image:url('{{ asset('comunicados/imagen_comunicado_20210324230854_65.jpg') }}');">
@@ -191,43 +215,41 @@
                 @if (count($brevista) > 0)
                   @foreach ($brevista as $itemrevista)
                     <div class="col-sm-4">
-                      <div class="profile-card-2">
-                        <img src="{{ $itemrevista->path }}" class="img img-responsive">
-                        <div class="profile-username">REVISTA DIGITAL</div>
-                        <div class="profile-icons">
-                          <a href="#">
-                            <i class="fa fa-facebook"></i>
-                          </a>
-                          <a href="#">
-                            <i class="fa fa-twitter"></i>
-                          </a>
-                          <a href="#">
-                            <i class="fa fa-linkedin"></i>
-                          </a>
-                        </div>
+                      <div class="card bg-dark text-white carta">
+                        <a href="{{ $itemrevista->href }}">
+                          <img src="{{ $itemrevista->path }}" class="card-img" alt="...">
+                          <div class="card-img-overlay">
+                            <h3 class="card-title">{{ $itemrevista->nombre }}</h3>
+                          </div>
+                        </a>
                       </div>
                     </div>
                   @endforeach
                 @else
                   <div class="col-sm-4">
-                    <div class="profile-card-2">
-                      <img src="{{ asset('revista_icatech/revista_febrero.jpg') }}" class="img img-responsive">
-                      <div class="profile-username">REVISTA DIGITAL</div>
-                      <div class="profile-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                    <div class="card bg-dark text-white carta">
+                      <a href="http://">
+                        <img src="{{ asset('revista_icatech/revista_febrero.jpg') }}" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                          <h3 class="card-title">Card title</h3>
+                        </div>
+                      </a>
                     </div>
                   </div>
                   <div class="col-sm-4">
-                    <div class="profile-card-2">
-                      <img src="{{ asset('revista_icatech/revista1_2021.jpeg') }}" class="img img-responsive">
-                      <div class="profile-username">REVISTA DIGITAL</div>
-                      <div class="profile-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                    <div class="card bg-dark text-white carta">
+                      <img src="{{ asset('revista_icatech/revista1_2021.jpeg') }}" class="card-img" alt="...">
+                      <div class="card-img-overlay">
+                        <h3 class="card-title">Card title</h3>
+                      </div>
                     </div>
                   </div>
                   <div class="col-sm-4">
-                    <div class="profile-card-2">
-                        <img src="{{ asset('revista_icatech/revista_2.png') }}" class="img img-responsive">
-                        <div class="profile-username">REVISTA DIGITAL</div>
-                        <div class="profile-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                    <div class="card bg-dark text-white carta">
+                      <img src="{{ asset('revista_icatech/revista_2.png') }}" class="card-img" alt="...">
+                      <div class="card-img-overlay">
+                        <h3 class="card-title">Card title</h3>
+                      </div>
                     </div>
                   </div>
                 @endif
