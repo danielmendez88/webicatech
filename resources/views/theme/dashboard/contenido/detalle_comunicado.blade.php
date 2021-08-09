@@ -9,10 +9,9 @@
 @section('contentSyles')
 	<style>
 		.col-md-4 img {
-            height: 300px;
-            width: 100%;
+      height: 300px;
+      width: 100%;
 		}
-
 	</style>
 @endsection
 {{-- sección hoja de estilos END --}}
