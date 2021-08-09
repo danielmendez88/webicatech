@@ -1,6 +1,6 @@
 @extends('theme.main.index')
 
-@section('title', "Principal | Icatech")
+@section('title', "Instituto de Capacitación y Vinculación Tecnológica del Estado de Chiapas | Icatech")
 
 @section('csscontent')
 	<style>

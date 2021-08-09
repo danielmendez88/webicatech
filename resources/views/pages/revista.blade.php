@@ -1,4 +1,4 @@
-@extends("theme.lte.layout") 
+{{-- @extends("theme.lte.layout") 
 <!--llamar la plantilla -->
 @section('title', 'Revista Icatech | Icatech')
 <!--tituto de la pestaña -->
@@ -124,4 +124,58 @@
  
             </div>
 </div>
-@stop
+@stop --}}
+
+@extends('theme.main.index')
+
+@section('title', 'Revista | Icatech')
+
+@section('csscontent')
+    <style>
+        .card img.img-fluid{
+            width: 100%;
+            height: 260px;
+        }
+    </style>
+@endsection
+
+@section('contenido')
+    <div class="container-xl">
+        <br>
+        <div class="masonry-grid row g-mb-0 row-eq-height">
+            <div class="masonry-grid-item col-sm-6 col-md-6 col-lg-12 g-mb-30">	
+                <img src="{{ asset('revista_icatech/baner_revista.jpeg') }}" class="img-responsive" width="100%" alig="center">
+            </div>
+        </div>
+        <div class="row">
+                @if (count($revista) > 0)
+                    @foreach ($revista as $itemRevista)
+                        <div class="col-md-4 mb-3 g-pb-40">
+                            <div class="card">
+                                <img class="img-fluid" src="{{ asset($itemRevista->path) }}">
+                                <div class="card-body">
+                                    <h3 class="card-title">{{ $itemRevista->nombre }}</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <a class="btn btn-danger" href="{{ $itemRevista->documento }}" download target="_blank"> 
+                                        <i class="fas fa-file-download fa-2x"></i>
+                                        Descargar 
+                                    </a>
+                                    &nbsp;
+                                    <a class="btn btn-primary" href="{{ $itemRevista->href }}" target="_blank"> 
+                                        <i class="fas fa-book-reader fa-2x"></i>
+                                        Leer 
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                @endif
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                {{ $revista->links('vendor.pagination.custom') }}
+            </div>
+        </div>
+    </div>
+@endsection
