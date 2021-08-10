@@ -160,4 +160,13 @@ class MainController extends Controller
         $bprincipal = $this->getBanner('banner_principal');
         return view('pages.ofertaeducativa', compact('bprincipal', 'categorias'));
     }
+
+    public function getrevista(){
+        $bprincipal = $this->getBanner('banner_principal');
+        $revista = Banner::select('banner.id', 'banner.nombre', 'banner.activo', 'banner.path', 'banner.tipo_archivo', 'banner.slug', 'catalogo_banner.nombre_ubicacion', 'banner.href', 'banner.documento')
+                ->join('catalogo_banner', 'catalogo_banner.id', '=', 'banner.id_catbanner')
+                ->where([['banner.activo','=', true],['catalogo_banner.codigo','=', 'revista']])
+                ->latest('banner.created_at')->paginate(6);
+        return view('pages.revista', compact('revista', 'bprincipal'))->render();
+    }
 }
