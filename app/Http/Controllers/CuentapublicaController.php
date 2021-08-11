@@ -262,8 +262,8 @@ class CuentapublicaController extends Controller
         );
 
         $programa_anual_adquisiciones = array(
-            'PROGRAMA ESTATAL 2020' => 'licitaciones_/adquisiciones/programa_estatal_2020.pdf',
-            'PROGRAMA ESTATAL 2021' => 'licitaciones_/adquisiciones/programa_estatal_2021.pdf'
+            'PROGRAMA 2020' => 'licitaciones_/adquisiciones/programa_2020.pdf',
+            'PROGRAMA 2021' => 'licitaciones_/adquisiciones/programa_2021.pdf'
         );
         
 
