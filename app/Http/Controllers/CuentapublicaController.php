@@ -260,9 +260,14 @@ class CuentapublicaController extends Controller
             '- EVENTO DE PRESENTACIÓN Y APERTURA DE PROPUESTAS DE LA INVITACIÓN A CUANDO MENOS TRES PERSONAS, NACIONAL, PRESENCIAL, ICATECH-ICTP/002/2021' => 'licitaciones_/federal/acta_apertura_presentacion_apertura_propuestas.pdf',  
             '- ACTA DE FALLO' => 'licitaciones_/federal/ACTA_DE_FALLO_TINTAS.pdf'          
         );
+
+        $programa_anual_adquisiciones = array(
+            'PROGRAMA ESTATAL 2020' => 'licitaciones_/adquisiciones/programa_estatal_2020.pdf',
+            'PROGRAMA ESTATAL 2021' => 'licitaciones_/adquisiciones/programa_estatal_2021.pdf'
+        );
         
 
-        return view('pages.licitaciones', ['acfallo' => $lic_federal_apertura, 'convocatorias_' => $lic_convocatoria, 'ictp002' => $lic_federal_presencial]);
+        return view('pages.licitaciones', ['acfallo' => $lic_federal_apertura, 'convocatorias_' => $lic_convocatoria, 'ictp002' => $lic_federal_presencial, 'adquisiciones' => $programa_anual_adquisiciones]);
     }
 
     public function sevac()
