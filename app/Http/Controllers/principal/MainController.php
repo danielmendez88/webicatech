@@ -174,14 +174,14 @@ class MainController extends Controller
         $queryCuentaPublica = Apartado::select('apartados.id', 'apartados.titulo', 'apartados.descripcion')
                                 ->join('catalogo_categoria', 'apartados.cat_id', '=', 'catalogo_categoria.id')
                                 ->join('pages', 'catalogo_categoria.id', '=', 'pages.categoria_id')
-                                ->where(['apartados.cat_id' => 20, 'catalogo_categoria.activo' => 1])
+                                ->where(['apartados.cat_id' => 21, 'catalogo_categoria.activo' => 1])
                                 ->get();
         /**
          * 
          */
         $subQueryCuentaPublica = CatSubcategoria::select('catalogo_subcategoria.nombre', 'catalogo_subcategoria.ruta_archivo', 'catalogo_subcategoria.apartados_id')
                                     ->join('apartados', 'catalogo_subcategoria.apartados_id', '=', 'apartados.id')
-                                    ->where(['apartados.cat_id' => 20, 'catalogo_subcategoria.activo' => 1])
+                                    ->where(['apartados.cat_id' => 21, 'catalogo_subcategoria.activo' => 1])
                                     ->get();
         $bprincipal = $this->getBanner('banner_principal');
         return view('theme.main.cuenta_publica.index', compact('bprincipal', 'queryCuentaPublica', 'subQueryCuentaPublica'));
