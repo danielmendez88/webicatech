@@ -26,7 +26,7 @@
                     </a>
                 </div>
                 <div class=" col-md-2 g-mb-30">
-                    <a href="/cuenta-publica">
+                    <a href="{{ route('cuenta-publica') }}">
                         <img src="{{ asset('Imagenes Pagina/cuentapublica-icatech.png') }}" class="imgRedonda">
                     </a>
                 </div>
