@@ -195,7 +195,9 @@ class CuentapublicaController extends Controller
             'Información Presupuestal' => 'cuenta_publica/pt2021/presupuestal/Informacion_pptal1ertrimestre2021.pdf'
         );
         $inf_presupuestal2t21 =array(
-            'Formatos Armonizados Conac ' => 'cuenta_publica/st2021/presupuestal/formatosCONAC7y132o.trimestre2021.pdf'
+            'Formatos Armonizados Conac ' => 'cuenta_publica/st2021/presupuestal/formatosCONAC7y132o.trimestre2021.pdf',
+            'Información Funcional' => 'cuenta_publica/st2021/presupuestal/InformacionFuncional2oTrimestre2021.pdf',
+            'Información Presupuestal' => 'cuenta_publica/st2021/presupuestal/InformacionPresupuestal2oTrimestre2021.pdf'
         );
 
         return view('pages.cuentapublica', ['presu2t21'=> $inf_presupuestal2t21,'finan1t21'=> $inf_financiera1t21, 'presu1t21'=> $inf_presupuestal1t21, 'disci1t21'=> $inf_disciplina1t21, 'disci2t21'=> $inf_disciplina2t21, 'infin1t20'=> $inf_financiera20, 'infpre1t20'=> $inf_presupuestal20, 'infin2t20'=> $inf_financiera2t20, 'infpre2t20'=> $inf_presupuestal2t20, 'infin3t20'=> $inf_financiera3t20, 'infpre3t20'=> $inf_presupuestal3t20, 'infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3,
