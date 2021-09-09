@@ -26,9 +26,9 @@ Route::post('/aspirante/save', 'AlumnoController@store')->name('alumnos.save');
 
 Route::get('/', 'ComunicadoController@index');
 // CONOCENOS
-Route::get('/conocenos', function(){
-	return view('pages.conocenos');
-});
+// Route::get('/conocenos', function(){
+// 	return view('pages.conocenos');
+// });
 //COBERTURA
 Route::get('/cobertura', function(){
 	return view('pages.cobertura');
