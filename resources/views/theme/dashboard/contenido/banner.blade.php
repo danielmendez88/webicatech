@@ -35,6 +35,10 @@
                                         @else
                                             <h5 class="card-title">{{ $itemBanner->nombre }}</h5>
                                         @endif
+                                        <a href="javascript:;" class="btn btn-danger">
+                                            <i class="fas fa-minus-circle"></i>
+                                            Eliminar
+                                        </a>
                                     </div>
                                 </div>
                             @endforeach

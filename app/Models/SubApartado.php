@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Apartado extends Model
+class SubApartado extends Model
 {
     use HasFactory;
 
-    protected $table =  'apartados';
+    protected $table =  'sub_apartado';
 
-    protected $fillable = ['id', 'titulo', 'activo', 'descripcion', 'sub_apartado_id'];
+    protected $fillable = ['id', 'nombre', 'activo', 'descripcion', 'cat_id'];
 
     protected $hidden = ['created_at', 'updated_at'];
 }

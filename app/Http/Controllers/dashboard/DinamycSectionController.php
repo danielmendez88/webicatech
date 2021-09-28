@@ -12,6 +12,7 @@ use App\Traits\CatTrait;
 use App\Models\Apartado;
 use App\Traits\uploadFileTrait;
 use App\Models\CatSubcategoria;
+use App\Models\SubApartado;
 
 class DinamycSectionController extends Controller
 {
@@ -24,10 +25,10 @@ class DinamycSectionController extends Controller
     public function index($slug, $slg_path, $id)
     {
         $allcategories = $this->allCategories();
-        $apartados = Apartado::select('apartados.titulo', 'apartados.id', 'apartados.activo', 'apartados.descripcion', 'catalogo_categoria.id AS catId', 'pages.slug_path', 'pages.page_content')
-                    ->join('catalogo_categoria', 'apartados.cat_id', '=', 'catalogo_categoria.id')
-                    ->join('pages', 'apartados.cat_id', '=', 'pages.categoria_id')
-                    ->where(['apartados.activo' => 1, 'catalogo_categoria.id' => $id])
+        $apartados = SubApartado::select('sub_apartado.nombre', 'sub_apartado.id', 'sub_apartado.activo', 'sub_apartado.descripcion', 'catalogo_categoria.id AS catId', 'pages.slug_path', 'pages.page_content')
+                    ->join('catalogo_categoria', 'sub_apartado.cat_id', '=', 'catalogo_categoria.id')
+                    ->join('pages', 'sub_apartado.cat_id', '=', 'pages.categoria_id')
+                    ->where(['sub_apartado.activo' => 1, 'catalogo_categoria.id' => $id])
                     ->get();
         // modificaciones
         return view('theme.dashboard.forms.dinamycsection', compact('allcategories', 'slug', 'id', 'apartados', 'slg_path'));
@@ -54,8 +55,8 @@ class DinamycSectionController extends Controller
         //
         try {
             $habilitado = (empty($request->get('habilitado')) ? false : true);
-            $apartado_guardar = new Apartado;
-            $apartado_guardar->titulo = $request->get('categoria');
+            $apartado_guardar = new SubApartado;
+            $apartado_guardar->nombre = $request->get('categoria');
             $apartado_guardar->descripcion = $request->get('descripcion');
             $apartado_guardar->activo = $habilitado;
             $apartado_guardar->cat_id = $request->get('idcategoria');
@@ -77,15 +78,17 @@ class DinamycSectionController extends Controller
     public function show($slug, $pagecontent, $id, $idapartado)
     {
         $allcategories = $this->allCategories();
+        $qrySubApartado = SubApartado::find($idapartado);
         /**
          * hacer consulta de datos para mostrar una colección
          */
-        $query = CatSubcategoria::select('catalogo_subcategoria.nombre', 'catalogo_subcategoria.ruta_archivo', 'catalogo_subcategoria.titulo_documento')
-                    ->join('apartados', 'catalogo_subcategoria.apartados_id', '=', 'apartados.id')
-                    ->join('catalogo_categoria', 'apartados.cat_id', '=', 'catalogo_categoria.id')
-                    ->where(['catalogo_categoria.id' => $id, 'catalogo_subcategoria.activo' => 1])->get();
+        $queryApartados = Apartado::select('apartados.titulo', 'apartados.activo', 'apartados.descripcion', 'apartados.id', 'apartados.sub_apartado_id')
+                            ->join('sub_apartado', 'apartados.sub_apartado_id', '=', 'sub_apartado.id')
+                            ->join('catalogo_categoria', 'sub_apartado.cat_id', '=', 'catalogo_categoria.id')
+                            ->where(['catalogo_categoria.id' => $id, 'apartados.activo' => 1])->get();
+
         // modificaciones para checar el sistema
-        return view('theme.dashboard.forms.formaddsubcategories', compact( 'allcategories', 'slug', 'id', 'pagecontent', 'idapartado', 'query'));
+        return view('theme.dashboard.forms.subapartados', compact( 'allcategories', 'slug', 'id', 'pagecontent', 'idapartado', 'queryApartados', 'qrySubApartado'));
 
     }
 
@@ -130,7 +133,6 @@ class DinamycSectionController extends Controller
          */
         $validatedData = $request->validate([
             'documentoSubcategoria' => 'required',
-            'subcategoria' => 'required',
             'titulo_documento' => 'required'
         ], [
             'documentoSubcategoria.required' => 'El documento es requerido',
@@ -142,7 +144,6 @@ class DinamycSectionController extends Controller
             // se trabaja insertando el dato en la base de datos y subiendo el archivo al servidor
             $habilitado = (empty($request->get('activo')) ? false : true);
             $subcategorias = new CatSubcategoria;
-            $subcategorias->nombre = $request->get('subcategoria');
             $subcategorias->titulo_documento = $request->get('titulo_documento');
             $subcategorias->apartados_id = $request->get('idapartado');
             $subcategorias->activo = $habilitado;
@@ -185,12 +186,44 @@ class DinamycSectionController extends Controller
                /**
                 * redireccionamos
                 */
-                return redirect()->route('form_add_subcateogires', [$request->slug, $request->page_content, $request->idcategoria, $request->idapartado])->with('success', 'Subcategoria Agregada exitosamente.');
+                return redirect()->route('form_add_sub_cat', ['slug' => $request->slug, 'pagecontent' => $request->page_content, 'id' => $request->idapartado, 'subapartado' => $request->idsubapartado])->with('success', 'Subcategoria Agregada exitosamente.');
             }
         } catch (QueryException $th) {
             //cachando excepcion y retornando a la vista
             return back()->with('error', $th->getMessage());
         }
+    }
+
+    public function create_sub(Request $request)
+    {
+        try {
+            $habilitado = (empty($request->get('activo')) ? false : true);
+            $apartados = new Apartado;
+            $apartados->titulo = $request->get('titulo_apartados');
+            $apartados->descripcion = $request->get('descripcion_apartados');
+            $apartados->activo = $habilitado;
+            $apartados->sub_apartado_id = $request->get('subapartadoid');
+            $apartados->save();
+
+            return redirect()->route('form_add_subcateogires', [$request->slug, $request->page_content, $request->idcategoria, $request->idapartado])->with('success','Apartado Agregado exitosamente!');
+            //entra en el apartado para guardar el registro
+        } catch (QueryException $ex) {
+            //cachando excepcion y retornando a la vista
+            return back()->with('error', $ex->getMessage());
+        }
+    }
+
+    public function showsubcat($slug, $pagecontent, $id, $subapartado)
+    {
+        $allcategories = $this->allCategories();
+
+        $query = CatSubcategoria::select('catalogo_subcategoria.nombre', 'catalogo_subcategoria.ruta_archivo', 'catalogo_subcategoria.titulo_documento')
+                    ->join('apartados', 'catalogo_subcategoria.apartados_id', '=', 'apartados.id')
+                    ->join('sub_apartado', 'apartados.sub_apartado_id', '=', 'sub_apartado.id')
+                    ->join('catalogo_categoria', 'sub_apartado.cat_id', '=', 'catalogo_categoria.id')
+                    ->where(['apartados.sub_apartado_id' => $subapartado, 'catalogo_subcategoria.activo' => 1])->get();
+
+        return view('theme.dashboard.forms.formaddsubcategories', compact('allcategories', 'query', 'id', 'pagecontent', 'subapartado', 'slug'));
     }
 
     /**

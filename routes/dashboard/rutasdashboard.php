@@ -36,4 +36,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::post('/dashboard/admin/comunicado/store', 'dashboard\ComunicadoController@store')->name('comunicado_store');
     Route::get('/dashboard/admin/comunicado/index', 'dashboard\ComunicadoController@index')->name('comunicado_indice');
     Route::get('/dashboard/comunicado/detalle/indice/{id}', 'dashboard\ComunicadoController@show')->name('detalle_comunicado');
+    Route::post('create-catalogo-sub', 'dashboard\DinamycSectionController@create_sub')->name('store_catalogo_sub');
+    Route::get('/dashboard/admin/sub/{slug}/{pagecontent}/{id}/{subapartado}', 'dashboard\DinamycSectionController@showsubcat')->name('form_add_sub_cat');
+    
 });

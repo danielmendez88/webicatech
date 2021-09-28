@@ -83,10 +83,10 @@
                       @if (count($apartados) > 0)
                         @foreach ($apartados as $itemApartados)
                           <tr role="row">
-                            <td role="cell" scope="row">{{ $itemApartados->titulo }}</td>
-                            <td role="cell">{{ $itemApartados->activo == 1 ? 'Habilitado' : 'Deshabilitado' }}</td>
-                            <td role="cell"><a href="javascript:;"><i class="fas fa-keyboard fa-2x"></i></a></td>
-                            <td role="cell"><a href="{{ route('form_add_subcateogires', [$itemApartados->slug_path, $itemApartados->page_content, $itemApartados->catId, $itemApartados->id]) }}" title="Agregar Subcategoría"><i class="fas fa-folder-plus fa-2x"></i></a></td>
+                            <td role="cell" style="width: 20%;" scope="row">{{ $itemApartados->nombre }}</td>
+                            <td role="cell" style="width: 20%;">{{ $itemApartados->activo == 1 ? 'Habilitado' : 'Deshabilitado' }}</td>
+                            <td role="cell" style="width: 20%;"><a href="javascript:;"><i class="fas fa-keyboard fa-2x"></i></a></td>
+                            <td role="cell" style="width: 20%;"><a href="{{ route('form_add_subcateogires', [$itemApartados->slug_path, $itemApartados->page_content, $itemApartados->catId, $itemApartados->id]) }}" title="Agregar Subcategoría"><i class="fas fa-folder-plus fa-2x"></i></a></td>
                           </tr>
                         @endforeach
                       @else

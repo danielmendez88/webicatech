@@ -47,15 +47,7 @@
                 <form class="form-sample" id="formSubcategoria" method="POST" action="{{ route('fileUploadPost') }}" enctype="multipart/form-data">
                   @csrf
                   <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group row">
-                        <label class="col-sm-3 col-form-label">Subcategoria</label>
-                        <div class="col-sm-9">
-                          <input type="text" class="form-control" id="subcategoria" name="subcategoria"/>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Título del Documento</label>
                         <div class="col-sm-9">
@@ -70,10 +62,6 @@
                         <label class="col-sm-3 col-form-label">Documento</label>
                         <div class="col-sm-9">
                             <input class="form-control" type="file" id="documentoSubcategoria" name="documentoSubcategoria">
-                            {{-- Progress Bar --}}
-                            <div class="progress">
-                              <div class="progress-bar"></div>
-                            </div>
                         </div>
                       </div>
                         <button type="submit" class="btn btn-success mr-2">Enviar</button>
@@ -91,10 +79,10 @@
                       </div>
                     </div>
                   </div>
-                  <input type="hidden" name="idcategoria" id="idcategoria" value="{{ $id }}">
-                  <input type="hidden" name="page_content" id="page_content" value="{{ $pagecontent }}">
-                  <input type="hidden" name="slug" id="slug" value="{{ $slug }}">
-                  <input type="hidden" name="idapartado" id="idapartado" value="{{ $idapartado }}">
+                  <input type="text" name="idapartado" id="idapartado" value="{{ $id }}">
+                  <input type="text" name="page_content" id="page_content" value="{{ $pagecontent }}">
+                  <input type="text" name="slug" id="slug" value="{{ $slug }}">
+                  <input type="text" name="idsubapartado" id="idsubapartado" value="{{ $subapartado }}">
                 </form>
               </div>
             </div>
