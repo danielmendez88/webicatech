@@ -35,7 +35,7 @@
                                         @else
                                             <h5 class="card-title">{{ $itemBanner->nombre }}</h5>
                                         @endif
-                                        <a href="javascript:;" class="btn btn-danger">
+                                        <a href="#closeModal" class="closeModal btn btn-danger" data-toggle="modal" data-banner-id="{{ $itemBanner->id }}" data-banner-name="{{ $itemBanner->nombre }}" data-categoria-id="{{ $idCategoria }}">
                                             <i class="fas fa-minus-circle"></i>
                                             Eliminar
                                         </a>
@@ -64,8 +64,47 @@
         <strong>Bien Hecho!</strong> {{ $message }}
       </div>
     @endif
+
+    {{-- MODAL --}}
+    <div class="modal fade" id="closeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="" id="formdelete" method="post">
+                    @method('DELETE')
+                    @csrf
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"><h3><b>Eliminar Elemento</b></h3></h5>
+                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-success">Confirmar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{-- END MODAL --}}
 @endsection
 
 @section('contentScriptJs')
-    
+    <script type="text/javascript">
+        $(function(){
+            $('#closeModal').on('show.bs.modal', function(e){
+                $('.modal-body').empty();
+                var id = $(e.relatedTarget).data('banner-id');
+                var categoriaId = $(e.relatedTarget).data('categoria-id');
+                var bannerName = $(e.relatedTarget).data('banner-name');
+                var label = "<h2><b>¿Desea Eliminar el elemento llamado "+ bannerName +"?</b></h2>";
+                $('.modal-body').append(label);
+                // url
+                var url = "{{ route('delete_banner_element', [':id', ':categoria']) }}";
+                url = url.replace(':id', id).replace(':categoria', categoriaId);
+                $('form#formdelete').attr('action', function(i, value) {
+                    return url;
+                });
+            });
+        });
+    </script>
 @endsection

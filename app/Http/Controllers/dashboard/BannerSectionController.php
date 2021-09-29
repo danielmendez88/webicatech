@@ -16,10 +16,11 @@ use Illuminate\Database\QueryException;
 use Response;
 use App\Traits\uploadFileTrait;
 use Illuminate\Support\Facades\DB;
+use App\Traits\DeleteTrait;
 
 class BannerSectionController extends Controller
 {
-    use CatTrait, uploadImageTrait, uploadFileTrait;
+    use CatTrait, uploadImageTrait, uploadFileTrait, DeleteTrait;
     /**
      * Display a listing of the resource.
      *
@@ -296,9 +297,29 @@ class BannerSectionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, $categoria)
     {
-        //
+        try {
+            //intentos para cargar los datos (borrar registros y archivos)
+            //obtener path
+            $banner_seleccionado = Banner::select('path')->where('id', $id)->first();
+            $eliminar = $this->deleteFile($id, $banner_seleccionado->path);
+            $delete_banner = Banner::findOrFail($id);
+            if (!is_null($delete_banner)) {
+                # borramos el registro
+                $delete_banner->delete();
+                return redirect()->route('select_category',  ['id' => base64_encode($categoria)])->with('success', 'Elemento Eliminado!');
+            }
+        } catch (QueryException $th) {
+            //excepcion enviar mensaje
+            return back()->with('error', $th->getMessage());
+        }
+        // borrar elementos del sistema
+        $banner_seleccionado = Banner::findOrFail($id);
+        $banner_seleccionado->delete(); // eliminar registro
+        /**
+         * procedemos a borrar el archivo que está vinculado
+         */
     }
     /**
      * eliminar caracteres especiales

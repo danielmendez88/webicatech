@@ -108,9 +108,9 @@
                           <input type="hidden" name="dataheight" id="dataheight" value="420">
                         @break
                         @case('banner_secundario')
-                          <input type="text" name="aspectRatio" id="aspectRatio" value="16:9">
-                          <input type="text" name="datawidth" id="datawidth" value="1080">
-                          <input type="text" name="dataheight" id="dataheight" value="608">
+                          <input type="hidden" name="aspectRatio" id="aspectRatio" value="16:9">
+                          <input type="hidden" name="datawidth" id="datawidth" value="1080">
+                          <input type="hidden" name="dataheight" id="dataheight" value="608">
                         @break
                         @case('banner_principal')
                           <input type="hidden" name="aspectRatio" id="aspectRatio" value="">
