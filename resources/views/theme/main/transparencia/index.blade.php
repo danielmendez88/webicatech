@@ -68,7 +68,7 @@
                 <div id="accordion-{{ $colleges->cat_id }}-body-01" class="collapse" role="tabpanel" aria-labelledby="accordion-{{ $colleges->cat_id }}-heading-01" data-parent="#accordion-07">
                     <div class="u-accordion__body g-bg-gray-light-v5 g-px-50 g-py-30">
                         <ul class="list-unstyled">
-                            @foreach ($subtransparencia as $item)
+                            {{-- @foreach ($subtransparencia as $item)
                                 <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
                                     <div class="d-flex justify-content-start">
                                         <h5 class="g-font-weight-600 g-color-black">{{ $item->nombre }}</h5>
@@ -80,7 +80,7 @@
                                         </div>
                                     </div>
                                 </li>
-                            @endforeach   
+                            @endforeach    --}}
                         </ul>
                     </div>
                 </div>

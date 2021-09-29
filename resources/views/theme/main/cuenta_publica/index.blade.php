@@ -29,6 +29,7 @@
         <section class="text-left">
             <div class="card rounded-0 g-brd-none">
                 @foreach ($queryCuentaPublica as $itemcuentaPublica => $collective)
+                    <h5><b>{{ $collective->nombre }}</b></h5>
                     <div id="accordion-{{ $collective->id }}-heading-01}" class="u-accordion__header g-pa-0" role="tab">
                         <h5 class="mb-0 g-font-size-default g-font-weight-700 g-pa-20a mb-0">
                             <a class="collapsed d-flex g-color-main g-text-underline--none--hover" href="#accordion-{{ $collective->id }}-body-01" data-toggle="collapse" data-parent="#accordion-{{ $collective->id }}" aria-expanded="false" aria-controls="accordion-{{ $collective->id }}-body-01">
@@ -49,7 +50,7 @@
                                     @if ($collective->id == $item->apartados_id)
                                         <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
                                             <div class="d-flex justify-content-start">
-                                                <h6 class="g-font-weight-600 g-color-black">{{ $item->nombre }}</h6>   
+                                                <h6 class="g-font-weight-600 g-color-black">{{ $item->titulo_documento }}</h6>   
                                             </div>
                                             <div class="d-flex justify-content-between">
                                                 <ul class="u-list-inline"></ul>

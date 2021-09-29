@@ -112,16 +112,20 @@ class MainController extends Controller
         /**
          * consulta para obtener las categorias y subcategorias
          */
-        $apartados = Apartado::select('apartados.titulo', 'apartados.cat_id')
-                        ->where(['apartados.activo' => 1, 'apartados.cat_id' => 14])
+        $apartados = Apartado::select('apartados.titulo', 'apartados.sub_apartado_id')
+                        ->join('sub_apartado', 'apartados.sub_apartado_id', '=', 'sub_apartado.id')
+                        ->join('catalogo_categoria', 'sub_apartado.cat_id', '=', 'catalogo_categoria.id')
+                        ->join('pages', 'catalogo_categoria.id', '=', 'pages.categoria_id')
+                        ->where(['apartados.activo' => 1, 'pages.slug_path' => 'cuenta_publica'])
                         ->get();
-        $subtransparencia = CatSubcategoria::select('catalogo_subcategoria.nombre', 'catalogo_subcategoria.ruta_archivo', 'catalogo_subcategoria.titulo_documento', 'catalogo_subcategoria.id')
-                    ->join('apartados', 'catalogo_subcategoria.apartados_id', '=', 'apartados.id')
-                    ->join('catalogo_categoria', 'apartados.cat_id', '=', 'catalogo_categoria.id')
-                    ->where(['apartados.cat_id' => 14, 'catalogo_subcategoria.activo' => 1])
-                    ->get();
+        // $subtransparencia = CatSubcategoria::select('catalogo_subcategoria.nombre', 'catalogo_subcategoria.ruta_archivo', 'catalogo_subcategoria.titulo_documento', 'catalogo_subcategoria.id')
+        //             ->join('apartados', 'catalogo_subcategoria.apartados_id', '=', 'apartados.id')
+        //             ->join('catalogo_categoria', 'sub_apartado.cat_id', '=', 'catalogo_categoria.id')
+        //             ->join('pages', 'catalogo_categoria.id', '=', 'pages.categoria_id')
+        //             ->where(['pages.slug_path' => 'cuenta_publica', 'catalogo_subcategoria.activo' => 1])
+        //             ->get();
         $bprincipal = $this->getBanner('banner_principal');
-        return view('theme.main.transparencia.index', compact('bprincipal', 'subtransparencia', 'apartados'));
+        return view('theme.main.transparencia.index', compact('bprincipal', 'apartados'));
     }
 
     public function getnormatividad(){
@@ -171,17 +175,21 @@ class MainController extends Controller
     }
 
     public function getcuentapublica(){
-        $queryCuentaPublica = Apartado::select('apartados.id', 'apartados.titulo', 'apartados.descripcion')
-                                ->join('catalogo_categoria', 'apartados.cat_id', '=', 'catalogo_categoria.id')
+        $queryCuentaPublica = Apartado::select('apartados.id', 'apartados.titulo', 'apartados.descripcion', 'sub_apartado.nombre')
+                                ->join('sub_apartado', 'sub_apartado.id', '=', 'apartados.sub_apartado_id')
+                                ->join('catalogo_categoria', 'sub_apartado.cat_id', '=', 'catalogo_categoria.id')
                                 ->join('pages', 'catalogo_categoria.id', '=', 'pages.categoria_id')
-                                ->where(['apartados.cat_id' => 21, 'catalogo_categoria.activo' => 1])
+                                ->where(['pages.slug_path' => 'cuenta_publica', 'catalogo_categoria.activo' => 1])
                                 ->get();
         /**
          * 
          */
-        $subQueryCuentaPublica = CatSubcategoria::select('catalogo_subcategoria.nombre', 'catalogo_subcategoria.ruta_archivo', 'catalogo_subcategoria.apartados_id')
+        $subQueryCuentaPublica = CatSubcategoria::select('catalogo_subcategoria.titulo_documento', 'catalogo_subcategoria.ruta_archivo', 'catalogo_subcategoria.apartados_id')
                                     ->join('apartados', 'catalogo_subcategoria.apartados_id', '=', 'apartados.id')
-                                    ->where(['apartados.cat_id' => 21, 'catalogo_subcategoria.activo' => 1])
+                                    ->join('sub_apartado', 'apartados.sub_apartado_id', '=', 'sub_apartado.id')
+                                    ->join('catalogo_categoria', 'sub_apartado.cat_id', '=', 'catalogo_categoria.id')
+                                    ->join('pages', 'catalogo_categoria.id', '=', 'pages.categoria_id')
+                                    ->where(['pages.slug_path' => 'cuenta_publica', 'catalogo_subcategoria.activo' => 1])
                                     ->get();
         $bprincipal = $this->getBanner('banner_principal');
         return view('theme.main.cuenta_publica.index', compact('bprincipal', 'queryCuentaPublica', 'subQueryCuentaPublica'));
