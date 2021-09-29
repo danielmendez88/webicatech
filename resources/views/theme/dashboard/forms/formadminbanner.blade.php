@@ -209,11 +209,11 @@
               var optionSelected = $("option:selected", this);
               // switcheamos la variable
               switch (optionSelected.val()) {
-                case '8':
+                case '3':
                     $('#archivo_revista').prop("disabled", false);
                     $( "#url_pagina" ).prop( "disabled", false );
                   break;
-                case '9':
+                case '4':
                     // hablitiar url input
                     $('#archivo_revista').prop("disabled", true);
                     $( "#url_pagina" ).prop( "disabled", false );
