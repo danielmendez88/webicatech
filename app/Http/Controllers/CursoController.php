@@ -24,9 +24,10 @@ class CursoController extends Controller
         //
         $categoria = new Categoria();
         $categorias = $categoria::WHERE('id', '!=', 6)->get();
+        $bprincipal = $this->getBanner('banner_principal');
         // return view('', compact);
         // return redirect()->route('oferta-educativa');
-        return view('pages.ofertaeducativa', compact('categorias'));
+        return view('pages.ofertaeducativa', compact('categorias', 'bprincipal'));
     }
 
     /**

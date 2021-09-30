@@ -34,7 +34,8 @@
         <div class="row">
             <div class="col-md-12">
                 {{-- acordeon --}}
-                @foreach ($apartados as $itemApartados => $aparts)
+                @foreach ($queryIntegridad as $itemApartados => $aparts)
+                    <b><h5>{{ $aparts->nombre }}</h5></b><br>
                     <div class="card rounded-0 g-brd-none">
                         <div id="accordion-{{ $itemApartados  + 1}}-heading-01" class="u-accordion__header g-pa-0" role="tab">
                             <h5 class="mb-0 g-font-size-default g-font-weight-700 g-pa-20a mb-0">
@@ -52,17 +53,21 @@
                         <div id="accordion-{{ $itemApartados  + 1}}-body-01" class="collapse" role="tabpanel" aria-labelledby="accordion-{{ $itemApartados  + 1}}-heading-02" data-parent="#accordion-{{ $itemApartados  + 1}}">
                             <div class="u-accordion__body g-bg-gray-light-v5 g-px-50 g-py-30">
                                 <ul class="list-unstyled">
-                                        <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
-                                            <div class="d-flex justify-content-start">
-                                                <h5 class="g-font-weight-600 g-color-black">{{ $aparts->nombre }}</h5>   
-                                            </div>
-                                            <div class="d-flex justify-content-between">
-                                                <ul class="u-list-inline"></ul>
-                                                    <div class="align-self-center">
-                                                        <a class="" href="{{ $aparts->ruta_archivo }}" target="_blank"><img src="{{ asset('Imagenes Pagina/2.png') }}"alt=""></a>
-                                                    </div>
-                                            </div>
-                                        </li>
+                                    @foreach ($apartados as $item)
+                                        @if ($item->apartados_id == $aparts->id)
+                                            <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
+                                                <div class="d-flex justify-content-start">
+                                                    <h5 class="g-font-weight-600 g-color-black">{{ $item->titulo_documento }}</h5>   
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <ul class="u-list-inline"></ul>
+                                                        <div class="align-self-center">
+                                                            <a class="" href="{{ $item->ruta_archivo }}" target="_blank"><img src="{{ asset('Imagenes Pagina/2.png') }}"alt=""></a>
+                                                        </div>
+                                                </div>
+                                            </li>
+                                        @endif
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>

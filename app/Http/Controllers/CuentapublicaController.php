@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
  */
 use App\Traits\bannerTrait;
 use App\Models\CatCategoria;
+use App\Models\Apartado;
+use App\Models\CatSubcategoria;
 
 class CuentapublicaController extends Controller
 {
@@ -788,16 +790,34 @@ class CuentapublicaController extends Controller
         /**
          * generamos una consulta que traiga toda la información
          */
-        $apartados = CatCategoria::select('apartados.titulo', 'apartados.id', 'apartados.activo', 'apartados.descripcion', 'catalogo_categoria.id AS catId', 'pages.slug_path', 'pages.page_content', 'catalogo_subcategoria.nombre', 'catalogo_subcategoria.ruta_archivo')
-                    ->join('apartados', 'catalogo_categoria.id', '=', 'apartados.cat_id')
-                    ->join('catalogo_subcategoria', 'apartados.id', '=', 'catalogo_subcategoria.apartados_id')
-                    ->join('pages', 'catalogo_categoria.id', '=', 'pages.categoria_id')
-                    ->where(['apartados.activo' => 1, 'pages.slug_path' => 'integridad'])
-                    ->get();
+        $queryIntegridad = Apartado::select('apartados.id', 'apartados.titulo', 'apartados.descripcion', 'sub_apartado.nombre')
+                                ->join('sub_apartado', 'sub_apartado.id', '=', 'apartados.sub_apartado_id')
+                                ->join('catalogo_categoria', 'sub_apartado.cat_id', '=', 'catalogo_categoria.id')
+                                ->join('pages', 'catalogo_categoria.id', '=', 'pages.categoria_id')
+                                ->where(['pages.slug_path' => 'integridad', 'catalogo_categoria.activo' => 1])
+                                ->get();
+        /**
+         * 
+         */
+        $apartados = CatSubcategoria::select('catalogo_subcategoria.titulo_documento', 'catalogo_subcategoria.ruta_archivo', 'catalogo_subcategoria.apartados_id')
+                        ->join('apartados', 'catalogo_subcategoria.apartados_id', '=', 'apartados.id')
+                        ->join('sub_apartado', 'apartados.sub_apartado_id', '=', 'sub_apartado.id')
+                        ->join('catalogo_categoria', 'sub_apartado.cat_id', '=', 'catalogo_categoria.id')
+                        ->join('pages', 'catalogo_categoria.id', '=', 'pages.categoria_id')
+                        ->where(['pages.slug_path' => 'cuenta_publica', 'catalogo_subcategoria.activo' => 1])
+                        ->get();
+
+        // $apartados = CatCategoria::select('apartados.titulo', 'apartados.id', 'apartados.activo', 'apartados.descripcion', 'catalogo_categoria.id AS catId', 'pages.slug_path', 'pages.page_content', 'catalogo_subcategoria.titulo_documento', 'catalogo_subcategoria.ruta_archivo', 'sub_apartado.nombre')
+        //             ->join('sub_apartado', 'sub_apartado.cat_id', '=', 'catalogo_categoria.id')
+        //             ->join('apartados', 'sub_apartado.id', '=', 'apartados.sub_apartado_id')
+        //             ->join('catalogo_subcategoria', 'apartados.id', '=', 'catalogo_subcategoria.apartados_id')
+        //             ->join('pages', 'catalogo_categoria.id', '=', 'pages.categoria_id')
+        //             ->where(['apartados.activo' => 1, 'pages.slug_path' => 'integridad'])
+        //             ->get();
         $bprincipal = $this->getBanner('banner_principal');
         $conduc_codigos =array(
             'Codigo de Conducta ICATECH' => 'codigos_conducta/códigodeconductaicatech.pdf',
         );
-        return view('pages.seccion_integridad', compact('bprincipal', 'apartados'), ['codigos1' =>$conduc_codigos,]);
+        return view('pages.seccion_integridad', compact('bprincipal', 'apartados', 'queryIntegridad'), ['codigos1' =>$conduc_codigos,]);
     }
 }
