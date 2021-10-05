@@ -79,10 +79,10 @@
                       </div>
                     </div>
                   </div>
-                  <input type="text" name="idapartado" id="idapartado" value="{{ $id }}">
-                  <input type="text" name="page_content" id="page_content" value="{{ $pagecontent }}">
-                  <input type="text" name="slug" id="slug" value="{{ $slug }}">
-                  <input type="text" name="idsubapartado" id="idsubapartado" value="{{ $subapartado }}">
+                  <input type="hidden" name="idapartado" id="idapartado" value="{{ $id }}">
+                  <input type="hidden" name="page_content" id="page_content" value="{{ $pagecontent }}">
+                  <input type="hidden" name="slug" id="slug" value="{{ $slug }}">
+                  <input type="hidden" name="idsubapartado" id="idsubapartado" value="{{ $subapartado }}">
                 </form>
               </div>
             </div>

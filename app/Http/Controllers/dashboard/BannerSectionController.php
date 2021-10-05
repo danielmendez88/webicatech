@@ -114,12 +114,12 @@ class BannerSectionController extends Controller
                         * obtener valores de una consulta de tipo de banner
                         */
                         $urlref = $_POST['url_pagina'];
-                        parse_str(parse_url($urlref, PHP_URL_QUERY), $my_array_of_vars);
                         $pivote = true;
                     break;
                     case 4:
                         # checamos el banner videoteca
                         $urlref = $_POST['url_pagina'];
+                        parse_str(parse_url($urlref, PHP_URL_QUERY), $my_array_of_vars);
                         $pivote = false;
                     break;
                     
@@ -300,26 +300,36 @@ class BannerSectionController extends Controller
     public function destroy($id, $categoria)
     {
         try {
-            //intentos para cargar los datos (borrar registros y archivos)
-            //obtener path
-            $banner_seleccionado = Banner::select('path')->where('id', $id)->first();
-            $eliminar = $this->deleteFile($id, $banner_seleccionado->path);
-            $delete_banner = Banner::findOrFail($id);
-            if (!is_null($delete_banner)) {
-                # borramos el registro
-                $delete_banner->delete();
-                return redirect()->route('select_category',  ['id' => base64_encode($categoria)])->with('success', 'Elemento Eliminado!');
+            switch ($categoria) {
+                case '4':
+                        # sólo se tiene que borrar si en dado caso la categoria está en este numero
+                        //intentos para cargar los datos (borrar registros y archivos)
+                        $delete_banner = Banner::findOrFail($id);
+                        if (!is_null($delete_banner)) {
+                            # borramos el registro
+                            $delete_banner->delete();
+                            return redirect()->route('select_category',  ['id' => base64_encode($categoria)])->with('success', 'Elemento Eliminado!');
+                        }
+                    break;
+                
+                default:
+                        //intentos para cargar los datos (borrar registros y archivos)
+                        //obtener path
+                        $banner_seleccionado = Banner::select('path')->where('id', $id)->first();
+                        $eliminar = $this->deleteFile($id, $banner_seleccionado->path);
+                        $delete_banner = Banner::findOrFail($id);
+                        if (!is_null($delete_banner)) {
+                            # borramos el registro
+                            $delete_banner->delete();
+                            return redirect()->route('select_category',  ['id' => base64_encode($categoria)])->with('success', 'Elemento Eliminado!');
+                        }
+                    break;
             }
+            
         } catch (QueryException $th) {
             //excepcion enviar mensaje
             return back()->with('error', $th->getMessage());
         }
-        // borrar elementos del sistema
-        $banner_seleccionado = Banner::findOrFail($id);
-        $banner_seleccionado->delete(); // eliminar registro
-        /**
-         * procedemos a borrar el archivo que está vinculado
-         */
     }
     /**
      * eliminar caracteres especiales

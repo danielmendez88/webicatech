@@ -165,8 +165,7 @@
             {{-- SECCIÓN DE INDICE BANNER --}}
               <div class="col-sm-12">
                 <div class="comunicados">
-                  <p>BANNER</p>
-                  <div class="separador"></div>
+                  &nbsp;&nbsp;
                 </div>
               </div>
             {{-- SECCIÓN DE INDICE BANNER END --}}
