@@ -215,7 +215,7 @@
                   @foreach ($brevista as $itemrevista)
                     <div class="col-sm-4">
                       <div class="card bg-dark text-white carta">
-                        <a href="{{ $itemrevista->href }}">
+                        <a href="{{ $itemrevista->href }}" target="_blank">
                           <img src="{{ $itemrevista->path }}" class="card-img" alt="...">
                           <div class="card-img-overlay">
                             <h3 class="card-title">{{ $itemrevista->nombre }}</h3>
