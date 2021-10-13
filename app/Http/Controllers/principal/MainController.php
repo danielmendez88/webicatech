@@ -129,17 +129,23 @@ class MainController extends Controller
     }
 
     public function getnormatividad(){
-        $queryNormatividad = Apartado::select('apartados.id', 'apartados.titulo', 'apartados.descripcion')
-                                ->join('catalogo_categoria', 'apartados.cat_id', '=', 'catalogo_categoria.id')
-                                ->join('pages', 'catalogo_categoria.id', '=', 'pages.categoria_id')
-                                ->where(['apartados.cat_id' => 17, 'catalogo_categoria.activo' => 1])
-                                ->get();
+
+        $queryNormatividad = Apartado::select('apartados.id', 'apartados.titulo', 'apartados.descripcion', 'sub_apartado.nombre')
+            ->join('sub_apartado', 'sub_apartado.id', '=', 'apartados.sub_apartado_id')
+            ->join('catalogo_categoria', 'sub_apartado.cat_id', '=', 'catalogo_categoria.id')
+            ->join('pages', 'catalogo_categoria.id', '=', 'pages.categoria_id')
+            ->where(['pages.slug_path' => 'normatividad', 'catalogo_categoria.activo' => 1])
+            ->get();
         /**
          * subcategoria normatividad
          */
-        $subQueryNormatividad = CatSubcategoria::select('catalogo_subcategoria.nombre', 'catalogo_subcategoria.ruta_archivo', 'catalogo_subcategoria.apartados_id')
+
+        $subQueryNormatividad = CatSubcategoria::select('catalogo_subcategoria.titulo_documento', 'catalogo_subcategoria.ruta_archivo', 'catalogo_subcategoria.apartados_id')
                                     ->join('apartados', 'catalogo_subcategoria.apartados_id', '=', 'apartados.id')
-                                    ->where(['apartados.cat_id' => 17, 'catalogo_subcategoria.activo' => 1])
+                                    ->join('sub_apartado', 'apartados.sub_apartado_id', '=', 'sub_apartado.id')
+                                    ->join('catalogo_categoria', 'sub_apartado.cat_id', '=', 'catalogo_categoria.id')
+                                    ->join('pages', 'catalogo_categoria.id', '=', 'pages.categoria_id')
+                                    ->where(['pages.slug_path' => 'normatividad', 'catalogo_subcategoria.activo' => 1])
                                     ->get();
         $bprincipal = $this->getBanner('banner_principal');
         return view('theme.main.normatividad.index', compact('bprincipal', 'queryNormatividad', 'subQueryNormatividad'));
