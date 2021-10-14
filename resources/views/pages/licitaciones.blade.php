@@ -92,6 +92,7 @@
                     </div>
                     {{-- información financiera acta circunstanciada END --}}
                     {{-- informacion financiera acta circuntanciada --}}
+                    {{-- nuevo comentario --}}
                     <div class="card rounded-0 g-brd-none">
                       <div id="accordion-07-heading-03" class="u-accordion__header g-pa-0" role="tab">
                         <h5 class="mb-0 g-font-size-default g-font-weight-700 g-pa-20a mb-0">
@@ -101,7 +102,7 @@
                                 <i class="fa fa-minus"></i>
                               </span>
                               <span class="g-pa-20">
-                                ICATECH ICTP/002/2021
+                                Icatech ICTP/002/2021
                               </span>
                             </a>
                         </h5>
