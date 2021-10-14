@@ -271,9 +271,12 @@ class CuentapublicaController extends Controller
             '- EVENTO DE PRESENTACIÓN Y APERTURA DE PROPUESTAS DE LA INVITACIÓN A CUANDO MENOS TRES PERSONAS, NACIONAL, PRESENCIAL, ICATECH-ICTP/002/2021' => 'licitaciones_/federal/acta_apertura_presentacion_apertura_propuestas.pdf',  
             '- ACTA DE FALLO' => 'licitaciones_/federal/ACTA_DE_FALLO_TINTAS.pdf'          
         );
+        $lic_caasicatech_presencial = array(
+            '- Invitacion a Cuando menos Tres Personas, Nacional, Presencial, ICATECH/ICTP/003/2021 COMPRANET IA-907081961-E5-2021' => 'licitaciones_/federal/actade_apertura_de_propuestas_tecnicas.pdf'                     
+        );
         
 
-        return view('pages.licitaciones', ['acfallo' => $lic_federal_apertura, 'convocatorias_' => $lic_convocatoria, 'ictp002' => $lic_federal_presencial]);
+        return view('pages.licitaciones', ['IA907081961' => $lic_caasicatech_presencial, 'acfallo' => $lic_federal_apertura, 'convocatorias_' => $lic_convocatoria, 'ictp002' => $lic_federal_presencial]);
     }
 
     public function sevac()
