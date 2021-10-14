@@ -289,9 +289,12 @@ class CuentapublicaController extends Controller
             'PROGRAMA 2020' => 'licitaciones_/adquisiciones/programa_2020.pdf',
             'PROGRAMA 2021' => 'licitaciones_/adquisiciones/programa_2021.pdf'
         );
+        $lic_caasicatech_presencial = array(
+            '- Invitacion a Cuando menos Tres Personas, Nacional, Presencial, ICATECH/ICTP/003/2021 COMPRANET IA-907081961-E5-2021' => 'licitaciones_/federal/actade_apertura_de_propuestas_tecnicas.pdf'                     
+        );
         
 
-        return view('pages.licitaciones', ['acfallo' => $lic_federal_apertura, 'convocatorias_' => $lic_convocatoria, 'ictp002' => $lic_federal_presencial, 'adquisiciones' => $programa_anual_adquisiciones]);
+        return view('pages.licitaciones', ['IA907081961' => $lic_caasicatech_presencial, 'acfallo' => $lic_federal_apertura, 'convocatorias_' => $lic_convocatoria, 'ictp002' => $lic_federal_presencial]);
     }
 
     public function sevac()
