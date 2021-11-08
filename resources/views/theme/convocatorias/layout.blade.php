@@ -43,6 +43,7 @@
         <link rel="stylesheet" type="text/css" href="{{asset("assets/css/slider_unidad.css")}}">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="{{ asset("assets/stacktable/stacktable.css")}}">
+        <link rel="stylesheet" href="{{ asset('assets/css/flavor-lightbox.css') }}">
 
         <!-- Recaptcha -->
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -82,7 +83,6 @@
             <script src="{{asset("assets/js/components/hs.popup.js")}}"></script>
             <script src="{{asset("assets/js/components/hs.carousel.js")}}"></script>
             <script src="{{asset("assets/js/components/hs.go-to.js")}}"></script>
-            <script src="{{asset("assets/js/functions.js")}}"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
             <script src="{{asset("assets/js/responsiveslides.js")}}"></script>
             <script src="{{ asset("assets/js/scripts/jquery.smartmarquee.js")}}"></script>
@@ -91,9 +91,11 @@
             <script src="{{asset("assets/js/uppercase.js")}}"></script>
             <script src="{{asset("assets/js/validate.js")}}"></script>
             <script src="{{ asset("assets/stacktable/stacktable.js") }}"></script>
+            <script src="{{ asset('assets/js/jquery.flavor.js') }}"></script>
 
             <script>
                 $('#tblconvocatoria').stacktable({myClass:'table'});
            </script>
+           @yield('jquerytype')
     </body>
 </html>
