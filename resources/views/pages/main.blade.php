@@ -122,7 +122,7 @@
 			<div class="about-text">
 				<p>
 					<marquee behavior="alternate">
-					
+					<a target="_blank" href="/convocatorias/instructores-externos" target=""><img src="../../convocatoria/BANNER.jpg" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="https://www.chiapas.gob.mx/media/plan-desarrollo-2019/Plan-Estatal-de-Desarrollo-Chiapas-2019-2024.pdf" target="_new"><img src="Imagenes Pagina/banner-plan.png" width="600px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
                     <a target="_blank" href="Imagenes Pagina/calendario_icatech.pdf" target=""><img src="Imagenes Pagina/calendario_marzo_2021.jpeg" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a target="_blank" href="Imagenes Pagina/catalogo_2020.pdf" target=""><img src="Imagenes Pagina/catalogo_cursos.jpeg" width="470px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
