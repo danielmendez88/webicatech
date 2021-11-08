@@ -29,6 +29,6 @@
 
 
 <section style="height: 350px">
-    <div style="height: 100%; margin-top: 2.6em; background-image: url('{{asset('/Imagenes Pagina/convocatoria_instructores_externos.png')}}'); background-size: 100% 100%; transform: translate3d(0px, 0px, 0px);">
+    <div style="height: 100%; margin-top: 2.6em; background-image: url('{{asset('../../convocatoria/BANNER.jpg')}}'); background-size: 100% 100%; transform: translate3d(0px, 0px, 0px);">
     </div>
 </section>
