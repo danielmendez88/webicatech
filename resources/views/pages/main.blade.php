@@ -67,7 +67,7 @@
 		<div class="masonry-grid-item col-sm-1 col-md-1 col-lg-4 g-mb-30">
 				<div class="about-image">
 					<div class="image">
-						<a target="_blank" href="{{ route('revista') }}"><img src="revista_icatech/revista_agosto2021dentro.jpeg" alt="Banner" class="img-thumbnail"></a><br><br>
+						<a target="_blank" href="{{ route('revista') }}"><img src="revista_icatech/sept-octubre-princi.jpeg" alt="Banner" class="img-thumbnail"></a><br><br>
 					</div>
 				</div>
 				</div>
