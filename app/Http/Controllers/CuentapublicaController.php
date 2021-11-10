@@ -200,8 +200,15 @@ class CuentapublicaController extends Controller
             'Formatos Complementarios' => 'cuenta_publica/st2021/financiera/FORMATOS_COMPLEMENTARIOS.pdf',
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/st2021/financiera/FORMATOS_LEY_DE_DISCIPLINA_FINANCIERA.pdf'
         );
+       
+        $inf_financiera3t21 =array(
+            'Bienes Patrimoniales' => 'cuenta_publica/tt2021/financiera/bienes_patrimoniales.pdf',
+            'Formatos Armonizados Conac' => 'cuenta_publica/tt2021/financiera/formatos_armonizados_conac.pdf',
+            'Formatos Complementarios' => 'cuenta_publica/tt2021/financiera/formatos_complementarios.pdf',
+            'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/tt2021/financiera/formatos_ley_disciplina_financiera.pdf'
+        );
 
-        return view('pages.cuentapublica', ['financ2t21'=> $inf_financiera2t21, 'presu2t21'=> $inf_presupuestal2t21,'finan1t21'=> $inf_financiera1t21, 'presu1t21'=> $inf_presupuestal1t21, 'disci3t21' => $inf_disciplina3t21,'disci1t21'=> $inf_disciplina1t21, 'disci2t21'=> $inf_disciplina2t21, 'infin1t20'=> $inf_financiera20, 'infpre1t20'=> $inf_presupuestal20, 'infin2t20'=> $inf_financiera2t20, 'infpre2t20'=> $inf_presupuestal2t20, 'infin3t20'=> $inf_financiera3t20, 'infpre3t20'=> $inf_presupuestal3t20, 'infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3,
+        return view('pages.cuentapublica', ['financ3t21'=> $inf_financiera3t21, 'financ2t21'=> $inf_financiera2t21, 'presu2t21'=> $inf_presupuestal2t21,'finan1t21'=> $inf_financiera1t21, 'presu1t21'=> $inf_presupuestal1t21, 'disci3t21' => $inf_disciplina3t21,'disci1t21'=> $inf_disciplina1t21, 'disci2t21'=> $inf_disciplina2t21, 'infin1t20'=> $inf_financiera20, 'infpre1t20'=> $inf_presupuestal20, 'infin2t20'=> $inf_financiera2t20, 'infpre2t20'=> $inf_presupuestal2t20, 'infin3t20'=> $inf_financiera3t20, 'infpre3t20'=> $inf_presupuestal3t20, 'infFin'=> $inf_financiera, 'infPre'=>$inf_presupuestal,'infFin2'=>$inf_financiera2, 'infPre2'=> $inf_presupuestal2, 'infFin3'=> $inf_financiera3, 'infPre3'=> $inf_presupuestal3,
         'infFin4'=>$inf_financiera4,'infPre4'=>$inf_presupuestal4,'inffin18'=> $inf_financiera18, 'infpres18'=> $inf_presupuestal18, 'inffin182t'=> $inf_financiera182t, 'infpres182t'=> $inf_presupuestal182t, 'inffint183t'=> $inf_financiera183t, 'infpres183t'=> $inf_presupuestal183t,
         'inffin184t'=> $inf_financiera184t, 'infpres184t'=> $inf_presupuestal184t, 'inffinan4t'=> $inf_financiera4t20, 'infpresu4t'=> $inf_presupuestal4t20]);
 
@@ -569,9 +576,21 @@ class CuentapublicaController extends Controller
             'Notas a los Estados Financieros' => 'sevac_/2021/2t/9_notas_a_los_estados_financieros.pdf',
             'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2021/2t/10_montos_pagados_por_ayudas_y_subsidios.pdf'
         );
+        $tercer_trimestre2021 =array(
+            'Estado de Situación Financiera' => 'sevac_/2021/3t/1_estado_de_situacion_financiera.pdf',
+            'Estado de Actividades' => 'sevac_/2021/3t/2_estado_de_actividades.pdf',
+            'Estado de Variacion en la Hacienda Pública' => 'sevac_/2021/3t/3_estado_de_variacion_de_hacienda_publica.pdf',
+            'Estado de Cambios en la Situación Financiera' => 'sevac_/2021/3t/4_estado_de_cambios_en_la_situacion_financiera.pdf',
+            'Estado de Flujos de Efectivo' => 'sevac_/2021/3t/5_estado_de_flujo_de_efectivo.pdf',
+            'Estado Analitico del Activo' => 'sevac_/2021/3t/6_estado_analitico_del_activo.pdf',
+            'Estado Analitico de la Deuda y Otros Pasivos' => 'sevac_/2021/3t/7_estado_analitico_de_deuda_y_otros_pasivos.pdf',
+            'Informe Sobre Pasivos Contingentes' => 'sevac_/2021/3t/8_informe_sobre_pasivos Contingentes.pdf',
+            'Notas a los Estados Financieros' => 'sevac_/2021/3t/9_notas_estados_financieros.pdf',
+            'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2021/3t/10_montos_pagados_por_ayudas_y_subsidios.pdf'
+        );
 
 
-        return view('pages.sevac', ['seguntrim2021' => $segundo_trimestre2021, 'cuartotrim2020' => $cuarto_trimestre2020, 'primtrim2021' => $primer_trimestre2021, 'primtrim2020' => $prim_trimestre2020, 'segundtrim2020' => $segun_trimestre2020, 'tercertrim2020' => $tercer_trimestre2020, 'primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018]);
+        return view('pages.sevac', ['tercertrim2021' => $tercer_trimestre2021, 'seguntrim2021' => $segundo_trimestre2021, 'cuartotrim2020' => $cuarto_trimestre2020, 'primtrim2021' => $primer_trimestre2021, 'primtrim2020' => $prim_trimestre2020, 'segundtrim2020' => $segun_trimestre2020, 'tercertrim2020' => $tercer_trimestre2020, 'primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018]);
         //comentario
     }
 
