@@ -1,4 +1,4 @@
-{{-- desarrollado y diseñado por MIS. Daniel Méndez Cruz --}}
+{{-- desarrollado y diseñado por MIS. Daniel Méndez Cruz modificaciones recientes--}}
 @extends('theme.main.index')
 
 {{-- lista de nombre --}}
