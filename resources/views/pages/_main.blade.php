@@ -293,8 +293,8 @@
                 <div class="masonry-grid-item col-sm-6 col-md-6 col-lg-6 g-mb-30">
                   <div class="about-image">
                     <div class="image">
-                      <a target="_blank" href="https://www.plataformadetransparencia.org.mx/web/guest/inicio">
-                        <img src="Imagenes Pagina/banner_pnt.jpg" alt="About Images" class="img-thumbnail">
+                      <a target="_blank" href="http://consultapublicamx.inai.org.mx:8080/vut-web/?idSujetoObigadoParametro=1184&amp;idEntidadParametro=07&amp;idSectorParametro=21">
+                        <img src="{{ asset('Imagenes Pagina/banner_consulta.jpg') }}" alt="About Images" class="img-thumbnail">
                       </a>
                       <br>
                     </div>
@@ -304,7 +304,7 @@
                   <div class="about-image">
                     <div class="image">
                       <a target="_blank" href="https://www.plataformadetransparencia.org.mx/web/guest/inicio">
-                        <img src="Imagenes Pagina/banner_pnt.jpg" alt="About Images" class="img-thumbnail">
+                        <img src="{{ asset('Imagenes Pagina/banner_pnt.jpg') }}" alt="About Images" class="img-thumbnail">
                       </a>
                       <br>
                     </div>
