@@ -43,7 +43,7 @@ Route::get('/comunicado/modificar/{id}', 'ComunicadoController@edit')->name('com
 Route::put('/comunicado/modificar/update/{id}', 'ComunicadoController@update')->name('comunicado.modificar.update');
 Route::get('/comunicado/detalle/{id}', 'ComunicadoController@showdetails')->name('comunicado.detalle.show');
 // agregar el indice principal de comunicados
-Route::get('/comunicado', 'ComunicadoController@getnews')->name('comunicado.index');
+// Route::get('/comunicado', 'ComunicadoController@getnews')->name('comunicado.index');
 // NOTICIAS DETALLES
 Route::get('/detalles-noticias', function(){
 	$param = "detalle de la noticia";
