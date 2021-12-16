@@ -204,7 +204,7 @@
             {{-- SECCIÓN DE INDICE REVISTA --}}
               <div class="col-sm-12">
                 <div class="comunicados">
-                  <p>REVISTA DIGITAL</p>
+                  <a href="{{ route('revista') }}"><p>REVISTA DIGITAL</p></a>
                   <div class="separador"></div>
                 </div>
               </div>
