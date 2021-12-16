@@ -278,7 +278,6 @@ class ComunicadoController extends Controller
         $bprincipal = $this->getBanner('banner_principal');
         $comunicados = new Comunidado();
         $newsAll = $comunicados::WHERE('confirmado', true)->latest()->paginate(7);
-        // return view('pages.news', compact('newsAll'));
         return view('pages.comunicado', compact('bprincipal', 'newsAll'));
     }
 
