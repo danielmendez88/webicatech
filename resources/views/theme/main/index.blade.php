@@ -1,3 +1,4 @@
+{{-- DISEÑADO POR MIS. DANIEL MÉNDEZ CRUZ, ING. ADRIAN ANTONIO TEJEDA --}}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,6 +8,16 @@
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <title>@yield('title', 'Instituto de Capacitación y Vinculación Tecnológica del Estado de Chiapas | Icatech')</title>
     <!-- CSS Global Compulsory -->
+    {{-- Global site tag (gtag.js) - Google Analytics --}}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155200639-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-155200639-1');
+        </script>
+    {{-- Global site tag (gtag.js) - Google Analytics --}}
     <link rel="stylesheet" href="{{asset("assets/vendor/bootstrap/bootstrap.min.css") }}">
 	<link rel="stylesheet" href="{{asset("assets/vendor/bootstrap/offcanvas.css")}}">
     <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
