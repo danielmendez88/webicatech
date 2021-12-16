@@ -30,9 +30,9 @@ Route::get('/', 'ComunicadoController@index');
 // 	return view('pages.conocenos');
 // });
 //COBERTURA
-Route::get('/cobertura', function(){
-	return view('pages.cobertura');
-});
+// Route::get('/cobertura', function(){
+// 	return view('pages.cobertura');
+// });
 // OFERTA EDUTATIVA
 Route::get('/oferta-educativa', 'CursoController@index')->name('oferta-educativa');
 // NOTICIAS
@@ -50,7 +50,7 @@ Route::get('/detalles-noticias', function(){
 	return view('micrositios.noticiasdetalle', compact('param'));
 });
 // TRANSPARENCIA
-Route::get( '/transparencia', 'CuentapublicaController@transparencia');
+// Route::get( '/transparencia', 'CuentapublicaController@transparencia');
 // revista
 Route::get( '/revista', function(){
 	return view('pages.revista');
@@ -68,7 +68,7 @@ Route::get('/sevac', 'CuentapublicaController@sevac');
 Route::get('/sevac2018', 'CuentapublicaController@sevac_2018');
 
 //NORMATIVIDAD
-Route::get('/normatividad', 'CuentapublicaController@normatividad');
+// Route::get('/normatividad', 'CuentapublicaController@normatividad');
 //CUENTA PUBLICA
 Route::get('/cuenta-publica', 'CuentapublicaController@index');
 //DIRECTORIO
