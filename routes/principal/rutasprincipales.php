@@ -21,6 +21,10 @@ Auth::routes(['register' => false]);
  Route::get('/comunicado-detalle/{id}/{url}', 'ComunicadoController@show')->name('comunicado-detalle');
  Route::get('/revista', 'principal\MainController@getrevista')->name('revista');
  Route::get('/cuenta-publica', 'principal\MainController@getcuentapublica')->name('cuenta-publica');
+ Route::get('/sevac', 'CuentapublicaController@sevac')->name('sevac');
+ Route::get('/Integridad', 'CuentapublicaController@Integridad')->name('integridad');
+ // LICITACIONES
+Route::get('/licitaciones', 'CuentapublicaController@licitaciones')->name('licitaciones');
  /**
   * cursos por categorias
   */
