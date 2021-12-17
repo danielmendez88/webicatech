@@ -31,17 +31,17 @@
                     </a>
                 </div>
                 <div class=" col-md-2  g-mb-30">
-                    <a href="/sevac">
+                    <a href="{{ route('sevac') }}">
                         <img src="{{ asset('Imagenes Pagina/sevac-icatech.png') }}" class="imgRedonda">
                     </a>
                 </div>
                 <div class=" col-md-2 g-mb-30">
-                    <a href="/Integridad">
+                    <a href="{{ route('integridad') }}">
                         <img src="{{ asset('Imagenes Pagina/codigodecondcuta-icatech.png') }}" class="imgRedonda">
                     </a>
                 </div>
                 <div class=" col-md-2  g-mb-30">
-                    <a href="/licitaciones">
+                    <a href="{{ route('licitaciones') }}">
                         <img src="{{ asset('Imagenes Pagina/licitaciones-icatech.png') }}" class="imgRedonda">
                     </a>
                 </div>
