@@ -75,7 +75,7 @@
                                 <div class="d-flex justify-content-between">
                                     <ul class="u-list-inline"></ul>
                                     <div class="align-self-center">
-                                      <a class="" href="{{ $v }}" target="_blank"><img src="{{ asset('Imagenes Pagina/2.jpg') }}"alt=""></a>
+                                      <a class="" href="{{ $v }}" target="_blank"><img src="{{ asset('Imagenes Pagina/2.png') }}"alt=""></a>
                                     </div>
                                 </div>
                             </li>  
