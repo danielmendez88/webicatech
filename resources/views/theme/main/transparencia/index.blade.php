@@ -49,8 +49,7 @@
         </div>
 
         <div class="card rounded-0 g-brd-none">
-            @foreach ($apartados as $item => $colleges)
-                <div id="accordion-{{ $colleges->cat_id }}-heading-01" class="u-accordion__header g-pa-0" role="tab">
+                <div id="accordion-07-heading-01" class="u-accordion__header g-pa-0" role="tab">
                     <h5 class="mb-0 g-font-size-default g-font-weight-700 g-pa-20a mb-0">
                         <a class="collapsed d-flex g-color-main g-text-underline--none--hover" href="#accordion-{{ $colleges->cat_id }}-body-01" data-toggle="collapse" data-parent="#accordion-07" aria-expanded="false" aria-controls="accordion-07-body-01">
                             <span class="u-accordion__control-icon g-brd-right g-brd-gray-light-v4 g-color-primary text-center g-pa-20">
@@ -58,34 +57,33 @@
                                 <i class="fa fa-minus"></i>
                             </span>
                             <span class="g-pa-20">
-                                {{ $colleges->titulo }}
+                                PLAN ANUAL DE DESARROLLO ARCHIVISTICO
                             </span>
                         </a>
                     </h5>
                 </div>
                 
                 {{-- acordion --}}
-                <div id="accordion-{{ $colleges->cat_id }}-body-01" class="collapse" role="tabpanel" aria-labelledby="accordion-{{ $colleges->cat_id }}-heading-01" data-parent="#accordion-07">
+                <div id="accordion-07-body-01" class="collapse" role="tabpanel" aria-labelledby="accordion-07-heading-01" data-parent="#accordion-07">
                     <div class="u-accordion__body g-bg-gray-light-v5 g-px-50 g-py-30">
                         <ul class="list-unstyled">
-                            {{-- @foreach ($subtransparencia as $item)
-                                <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
-                                    <div class="d-flex justify-content-start">
-                                        <h5 class="g-font-weight-600 g-color-black">{{ $item->nombre }}</h5>
+                           @foreach ($programactividades_codigo as $k => $v)
+                            <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
+                                <div class="d-flex justify-content-start">
+                                    <h5 class="g-font-weight-600 g-color-black">{{ $K }}</h5>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <ul class="u-list-inline"></ul>
+                                    <div class="align-self-center">
+                                      <a class="" href="{{ $v }}" target="_blank"><img src="{{ asset('Imagenes Pagina/2.jpg') }}"alt=""></a>
                                     </div>
-                                    <div class="d-flex justify-content-between">
-                                        <ul class="u-list-inline"></ul>
-                                        <div class="align-self-center">
-                                            <a class="" href="{{ $item->ruta_archivo }}" target="_blank"><img src="{{ asset('Imagenes Pagina/2.png') }}" alt=""></a>
-                                        </div>
-                                    </div>
-                                </li>
-                            @endforeach    --}}
+                                </div>
+                            </li>  
+                           @endforeach
                         </ul>
                     </div>
                 </div>
-                {{-- acordion --}}
-            @endforeach
+                {{-- acordion END --}}
         </div>
         <br>
 			<a href="http://www.itaipchiapas.org.mx/actas-pleno/06-E-2021.pdf" title="Inai" target="_blank">

@@ -110,14 +110,21 @@ class MainController extends Controller
     public function gettransparencia()
     {
         /**
+         * consulta de transparencia
+         */
+        $programactividades_codigo = array(
+            'Informe del Plan Anual de Desarrollo Archivístico “PADA” 2020'=> 'archivtransparencia/INFORME_PADA_2020.pdf',
+            'Plan Anual de Desarrollo Archivístico “PADA” 2021'=> 'archivtransparencia/INFORME_PADA_2021.pdf'
+        );
+        /**
          * consulta para obtener las categorias y subcategorias
          */
-        $apartados = Apartado::select('apartados.titulo', 'apartados.sub_apartado_id')
-                        ->join('sub_apartado', 'apartados.sub_apartado_id', '=', 'sub_apartado.id')
-                        ->join('catalogo_categoria', 'sub_apartado.cat_id', '=', 'catalogo_categoria.id')
-                        ->join('pages', 'catalogo_categoria.id', '=', 'pages.categoria_id')
-                        ->where(['apartados.activo' => 1, 'pages.slug_path' => 'cuenta_publica'])
-                        ->get();
+        // $apartados = Apartado::select('apartados.titulo', 'apartados.sub_apartado_id')
+        //                 ->join('sub_apartado', 'apartados.sub_apartado_id', '=', 'sub_apartado.id')
+        //                 ->join('catalogo_categoria', 'sub_apartado.cat_id', '=', 'catalogo_categoria.id')
+        //                 ->join('pages', 'catalogo_categoria.id', '=', 'pages.categoria_id')
+        //                 ->where(['apartados.activo' => 1, 'pages.slug_path' => 'cuenta_publica'])
+        //                 ->get();
         // $subtransparencia = CatSubcategoria::select('catalogo_subcategoria.nombre', 'catalogo_subcategoria.ruta_archivo', 'catalogo_subcategoria.titulo_documento', 'catalogo_subcategoria.id')
         //             ->join('apartados', 'catalogo_subcategoria.apartados_id', '=', 'apartados.id')
         //             ->join('catalogo_categoria', 'sub_apartado.cat_id', '=', 'catalogo_categoria.id')
@@ -125,7 +132,7 @@ class MainController extends Controller
         //             ->where(['pages.slug_path' => 'cuenta_publica', 'catalogo_subcategoria.activo' => 1])
         //             ->get();
         $bprincipal = $this->getBanner('banner_principal');
-        return view('theme.main.transparencia.index', compact('bprincipal', 'apartados'));
+        return view('theme.main.transparencia.index', compact('bprincipal', 'programactividades_codigo'));
     }
 
     public function getnormatividad(){
