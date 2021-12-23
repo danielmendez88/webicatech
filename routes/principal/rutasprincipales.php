@@ -1,4 +1,7 @@
 <?php
+use Illuminate\Support\Facades\Route;
+  
+use App\Http\Controllers\Auth\AuthController;
 /**
  * RUTAS PRINCIPALES DE LOS CAMBIOS DE LA PÁGINA WEB ADMINISTRABLE
  * estas rutas son cargadas en el RouteServiceProvider
@@ -29,5 +32,10 @@ Route::get('/licitaciones', 'CuentapublicaController@licitaciones')->name('licit
   * cursos por categorias
   */
 Route::get('/cursos/{id}/{categoria}', 'CursoController@show')->name('cursos');
+/**
+ * inicio de sesión
+ */
+Route::get('/login','LoginController@show_login_form')->name('login');
+Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
  
 
