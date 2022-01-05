@@ -37,5 +37,8 @@ Route::get('/cursos/{id}/{categoria}', 'CursoController@show')->name('cursos');
  */
 Route::get('/login','LoginController@show_login_form')->name('login');
 Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
- 
+// nuevo comunicado
+Route::get('/nuevo-comunicado', 'ComunicadoController@getform');
+Route::post('/noticias-save', 'ComunicadoController@store')->name('comunicados.save');
+Route::get('/comunicado', 'ComunicadoController@getnews')->name('comunicado.index');
 
