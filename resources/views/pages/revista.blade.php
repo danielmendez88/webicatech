@@ -272,7 +272,9 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title h4" id="exampleModalFullscreenLabel">Calendario 2022</h5>
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">X</span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <img src="{{ asset('revista_icatech/calendario_2022/calendario.jpeg') }}" width="100%" alt="calendario_2022">
