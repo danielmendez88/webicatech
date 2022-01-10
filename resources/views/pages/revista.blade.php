@@ -209,7 +209,7 @@
                         <h3 class="card-title">Calendario 2022</h3>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen"> 
+                        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> 
                             <i class="fas fa-eye fa-2x"></i>
                             Ver 
                         </a>
@@ -265,12 +265,12 @@
             </div>
         </div>
     </div>
-   {{-- modal --}}
-   <div class="modal fade show" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: block;" aria-modal="true" role="dialog">
+  {{-- modal --}}
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title h4" id="exampleModalFullscreenLabel">Calendario 2022</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Calendario 2022    </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -281,6 +281,6 @@
                 </div>
             </div>
         </div>
-   </div>
-   {{-- modal END --}}
+    </div>
+ {{-- modal END --}}
 @endsection
