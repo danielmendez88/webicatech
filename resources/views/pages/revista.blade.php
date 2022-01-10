@@ -225,7 +225,7 @@
                         &nbsp;
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-danger" href="{{ asset('revista_icatech/calendario_2022/calendario_2022.pdf') }}" download target="_blank"> 
+                        <a class="btn btn-danger" href="{{ asset('revista_icatech/calendario_2022/calendario_2022.pdf') }}" target="_blank"> 
                             <i class="fas fa-file-download fa-2x"></i>
                             Descargar 
                         </a>
