@@ -185,6 +185,7 @@
 @section('title', 'Revista | Icatech')
 
 @section('csscontent')
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <style>
         .card img.img-fluid{
             width: 100%;
@@ -272,9 +273,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title h4" id="exampleModalFullscreenLabel">Calendario 2022</h5>
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">X</span>
-                    </button>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <img src="{{ asset('revista_icatech/calendario_2022/calendario.jpeg') }}" width="100%" alt="calendario_2022">
