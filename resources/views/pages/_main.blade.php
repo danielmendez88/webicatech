@@ -211,6 +211,17 @@
             {{-- SECCIÓN DE INDICE REVISTA END --}}
             {{-- SECCION DE PAGOS Y APLICACIONES --}}
               <div class="row">
+               {{-- calendario --}}
+                <div class="col-sm-4">
+                  <div class="card bg-dark text-white carta">
+                    <a href="{{ route('revista') }}" target="_blank">
+                      <img src="{{ asset('Imagenes Pagina/portada_calendario.jpeg') }}" class="card-img" alt="...">
+                      <div class="card-img-overlay">
+                      </div>
+                    </a>
+                  </div>
+                </div>
+               {{-- calendario --}}
                 @if (count($brevista) > 0)
                   @foreach ($brevista as $itemrevista)
                     <div class="col-sm-4">
