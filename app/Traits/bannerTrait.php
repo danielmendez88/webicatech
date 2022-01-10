@@ -15,7 +15,7 @@ trait bannerTrait {
                 $query = Banner::select('banner.id', 'banner.nombre', 'banner.activo', 'banner.path', 'banner.tipo_archivo', 'banner.slug', 'catalogo_banner.nombre_ubicacion', 'banner.href')
                 ->join('catalogo_banner', 'catalogo_banner.id', '=', 'banner.id_catbanner')
                 ->where([['banner.activo','=', true],['catalogo_banner.codigo','=', $codigo]])
-                ->take(3)
+                ->take(2)
                 ->get();
                 break;
             case 'videoteca':

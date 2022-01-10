@@ -202,6 +202,36 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-md-6 g-pb-40">
+                <div class="card">
+                    <img class="img-fluid" src="{{ asset('revista_icatech/calendario_2022/calendario.jpeg') }}">
+                    <div class="card-body">
+                        <h3 class="card-title">Calendario 2022</h3>
+                    </div>
+                    <div class="card-footer">
+                        &nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+           {{-- calendario pdf --}}
+            <div class="col-md-6 g-pb-40">
+                <div class="card">
+                    <img class="img-fluid" src="{{ asset('revista_icatech/calendario_2022/calendario_banner.jpeg') }}">
+                    <div class="card-body">
+                        &nbsp;
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-danger" href="{{ asset('revista_icatech/calendario_2022/calendario_2022.pdf') }}" download target="_blank"> 
+                            <i class="fas fa-file-download fa-2x"></i>
+                            Descargar 
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+          {{-- calendario pdf END --}}
+        </div>
+        <div class="row">
                 @if (count($revista) > 0)
                     @foreach ($revista as $itemRevista)
                         <div class="col-md-4 mb-3 g-pb-40">
