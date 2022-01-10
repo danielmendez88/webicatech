@@ -209,7 +209,7 @@
                         <h3 class="card-title">Calendario 2022</h3>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop"> 
+                        <a class="btn btn-primary" data-toggle="modal" data-target="#exampleModalFullscreen"> 
                             <i class="far fa-eye fa-2x"></i>
                             Ver 
                         </a>
@@ -265,22 +265,24 @@
             </div>
         </div>
     </div>
-  {{-- modal --}}
-    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+{{-- modal --}}
+
+    <div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Calendario 2022    </h5>
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">x</button>
+                    <h5 class="modal-title h4" id="exampleModalFullscreenLabel">Calendario 2022</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="{{ asset('revista_icatech/calendario_2022/calendario.jpeg') }}" alt="calendario_2022">
+                    <img src="{{ asset('revista_icatech/calendario_2022/calendario.jpeg') }}" width="100%" alt="calendario_2022">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
- {{-- modal END --}}
+
+{{-- modal END --}}
 @endsection
