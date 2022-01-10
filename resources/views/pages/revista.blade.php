@@ -209,7 +209,10 @@
                         <h3 class="card-title">Calendario 2022</h3>
                     </div>
                     <div class="card-footer">
-                        &nbsp;&nbsp;
+                        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen"> 
+                            <i class="fas fa-eye fa-2x"></i>
+                            Ver 
+                        </a>
                     </div>
                 </div>
             </div>
@@ -262,4 +265,22 @@
             </div>
         </div>
     </div>
+   {{-- modal --}}
+   <div class="modal fade show" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: block;" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title h4" id="exampleModalFullscreenLabel">Calendario 2022</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{ asset('revista_icatech/calendario_2022/calendario.jpeg') }}" alt="calendario_2022">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+   </div>
+   {{-- modal END --}}
 @endsection
