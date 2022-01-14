@@ -39,4 +39,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::post('create-catalogo-sub', 'dashboard\DinamycSectionController@create_sub')->name('store_catalogo_sub');
     Route::get('/dashboard/admin/sub/{slug}/{pagecontent}/{id}/{subapartado}', 'dashboard\DinamycSectionController@showsubcat')->name('form_add_sub_cat');
     Route::delete('delete-banner-element/{id}/{categoria}', 'dashboard\BannerSectionController@destroy')->name('delete_banner_element');
+    Route::get('/dashboard/banner/link/{id}/{idcat}', 'dashboard\BannerSectionController@linked_banner')->name('link_banner_secundario');
+    Route::post('/dashboard/vincular/banner/secundario', 'dashboard\BannerSectionController@secondary_banner_linked')->name('save_linked_banner');
+ 
 });
