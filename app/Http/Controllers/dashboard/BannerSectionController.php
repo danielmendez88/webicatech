@@ -17,6 +17,7 @@ use Response;
 use App\Traits\uploadFileTrait;
 use Illuminate\Support\Facades\DB;
 use App\Traits\DeleteTrait;
+use App\Models\BannerSecundarioVinculado;
 
 class BannerSectionController extends Controller
 {
@@ -376,4 +377,73 @@ class BannerSectionController extends Controller
 		
 		return $cadena;
 	}
+
+    protected function linked_banner($id, $idcat)
+    {
+        $idBanner = base64_decode($id);
+        $idCategoria = base64_decode($idcat);
+        return view('theme.dashboard.forms.linked_banner', compact('idBanner', 'idCategoria'));
+    }
+
+    protected function secondary_banner_linked(Request $request)
+    {
+        // validar
+        $validatedData = $request->validate([
+            'linked_file' => 'required|max:2048|mimes:jpg,png,jpeg,jpe',
+        ], [
+            'linked_file.required' => 'EL ARCHIVO ES REQUERIDO',
+            'linked_file.mimes' => 'NO SE ACEPTA ESTE TIPO DE ARCHIVO, SÓLO jpg, png, jpeg, jpe',
+            'linked_file.max' => 'EL TAMAÑO MÁXIMO DE UN ARCHIVO A CARGAR ES DE 2MB (2048 KB)'
+        ]);
+        /**
+         * obtenemos un registro y hacemos un try
+         */
+        try {
+            //se inicia el código para guardar el registro 'file' => 'required|max:10000|mimes:doc,docx
+            $activo = $_POST['activo'];
+            $habilitado = (empty($activo) ? false : true);
+            $idLinkedBanner = base64_decode($request->get('idBanner'));
+            $id_categoria = $request->get('idCategoria');
+            /**
+             * si hay un archivo procedemos a subirlo
+             */
+            if ($request->hasFile('linked_file')) {
+                $archivo_banner_enlazado = $request->file('linked_file'); # obtenemos el archivo
+                $imagen = $_POST['linked_file'];
+                $extension = explode('/', mime_content_type($imagen))[1];
+                /**
+                 * banner slug
+                 */
+                $bannerById = DB::table('banner')
+                ->select('catalogo_banner.codigo', 'banner.slug')
+                ->join('catalogo_banner', 'catalogo_banner.id', '=', 'banner.id_catbanner')
+                ->where('banner.id', $idLinkedBanner)
+                ->first();
+                // url
+                $url_archivo = $this->uploadImage($archivo_banner_enlazado, $idLinkedBanner, $bannerById->slug.'_'.'secondary_banner', $extension, 'linked_secondary_banner'); #invocamos el método
+                // creamos un arreglo
+                $array_documento = [
+                    'linked_file' => $url_archivo
+                ];
+                // limpiamos el arreglo
+                unset($array_documento);
+                /**
+                 * guardar registro
+                 */
+                $banner_secundario_vinculado = new BannerSecundarioVinculado;
+                $banner_secundario_vinculado->nombre = $bannerById->slug.'_'.'secondary_banner';
+                $banner_secundario_vinculado->path = $url_archivo;
+                $banner_secundario_vinculado->id_banner = idLinkedBanner;
+                $banner_secundario_vinculado->save();
+
+                /**
+                 * redireccionamiento
+                 */
+                return redirect()->route('select_category', $id_categoria)->with('success', 'Banner Secundario Vinculado Éxitosamente!');
+            }
+        } catch (QueryException $th) {
+            //throw QueryException;
+            return back()->with('error', $th->getMessage());
+        }
+    }
 }

@@ -39,6 +39,10 @@
                                             <i class="fas fa-minus-circle"></i>
                                             Eliminar
                                         </a>
+                                        <a href="{{ route('link_banner_secundario', ['id' => base64_encode($itemBanner->id), 'idcat' => base64_encode($idCategoria)]) }}" class="btn btn-primary">
+                                            <i class="fas fa-link"></i>
+                                            Vicular Archivo
+                                        </a>
                                     </div>
                                 </div>
                             @endforeach
