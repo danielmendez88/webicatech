@@ -380,9 +380,10 @@ class BannerSectionController extends Controller
 
     protected function linked_banner($id, $idcat)
     {
+        $allcategories = $this->allCategories();
         $idBanner = base64_decode($id);
         $idCategoria = base64_decode($idcat);
-        return view('theme.dashboard.forms.linked_banner', compact('idBanner', 'idCategoria'));
+        return view('theme.dashboard.forms.linked_banner', compact('idBanner', 'idCategoria', 'allcategories'));
     }
 
     protected function secondary_banner_linked(Request $request)
