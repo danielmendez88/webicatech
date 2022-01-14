@@ -435,6 +435,7 @@ class BannerSectionController extends Controller
                 $banner_secundario_vinculado->nombre = $bannerById->slug.'_'.'secondary_banner';
                 $banner_secundario_vinculado->path = $url_archivo;
                 $banner_secundario_vinculado->id_banner = idLinkedBanner;
+                $banner_secundario_vinculado->activado = $habilitado;
                 $banner_secundario_vinculado->save();
 
                 /**
