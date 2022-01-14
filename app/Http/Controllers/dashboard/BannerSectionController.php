@@ -410,7 +410,7 @@ class BannerSectionController extends Controller
              */
             if ($request->hasFile('linked_file')) {
                 $archivo_banner_enlazado = $request->file('linked_file'); # obtenemos el archivo
-                $imagen = $_POST['linked_file'];
+                $imagen = $request->file('linked_file');
                 $extension = explode('/', mime_content_type($imagen))[1];
                 /**
                  * banner slug
