@@ -113,8 +113,8 @@ class MainController extends Controller
          * consulta de transparencia
          */
         $programactividades_codigo = array(
-            'Informe del Plan Anual de Desarrollo Archivístico “PADA” 2020'=> 'archivtransparencia/INFORME_PADA_2020.pdf',
-            'Plan Anual de Desarrollo Archivístico “PADA” 2021'=> 'archivtransparencia/INFORME_PADA_2021.pdf'
+            'Informe del Plan Anual de Desarrollo Archivístico “PADA” 2021'=> 'archivtransparencia/INFORME_PADA_2021.pdf',
+            'Plan Anual de Desarrollo Archivístico “PADA” 2022'=> 'archivtransparencia/INFORME_PADA_2022.pdf'
         );
         /**
          * consulta para obtener las categorias y subcategorias
