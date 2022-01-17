@@ -86,13 +86,6 @@
                 {{-- acordion END --}}
         </div>
         <br>
-			<a href="http://www.itaipchiapas.org.mx/actas-pleno/06-E-2021.pdf" title="Inai" target="_blank">
-                <img src="{{ asset('Imagenes Pagina/informe.jpeg') }}" class="img-responsive" width="20%" alig="center"/>
-            </a>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="Imagenes Pagina/informe_2020.pdf" title="Inai" target="_blank">
-                <img src="{{ asset('Imagenes Pagina/informe_labores2020.png') }}" class="img-responsive" width="40%" alig="center"/>
-            </a>
         <hr>
         <div class="masonry-grid row g-mb-0 row-eq-height">
             <div class="row mb-3">
