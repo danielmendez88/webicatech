@@ -721,7 +721,10 @@ class CuentapublicaController extends Controller
         $hostigamiento_sexual = array(
             'CERO TOLERANCIA A LAS CONDUCTAS DE HOSTIGAMIENTO SEXUAL Y ACOSO SEXUAL' => 'codigos_conducta/pronunciamiento_cero_tolerancia_a_las_conductas_de_has_2021.pdf'
         );
-        return view('pages.Integridad', ['directorioasesor' => $directorioasesores_codigo,'directorioconsejero' => $directorioconse_codigo, 'protocoloprevencion' =>$protocolo2_codigo, 'protocoloactuacion' =>$protocolo3_codigo, 'codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo, 'convocatorias' =>$convocatorias_codigo, 'informe' => $informeanual_codigo, 'protocolo' =>$protocolodeatencion_codigo, 'hostigamiento' => $hostigamiento_sexual]);
+        $nominados_cepci_2022 = array(
+            'NOMINADOS CEPCI 2022' => 'codigos_conducta/nominados_cepsi_2022.pdf'
+        );
+        return view('pages.Integridad', ['directorioasesor' => $directorioasesores_codigo,'directorioconsejero' => $directorioconse_codigo, 'protocoloprevencion' =>$protocolo2_codigo, 'protocoloactuacion' =>$protocolo3_codigo, 'codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo, 'convocatorias' =>$convocatorias_codigo, 'informe' => $informeanual_codigo, 'protocolo' =>$protocolodeatencion_codigo, 'hostigamiento' => $hostigamiento_sexual, 'nominados_cepci_2022' => $nominados_cepci_2022]);
     }
     public function planarchivo()
     {
