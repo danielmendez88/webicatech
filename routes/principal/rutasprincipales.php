@@ -25,7 +25,7 @@ Auth::routes(['register' => false]);
  Route::get('/revista', 'principal\MainController@getrevista')->name('revista');
  Route::get('/cuenta-publica', 'principal\MainController@getcuentapublica')->name('cuenta-publica');
  Route::get('/sevac', 'CuentapublicaController@sevac')->name('sevac');
- Route::get('/Integridad', 'CuentapublicaController@Integridad')->name('integridad');
+ Route::get('/integridad', 'CuentapublicaController@Integridad')->name('integridad');
  // LICITACIONES
 Route::get('/licitaciones', 'CuentapublicaController@licitaciones')->name('licitaciones');
  /**
