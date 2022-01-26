@@ -727,11 +727,14 @@ class CuentapublicaController extends Controller
         $linamiento_integracion_y_funcionamiento_de_comites = array(
             'LINAMIENTOS PARA LA INTEGRACIÓN Y FUNCIONAMIENTO DE lOS COMITÉS DE ÉTICA' => 'codigos_conducta/lineamientos_para_integracion_funcionamiento_delos_comitesyetica.pdf'
         );
+        $bprincipal = $this->getBanner('banner_principal');
+
         return view('pages.Integridad', ['directorioasesor' => $directorioasesores_codigo,'directorioconsejero' => $directorioconse_codigo, 'protocoloprevencion' =>$protocolo2_codigo, 'protocoloactuacion' =>$protocolo3_codigo, 'codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo, 'convocatorias' =>$convocatorias_codigo, 'informe' => $informeanual_codigo, 'protocolo' =>$protocolodeatencion_codigo, 
-        'hostigamiento' => $hostigamiento_sexual, 
-        'nominados_cepci_2022' => $nominados_cepci_2022,
-        'linamiento_integracion_y_funcionamiento_de_comites' => $linamiento_integracion_y_funcionamiento_de_comites
-    ]);
+            'hostigamiento' => $hostigamiento_sexual, 
+            'nominados_cepci_2022' => $nominados_cepci_2022,
+            'linamiento_integracion_y_funcionamiento_de_comites' => $linamiento_integracion_y_funcionamiento_de_comites,
+            'bprincipal' => $bprincipal
+        ]);
     }
     public function planarchivo()
     {
