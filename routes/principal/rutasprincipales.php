@@ -16,7 +16,7 @@ Auth::routes(['register' => false]);
  Route::get('/transparencia', 'principal\MainController@gettransparencia')->name('transparencia');
  Route::get('/normatividad', 'principal\MainController@getnormatividad')->name('normatividad');
  Route::get('/comunicados/index', 'ComunicadoController@getnews')->name('comunicados');
- Route::get('/integridad', 'CuentapublicaController@getIntegrity')->name('integridad');
+//  Route::get('/integridad', 'CuentapublicaController@getIntegrity')->name('integridad');
  Route::get('/conocenos', 'principal\MainController@getconocenos')->name('conocenos');
  Route::get('/cobertura', 'principal\MainController@getcobertura')->name('cobertura');
  Route::get('/cursos', 'principal\MainController@getofertaeducativa')->name('oferta-educativa');
