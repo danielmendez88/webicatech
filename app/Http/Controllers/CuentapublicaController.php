@@ -678,7 +678,7 @@ class CuentapublicaController extends Controller
         );
 
         $honesti_codigos =array(
-            'Codigo de Honestidad y Etica de los Servidores Públicos de la Administración Pública del Estado de Chiapas ' => 'codigos_conducta/codigodeetica.pdf',
+            'Codigo de Honestidad y Etica de los Servidores Públicos de la Administración Pública del Estado de Chiapas ' => 'codigos_conducta/codigo_de_honestidad_etica_2021.pdf',
         );
 
         $acuerdos_codigo =array(
