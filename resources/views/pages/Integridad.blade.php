@@ -568,7 +568,7 @@
                                     <i class="fa fa-minus"></i>
                                 </span>
                                 <span class="g-pa-20">
-                                    Lineamientos para la Integración y Funcionamiento de los Comités de Ética
+                                    Linamientos para la Integración y Funcionamiento de los Comités de Ética
                                 </span>
                             </a>
                         </h5>
