@@ -305,7 +305,7 @@
                                 <i class="fa fa-minus"></i>
                             </span>
                             <span class="g-pa-20">
-                                Informe Anual de Actividades 
+                                Informe Anual de Actividades
                             </span>
                         </a>
                     </h5>
@@ -568,7 +568,7 @@
                                     <i class="fa fa-minus"></i>
                                 </span>
                                 <span class="g-pa-20">
-                                    Linamientos para la Integración y Funcionamiento de los Comités de Ética
+                                    Lineamientos para la Integración y Funcionamiento de los Comités de Ética
                                 </span>
                             </a>
                         </h5>
@@ -576,7 +576,7 @@
                     <div id="accordion-07-body-15" class="collapse" role="tabpanel" aria-labelledby="accordion-07-heading-15" data-parent="#accordion-07">
                         <div class="u-accordion__body g-bg-gray-light-v5 g-px-50 g-py-30">
                             <ul class="list-unstyled">
-                                @foreach ($linamiento_integracion_y_funcionamiento_de_comites as $key => $value)
+                                @foreach ($lineamiento_integracion_y_funcionamiento_de_comites as $key => $value)
                                     <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
                                         <div class="d-flex justify-content-start">
                                             <h5 class="g-font-weight-600 g-color-black">{{ $key }}</h5>   
