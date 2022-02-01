@@ -41,4 +41,8 @@ Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.pos
 Route::get('/nuevo-comunicado', 'ComunicadoController@getform');
 Route::post('/noticias-save', 'ComunicadoController@store')->name('comunicados.save');
 Route::get('/comunicado', 'ComunicadoController@getnews')->name('comunicado.index');
+/**
+ * avisos de privacidad
+ */
+Route::get( '/avisos-de-privacidad', 'CuentapublicaController@avisosprivacidad');
 
