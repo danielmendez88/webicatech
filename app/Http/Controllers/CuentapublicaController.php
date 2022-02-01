@@ -666,9 +666,10 @@ class CuentapublicaController extends Controller
             'Comisaria Pública' => 'avisos_privacidad/simplificado/21_COMISARIA.pdf',
             'Impartición de Cursos' => 'avisos_privacidad/simplificado/22_CURSOS.pdf'
         );
+        $bprincipal = $this->getBanner('banner_principal');
 
         
-        return view('pages.avisosprivacidad', ['avisos_integrales' => $avisos_integrales2021, 'avisos_simplificados' => $avisos_simplificados2021]);
+        return view('pages.avisosprivacidad', ['avisos_integrales' => $avisos_integrales2021, 'avisos_simplificados' => $avisos_simplificados2021, 'bprincipal' => $bprincipal]);
     }
 
     public function Integridad()
