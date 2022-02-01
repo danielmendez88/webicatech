@@ -86,6 +86,7 @@
         </div>
       {{-- carta END --}}
     </section>
+    <br><br>
 </div>
 {{-- contenedor END --}}
 @stop
