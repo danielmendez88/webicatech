@@ -616,25 +616,25 @@ class CuentapublicaController extends Controller
     {
 
         $avisos_integrales2021 =array(
-            'ICATECH' => 'avisos_privacidad/integral/1_ICATECH.pdf',
-            'Dirección General' => 'avisos_privacidad/integral/2_DIRECCION_GENERAL.pdf',
-            'Area de Infórmatica' => 'avisos_privacidad/integral/3_INFORMATICA.pdf',
-            'Area de Mercadotecnia' => 'avisos_privacidad/integral/4_MERCADOTECNIA.pdf',
-            'Unidad Juridica' => 'avisos_privacidad/integral/5_UNIDAD_JURIDICA.pdf',
-            'Unidad de Transparencia (Derecho ARCO)' => 'avisos_privacidad/integral/6_UNIDAD_DE_TRANSPARENCIA_DERECHO_ARCO.pdf',
-            'Unidad de Transparencia' => 'avisos_privacidad/integral/7_UNIDAD_DE_TRANSPARENCIA.pdf',
-            'Departamento de Recursos Financieros (CDFI)' => 'avisos_privacidad/integral/8_RECURSOS_FINANCIEROS.pdf',
-            'Departamento de Recursos Humanos (Nomina)' => 'avisos_privacidad/integral/9_RECURSOS_HUMANOS_NOMIDA.pdf',
-            'Departamento de Recursos Humanos (Expediente Unico del Personal)' => 'avisos_privacidad/integral/10_RECURSOS_HUMANOS_EXPEDIENTE_UNICO_DE_PERSONAL.pdf',
-            'Departamento de Recursos Humanos (Sistema de Registro de Asistencia)' => 'avisos_privacidad/integral/11_RECURSOS_HUMANOS_SISTEMA_DE_REGISTRO_DE_ASISTENCIA.pdf',
-            'Departamento de Recursos Materiales (Proveedores)' => 'avisos_privacidad/integral/12_RECUROS_MATERIALES_PROVEEDORES.pdf',
-            'Departamento de Recursos Materiales (Resguardos)' => 'avisos_privacidad/integral/13_RECURSOS_MATERIALES_RESGUARDOS.pdf',
-            'Departamento de Recursos Materiales (Registro de Visitas)' => 'avisos_privacidad/integral/14_RECURSOS_MATERIALES_RESGISTRO_DE_VISITAS.pdf',
-            'Departamento de Organizacion y Evaluacion' => 'avisos_privacidad/integral/15_DIRECCION_DE_PLANEACION.pdf',
-            'Departamento de Vinculación Social y Empresarial' => 'avisos_privacidad/integral/16_DIRECCION_DE_VINCULACION.pdf',
-            'Departamento de Vinculación para la Competitividad (firma de convenios)' => 'avisos_privacidad/integral/17_DIRECCION_DE_VINCULACION_CONVENIOS.pdf',
-            'Departamento de Vinculación para la Competitividad (Seguimiento de Egresados)' => 'avisos_privacidad/integral/18-Aviso_de_Privacidad_Integral_Seguimiento_Egresados.pdf',
-            'Departamento de Vinculación Gubernamental' => 'avisos_privacidad/integral/23-Departamento_de vinculación_gubernamental.pdf',
+            'Aviso de privacidad Integral de ICATECH' => 'avisos_privacidad/integral/AVISO_INTEGRAL_ICATECH.pdf',
+            'Dirección General' => 'avisos_privacidad/integral/AVISO_INTEGRAL_DIRECC_GRAL_CTRL_ACCESO.pdf',
+            'Area de Infórmatica' => 'avisos_privacidad/integral/AVISO_INTEGRAL_INFORMATICA_FIRMA_ELECT.pdf',
+            'Area de Mercadotecnia' => 'avisos_privacidad/integral/AVISO_INTEGRAL_MERCADOTECNIA_ATENCION_EN_REDES.pdf',
+            'Unidad Juridica' => 'avisos_privacidad/integral/AVISO_INTEGRAL_UNIDAD_JURIDICA_PROCED_ADMVOS.pdf',
+            'Unidad de Transparencia (Derecho ARCO)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_TRANSPARENCIA_DERECHOS_ARCO.pdf',
+            'Unidad de Transparencia' => 'avisos_privacidad/integral/AVISO_INTEGRAL_TRANSPARENCIA_SOLIC_INFORMACION.pdf',
+            'Departamento de Recursos Financieros (CDFI)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_REC_FINANC_CFDI.pdf',
+            'Departamento de Recursos Humanos (Nomina)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_REC_HUM_NOMINA.pdf',
+            'Departamento de Recursos Humanos (Expediente Unico del Personal)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_REC_HUM_EXP_UNICO_PERS.pdf',
+            'Departamento de Recursos Humanos (Sistema de Registro de Asistencia)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_REC_HUM_REG_ASIST.pdf',
+            'Departamento de Recursos Materiales (Proveedores)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_REC_MAT_REGISTRO_DE_PROVEEDORES.pdf',
+            'Departamento de Recursos Materiales (Resguardos)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_REC_MAT_RESG_MOBILIARIOS.pdf',
+            'Departamento de Recursos Materiales (Registro de Visitas)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_REC_MAT_REGISTRO_DE_VISITANTES.pdf',
+            'Departamento de Organizacion y Evaluacion' => 'avisos_privacidad/integral/AVISO_INTEGRAL_PLANEACION_JUNTA_DIRECT.pdf',
+            'Departamento de Vinculación Social y Empresarial' => 'avisos_privacidad/integral/AVISO_INTEGRAL_VINC_COMPETIT_FIRMA_CONVENIOS.pdf',
+            'Departamento de Vinculación para la Competitividad (firma de convenios)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_VINC_GUBERNAM_FIRMA_CONVENIOS.pdf',
+            'Departamento de Vinculación para la Competitividad (Seguimiento de Egresados)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_VINC_COMPETIT_SEGUIMIENTO_A_EGRESADOS.pdf',
+            'Departamento de Vinculación Gubernamental' => 'avisos_privacidad/integral/AVISO_INTEGRAL_VINC_GUBERNAM_FIRMA_CONVENIOS.pdf',
             'Departamento de Gestión Academica (Instructores)' => 'avisos_privacidad/integral/19_DIRECCION_TECNICA_ACADEMICA_INSTRUCTORES.pdf',
             'Departamento de Certificación y Control' => 'avisos_privacidad/integral/20_DIRECCION_TECNICA_ACADEMICA_CERTIFICACION_Y_CONTROL.pdf',
             'Comisaria Pública' => 'avisos_privacidad/integral/21_COMISARIA.pdf',
@@ -687,7 +687,7 @@ class CuentapublicaController extends Controller
         );
 
         $directorio_codigo =array(
-            'DIRECTORIO COMITÉ DE ÉTICA Y DE PREVENCIÓN DE CONFLICTO DE INTERÉS' => 'codigos_conducta/directorio1.pdf',
+            'DIRECTORIO COMITÉ DE ÉTICA Y DE PREVENCIÓN DE CONFLICTO DE INTERÉS' => 'codigos_conducta/DIRECTORIO_DEL_CEPCI_2022.pdf',
         );
 
         $plandetrabajo_codigo =array(
