@@ -635,10 +635,10 @@ class CuentapublicaController extends Controller
             'Departamento de Vinculación para la Competitividad (firma de convenios)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_VINC_GUBERNAM_FIRMA_CONVENIOS.pdf',
             'Departamento de Vinculación para la Competitividad (Seguimiento de Egresados)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_VINC_COMPETIT_SEGUIMIENTO_A_EGRESADOS.pdf',
             'Departamento de Vinculación Gubernamental' => 'avisos_privacidad/integral/AVISO_INTEGRAL_VINC_GUBERNAM_FIRMA_CONVENIOS.pdf',
-            'Departamento de Gestión Academica (Instructores)' => 'avisos_privacidad/integral/19_DIRECCION_TECNICA_ACADEMICA_INSTRUCTORES.pdf',
-            'Departamento de Certificación y Control' => 'avisos_privacidad/integral/20_DIRECCION_TECNICA_ACADEMICA_CERTIFICACION_Y_CONTROL.pdf',
+            'Departamento de Gestión Academica (Instructores)' => 'avisos_privacidad/integral/AVISO_INTEGRAL_TEC_ACAD_VALID_PERSONAL.pdf',
+            'Departamento de Certificación y Control' => 'avisos_privacidad/integral/AVISO_INTEGRAL_TEC_ACAD_CONTROL_ESCOLAR.pdf',
             'Comisaria Pública' => 'avisos_privacidad/integral/21_COMISARIA.pdf',
-            'Imparticion de Cursos' => 'avisos_privacidad/integral/22_CURSOS.pdf'
+            'Imparticion de Cursos' => 'avisos_privacidad/integral/AVISO_INTEGRAL_ICATECH_CURSOS_NO_PRESENC.pdf'
         );            
        
         $avisos_simplificados2021 =array(
