@@ -1,8 +1,8 @@
-@extends("theme.lte.layout") 
+@extends('theme.main.index')
 <!--llamar la plantilla -->
 @section('title', 'Normatividad | Icatech')
 <!--tituto de la pestaña -->
-@section('content')
+@section('contenido')
 <!--llama contenido de la pagina -->
 
     <div class="container g-pt-25">
