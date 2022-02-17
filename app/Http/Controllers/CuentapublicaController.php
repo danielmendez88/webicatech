@@ -264,9 +264,10 @@ class CuentapublicaController extends Controller
             'Diario Oficial "ICATECH"'=> 'normatividad_/reglamentos/decreto_lineamientos_icatech.pdf'
         );
 
+        $bprincipal = $this->getBanner('banner_principal');
 
         return view('pages.normatividad', ['deccrea'=> $dec_decretos, 'manual_lineamientos'=> $diario_oficialicatech, 'reglam'=> $reg_reglamentos, 'manual'=> $man_induccion,
-        'manualproc'=> $manu_procedimientos, 'manualorga'=> $manu_organizacion,]);
+        'manualproc'=> $manu_procedimientos, 'manualorga'=> $manu_organizacion, 'bprincipal' => $bprincipal]);
 
     }
 
