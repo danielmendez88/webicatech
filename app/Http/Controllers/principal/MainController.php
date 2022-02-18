@@ -166,8 +166,21 @@ class MainController extends Controller
 
     public function getcobertura()
     {
+        $array_unidades_cap_movil = [
+            array('Unidad de Capacitación Comitán', 'Antiguo camino a La Trinitaria s/n, Col. Parque Industrial C.P. 30000 Comitán de Domínguez, Chiapas.', 'Conmutador: (963) 63 2 76 99 Teléfono: (963) 63 2 76 99 Fax: (963) 63 2 76 99'),
+            array('Unidad de Capacitación Jiquipilas', 'Predio Nueva Aurora, Cerrada Prolongación de la 1a. Pte. s/n. Col. Juan Sabines., Col. Centro C.P. 30431 Jiquipilas, Chiapas.', 'Teléfono: (968) 6 81 10 29'),
+            array('Unidad de Capacitación Catazajá', 'Blvd. Tuxtla Gutiérrez s/n. C.P. 29980 , Barrio Sagrado Corazón de Jesus C.P. 29980 Catazajá, Chiapas.', 'Teléfono: (916) 3660060'),
+            array('Unidad de Capacitación Reforma', 'Calle Chihuahua S/N. entre Prol. Chihuahua y calle Aguascalientes. Zona V-A, Mna. R-71. , Col. Adolfo López Mateos C.P. 29500 Reforma, Chiapas.', 'Teléfono: (917) 32 8 89 73 Fax: (917) 32 8 89 73'),
+            array('Unidad de Capacitación Tapachula', 'Calle Juana de Arco S/N; entre Blvd. Palacios y Ceballa. Col. Octavio Paz. C.P. 30784 , Col. Octavio Paz C.P. 30784 Tapachula, Chiapas.', 'Conmutador: (962) 62 6 66 51 Teléfono: (962) 62 6 66 51 Fax: (962) 62 6 66 51'),
+            array('Unidad de Capacitación San Cristóbal de Las Casas', 'Avenida Patzcuaro s/n, Lagos de María Eugenia San Cristóbal de las Casas, Chiapas.', 'Teléfono: 01 967 110 8080'),
+            array('Unidad de Capacitación Tuxtla Gutiérrez', 'Av. Barrio San Jacinto N° 154, entre calle Pájaros y calle Conejos, Fracc. El Diamante C.P. 29000 Tuxtla Gutiérrez, Chiapas.', 'Teléfono: (961) 26 4 02 51'),
+            array('Unidad de Capacitación Tonalá', 'Carretera Tonalá-Paredón km 3.5 , Col. La Victoria C.P. 30500 Tonalá, Chiapas.', ''),
+            array('Unidad de Capacitación Ocosingo', '2ª. Calle Poniente Sur No. 209 entre 5ª Sur Ote y 6ª Sur Ote, Barrio Guadalupe C.P. 29950 Ocosingo, Chiapas.', ''),
+            array('Unidad de Capacitación Villaflores', 'Carretera villaflores la sirena km 1.5 , Predio El Jauey C.P. 30470 Villaflores, Chiapas.', ''),
+            array('Unidad de Capacitación Yajalón', 'Prologación de la 2a. Av. Norte Poniente s/n. , Barrio El Campo C.P. 29930 Yajalón, Chiapas.', 'Teléfono: 01 919 67 40388'),
+        ];
         $bprincipal = $this->getBanner('banner_principal');
-        return view('pages.cobertura', compact('bprincipal'));
+        return view('pages.cobertura', compact('bprincipal', 'array_unidades_cap_movil'));
     }
 
     public function getofertaeducativa()
