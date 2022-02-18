@@ -14,6 +14,10 @@
 {{-- contenido --}}
 @section('contenido')
     <div class="container-xl">
+        <br><br>
+        {{-- include social media --}}
+		@include('theme.main.media')
+		{{-- include social media END --}}
         <div class="masonry-grid row g-mb-0 row-eq-height">
             <div class="masonry-grid-sizer col-sm-12"></div><br>
             <div class="masonry-grid-item col-sm-6 col-md-6 col-lg-12 g-mb-30">					

@@ -32,7 +32,10 @@
 {{-- sección del contenido --}}
 @section('contenido')
 	<div class="container-xl">
-		<br>
+		<br><br>
+		{{-- include social media --}}
+		@include('theme.main.media')
+		{{-- include social media END --}}
 		<div class="row">
 			<div class="col-md-12">
 				<img src="{{ asset('Imagenes Pagina/cobertura2.jpg') }}" class="img-responsive" width="100%" style="height: auto;"  alig="center">

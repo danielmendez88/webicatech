@@ -4,9 +4,13 @@
 <!--tituto de la pestaña -->
 @section('contenido')
 <!--llama contenido de la pagina -->
-
     <div class="container g-pt-25">
-        <img src="Imagenes Pagina/bannernormatividad.jpg" class="img-responsive" width="100%" alig="center">
+      <br>
+      {{-- include social media --}}
+      @include('theme.main.media')
+      {{-- include social media END --}}
+
+      <img src="Imagenes Pagina/bannernormatividad.jpg" class="img-responsive" width="100%" alig="center">
      <section class="text-left">
                  <!--nuevo!-->
          <div class="card rounded-0 g-brd-none">

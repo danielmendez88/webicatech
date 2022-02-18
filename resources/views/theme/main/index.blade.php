@@ -37,6 +37,13 @@
     <link rel="stylesheet" href="{{ asset("assets/css/slick/slick-theme.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/css/slick/slick.css") }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+        .redes_sociales {
+            text-align: right;
+            top: -2.2em;
+            position: relative;
+        }
+    </style>
     {{-- yield script css --}}
     @yield('csscontent')
     {{-- yield script css --}}
