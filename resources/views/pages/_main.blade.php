@@ -92,6 +92,10 @@
                 </div>
               </div>
               {{-- SECCIÓN DE INDICE COMUNICADOS END --}}
+
+             {{-- include social media --}}
+              @include('theme.main.media')
+             {{-- include social media END --}}
               
               <div class="row">
                 @if (count($comunicados) > 0)       

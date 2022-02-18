@@ -1,8 +1,16 @@
-@extends("theme.lte.layout")
+@extends('theme.main.index')
 @section('title', 'Lista de cursos de | Icatech')
 
-@section('content')
+@section('csscontent')
+
+@endsection
+
+@section('contenido')
 <div class="container g-pt-25">
+    <br>
+    {{-- include social media --}}
+    @include('theme.main.media')
+    {{-- include social media END --}}
     <div class="masonry-grid row g-mb-0 row-eq-height s">
         @foreach ($cursos as $item)
             <div class="masonry-grid-item col-sm-6 col-md-6 col-lg-12">

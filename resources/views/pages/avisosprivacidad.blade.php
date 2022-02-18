@@ -7,6 +7,10 @@
 {{-- contenedor --}}
 <div class="container-xl">
     <section class="container g-pt-25">
+        <br>
+        {{-- include social media --}}
+        @include('theme.main.media')
+        {{-- include social media END --}}
         <div class="container">
           <img src="{{ asset('Imagenes Pagina/aviso_de_privacidad.jpg') }}" class="img-responsive" width="100%" alig="center">
         </div>

@@ -6,7 +6,10 @@
 <!--llama contenido de la pagina -->
 
 <div class="container-xl">
-    <br>
+    <br><br>
+    {{-- include social media --}}
+    @include('theme.main.media')
+    {{-- include social media END --}}
     <div class="row">
         <div class="col-md-12">
             <img src="{{ asset('Imagenes Pagina/bannericatechintegridad.png') }}" class="img-responsive" width="100%" alig="center">

@@ -135,6 +135,9 @@
 				<h2>Directorio</h2>
 			</a>
 		</div>
+		{{-- include social media --}}
+		@include('theme.main.media')
+		{{-- include social media END --}}
 		<div class="row">
 			<div class="col-md-6">
 				<div class="card">

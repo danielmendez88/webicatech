@@ -62,12 +62,13 @@ class CursoController extends Controller
         //
         $curso = new Curso();
         $cursos = $curso::WHERE('categoria_id', '=', $id)
-                        ->JOIN('administrativebodies', 'cursos.unidadAccionMovil', '=', 'administrativebodies.id')
+                        ->JOIN('categoria', 'cursos.categoria_id', '=', 'categoria.id')
                         ->get();
         // dd($cursos);
         // return view('', compact);
         // return redirect()->route('oferta-educativa');
-        return view('pages.cursos', compact('cursos'));
+        $bprincipal = $this->getBanner('banner_principal');
+        return view('pages.cursos', compact('cursos', 'bprincipal'));
     }
 
     /**

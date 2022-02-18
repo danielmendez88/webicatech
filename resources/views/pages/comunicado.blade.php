@@ -18,7 +18,10 @@
 {{-- contenido --}}
 @section('contenido')
     <div class="container-xl">
-        <br>
+        <br><br>
+        {{-- include social media --}}
+        @include('theme.main.media')
+        {{-- include social media END --}}
         <div class="row">
             <div class="col-12 g-pb-40">
                 @foreach ($newsAll as $itemNew)

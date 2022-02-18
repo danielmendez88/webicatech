@@ -26,7 +26,10 @@
 
 @section('contenido')
 	<div class="container-xl">
-		<br>
+		<br><br>
+		{{-- include social media --}}
+		@include('theme.main.media')
+		{{-- include social media END --}}
 		<div class="row">
 			<div class="masonry-grid row row-eq-height">
 				@foreach ($categorias as $item)
