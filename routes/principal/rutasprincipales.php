@@ -46,4 +46,8 @@ Route::get('/comunicado', 'ComunicadoController@getnews')->name('comunicado.inde
  * avisos de privacidad
  */
 Route::get( '/avisos-de-privacidad', 'CuentapublicaController@avisosprivacidad');
+/**
+ * ruta de busqueda de cursos
+ */
+Route::get('/cursos/buscar','CursoController@searchCursosByParam')->name('buscadorBy');
 
