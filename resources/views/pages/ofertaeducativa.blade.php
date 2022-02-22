@@ -43,7 +43,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<img src="{{ asset('Imagenes Pagina/requisitos-icatech.png') }}" alt="requisitos" class="img-responsive" width="100%">
+				<img src="{{ asset('Imagenes Pagina/requisitos_icatech.jpeg') }}" alt="requisitos" class="img-responsive" width="100%">
 			</div>
 		</div>
 		<br>

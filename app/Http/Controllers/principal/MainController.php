@@ -186,7 +186,7 @@ class MainController extends Controller
     public function getofertaeducativa()
     {
         $categoria = new Categoria();
-        $categorias = $categoria::WHERE('id', '!=', 6)->get();
+        $categorias = $categoria::whereNotIn('id', [7, 8, 9, 10, 11, 6])->get();
         $bprincipal = $this->getBanner('banner_principal');
         return view('pages.ofertaeducativa', compact('bprincipal', 'categorias'));
     }

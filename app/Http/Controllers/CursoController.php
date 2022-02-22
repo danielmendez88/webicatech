@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Curso;
 use App\Models\Categoria;
 use App\Models\Instructor;
+use Illuminate\Support\Facades\Response;
 /**
  * imports
  */
@@ -111,5 +112,10 @@ class CursoController extends Controller
         $instructor = new Instructor();
         $instructores = $instructor::paginate(7);
         return view('pages.instructores', compact('instructores', 'bprincipal'));
+    }
+
+    protected function searchCursosByParam(Request $request){
+        $cursoResult =  Curso::where("curso",'LIKE', $request->busqueda."%")->take(10)->get();
+        return Response::json($cursoResult);
     }
 }
