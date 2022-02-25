@@ -675,67 +675,20 @@ class CuentapublicaController extends Controller
 
     public function Integridad()
     {
-        $conduc_codigos =array(
-            'Codigo de Conducta ICATECH' => 'codigos_conducta/codigo_de_conducta.pdf',
-        );
-
-        $honesti_codigos =array(
+        $array_normatividad = array(
             'Codigo de Honestidad y Etica de los Servidores Públicos de la Administración Pública del Estado de Chiapas ' => 'codigos_conducta/codigo_de_honestidad_etica_2021.pdf',
-        );
-
-        $acuerdos_codigo =array(
-            'Acuerdos' => 'codigos_conducta/acuerdo-limpio.pdf',
-        );
-
-        $directorio_codigo =array(
-            'DIRECTORIO COMITÉ DE ÉTICA Y DE PREVENCIÓN DE CONFLICTO DE INTERÉS' => 'codigos_conducta/DIRECTORIO_DEL_CEPCI_2022.pdf',
-        );
-
-        $plandetrabajo_codigo =array(
-            'Plan de Trabajo Anual 2019'=> 'codigos_conducta/plan-de-trabajo-anual.pdf',
-        );
-
-        $convocatorias_codigo =array(
-            'Convocatorias 2020'=> 'codigos_conducta/convocatorias/convocatoria-consejeros.pdf',
-        );
-
-        $protocolodeatencion_codigo =array(
-            'Protocolo de Atención de Quejas y Denuncias'=> 'codigos_conducta/protocolo-de-atencion-a-denuncias.pdf',
-        );
-
-        $informeanual_codigo = array(
-            'Informe Anual de Actividades 2021'=> 'codigos_conducta/informe_anual_de_actividades_2021.pdf',
-        );
-
-        $protocolo2_codigo = array(
             'Protocolo para la Prevención, Atención y Sanción del Hostigamiento Sexual y Acoso sexual.'=> 'codigos_conducta/protocolo.pdf',
-        );
-        $protocolo3_codigo = array(
+            'LINEAMIENTOS PARA LA INTEGRACIÓN Y FUNCIONAMIENTO DE lOS COMITÉS DE ÉTICA' => 'codigos_conducta/lineamientos_para_integracion_funcionamiento_delos_comitesyetica.pdf',
             'Protocolo de Actuación de los Comités de Ética y de Prevención de Conflictos de Interés en la Atención de Presuntos Actos de Discriminación'=> 'codigos_conducta/protocolo_actuacion.pdf',
         );
-        $directorioconse_codigo = array(
-            'DIRECTORIO DEL CONSEJERO'=> 'codigos_conducta/directorio_consejeros.pdf',
-        );
-        $directorioasesores_codigo = array(
-            'DIRECTORIO DE ASESORES'=> 'codigos_conducta/directorio_asesores.pdf',
-        );
-
-        $hostigamiento_sexual = array(
-            'CERO TOLERANCIA A LAS CONDUCTAS DE HOSTIGAMIENTO SEXUAL Y ACOSO SEXUAL' => 'codigos_conducta/pronunciamiento_cero_tolerancia_a_las_conductas_de_has_2021.pdf'
-        );
-        $nominados_cepci_2022 = array(
-            'NOMINADOS CEPCI 2022' => 'codigos_conducta/nominados_cepsi_2022.pdf'
-        );
-        $lineamiento_integracion_y_funcionamiento_de_comites = array(
-            'LINEAMIENTOS PARA LA INTEGRACIÓN Y FUNCIONAMIENTO DE lOS COMITÉS DE ÉTICA' => 'codigos_conducta/lineamientos_para_integracion_funcionamiento_delos_comitesyetica.pdf'
-        );
+        /**
+         * normatividad
+         */
         $bprincipal = $this->getBanner('banner_principal');
 
-        return view('pages.Integridad', ['directorioasesor' => $directorioasesores_codigo,'directorioconsejero' => $directorioconse_codigo, 'protocoloprevencion' =>$protocolo2_codigo, 'protocoloactuacion' =>$protocolo3_codigo, 'codigos1' =>$conduc_codigos, 'honestidad' =>$honesti_codigos, 'acuerdos' =>$acuerdos_codigo, 'directorios' =>$directorio_codigo, 'plantrabajo' =>$plandetrabajo_codigo, 'convocatorias' =>$convocatorias_codigo, 'informe' => $informeanual_codigo, 'protocolo' =>$protocolodeatencion_codigo, 
-            'hostigamiento' => $hostigamiento_sexual, 
-            'nominados_cepci_2022' => $nominados_cepci_2022,
-            'lineamiento_integracion_y_funcionamiento_de_comites' => $lineamiento_integracion_y_funcionamiento_de_comites,
-            'bprincipal' => $bprincipal
+        return view('theme.main.integridad.normatividad', [
+            'array_normatividad' => $array_normatividad,
+            'bprincipal' => $bprincipal,
         ]);
     }
     public function planarchivo()

@@ -51,3 +51,26 @@ Route::get( '/avisos-de-privacidad', 'CuentapublicaController@avisosprivacidad')
  */
 Route::get('/cursos/buscar','CursoController@searchCursosByParam')->name('buscadorBy');
 
+/**
+ * rutas seccion de integridad
+ */
+Route::get('/integridad/introduccion', 'principal\IntegridadController@getintroduccion')->name('integridad.introduccion');
+Route::get('/integridad/objetivo', 'principal\IntegridadController@getobjetivo')->name('integridad.objetivo');
+Route::get('/integridad/acta-instalacion', 'principal\IntegridadController@getactainstalacion')->name('integridad.acta.instalacion');
+Route::get('/integridad/directorio-cepci', 'principal\IntegridadController@getdirectoriocepci')->name('integridad.directorio.cepci');
+Route::get('/integridad/codigo-conducta', 'principal\IntegridadController@getcondigoconducta')->name('integridad.codigo.conducta');
+Route::get('/integridad/atencion-quedas-denuncias', 'principal\IntegridadController@getquejasodenuncias')->name('integridad.quejas.denuncias');
+Route::get('/integridad/pronunciamiento', 'principal\IntegridadController@getpronunciamiento')->name('integridad.pronunciamiento');
+Route::get('/integridad/directorio-consejeros', 'principal\IntegridadController@getdirectorioconsejeros')->name('integridad.directorio.consejeros');
+Route::get('/integridad/directorio-asesores', 'principal\IntegridadController@getdirectorioasesores')->name('integridad.directorio.asesores');
+Route::get('/integridad/informe-anual-actividades', 'principal\IntegridadController@getinformeanualactividades')->name('integridad.informe.anual.actividades');
+
+
+
+
+
+
+
+
+
+
