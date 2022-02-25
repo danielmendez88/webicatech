@@ -10,27 +10,12 @@
         </div>
     </div>
     <hr class="g-brd-gray-light-v4">
-    <table class="table table-hover">
-        <tbody>
-            <tr>
-                <td style="text-align: center" valign="middle" width="10%">
-                    <i class="far fa-file-pdf d-block g-mr-8 g-font-size-40"></i>
-                </td>
-                <td style="text-align: justify" valign="middle" width="90%">
-                    <a href="" target="_blank">Directorio de Asesores</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
     <div class="card-header">
         <h3 style="text-align:center">
-            <strong>Directorio de Asesores</strong>
+            <strong>Asesores</strong>
         </h3>
     </div>
     <br>
-    <h4 style="text-align: center">
-        <strong>Asesores</strong>
-    </h4>
     <div class="row" style="text-align:center">
         <div class="col-sm" style="margin-top:25px;">
             <strong>

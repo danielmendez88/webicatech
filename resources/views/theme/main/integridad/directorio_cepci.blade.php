@@ -12,13 +12,10 @@
     <hr class="g-brd-gray-light-v4">
     <div class="card-header">
         <h3 style="text-align:center">
-            <strong>Directorio de Consejeros</strong>
+            <strong>Directorio</strong>
         </h3>
     </div>
     <br>
-    <h4 style="text-align: center">
-        <strong>Consejera</strong>
-    </h4>
     <div class="row">
         <div class="col-sm" style="margin-top:25px; text-align:center">
             <strong>
