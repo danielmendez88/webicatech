@@ -228,10 +228,10 @@ class CuentapublicaController extends Controller
     public function normatividad()
     {
         $dec_decretos = array(
-            'Decreto N° 182 por el que se crea el Instituto de Capacitación y Vinculación Tecnologica del Estado de Chiapas, Diario N° 32, Publicado el 26 de Julio del año 2000' => 'normatividad_/decretos/decreto-de-creacion.pdf',
-            'Decreto N° 183 Por el que se reforman, derogan y adicionan diversas disposiciones del Decreto por el que se crea el Instituto de Capacitación y Vinculación Tecnológica del Estado de Chiapas, Diario N° 94, Publicado el 21 de Mayo de 2008' => 'normatividad_/decretos/decreto-modificatorio.pdf',
-            'Decreto N° 031 Por el que reforman y abrogan diversas leyes y decretos por los que se crean diversos organismos públicos del poder Ejecutivo del Estado; Artículo Sexto, Diario N° 006, Publicado el 31 de Diciembre de 2018' => 'normatividad_/decretos/decreto-modificatorio-2018.pdf',
-            'Decreto N° 180 Por el que se reforman diversas disposiciones del Decreto por el que se crea el Instituto de Capacitación y Vinculación Tecnológica del Estado de Chiapas, Diario N° 148, Publicado el 20 de enero de 2021' => 'normatividad_/decretos/decreto-modificatorio-2021.pdf'
+            'Decreto N° 182 por el que se crea el Instituto de Capacitación y Vinculación Tecnologica del Estado de Chiapas, Periódico N° 32, Publicado el 26 de Julio del año 2000' => 'normatividad_/decretos/decreto-de-creacion.pdf',
+            'Decreto N° 183 Por el que se reforman, derogan y adicionan diversas disposiciones del Decreto por el que se crea el Instituto de Capacitación y Vinculación Tecnológica del Estado de Chiapas, Periódico N° 94, Publicado el 21 de Mayo de 2008' => 'normatividad_/decretos/decreto-modificatorio.pdf',
+            'Decreto N° 031 Por el que reforman y abrogan diversas leyes y decretos por los que se crean diversos organismos públicos del poder Ejecutivo del Estado; Artículo Sexto, Periódico N° 006, Publicado el 31 de Diciembre de 2018' => 'normatividad_/decretos/decreto-modificatorio-2018.pdf',
+            'Decreto N° 180 Por el que se reforman diversas disposiciones del Decreto por el que se crea el Instituto de Capacitación y Vinculación Tecnológica del Estado de Chiapas, Periódico N° 148, Publicado el 20 de enero de 2021' => 'normatividad_/decretos/decreto-modificatorio-2021.pdf'
         );
 
         $reg_reglamentos = array(
