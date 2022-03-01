@@ -18,12 +18,12 @@
                  <h5 class="mb-0 g-font-size-default g-font-weight-700 g-pa-20a mb-0">
                      <a class="collapsed d-flex g-color-main g-text-underline--none--hover" href="#accordion-07-body-01" data-toggle="collapse" data-parent="#accordion-07" aria-expanded="false" aria-controls="accordion-07-body-01">
                          <span class="u-accordion__control-icon g-brd-right g-brd-gray-light-v4 g-color-primary text-center g-pa-20">
-                             <i class="fa fa-plus"></i>
-                                 <i class="fa fa-minus"></i>
+                            <i class="fa fa-plus"></i>
+                            <i class="fa fa-minus"></i>
                          </span>
-                                 <span class="g-pa-20">
-                                     Decretos
-                                 </span>
+                         <span class="g-pa-20">
+                           Decretos
+                         </span>
                      </a>
                  </h5>
              </div>
@@ -37,12 +37,12 @@
                                  <h6 class="g-font-weight-600 g-color-black">{{ $key }}</h6>
                                      
                              </div>
-                                 <div class="d-flex justify-content-between">
-                                     <ul class="u-list-inline"></ul>
-                                         <div class="align-self-center">
-                                             <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
-                                         </div>
-                                 </div>
+                              <div class="d-flex justify-content-between">
+                                <ul class="u-list-inline"></ul>
+                                <div class="align-self-center">
+                                    <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
+                                </div>
+                              </div>
                          </li>
                      @endforeach 
                  </ul>
@@ -211,7 +211,7 @@
                          <i class="fa fa-minus"></i>
                          </span>
                            <span class="g-pa-20">
-                                 Decreto Lineamiento, Diario Oficial ICATECH
+                              Lineamientos para los procesos de vinculación y capacitación
                             </span>
                       </a>
                      </h5>
