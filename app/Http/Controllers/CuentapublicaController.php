@@ -274,7 +274,10 @@ class CuentapublicaController extends Controller
     }
 
     public function licitaciones()
-    {               
+    {
+        $lic_anual_adquisiciones = array(
+            'PROGRAMA ANUAL 2022' => 'licitaciones_/adquisiciones/programa_anual_de_adquisiciones_federal_2022.pdf',
+        );            
         $lic_federal_apertura = array(
             '- ACTA DE APERTURA DE PROPUESTAS TECNICAS Y ECONOMICAS' => 'licitaciones_/federal/ACTA_APERTURA_PROPUESTAS.pdf',
             '- ACTA DE FALLO' => 'licitaciones_/federal/FALLO_ICTP-001-2021_2DO.PROCEDIMIENTO .pdf'
@@ -303,9 +306,11 @@ class CuentapublicaController extends Controller
             '- Invitacion a Cuando Menos Tres Personas, Nacional, Presencial, ICATECH/ICTP/003/2021 COMPRANET IA-907081961-E5-2021' => 'licitaciones_/federal/actade_apertura_de_propuestas_tecnicas.pdf',
             '- ACTA DE FALLOxam' => 'licitaciones_/federal/actafallo_907081961.pdf'                     
         );
+
+        $bprincipal = $this->getBanner('banner_principal');
         
 
-        return view('pages.licitaciones', ['IA907081961' => $lic_caasicatech_presencial, 'acfallo' => $lic_federal_apertura, 'convocatorias_' => $lic_convocatoria, 'ictp002' => $lic_federal_presencial]);
+        return view('pages.licitaciones', ['IA907081961' => $lic_caasicatech_presencial, 'acfallo' => $lic_federal_apertura, 'convocatorias_' => $lic_convocatoria, 'ictp002' => $lic_federal_presencial, 'bprincipal' => $bprincipal, 'lic_anual_adquisiciones' => $lic_anual_adquisiciones]);
     }
 
     public function sevac()
