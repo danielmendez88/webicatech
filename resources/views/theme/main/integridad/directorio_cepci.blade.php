@@ -29,7 +29,10 @@
             www.icatech.gob.mx
         </div>
         <div class="w-100"></div>
-        <div class="col-sm" style="margin-top:25px; text-align:center">
+        <div class="col-sm-2" style="margin-top:25px; text-align:justify">
+            <img src="{{ asset('assets/img/directorio_cepci/CP_JOSE_WILLIAM_ARGUELLO_GUILLEN.png') }}" alt="Avatar" class="avatar">
+        </div>
+        <div class="col-sm-10" style="margin-top:25px; text-align:center">
             <strong>
                 Mtro. Walter Domínguez Camacho
                 <br>
@@ -46,8 +49,8 @@
         </div>
         <div class="w-100"></div>
         <div class="col-sm-2" style="margin-top:25px; text-align:justify">
-            <img src="{{ asset('assets/img/directorio_cepci/CP_JOSE_WILLIAM_ARGUELLO_GUILLEN.png') }}" alt="Avatar" class="avatar">
-        </div>
+           <img src="{{ asset('assets/img/directorio_cepci/MTRO_WALTER_DOMINGUEZ_CAMACHO.jpeg') }}" alt="Avatar" class="avatar">
+        </div> 
         <div class="col-sm-10" style="margin-top:25px; text-align:justify">
             <strong>
                 C.P. José William Argüello Guillén
@@ -196,6 +199,9 @@
             nievespz@hotmail.com
         </div>
         <div class="w-100"></div>
+        <div class="col-sm-2" style="margin-top:25px; text-align:justify">
+            <img src="{{ asset('assets/img/directorio_cepci/CP_LUIS_RODOLFO_MOISES_RAMIREZ.jpeg') }}" alt="Avatar" class="avatar">
+        </div> 
         <div class="col-sm" style="margin-top:25px;">
             <strong>
                 C.P. Luis Rodolfo Moisés Ramírez
