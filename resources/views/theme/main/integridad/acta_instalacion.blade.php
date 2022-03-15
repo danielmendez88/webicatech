@@ -12,14 +12,18 @@
     <hr class="g-brd-gray-light-v4">
     <table class="table table-hover">
         <tbody>
+           @foreach ($array_acta_instalacion_cepci as $k => $v)
             <tr>
                 <td style="text-align: center" valign="middle" width="10%">
-                    <i class="far fa-file-pdf d-block g-mr-8 g-font-size-40"></i>
+                    <a href="{{ asset($v) }}" target="_blank" class="docpdf">
+                        <i class="far fa-file-pdf d-block g-mr-8 g-font-size-40"></i>
+                    </a>
                 </td>
                 <td style="text-align: justify" valign="middle" width="90%">
-                    <a href="" target="_blank">Código de Honestidad</a>
+                    <a href="{{ asset($v) }}" target="_blank" class="docletter">{{ $k }}</a>
                 </td>
             </tr>
+           @endforeach
         </tbody>
     </table>
 </article>
