@@ -289,7 +289,7 @@ class CuentapublicaController extends Controller
         );
 
         $acta_apertura_propuesta_tecnica = [
-            'ICATECH-ICTP/001/2022' => 'licitaciones_/fedetal/ACTA_DE_APERTURA_DE_PROPUESTAS_140322.pdf',
+            'ICATECH-ICTP/001/2022' => 'licitaciones_/federal/ACTA_DE_APERTURA_DE_PROPUESTAS_140322.pdf',
         ];
 
         $bprincipal = $this->getBanner('banner_principal');
