@@ -277,40 +277,25 @@ class CuentapublicaController extends Controller
     {
         $lic_anual_adquisiciones = array(
             'PROGRAMA ANUAL 2022' => 'licitaciones_/adquisiciones/programa_anual_de_adquisiciones_federal_2022.pdf',
-        );            
-        $lic_federal_apertura = array(
-            '- ACTA DE APERTURA DE PROPUESTAS TECNICAS Y ECONOMICAS' => 'licitaciones_/federal/ACTA_APERTURA_PROPUESTAS.pdf',
-            '- ACTA DE FALLO' => 'licitaciones_/federal/FALLO_ICTP-001-2021_2DO.PROCEDIMIENTO .pdf'
         );
 
-        $lic_convocatoria = array(
-            ' PRESENCIAL ICATECH-LPN/001/2021 (TIEMPOS RECORTADOS)' => 'licitaciones_/federal/ICATECH-LPN0012021.pdf',
-            ' PRESENCIAL ICATECH-LPN/001/2021 (TIEMPOS RECORTADOS) COMPRANET LA-907081961-E3-2021' => 'licitaciones_/federal/aclaracion_de_dudas_LPN_001_2021.pdf',
-            ' ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONÓMICAS, ICATECH-LPN/001/2021 (TIEMPOS RECORTADOS), COMPRANET LA-907081961-E3-2021' => 'licitaciones_/federal/acta_de_apertura_lpn.pdf',
-            ' ACTA DE FALLO' => 'licitaciones_/federal/acta_de_fallo_presencial.pdf'
-        );
         $lic_federal_acta_circunstanciada = array(
             '- ACTA CIRCUNSTANCIADA 01' => 'licitaciones_/federal/ACTA_CIRCUNSTANCIADA_NO_01.pdf'
-        );
-
-        $lic_federal_presencial = array(
-            '- EVENTO DE PRESENTACIÓN Y APERTURA DE PROPUESTAS DE LA INVITACIÓN A CUANDO MENOS TRES PERSONAS, NACIONAL, PRESENCIAL, ICATECH-ICTP/002/2021' => 'licitaciones_/federal/acta_apertura_presentacion_apertura_propuestas.pdf',  
-            '- ACTA DE FALLO' => 'licitaciones_/federal/ACTA_DE_FALLO_TINTAS.pdf'          
         );
 
         $programa_anual_adquisiciones = array(
             'PROGRAMA 2020' => 'licitaciones_/adquisiciones/programa_2020.pdf',
             'PROGRAMA 2021' => 'licitaciones_/adquisiciones/programa_2021.pdf'
         );
-        $lic_caasicatech_presencial = array(
-            '- Invitacion a Cuando Menos Tres Personas, Nacional, Presencial, ICATECH/ICTP/003/2021 COMPRANET IA-907081961-E5-2021' => 'licitaciones_/federal/actade_apertura_de_propuestas_tecnicas.pdf',
-            '- ACTA DE FALLOxam' => 'licitaciones_/federal/actafallo_907081961.pdf'                     
-        );
+
+        $acta_apertura_propuesta_tecnica = [
+            'ICATECH-ICTP/001/2022' => 'licitaciones_/fedetal/ACTA_DE_APERTURA_DE_PROPUESTAS_140322.pdf',
+        ];
 
         $bprincipal = $this->getBanner('banner_principal');
         
 
-        return view('pages.licitaciones', ['IA907081961' => $lic_caasicatech_presencial, 'acfallo' => $lic_federal_apertura, 'convocatorias_' => $lic_convocatoria, 'ictp002' => $lic_federal_presencial, 'bprincipal' => $bprincipal, 'lic_anual_adquisiciones' => $lic_anual_adquisiciones]);
+        return view('pages.licitaciones', [ 'bprincipal' => $bprincipal, 'lic_anual_adquisiciones' => $lic_anual_adquisiciones, 'acta_apertura_propuesta_tecnica' => $acta_apertura_propuesta_tecnica]);
     }
 
     public function sevac()
