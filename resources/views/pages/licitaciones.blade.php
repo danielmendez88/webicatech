@@ -105,7 +105,7 @@
                               <i class="fa fa-minus"></i>
                             </span>
                             <span class="g-pa-20">
-                              Progama Anual de Adquisiciones
+                              Acta de Apertura de Propuestas Técnicas
                             </span>
                           </a>
                       </h5>
