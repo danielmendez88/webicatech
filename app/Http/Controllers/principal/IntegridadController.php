@@ -96,8 +96,14 @@ class IntegridadController extends Controller
     }
     protected function getactainstalacion()
     {
+        /**
+         * agregando un arreglo bidimensional
+         */
+        $array_acta_instalacion_cepci = [
+            'Acta de Instalación CEPCI' => 'codigos_conducta/acta_instalacion_cepci.pdf'
+        ];
         $bprincipal = $this->getBanner('banner_principal');
-        return view('theme.main.integridad.acta_instalacion', compact('bprincipal'));
+        return view('theme.main.integridad.acta_instalacion', compact('bprincipal', 'array_acta_instalacion_cepci'));
     }
 
     protected function getdirectoriocepci()
