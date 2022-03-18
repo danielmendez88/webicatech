@@ -288,14 +288,14 @@ class CuentapublicaController extends Controller
             'PROGRAMA 2021' => 'licitaciones_/adquisiciones/programa_2021.pdf'
         );
 
-        $acta_apertura_propuesta_tecnica = [
-            'ICATECH-ICTP/001/2022' => 'licitaciones_/federal/ACTA_DE_APERTURA_DE_PROPUESTAS_140322.pdf',
+        $acta_fallo_propuesta_tecnica = [
+            'ICATECH-ICTP/001/2022' => 'licitaciones_/federal/ACTA_DE_FALLO_MARZO_2022.pdf',
         ];
 
         $bprincipal = $this->getBanner('banner_principal');
         
 
-        return view('pages.licitaciones', [ 'bprincipal' => $bprincipal, 'lic_anual_adquisiciones' => $lic_anual_adquisiciones, 'acta_apertura_propuesta_tecnica' => $acta_apertura_propuesta_tecnica]);
+        return view('pages.licitaciones', [ 'bprincipal' => $bprincipal, 'lic_anual_adquisiciones' => $lic_anual_adquisiciones, 'acta_fallo_propuesta_tecnica' => $acta_fallo_propuesta_tecnica]);
     }
 
     public function sevac()

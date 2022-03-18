@@ -14,8 +14,7 @@
         <div class="masonry-grid row  row-eq-height">
             <div class="masonry-grid-sizer col-sm-12"></div>
             <div class="masonry-grid-item col-sm-12 col-md-12 col-lg-12 g-mb-30">
-                
-                    <p><h2><b>LICITACIONES:</b></h2></p><br> 
+                    <p><h2><b>LICITACIONES:</b></h2></p><br>
 
                     <p><b><h5>LICITACIONES FEDERALES</h5></b></p><br>
 
@@ -68,7 +67,7 @@
                               <i class="fa fa-minus"></i>
                             </span>
                             <span class="g-pa-20">
-                              Acta de Apertura de Propuestas Técnicas
+                              Acta de Fallo de Propuesta Técnica
                             </span>
                           </a>
                       </h5>
@@ -76,7 +75,7 @@
                     <div id="accordion-07-body-02" class="collapse" role="tabpanel" aria-labelledby="accordion-07-heading-02" data-parent="#accordion-07">
                       <div class="u-accordion__body g-bg-gray-light-v5 g-px-50 g-py-30">
                           <ul class="list-unstyled">
-                            @foreach ($acta_apertura_propuesta_tecnica as $key => $value)
+                            @foreach ($acta_fallo_propuesta_tecnica as $key => $value)
                               <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
                                 <div class="d-flex justify-content-start">
                                   <h5 class="g-font-weight-600 g-color-black">{{ $key }}</h5>
