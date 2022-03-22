@@ -422,7 +422,7 @@ class BannerSectionController extends Controller
                 ->where('banner.id', $idLinkedBanner)
                 ->first();
                 // url
-                $url_archivo = $this->uploadImage($archivo_banner_enlazado, $idLinkedBanner, $bannerById->slug.'_'.'secondary_banner', $extension, 'linked_secondary_banner'); #invocamos el método
+                $url_archivo = $this->uploadImage($archivo_banner_enlazado, $idLinkedBanner, $bannerById->slug.'_'.'secondary_banner', $extension, 'banner_secundario_vinculado'); #invocamos el método
                 // creamos un arreglo
                 $array_documento = [
                     'linked_file' => $url_archivo
