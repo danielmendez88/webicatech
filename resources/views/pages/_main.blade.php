@@ -180,7 +180,8 @@
                     @if (count($bsecundario) > 0)
                         @foreach ($bsecundario as $itembannersecundario)
                           <div>
-                            <img data-lazy="{{ $itembannersecundario->path }}" data-srcset="{{ $itembannersecundario->path }} 960w" data-sizes="100vw" aria-hidden="true">
+                            <img data-lazy="{{ $itembannersecundario->path }}" data-srcset="{{ $itembannersecundario->path }} 960w" data-sizes="100vw" aria-hidden="true" 
+                              {{  is_null($itembannersecundario->path_vinculado) ? '' : 'data-toggle=modal data-target=#modelPreComision data-bannersecundario='.$itembannersecundario->path_vinculado }}>
                           </div>
                         @endforeach
                     @else
@@ -332,8 +333,33 @@
             <br>
         </div>
     {{-- CONTENEDOR PRINCIPAL END --}}
+{{-- MODAL --}}
+<div class="modal fade" id="modelPreComision" tabindex="-1" aria-labelledby="modelPreComisionLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modelPreComisionLabel">
+                <b>CONVOCATORIAS</b>
+              </h5>
+          </div>
+          <div class="modal-body">
+             <div class="form-row">
+                  <div class="col-md-12 mb-3">
+                      <img id="imagenes_convocatoria" style='height: 100%; width: 100%; object-fit: contain'/>
+                  </div>
+             </div>
+          </div>
+          <div class="modal-footer">
+              <a target="_blank" id="btnverconvocatoria" class="btn btn-success">VER</a>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">SALIR</button>
+          </div>
+      </div>
+  </div>
+</div>
+{{-- MODAL END --}}
 @endsection
 @section('contentScriptJs')
+  <script src="{{ asset('assets/js/FuncionesModal.js') }}"></script>
   <script type="text/javascript">
     $(document).ready(function () {
       $(".arrow-right").bind("click", function (event) {

@@ -29,6 +29,11 @@ Auth::routes(['register' => false]);
  Route::get('/integridad', 'CuentapublicaController@Integridad')->name('integridad');
  // LICITACIONES
 Route::get('/licitaciones', 'CuentapublicaController@licitaciones')->name('licitaciones');
+/**
+ * CONVOCATORIAS
+ */
+Route::get('/convocatorias/{imagen}', 'principal\ConvocatoriaController@getconvocatoria')->name('convocatoria');
+
  /**
   * cursos por categorias
   */
