@@ -256,7 +256,7 @@ class CuentapublicaController extends Controller
 
         );
 
-        $manu_organizacion =array(
+        $manu_organizacion = array(
             'Manual de Organizacion' => 'normatividad_/manuales/organizacion/organizacion.pdf',
             'Manual de Organizacion - Organigramas y Funciones Parte 1' => 'normatividad_/manuales/organizacion/organigramas_y_funciones_1.pdf',
             'Manual de Organizacion - Organigramas y Funciones Parte 2' => 'normatividad_/manuales/organizacion/organigramas_y_funciones_2.pdf',
@@ -266,10 +266,15 @@ class CuentapublicaController extends Controller
             'Lineamientos'=> 'normatividad_/reglamentos/decreto_lineamientos_icatech.pdf'
         );
 
+        $mejora_regulatoria = [
+            'Acta de Instalación de la Unidad de Mejora Regulatoria' => 'normatividad_/mejora_regulatoria/UNIDAD_MEJORA_REGULATORIA_ICATECH_2022.pdf',
+            'Programa Anual de Mejora Regulatoria 2021 - 2022' => 'normatividad_/mejora_regulatoria/Programa_Mejora_Regulatoria_ICATECH_2021.pdf'
+        ];
+
         $bprincipal = $this->getBanner('banner_principal');
 
         return view('pages.normatividad', ['deccrea'=> $dec_decretos, 'manual_lineamientos'=> $diario_oficialicatech, 'reglam'=> $reg_reglamentos, 'manual'=> $man_induccion,
-        'manualproc'=> $manu_procedimientos, 'manualorga'=> $manu_organizacion, 'bprincipal' => $bprincipal]);
+        'manualproc'=> $manu_procedimientos, 'manualorga'=> $manu_organizacion, 'bprincipal' => $bprincipal, 'mejora_regulatoria' => $mejora_regulatoria]);
 
     }
 
