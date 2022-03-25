@@ -598,8 +598,21 @@ class CuentapublicaController extends Controller
             'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2021/3t/10_montos_pagados_por_ayudas_y_subsidios.pdf'
         );
 
+        $cuarto_trimestre2021 = [
+            'Estado de Situación Financiera' => 'sevac_/2021/4t/1estado_de_situacion_financiera.pdf',
+            'Estado de Actividades' => 'sevac_/2021/4t/2estado_de_actividades.pdf',
+            'Estado de Variación de Hacienda Pública' => 'sevac_/2021/4t/3estado_de_variacion_hacienda_publica.pdf',
+            'Estado Cambios Situación Financiera' => 'sevac_/2021/4t/4estado_cambios_situacion_financiera.pdf',
+            'Estado Flujo de Efectivo' => 'sevac_/2021/4t/5estado_flujo_de_efectivo.pdf',
+            'Estado Analítico Activo' => 'sevac_/2021/4t/6estado_analitico_activo.pdf',
+            'Estado Analítico de Deuda Otros Pasivos' => 'sevac_/2021/4t/7estado_analitico_de_deuda_otros_pasivos.pdf',
+            'Informe Sobre Pasivos Contingentes' => 'sevac_/2021/4t/8informe_sobre_pasivos_contingentes.pdf',
+            'Notas de los Estados Financieros' => 'sevac_/2021/4t/9notas_los_estados_financieros.pdf',
+            'Montos Pagados Ayudas Subsidios' => 'sevac_/2021/4t/10montos_pagados_ayudas_subsidios.pdf'
+        ];
 
-        return view('pages.sevac', ['tercertrim2021' => $tercer_trimestre2021, 'seguntrim2021' => $segundo_trimestre2021, 'cuartotrim2020' => $cuarto_trimestre2020, 'primtrim2021' => $primer_trimestre2021, 'primtrim2020' => $prim_trimestre2020, 'segundtrim2020' => $segun_trimestre2020, 'tercertrim2020' => $tercer_trimestre2020, 'primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018]);
+
+        return view('pages.sevac', ['tercertrim2021' => $tercer_trimestre2021, 'seguntrim2021' => $segundo_trimestre2021, 'cuartotrim2020' => $cuarto_trimestre2020, 'primtrim2021' => $primer_trimestre2021, 'primtrim2020' => $prim_trimestre2020, 'segundtrim2020' => $segun_trimestre2020, 'tercertrim2020' => $tercer_trimestre2020, 'primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018, 'cuarto_trimestre2021' => $cuarto_trimestre2021]);
         //comentario
     }
 
