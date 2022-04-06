@@ -297,10 +297,14 @@ class CuentapublicaController extends Controller
             'ICATECH-ICTP/001/2022' => 'licitaciones_/federal/ACTA_DE_FALLO_MARZO_2022.pdf',
         ];
 
+        $acta_apertura_propuestas_tecnicas = [
+            'ACTA DE APERTURA DE PROPUESTAS TÉCNICAS' => 'licitaciones_/federal/acta_apertura_propuestas_tecnicas.pdf',
+        ];
+
         $bprincipal = $this->getBanner('banner_principal');
         
 
-        return view('pages.licitaciones', [ 'bprincipal' => $bprincipal, 'lic_anual_adquisiciones' => $lic_anual_adquisiciones, 'acta_fallo_propuesta_tecnica' => $acta_fallo_propuesta_tecnica]);
+        return view('pages.licitaciones', [ 'bprincipal' => $bprincipal, 'lic_anual_adquisiciones' => $lic_anual_adquisiciones, 'acta_fallo_propuesta_tecnica' => $acta_fallo_propuesta_tecnica, 'acta_apertura_propuestas_tecnicas' => $acta_apertura_propuestas_tecnicas]);
     }
 
     public function sevac()
