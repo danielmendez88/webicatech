@@ -108,7 +108,7 @@
                           </a>
                       </h5>
                     </div>
-                    <div id="accordion-08-body-03" class="collapse" role="tabpanel" aria-labelledby="accordion-07-heading-03" data-parent="#accordion-07">
+                    <div id="accordion-07-body-03" class="collapse" role="tabpanel" aria-labelledby="accordion-07-heading-03" data-parent="#accordion-07">
                       <div class="u-accordion__body g-bg-gray-light-v5 g-px-50 g-py-30">
                           <ul class="list-unstyled">
                             @foreach ($acta_apertura_propuestas_tecnicas as $key => $value)
