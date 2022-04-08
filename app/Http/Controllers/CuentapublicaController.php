@@ -299,6 +299,7 @@ class CuentapublicaController extends Controller
 
         $acta_apertura_propuestas_tecnicas = [
             'ACTA DE APERTURA DE PROPUESTAS TÉCNICAS' => 'licitaciones_/federal/acta_apertura_propuestas_tecnicas.pdf',
+            'ACTA DE FALLO' => 'licitaciones_/federal/ACTA_DE_FALLO_2022.pdf'
         ];
 
         $bprincipal = $this->getBanner('banner_principal');
