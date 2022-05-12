@@ -18,6 +18,7 @@
 					<li class="nav-item g-mx-5--lg"><a class="nav-link g-color-white--hover g-bg-morado--hover g-rounded-3 g-color-black-opacity-0_9" href="{{ route('integridad') }}">Integridad</a></li>
                     {{-- <li class="nav-item g-mx-5--lg"><a class="nav-link g-color-white--hover g-bg-morado--hover g-rounded-3 g-color-black-opacity-0_9" href="{{ route('instructores') }}">Instructores</a></li> --}}
                     <!--<li class="nav-item g-mx-5--lg"><a class="nav-link g-color-white--hover g-bg-morado--hover g-rounded-3 g-color-black-opacity-0_9" href="/aspirante">Nuevo Aspirante</a></li>-->
+					<li class="nav-item g-mx-5--lg"><a class="nav-link g-color-white--hover g-bg-morado--hover g-rounded-3 g-color-black-opacity-0_9" href="{{ route('convocatoria.instructores.externos') }}">Convocatoria</a></li>
 				</ul>
 			</div>
 		</nav>

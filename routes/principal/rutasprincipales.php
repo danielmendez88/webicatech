@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\Route;
   
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\principal\InstructoresExternosController;
 /**
  * RUTAS PRINCIPALES DE LOS CAMBIOS DE LA PÁGINA WEB ADMINISTRABLE
  * estas rutas son cargadas en el RouteServiceProvider
@@ -33,6 +34,11 @@ Route::get('/licitaciones', 'CuentapublicaController@licitaciones')->name('licit
  * CONVOCATORIAS
  */
 Route::get('/convocatorias/{imagen}', 'principal\ConvocatoriaController@getconvocatoria')->name('convocatoria');
+/**
+ * instructores externos
+ */
+Route::get('/convocatoria/instructores', [InstructoresExternosController::class, 'index'])->name('convocatoria.instructores.externos');
+Route::get('/convocatorias/instructores/externos/detalle/{id}', [InstructoresExternosController::class, 'show'])->name('convocatoria.instructores_externos.detalle');
 
  /**
   * cursos por categorias
