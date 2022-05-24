@@ -299,7 +299,8 @@ class CuentapublicaController extends Controller
 
         $acta_apertura_propuestas_tecnicas = [
             'ACTA DE APERTURA DE PROPUESTAS TÉCNICAS' => 'licitaciones_/federal/acta_apertura_propuestas_tecnicas.pdf',
-            'ACTA DE FALLO' => 'licitaciones_/federal/ACTA_DE_FALLO_2022.pdf'
+            'ACTA DE FALLO' => 'licitaciones_/federal/ACTA_DE_FALLO_2022.pdf',
+            'ICATECH/004/2022 COMPRANET IA-907081961-E4-2022' => 'licitaciones_/federal/ACTA_DE_PRESENTACION_Y_APERTURA.pdf'
         ];
 
         $bprincipal = $this->getBanner('banner_principal');
