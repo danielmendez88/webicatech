@@ -239,7 +239,7 @@ class CuentapublicaController extends Controller
         );
 
         $man_induccion =array(
-            'Manual de Inducción 2018' => 'normatividad_/manuales/induccion/manual_induccion2018.pdf'
+            'Manual de Inducción 2022' => 'normatividad_/manuales/induccion/manual_induccion_2022.pdf'
         );
 
         $manu_procedimientos =array(
