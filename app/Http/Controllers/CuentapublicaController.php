@@ -280,35 +280,49 @@ class CuentapublicaController extends Controller
 
     public function licitaciones()
     {
-        $lic_anual_adquisiciones = array(
-            'PROGRAMA ANUAL 2022' => 'licitaciones_/adquisiciones/programa_anual_de_adquisiciones_federal_2022.pdf',
-        );
-
-        $lic_federal_acta_circunstanciada = array(
-            '- ACTA CIRCUNSTANCIADA 01' => 'licitaciones_/federal/ACTA_CIRCUNSTANCIADA_NO_01.pdf'
-        );
-
-        $programa_anual_adquisiciones = array(
-            'PROGRAMA 2020' => 'licitaciones_/adquisiciones/programa_2020.pdf',
-            'PROGRAMA 2021' => 'licitaciones_/adquisiciones/programa_2021.pdf'
-        );
-
-        $acta_fallo_propuesta_tecnica = [
-            'ICATECH-ICTP/001/2022' => 'licitaciones_/federal/ACTA_DE_FALLO_MARZO_2022.pdf',
+        $programa_anual_adquisiciones = [
+            'PROGRAMA ANUAL DE ADQUISICIONES' => 'licitaciones_/adquisiciones/PADA_1.pdf'
         ];
-
-        $acta_apertura_propuestas_tecnicas = [
-            'ACTA DE APERTURA DE PROPUESTAS TÉCNICAS' => 'licitaciones_/federal/acta_apertura_propuestas_tecnicas.pdf',
-            'ACTA DE FALLO' => 'licitaciones_/federal/ACTA_DE_FALLO_2022.pdf',
-            'ICATECH/004/2022 COMPRANET IA-907081961-E4-2022' => 'licitaciones_/federal/ACTA_DE_PRESENTACION_Y_APERTURA.pdf',
-            'ICATECH-ICTP/003/2022 COMPRANET IA-907081961-E3-2022' => 'licitaciones_/federal/ICATECH_ICTP_003_2022_COMPRANET_IA_907081961_E3_2022.pdf',
-            'ACTA DE FALLO CAAS' => 'licitaciones_/federal/ACTA_DE_FALLO_CAAS_ICATECH_2022.pdf'
+        $icatech_ictp_003_2022 = [
+            'ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONÓMICAS' => 'licitaciones_/adquisiciones/AAPTE_2.pdf',
+            'ACTA DE FALLO' => 'licitaciones_/adquisiciones/ADF_3.pdf'
         ];
+        $icatech_ictp_004_2022 = [
+            'ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONÓMICAS' => 'licitaciones_/adquisiciones/AAPTE_4.pdf',
+            // 'ACTA DE FALLO' => ''
+        ];
+        // $lic_anual_adquisiciones = array(
+        //     'PROGRAMA ANUAL 2022' => 'licitaciones_/adquisiciones/programa_anual_de_adquisiciones_federal_2022.pdf',
+        // );
+
+        // $lic_federal_acta_circunstanciada = array(
+        //     '- ACTA CIRCUNSTANCIADA 01' => 'licitaciones_/federal/ACTA_CIRCUNSTANCIADA_NO_01.pdf'
+        // );
+
+        // $programa_anual_adquisiciones = array(
+        //     'PROGRAMA 2020' => 'licitaciones_/adquisiciones/programa_2020.pdf',
+        //     'PROGRAMA 2021' => 'licitaciones_/adquisiciones/programa_2021.pdf'
+        // );
+
+        // $acta_apertura_propuestas_tecnicas = [
+        //     'ACTA DE APERTURA DE PROPUESTAS TÉCNICAS' => 'licitaciones_/federal/acta_apertura_propuestas_tecnicas.pdf',
+        //     'ACTA DE FALLO' => 'licitaciones_/federal/ACTA_DE_FALLO_2022.pdf',
+        //     'ICATECH/004/2022 COMPRANET IA-907081961-E4-2022' => 'licitaciones_/federal/ACTA_DE_PRESENTACION_Y_APERTURA.pdf',
+        //     'ICATECH-ICTP/003/2022 COMPRANET IA-907081961-E3-2022' => 'licitaciones_/federal/ICATECH_ICTP_003_2022_COMPRANET_IA_907081961_E3_2022.pdf',
+        //     'ACTA DE FALLO CAAS' => 'licitaciones_/federal/ACTA_DE_FALLO_CAAS_ICATECH_2022.pdf'
+        // ];
 
         $bprincipal = $this->getBanner('banner_principal');
         
 
-        return view('pages.licitaciones', [ 'bprincipal' => $bprincipal, 'lic_anual_adquisiciones' => $lic_anual_adquisiciones, 'acta_fallo_propuesta_tecnica' => $acta_fallo_propuesta_tecnica, 'acta_apertura_propuestas_tecnicas' => $acta_apertura_propuestas_tecnicas]);
+        return view('pages.licitaciones', 
+            [
+                'bprincipal' => $bprincipal,
+                'programa_anual_adquisiciones' => $programa_anual_adquisiciones,
+                'icatech_ictp_003_2022' => $icatech_ictp_003_2022,
+                'icatech_ictp_004_2022' => $icatech_ictp_004_2022
+            ]
+        );
     }
 
     public function sevac()
