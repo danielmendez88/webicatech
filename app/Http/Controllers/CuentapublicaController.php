@@ -301,7 +301,8 @@ class CuentapublicaController extends Controller
             'ACTA DE APERTURA DE PROPUESTAS TÉCNICAS' => 'licitaciones_/federal/acta_apertura_propuestas_tecnicas.pdf',
             'ACTA DE FALLO' => 'licitaciones_/federal/ACTA_DE_FALLO_2022.pdf',
             'ICATECH/004/2022 COMPRANET IA-907081961-E4-2022' => 'licitaciones_/federal/ACTA_DE_PRESENTACION_Y_APERTURA.pdf',
-            'ICATECH-ICTP/003/2022 COMPRANET IA-907081961-E3-2022' => 'licitaciones_/federal/ICATECH_ICTP_003_2022_COMPRANET_IA_907081961_E3_2022.pdf'
+            'ICATECH-ICTP/003/2022 COMPRANET IA-907081961-E3-2022' => 'licitaciones_/federal/ICATECH_ICTP_003_2022_COMPRANET_IA_907081961_E3_2022.pdf',
+            'ACTA DE FALLO CAAS' => 'licitaciones_/federal/ACTA_DE_FALLO_CAAS_ICATECH_2022.pdf'
         ];
 
         $bprincipal = $this->getBanner('banner_principal');
