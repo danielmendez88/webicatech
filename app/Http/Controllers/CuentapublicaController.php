@@ -289,7 +289,7 @@ class CuentapublicaController extends Controller
         ];
         $icatech_ictp_004_2022 = [
             'ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONÓMICAS' => 'licitaciones_/adquisiciones/AAPTE_4.pdf',
-            // 'ACTA DE FALLO' => ''
+            'ACTA DE FALLO' => 'licitaciones_/adquisiciones/ADF_4.pdf'
         ];
         // $lic_anual_adquisiciones = array(
         //     'PROGRAMA ANUAL 2022' => 'licitaciones_/adquisiciones/programa_anual_de_adquisiciones_federal_2022.pdf',
