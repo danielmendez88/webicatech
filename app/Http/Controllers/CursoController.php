@@ -118,4 +118,10 @@ class CursoController extends Controller
         $cursoResult =  Curso::where("curso",'LIKE', $request->busqueda."%")->take(10)->get();
         return Response::json($cursoResult);
     }
+
+    public function getcatfactibilidad(){
+        $arr_imagenes = ['1' => 'unidad_tuxtla.pdf','2' => 'unidad_ocosingo.pdf','3' => 'unidad_tapachula.pdf', '4' => 'unidad_reforma.pdf', '5' => 'unidad_comitan.pdf', '6' => 'unidad_sancristobal.pdf', '7' => 'unidad_yajalon.pdf', '8' => 'unidad_villaflores.pdf', '9' => 'unidad_catazaja.pdf', '10' => 'unidad_jiquipilas.pdf', '11' => 'unidad_tonala.pdf'];
+        $bprincipal = $this->getBanner('banner_principal');
+        return view('pages.factibilidad.cursos_factibilidad', compact('bprincipal', 'arr_imagenes'));
+    }
 }

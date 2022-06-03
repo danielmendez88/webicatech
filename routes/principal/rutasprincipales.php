@@ -76,6 +76,12 @@ Route::get('/integridad/directorio-consejeros', 'principal\IntegridadController@
 Route::get('/integridad/directorio-asesores', 'principal\IntegridadController@getdirectorioasesores')->name('integridad.directorio.asesores');
 Route::get('/integridad/informe-anual-actividades', 'principal\IntegridadController@getinformeanualactividades')->name('integridad.informe.anual.actividades');
 
+/**
+ * catálogo factibilidad
+ */
+
+Route::get('/cursos/factibilidad', 'CursoController@getcatfactibilidad')->name('catalogo.factibilidad');
+
 
 
 
