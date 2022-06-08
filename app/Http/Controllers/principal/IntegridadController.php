@@ -127,9 +127,10 @@ class IntegridadController extends Controller
         return view('theme.main.integridad.protocolo_atencion_quejas_denuncias', compact('bprincipal', 'array_atencion_quejas_denuncias'));
     }
     protected function getpronunciamiento(){
-        $array_cero_tolerancia = array(
-            'Pronunciamiento Cero Tolerancia a las Conductas de Hostigamiento Sexual y Acoso Sexual' => 'codigos_conducta/pronunciamiento_cero_tolerancia_a_las_conductas_de_has_2021.pdf'
-        );
+        $array_cero_tolerancia = [
+            'Pronunciamiento Cero Tolerancia a las Conductas de Hostigamiento Sexual y Acoso Sexual 2022' => 'codigos_conducta/PRONUNCIAMIENTO_CERO_TOLERANCIA.pdf',
+            'Pronunciamiento Cero Tolerancia a las Conductas de Hostigamiento Sexual y Acoso Sexual 2021' => 'codigos_conducta/pronunciamiento_cero_tolerancia_a_las_conductas_de_has_2021.pdf',
+        ];
         $bprincipal = $this->getBanner('banner_principal');
         return view('theme.main.integridad.pronunciamiento', compact('bprincipal', 'array_cero_tolerancia'));
     }
