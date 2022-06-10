@@ -2,13 +2,13 @@
 
 @section('contenido_integridad')
 <article class="u-shadow-v11 rounded g-pa-30">
-    <div class="media">
-        <div class="media-body">
-            <span class="d-block g-mb-3 g-font-size-22 g-color-gray-dark-v1 g-font-secondary">
-                PRONUNCIAMIENTO
-            </span>
+
+    <div class="row" style="text-align:center">
+        <div class="col-sm-12" style="margin-top:25px; text-align:justify">
+            <img src="{{ asset('assets/img/banner/banner_pronunciamiento.jpeg') }}" alt=""  width="100%">
         </div>
     </div>
+    
     <hr class="g-brd-gray-light-v4">
     <p style="text-align:justify">
         En el Instituto de Capacitación y Vinculación Tecnológica del Estado de Chiapas, estamos construyendo ambientes laborales respetuosos de la ética, la dignidad, los valores de igualdad y no discriminación, equidad de genero y respeto.
