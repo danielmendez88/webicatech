@@ -291,6 +291,9 @@ class CuentapublicaController extends Controller
             'ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONÓMICAS' => 'licitaciones_/adquisiciones/AAPTE_4.pdf',
             'ACTA DE FALLO' => 'licitaciones_/adquisiciones/ADF_4.pdf'
         ];
+        $icatech_ictp_005_2022 = [
+            'ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONÓMICAS' => 'licitaciones_/adquisiciones/AAPTE_5.pdf',
+        ];
         // $lic_anual_adquisiciones = array(
         //     'PROGRAMA ANUAL 2022' => 'licitaciones_/adquisiciones/programa_anual_de_adquisiciones_federal_2022.pdf',
         // );
@@ -320,7 +323,8 @@ class CuentapublicaController extends Controller
                 'bprincipal' => $bprincipal,
                 'programa_anual_adquisiciones' => $programa_anual_adquisiciones,
                 'icatech_ictp_003_2022' => $icatech_ictp_003_2022,
-                'icatech_ictp_004_2022' => $icatech_ictp_004_2022
+                'icatech_ictp_004_2022' => $icatech_ictp_004_2022,
+                'icatech_ictp_005_2022' => $icatech_ictp_005_2022
             ]
         );
     }
