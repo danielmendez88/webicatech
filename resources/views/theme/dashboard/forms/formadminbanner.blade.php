@@ -209,6 +209,9 @@
               var optionSelected = $("option:selected", this);
               // switcheamos la variable
               switch (optionSelected.val()) {
+                case '2':
+                 $( "#url_pagina" ).prop( "disabled", false );
+                break;
                 case '3':
                     $('#archivo_revista').prop("disabled", false);
                     $( "#url_pagina" ).prop( "disabled", false );
