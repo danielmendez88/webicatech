@@ -180,9 +180,15 @@
                     @if (count($bsecundario) > 0)
                         @foreach ($bsecundario as $itembannersecundario)
                           <div>
-                            <img data-lazy="{{ $itembannersecundario->path }}" data-srcset="{{ $itembannersecundario->path }} 960w" data-sizes="100vw" aria-hidden="true" 
-                              {{ is_null($itembannersecundario->href) ? '' : 'data-target="_blank" data-href='.$itembannersecundario->href }}
-                              {{  is_null($itembannersecundario->path_vinculado) ? '' : 'data-toggle=modal data-target=#modelPreComision data-bannersecundario='.$itembannersecundario->path_vinculado }}>
+                           @if (!is_null($itembannersecundario->href))
+                              <a href="{{ $itembannersecundario->href }}" target="_blank">
+                                  <img data-lazy="{{ $itembannersecundario->path }}" data-srcset="{{ $itembannersecundario->path }} 960w" data-sizes="100vw" aria-hidden="true" 
+                                  {{  is_null($itembannersecundario->path_vinculado) ? '' : 'data-toggle=modal data-target=#modelPreComision data-bannersecundario='.$itembannersecundario->path_vinculado }}>
+                              </a>
+                           @else
+                                <img data-lazy="{{ $itembannersecundario->path }}" data-srcset="{{ $itembannersecundario->path }} 960w" data-sizes="100vw" aria-hidden="true" 
+                                {{  is_null($itembannersecundario->path_vinculado) ? '' : 'data-toggle=modal data-target=#modelPreComision data-bannersecundario='.$itembannersecundario->path_vinculado }}>
+                           @endif
                           </div>
                         @endforeach
                     @else
