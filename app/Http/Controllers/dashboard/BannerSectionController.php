@@ -109,6 +109,11 @@ class BannerSectionController extends Controller
                  * comprobar el banner
                  */
                 switch ($cat_banner) {
+                    case 2:
+                        # banner secundario
+                        $urlref = $_POST['url_pagina'];
+                        $pivote = false;
+                    break;
                     case 3:
                         # checamos el banner revista
                         /**
@@ -123,7 +128,6 @@ class BannerSectionController extends Controller
                         parse_str(parse_url($urlref, PHP_URL_QUERY), $my_array_of_vars);
                         $pivote = false;
                     break;
-                    
                     default:
                         # code...
                         $urlref = '';
@@ -438,12 +442,12 @@ class BannerSectionController extends Controller
                 $banner_secundario_vinculado->id_banner = $idLinkedBanner;
                 $banner_secundario_vinculado->activado = $habilitado;
                 $banner_secundario_vinculado->save();
-
-                /**
-                 * redireccionamiento
-                 */
-                return redirect()->route('select_category', $id_categoria)->with('success', 'Banner Secundario Vinculado Éxitosamente!');
             }
+            /**
+            * redireccionamiento
+            */
+
+            return redirect()->route('select_category', $id_categoria)->with('success', 'Banner Secundario Vinculado Éxitosamente!');
         } catch (QueryException $th) {
             //throw QueryException;
             return back()->with('error', $th->getMessage());
