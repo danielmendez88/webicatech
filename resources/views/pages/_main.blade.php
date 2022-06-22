@@ -181,6 +181,7 @@
                         @foreach ($bsecundario as $itembannersecundario)
                           <div>
                             <img data-lazy="{{ $itembannersecundario->path }}" data-srcset="{{ $itembannersecundario->path }} 960w" data-sizes="100vw" aria-hidden="true" 
+                              {{ is_null($itembannersecundario->href) ? '' : 'data-target="_blank" data-href='.$itembannersecundario->href }}
                               {{  is_null($itembannersecundario->path_vinculado) ? '' : 'data-toggle=modal data-target=#modelPreComision data-bannersecundario='.$itembannersecundario->path_vinculado }}>
                           </div>
                         @endforeach
