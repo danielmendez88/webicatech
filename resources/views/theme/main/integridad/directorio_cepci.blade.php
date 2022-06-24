@@ -252,7 +252,7 @@
                 Miembro propietario temporal nivel Operativo
             </strong>
             <br>
-            Miembro propietario temporal nivel Operativo
+                Analista Técnico Especializado
             <br>
             ICATECH planta baja, 14 poniente norte No.239, Colonia Moctezuma, C.P. 29030
             Tuxtla Gutiérrez, Chiapas.

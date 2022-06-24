@@ -121,7 +121,7 @@ class IntegridadController extends Controller
     protected function getquejasodenuncias()
     {
         $array_atencion_quejas_denuncias = array(
-            'Protocolo de Atención de Quejas y Denuncias'=> 'codigos_conducta/protocolo-de-atencion-a-denuncias.pdf',
+            'Protocolo de Atención de Denuncias 2022' => 'codigos_conducta/PROTOCOLO_DE_ATENCION_DE_DENUNCIAS_2022.pdf'
         );
         $bprincipal = $this->getBanner('banner_principal');
         return view('theme.main.integridad.protocolo_atencion_quejas_denuncias', compact('bprincipal', 'array_atencion_quejas_denuncias'));
