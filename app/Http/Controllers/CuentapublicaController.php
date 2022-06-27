@@ -235,7 +235,8 @@ class CuentapublicaController extends Controller
         );
 
         $reg_reglamentos = array(
-            'Reglamento Interior 2018' => 'normatividad_/reglamentos/reglamento_interno2018.pdf'
+            'Reglamento Interior 2018' => 'normatividad_/reglamentos/reglamento_interno2018.pdf',
+            'Reglamento Interior 2022' => 'normatividad_/reglamentos/reglamento_interno2022.pdf'
         );
 
         $man_induccion =array(
