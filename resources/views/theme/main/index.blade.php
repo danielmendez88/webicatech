@@ -34,8 +34,7 @@
     <link rel="stylesheet" href="{{asset("assets/css/unify-globals.css")}}">
     <link rel="stylesheet" href="{{asset("assets/css/custom.css")}}">
     <link rel="stylesheet" href="{{ asset("assets/css/layout.css") }}">
-    <link rel="stylesheet" href="{{ asset("assets/css/slick/slick-theme.css") }}">
-    <link rel="stylesheet" href="{{ asset("assets/css/slick/slick.css") }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/flexslider.css') }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
         .redes_sociales {
@@ -71,20 +70,17 @@
     <script src="{{asset("assets/js/ticker.js")}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="{{ asset("assets/js/slick.min.js") }}"></script>
-    <script src="{{ asset("assets/js/slick.js") }}"></script>
+    <script src="{{ asset('assets/js/jquery.flexslider.js') }}"></script>
 
     <script src="{{asset("assets/js/uppercase.js")}}"></script>
     {{-- CONTENIDO DEL SCRIPT JS --}}
     <script type="text/javascript">
         $(document).ready(function(){
-            $('.lazy').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 3500,
-                arrows: false,
-                fade: true,
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function(slider){
+                    $('body').removeClass('loading');
+                }
             });
         });
     </script>

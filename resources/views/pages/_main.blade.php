@@ -44,6 +44,23 @@
     .carta:hover img.card-img {
       filter: grayscale(100%);
     }
+    img.imagen_carrusel{
+      width: 100%;
+      max-height: 100%; /*maximum height for all slides*/
+      object-fit: fill;
+    }
+    .flex-caption {
+      width: 100%;
+      padding: 1.5%;
+      left: 0;
+      bottom: 0;
+      background: white;
+      color: black;
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: bold;
+      font-family: 'Times New Roman';
+    }
 	</style>
 @endsection
 
@@ -96,7 +113,6 @@
              {{-- include social media --}}
               @include('theme.main.media')
              {{-- include social media END --}}
-              
               <div class="row">
                 @if (count($comunicados) > 0)       
                   @foreach ($comunicados as $itemComunicados)
@@ -166,58 +182,69 @@
                 @endif
               </div>
             {{-- SECCIÓN COMUNICADOS END --}}
-            {{-- SECCIÓN DE INDICE BANNER --}}
-              <div class="col-sm-12">
-                <div class="comunicados">
-                  &nbsp;&nbsp;
-                </div>
-              </div>
-            {{-- SECCIÓN DE INDICE BANNER END --}}
             {{-- BANNER SECUNDARIO --}}
               <div class="row">
-                <div class="col-sm-12">
-                  <section class="lazy slider" data-sizes="50vw">
-                    @if (count($bsecundario) > 0)
-                        @foreach ($bsecundario as $itembannersecundario)
-                          <div>
-                           @if (!is_null($itembannersecundario->href))
-                              <a href="{{ $itembannersecundario->href }}" target="_blank">
-                                  <img data-lazy="{{ $itembannersecundario->path }}" data-srcset="{{ $itembannersecundario->path }} 960w" data-sizes="100vw" aria-hidden="true" 
-                                  {{  is_null($itembannersecundario->path_vinculado) ? '' : 'data-toggle=modal data-target=#modelPreComision data-bannersecundario='.$itembannersecundario->path_vinculado }}>
+                <div class="col-6 col-sm-1 mb-3"></div>
+                <div class="col-6 col-sm-10 mb-3">
+                    <section class="slider">
+                      <div class="flexslider">
+                        <ul class="slides">
+                         @if ( count($bsecundario) > 0)
+                          @foreach ($bsecundario as $itembannersecundario)
+                            <li>
+                              <img class="imagen_carrusel" src="{{ $itembannersecundario->path }}" />
+                              @if (!is_null($itembannersecundario->path_vinculado))
+                                <p class="flex-caption">
+                                  <a href="javascript:;" data-toggle="modal" data-target="#modelPreComision" data-bannersecundario="{{ $itembannersecundario->path_vinculado }}">
+                                    VER CONVOCATORIA
+                                  </a>
+                                </p>
+                              @elseif (!is_null($itembannersecundario->href) && !empty($itembannersecundario->href))
+                                {{-- modificaciones de ver href --}}
+                                <p class="flex-caption">
+                                  <a href="{{ $itembannersecundario->href }}" target="_blank">
+                                    IR A PUBLICACIÓN
+                                  </a>
+                                </p>
+                              @else
+                                
+                              @endif
+                              
+                            </li>
+                          @endforeach
+                         @else
+                          <li>
+                            <img class="imagen_carrusel" src="{{ asset('Imagenes Pagina/imagen_prueba1.jpeg') }}" />
+                            <p class="flex-caption">
+                              <a href="javascript:;" target="_blank">
+                                IR A PUBLICACIÓN
                               </a>
-                           @else
-                                <img data-lazy="{{ $itembannersecundario->path }}" data-srcset="{{ $itembannersecundario->path }} 960w" data-sizes="100vw" aria-hidden="true" 
-                                {{  is_null($itembannersecundario->path_vinculado) ? '' : 'data-toggle=modal data-target=#modelPreComision data-bannersecundario='.$itembannersecundario->path_vinculado }}>
-                           @endif
-                          </div>
-                        @endforeach
-                    @else
-                      <div>
-                        <img data-lazy="{{ asset('/sitio/banner_pnt.jpg') }}" data-srcset="{{ asset('/sitio/banner_pnt.jpg') }} 960w" data-sizes="100vw" aria-hidden="true">
+                            </p>
+                          </li>
+                          <li>
+                            <img class="imagen_carrusel" src="{{ asset('Imagenes Pagina/imagen_prueba2.jpeg') }}" />
+                            <p class="flex-caption">
+                              <a href="javascript:;" target="_blank">
+                                IR A PUBLICACIÓN
+                              </a>
+                            </p>
+                          </li>
+                         @endif
+                        </ul>
                       </div>
-                      <div>
-                        <img data-lazy="{{ asset('/sitio/bannernormatividad.jpg') }}" data-srcset="{{ asset('/sitio/bannernormatividad.jpg') }} 650w, {{ asset('/sitio/bannernormatividad.jpg') }} 960w" data-sizes="100vw" aria-hidden="true">
-                      </div>
-                      <div>
-                        <img data-lazy="{{ asset('/sitio/banner-plan.png') }}"  data-srcset="{{ asset('/sitio/banner-plan.png') }} 650w, {{ asset('/sitio/banner-plan.png') }} 960w" data-sizes="100vw" aria-hidden="true">
-                      </div>
-                      <div>
-                        <img data-lazy="{{ asset('/sitio/banner_pnt.jpg') }}"  data-srcset="{{ asset('/sitio/banner_pnt.jpg') }} 650w, {{ asset('/sitio/banner_pnt.jpg') }} 960w" data-sizes="100vw" aria-hidden="true">
-                      </div>
-                      <div>
-                        <!-- this slide should inherit the sizes attr from the parent slider -->
-                        <img data-lazy="{{ asset('/sitio/calendario_marzo_2021.jpeg') }}"  data-srcset="{{ asset('/sitio/calendario_marzo_2021.jpeg') }} 650w, {{ asset('/sitio/calendario_marzo_2021.jpeg') }} 960w">
-                      </div>
-                    @endif
-                  </section>
+                    </section>
                 </div>
+                <div class="col-6 col-sm-1 mb-3"></div>
               </div>
+              <br><br><br><br><br>
             {{-- BANNER SECUNDARIO END --}}
             {{-- SECCIÓN DE INDICE REVISTA --}}
-              <div class="col-sm-12">
-                <div class="comunicados">
-                  <a href="{{ route('revista') }}"><p>REVISTA DIGITAL</p></a>
-                  <div class="separador"></div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="comunicados">
+                    <a href="{{ route('revista') }}"><p>REVISTA DIGITAL</p></a>
+                    <div class="separador"></div>
+                  </div>
                 </div>
               </div>
             {{-- SECCIÓN DE INDICE REVISTA END --}}
@@ -276,14 +303,17 @@
                   </div>
                 @endif
               </div>
+              <br><br><br>
             {{-- SECCION DE PAGOS Y APLICACIONES END--}}
             {{-- SECCIÓN INDICE VIDEOTECA --}}
-            <div class="col-sm-12">
-              <div class="comunicados">
-                <p>VIDEOTECA</p>
-                <div class="separador"></div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="comunicados">
+                    <p>VIDEOTECA</p>
+                    <div class="separador"></div>
+                  </div>
+                </div>
               </div>
-            </div>
             {{-- SECCIÓN INDICE VIDEOTECA END --}}
             
             {{-- SECCIÓN DEL VIDEO --}}
