@@ -37,9 +37,6 @@ class MainController extends Controller
         return view('inicio', compact('bprincipal', 'btransparencia', 'bsecundario', 'brevista', 'bvideoteca', 'comunicado_cintilla', 'comunicados'));
     }
 
-    public function noticias(){
-        return view('inicio');
-    }
 
     /**
      * Show the form for creating a new resource.
