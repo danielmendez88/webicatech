@@ -13,7 +13,6 @@ Auth::routes(['register' => false]);
  Route::get('/principal', 'principal\MainController@index')->name('principal');
  Route::get('/', 'principal\MainController@index');
 
- Route::get('/noticias', 'principal\MainController@noticias')->name('principal.news');
  Route::get('/transparencia', 'principal\MainController@gettransparencia')->name('transparencia');
 //  Route::get('/normatividad', 'principal\MainController@getnormatividad')->name('normatividad');
  Route::get('/normatividad', 'CuentapublicaController@normatividad')->name('normatividad');
