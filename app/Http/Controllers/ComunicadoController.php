@@ -128,11 +128,14 @@ class ComunicadoController extends Controller
         $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
         //el comunicado exacto
         $iddecode = base64_decode($id);
-        //dd($iddecode);
-        //$detatelle = new Comunidado();
+        
         $detatelle = Comunidado::SELECT('titulo', 'imagen', 'fecha_publicacion', 'localizacion', 'contenido', 'categorias', 'url', 'resumen', 'id')
                     ->WHERE('id', '=', $iddecode)
                     ->get();
+        if ($detatelle == null) {
+            # retornamos el error 404
+            return view('errors.404');
+        }
         $titulo = $detatelle[0]->titulo;
         $imagen = $detatelle[0]->imagen;
         $fecha = \Carbon\Carbon::parse($detatelle[0]->fecha_publicacion);
