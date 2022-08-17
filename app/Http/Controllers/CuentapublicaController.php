@@ -656,8 +656,21 @@ class CuentapublicaController extends Controller
             'Notas a los Estados Financieros' => 'sevac_/2022/1t/notas_estados_financieros.pdf',
         ];
 
+        $segundo_trimestre_2022 = [
+            'Estado Analítico del Activo' => 'sevac_/2022/2t/Estado_analitico_del_activo.pdf',
+            'Estado Analítico de la Deuda y Otros Pasivos' => 'sevac_/2022/2t/estado_analitico_deuda_otros_pasivos.pdf',
+            'Estado de Cambios en la Situación Financiera' => 'sevac_/2022/2t/estado_cambios_situacion_financiera.pdf',
+            'Estado de Actividades' => 'sevac_/2022/2t/Estado_de_Actividades.pdf',
+            'Estado de Situación Financiera' => 'sevac_/2022/2t/estado_de_situacion_financiera.pdf',
+            'Estado de Variación en la Hacienda Pública' => 'sevac_/2022/2t/estado_de_variacion_de_la_hacienda_publica.pdf',
+            'Estado de Flujos de Efectivos' => 'sevac_/2022/2t/estado_flujo_de_efectivo.pdf',
+            'Informe sobre Pasivos Contingentes' => 'sevac_/2022/2t/informe_sobre_pasivos_contingentes.pdf',
+            'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2022/2t/montos_pagados_por_ayudas_subsidios.pdf',
+            'Notas a los Estados Financieros' => 'sevac_/2022/2t/notas_estados_financieros.pdf',
+        ];
 
-        return view('pages.sevac', ['tercertrim2021' => $tercer_trimestre2021, 'seguntrim2021' => $segundo_trimestre2021, 'cuartotrim2020' => $cuarto_trimestre2020, 'primtrim2021' => $primer_trimestre2021, 'primtrim2020' => $prim_trimestre2020, 'segundtrim2020' => $segun_trimestre2020, 'tercertrim2020' => $tercer_trimestre2020, 'primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018, 'cuarto_trimestre2021' => $cuarto_trimestre2021, 'primtrim2022' => $primer_trimestre_2022]);
+
+        return view('pages.sevac', ['tercertrim2021' => $tercer_trimestre2021, 'seguntrim2021' => $segundo_trimestre2021, 'cuartotrim2020' => $cuarto_trimestre2020, 'primtrim2021' => $primer_trimestre2021, 'primtrim2020' => $prim_trimestre2020, 'segundtrim2020' => $segun_trimestre2020, 'tercertrim2020' => $tercer_trimestre2020, 'primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018, 'cuarto_trimestre2021' => $cuarto_trimestre2021, 'primtrim2022' => $primer_trimestre_2022, 'segtrim2022' => $segundo_trimestre_2022]);
         //comentario
     }
 
