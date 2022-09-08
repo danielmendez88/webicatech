@@ -667,6 +667,8 @@ class CuentapublicaController extends Controller
             'Informe sobre Pasivos Contingentes' => 'sevac_/2022/2t/informe_sobre_pasivos_contingentes.pdf',
             'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2022/2t/montos_pagados_por_ayudas_subsidios.pdf',
             'Notas a los Estados Financieros' => 'sevac_/2022/2t/notas_estados_financieros.pdf',
+            'Inventario de Bienes Inmuebles' => 'sevac_/2022/2t/inventario_bienes_inmuebles2022.pdf',
+            'Inventario de Bienes Muebles' => 'sevac_/2022/2t/inventario_bienes_muebles2022.pdf'
         ];
 
 
