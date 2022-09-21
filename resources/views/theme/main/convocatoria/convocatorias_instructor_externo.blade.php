@@ -131,6 +131,20 @@
             </div>
           </div>
         </div>
+{{-- Agregamos nueva información --}}
+        <div class="col" style="padding-top: 10px;padding-bottom: 10px;">
+          <div class="card convocatoria">
+            <img src="{{ asset('imagenes-cursos/convocatorias/ing_automotriz.jpeg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title titulo">Convocatoria</h5>
+              <p class="card-text contenido-texto">Ing. Industrial, Ing. Mecánico, Ing. Automotriz en gasolina y diésel, o afines</p>
+              <div class="enlaces">
+                <a class="enlaces_info" href="{{ route('convocatoria.instructores_externos.detalle',['id' => base64_encode(6)]) }}">Leer Más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+{{-- Agregamos nueva información END --}}
       </div>
 </div>
 @endsection
