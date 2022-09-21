@@ -139,7 +139,7 @@
               <h5 class="card-title titulo">Convocatoria</h5>
               <p class="card-text contenido-texto">Ing. Industrial, Ing. Mecánico, Ing. Automotriz en gasolina y diésel, o afines</p>
               <div class="enlaces">
-                <a class="enlaces_info" href="{{ route('convocatoria.instructores_externos.detalle',['id' => base64_encode(6)]) }}">Leer Más</a>
+                <a class="enlace_info" href="{{ route('convocatoria.instructores_externos.detalle',['id' => base64_encode(6)]) }}">Leer Más</a>
               </div>
             </div>
           </div>

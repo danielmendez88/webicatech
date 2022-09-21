@@ -146,7 +146,14 @@
                         <p class="pinstructores">convocatoria</p>
                         <p class="pconvocatoria">
                             El Instituto de Capacitación y Vinculación Tecnológica del <br>
-                            Estado de Chiapas a través de la Unidad de Capacitación <br> San Cristóbal, 
+                            Estado de Chiapas a través de la Unidad de Capacitación <br> 
+                            @switch($convocatoria->id)
+                                @case(6)
+                                    Tapachula,
+                                @break
+                                @default
+                                    San Cristóbal,
+                            @endswitch
                             convoca a los interesados
                             en formar parte de <br> nuestro Padrón de Instrcutores Externos de dicha unidad.
                         </p>
@@ -174,16 +181,44 @@
         <div class="row">
             <div class="col-lg-12">
                 <p class="textconvocatoria">
-                    <b>ENVIAR DOCUMENTACIÓN DIGITAL AL SIGUIENTE CORREO ELECTRÓNICO</b>
+
+                    <b>ENVIAR DOCUMENTACIÓN DIGITAL AL SIGUIENTE CORREO ELECTRÓNICO:</b>
                     <br>
-                    academico.ucsicatech@gmail.com
+                    @switch($convocatoria->id)
+                        @case(6)
+                            recepcion.documentostap@gmail.com <br>
+                            Tel: 9626957353
+                        @break
+                        @default
+                            academico.ucsicatech@gmail.com   
+                    @endswitch
                 </p>
                 <br>
                 <p class="textconvocatoria">
-                    <b>UNIDAD SAN CRISTÓBAL</b>
-                    Avenida Patzcuaro s/n., Lagos de Matía Eugenia <br>
-                    San Cristóbal  de las Casas, Chiapas.
+                   @switch($convocatoria->id)
+                    @case(6)
+                        <b>UNIDAD DE CAPACITACIÓN TAPACHULA</b>
+                        Calle Juana de Arco esquina calle ceballa, Col. Octavio Paz S/N <br>
+                        Tapachula, Chiapas.
+                    @break
+                    @default
+                        <b>UNIDAD SAN CRISTÓBAL</b>
+                        Avenida Patzcuaro s/n., Lagos de Matía Eugenia <br>
+                        San Cristóbal  de las Casas, Chiapas.
+                   @endswitch
+                    
                 </p>
+                @switch($convocatoria->id)
+                    @case(6)
+                        <p class="textconvocatoria">
+                            <b>Horario de atención:</b><br>
+                            <b>Lunes a Viernes</b><br>
+                            <b>9:00 a 15:00 hrs</b>
+                        </p>
+                    @break
+                    @default
+                        
+                @endswitch
             </div>
         </div>
     </div>
