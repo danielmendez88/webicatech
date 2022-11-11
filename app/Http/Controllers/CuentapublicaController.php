@@ -669,8 +669,23 @@ class CuentapublicaController extends Controller
             'Notas a los Estados Financieros' => 'sevac_/2022/2t/notas_estados_financieros.pdf',
         ];
 
+        $tercer_trimestre_2022 = [
+            'Estado Analítico del Activo' => 'sevac_/2022/3t/estado_analitico_del_activo.pdf',
+            'Estado Analítico de la Deuda y Otros Pasivos' => 'sevac_/2022/3t/estado_analitico_de_la_deuda_y_otros_pasivos.pdf',
+            'Estado de Actividades' => 'sevac_/2022/3t/estado_de_actividades.pdf',
+            'Estado de Cambios en la Situación Financiera' => 'sevac_/2022/3t/estado_de_cambios_en_la_situacion_financiera.pdf',
+            'Estado de Flujos de Efectivo' => 'sevac_/2022/3t/estado_de_flujos_de_efectivo.pdf',
+            'Estado de la Situación Financiera' => 'sevac_/2022/3t/estado_de_situacion_financiera.pdf',
+            'Estado de Variación en la Hacienda Pública' => 'sevac_/2022/3t/estado_de_variacion_en_la_hacienda_publica.pdf',
+            'Informe sobre Pasivos Contingentes' => 'sevac_/2022/3t/informe_sobre_pasivos_contingentes.pdf',
+            'Inventario de Bienes Inmuebles' => 'sevac_/2022/3t/inventario_de_bienes_inmuebles_2022.pdf',
+            'Inventario de Bienes Muebles' => 'sevac_/2022/3t/inventario_de_bienes_muebles.pdf',
+            'Monto Pagados por Ayudas y Subsidios' => 'sevac_/2022/3t/montos_pagados_por_ayudas_y_subsidios.pdf',
+            'Notas a los Estados Financieros' => 'sevac_/2022/3t/notas_a_los_estados_financieros.pdf',
+        ];
 
-        return view('pages.sevac', ['tercertrim2021' => $tercer_trimestre2021, 'seguntrim2021' => $segundo_trimestre2021, 'cuartotrim2020' => $cuarto_trimestre2020, 'primtrim2021' => $primer_trimestre2021, 'primtrim2020' => $prim_trimestre2020, 'segundtrim2020' => $segun_trimestre2020, 'tercertrim2020' => $tercer_trimestre2020, 'primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018, 'cuarto_trimestre2021' => $cuarto_trimestre2021, 'primtrim2022' => $primer_trimestre_2022, 'segtrim2022' => $segundo_trimestre_2022]);
+
+        return view('pages.sevac', ['tercertrim2021' => $tercer_trimestre2021, 'seguntrim2021' => $segundo_trimestre2021, 'cuartotrim2020' => $cuarto_trimestre2020, 'primtrim2021' => $primer_trimestre2021, 'primtrim2020' => $prim_trimestre2020, 'segundtrim2020' => $segun_trimestre2020, 'tercertrim2020' => $tercer_trimestre2020, 'primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018, 'cuarto_trimestre2021' => $cuarto_trimestre2021, 'primtrim2022' => $primer_trimestre_2022, 'segtrim2022' => $segundo_trimestre_2022, 'tertrim2022' => $tercer_trimestre_2022]);
         //comentario
     }
 
