@@ -394,10 +394,10 @@ class BannerSectionController extends Controller
     {
         // validar
         $validatedData = $request->validate([
-            'linked_file' => 'required|max:2048|mimes:jpg,png,jpeg,jpe',
+            'linked_file' => 'required|max:2048|mimes:jpg,png,jpeg,jpe,pdf',
         ], [
             'linked_file.required' => 'EL ARCHIVO ES REQUERIDO',
-            'linked_file.mimes' => 'NO SE ACEPTA ESTE TIPO DE ARCHIVO, SÓLO jpg, png, jpeg, jpe',
+            'linked_file.mimes' => 'NO SE ACEPTA ESTE TIPO DE ARCHIVO, SÓLO jpg, png, jpeg, jpe, pdf',
             'linked_file.max' => 'EL TAMAÑO MÁXIMO DE UN ARCHIVO A CARGAR ES DE 2MB (2048 KB)'
         ]);
         /**
@@ -425,8 +425,14 @@ class BannerSectionController extends Controller
                 ->join('catalogo_banner', 'catalogo_banner.id', '=', 'banner.id_catbanner')
                 ->where('banner.id', $idLinkedBanner)
                 ->first();
-                // url
-                $url_archivo = $this->uploadImage($archivo_banner_enlazado, $idLinkedBanner, $bannerById->slug.'_'.'secondary_banner', $extension, 'banner_secundario_vinculado'); #invocamos el método
+                // url si la extensión es pdf
+                if ($extension == 'pdf') {
+                    # se llama a otro uploadfile
+                    $url_archivo = $this->uploadFile($archivo_banner_enlazado, $idLinkedBanner, $bannerById->slug.'_'.'secondary_banner', 'banner_secundario_vinculado');
+                } else {
+                    $url_archivo = $this->uploadImage($archivo_banner_enlazado, $idLinkedBanner, $bannerById->slug.'_'.'secondary_banner', $extension, 'banner_secundario_vinculado'); #invocamos el método
+                }
+                
                 // creamos un arreglo
                 $array_documento = [
                     'linked_file' => $url_archivo
