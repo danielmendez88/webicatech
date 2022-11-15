@@ -194,11 +194,24 @@
                             <li>
                               <img class="imagen_carrusel" src="{{ $itembannersecundario->path }}" />
                               @if (!is_null($itembannersecundario->path_vinculado))
-                                <p class="flex-caption">
-                                  <a href="javascript:;" data-toggle="modal" data-target="#modelPreComision" data-bannersecundario="{{ $itembannersecundario->path_vinculado }}">
-                                    VER CONVOCATORIA
-                                  </a>
-                                </p>
+                                  @php
+                                      $tipo = pathinfo(\Storage::url($itembannersecundario->path_vinculado), PATHINFO_EXTENSION);
+                                  @endphp
+                                  @switch($tipo)
+                                    @case('pdf')
+                                        <p class="flex-caption">
+                                          <a href="{{ $itembannersecundario->path_vinculado }}" target="_blank">
+                                            LEER GUIA
+                                          </a>
+                                        </p>
+                                    @break
+                                    @default
+                                        <p class="flex-caption">
+                                          <a href="javascript:;" data-toggle="modal" data-target="#modelPreComision" data-bannersecundario="{{ $itembannersecundario->path_vinculado }}">
+                                            VER CONVOCATORIA
+                                          </a>
+                                        </p>
+                                  @endswitch
                               @elseif (!is_null($itembannersecundario->href) && !empty($itembannersecundario->href))
                                 {{-- modificaciones de ver href --}}
                                 <p class="flex-caption">
