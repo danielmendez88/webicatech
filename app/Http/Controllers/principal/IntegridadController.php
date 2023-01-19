@@ -147,6 +147,7 @@ class IntegridadController extends Controller
     {
         $array_informe_anual = array(
             'Informe Anual de Actividades 2021'=> 'codigos_conducta/informe_anual_de_actividades_2021.pdf',
+            'Informe Anual de Actividades 2022' => 'codigos_conducta/informe_anual_de_actividades_2022.pdf',
         );
         $bprincipal = $this->getBanner('banner_principal');
         return view('theme.main.integridad.informe_anual_actividades', compact('bprincipal', 'array_informe_anual'));
