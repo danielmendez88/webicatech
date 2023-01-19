@@ -258,9 +258,6 @@ class CuentapublicaController extends Controller
 
         $manu_organizacion = array(
             'Manual de Organizacion' => 'normatividad_/manuales/organizacion/organizacion.pdf',
-            'Manual de Organizacion - Organigramas y Funciones Parte 1' => 'normatividad_/manuales/organizacion/organigramas_y_funciones_1.pdf',
-            'Manual de Organizacion - Organigramas y Funciones Parte 2' => 'normatividad_/manuales/organizacion/organigramas_y_funciones_2.pdf',
-            'Manual de Organizacion - Glosario de Terminos de Trabajo' => 'normatividad_/manuales/organizacion/glosario_de_terminos_y_trabajo.pdf'
         );
         $diario_oficialicatech =array(
             'Lineamientos'=> 'normatividad_/reglamentos/decreto_lineamientos_icatech.pdf'
