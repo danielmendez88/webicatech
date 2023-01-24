@@ -268,10 +268,14 @@ class CuentapublicaController extends Controller
             'Programa Anual de Mejora Regulatoria 2021 - 2022' => 'normatividad_/mejora_regulatoria/Programa_Mejora_Regulatoria_ICATECH_2021.pdf'
         ];
 
+        $acta_instalacion_comite_tecnoligia_informacion_comunicaciones = [
+            'Acta de Instalación de Comité de Tecnologías de Información y Comunicaciones (CTIC)' => 'normatividad_/comite_tecnologias_informacion/acta_de_instalacion_de_comite_CTIC.pdf',
+        ];
+
         $bprincipal = $this->getBanner('banner_principal');
 
         return view('pages.normatividad', ['deccrea'=> $dec_decretos, 'manual_lineamientos'=> $diario_oficialicatech, 'reglam'=> $reg_reglamentos, 'manual'=> $man_induccion,
-        'manualproc'=> $manu_procedimientos, 'manualorga'=> $manu_organizacion, 'bprincipal' => $bprincipal, 'mejora_regulatoria' => $mejora_regulatoria]);
+        'manualproc'=> $manu_procedimientos, 'manualorga'=> $manu_organizacion, 'bprincipal' => $bprincipal, 'mejora_regulatoria' => $mejora_regulatoria, 'ctic' => $acta_instalacion_comite_tecnoligia_informacion_comunicaciones]);
 
     }
 
