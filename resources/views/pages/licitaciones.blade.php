@@ -24,7 +24,7 @@
                     <i class="fa fa-minus"></i>
                   </span>
                   <span class="g-pa-20">
-                    PROGRAMA ANUAL DE ADQUISICIONES
+                    PROGRAMA ANUAL DE ADQUISICIONES 2023
                   </span>
                 </a>
               </h5>

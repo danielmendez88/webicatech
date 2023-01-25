@@ -282,7 +282,7 @@ class CuentapublicaController extends Controller
     public function licitaciones()
     {
         $programa_anual_adquisiciones = [
-            'PROGRAMA ANUAL DE ADQUISICIONES' => 'licitaciones_/adquisiciones/PADA_1.pdf'
+            'PROGRAMA ANUAL DE ADQUISICIONES 2023' => 'licitaciones_/adquisiciones/PADA_2023.pdf'
         ];
         $icatech_ictp_003_2022 = [
             'ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONÓMICAS' => 'licitaciones_/adquisiciones/AAPTE_2.pdf',
