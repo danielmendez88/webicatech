@@ -270,6 +270,7 @@ class CuentapublicaController extends Controller
 
         $acta_instalacion_comite_tecnoligia_informacion_comunicaciones = [
             'Acta de Instalación de Comité de Tecnologías de Información y Comunicaciones (CTIC)' => 'normatividad_/comite_tecnologias_informacion/acta_de_instalacion_de_comite_CTIC.pdf',
+            'Primera Sesión Ordinaria del Comité de Tecnologías de Información y Comunicaciones ICATECH CTIC' => 'normatividad_/comite_tecnologias_informacion/primera_sesion_comite_CTIC.pdf'
         ];
 
         $bprincipal = $this->getBanner('banner_principal');
