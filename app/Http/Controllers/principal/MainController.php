@@ -110,7 +110,7 @@ class MainController extends Controller
          * consulta de transparencia
          */
         $programactividades_codigo = array(
-            'Informe del Plan Anual de Desarrollo Archivístico 2023' => 'archivtransparencia/INFORME_PADA_2023.pdf',
+            'Informe del Plan Anual de Desarrollo Archivístico 2022' => 'archivtransparencia/INFORME_PADA_2023.pdf',
             'Plan Anual de Desarrollo Archivístico 2023' => 'archivtransparencia/PLAN_ANUAL_DE_DESARROLLO_ARCHIVISTICO_2023.pdf'
         );
         /**
