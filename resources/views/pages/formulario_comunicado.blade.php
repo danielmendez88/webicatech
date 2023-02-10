@@ -17,7 +17,7 @@
         <h3><b>REDACTAR COMUNICADO</b></h3>
     </div>
     <hr style="border-color:dimgray">
-    <form action="{{ route('comunicados.save')}}" method="post" id="registercomunicado" enctype="multipart/form-data">
+    <form action="{{ route('comunicados.save')}}" method="POST" id="registercomunicado" enctype="multipart/form-data">
         @csrf {{-- modificaciones --}}
         
         <div class="form-row">
