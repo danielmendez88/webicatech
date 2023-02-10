@@ -61,7 +61,7 @@
         <!-- FOOTER PORTAL DE GOBIERNO -->
         @include("theme.lte.footer")
 
-            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
             <script src="{{asset("assets/vendor/jquery/jquery.min.js")}}"></script>
             <script src="{{asset("assets/vendor/jquery-migrate/jquery-migrate.min.js")}}"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
