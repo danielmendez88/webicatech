@@ -82,7 +82,7 @@ Route::middleware(['cors'])->group(function () {
    * inicio de sesión
    */
     Route::get('/login','LoginController@show_login_form')->name('login');
-    Route::post('/post-login', [AuthController::class, 'postLogin'])->name('login.post');
+    Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
 });
 
 
