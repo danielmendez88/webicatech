@@ -43,11 +43,6 @@ Route::get('/convocatorias/instructores/externos/detalle/{id}', [InstructoresExt
   * cursos por categorias
   */
 Route::get('/cursos/{id}/{categoria}', 'CursoController@show')->name('cursos');
-/**
- * inicio de sesión
- */
-Route::get('/login','LoginController@show_login_form')->name('login');
-Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
 
 /**
  * avisos de privacidad
@@ -83,6 +78,11 @@ Route::middleware(['cors'])->group(function () {
     Route::get('/nuevo-comunicado', 'ComunicadoController@getform');
     Route::post('/noticias-save', 'ComunicadoController@store')->name('comunicados.save');
     Route::get('/comunicado', 'ComunicadoController@getnews')->name('comunicado.index');
+    /**
+   * inicio de sesión
+   */
+    Route::get('/login','LoginController@show_login_form')->name('login');
+    Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
 });
 
 

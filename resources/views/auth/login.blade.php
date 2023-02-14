@@ -78,6 +78,7 @@
         <div class="container-login100">
             <div class="wrap-login100">
                 <form class="login100-form validate-form" method="POST" action="{{ route('login.post') }}">
+                    {{ method_field('POST') }}
                     @csrf
                     
                     @if ($message = Session::get('error'))
