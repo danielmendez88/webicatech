@@ -3,6 +3,7 @@ use Illuminate\Support\Facades\Route;
   
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\principal\InstructoresExternosController;
+use App\Http\Controllers\Auth\LoginController;
 /**
  * RUTAS PRINCIPALES DE LOS CAMBIOS DE LA PÁGINA WEB ADMINISTRABLE
  * estas rutas son cargadas en el RouteServiceProvider
@@ -81,7 +82,7 @@ Route::middleware(['cors'])->group(function () {
     /**
    * inicio de sesión
    */
-    Route::get('/login','LoginController@show_login_form')->name('login');
+    Route::get('/login', [LoginController::class, 'show_login_form'])->name('login');
     Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
 });
 
