@@ -7,9 +7,9 @@
 /**
  * agregar el auth en un middleware
  */
-Route::get('/login','LoginController@show_login_form')->name('login');
-Route::post('/login-post','LoginController@process_login')->name('login-post');
-Route::post('/logout', 'LoginController@logout')->name('logout');
+Route::get('/login','Auth\LoginController@show_login_form')->name('login');
+Route::post('/login-post','Auth\LoginController@process_login')->name('login-post');
+Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 
 Auth::routes(['register' => false]);
 
