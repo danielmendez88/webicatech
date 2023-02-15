@@ -29,5 +29,10 @@ class AppServiceProvider extends ServiceProvider
         //
         Paginator::useBootstrap();
         Schema::defaultStringLength(191);
+        // forzar https en producción
+        if ($this->app->environment('production')) {
+            # forzamos el esquema a trabajar con https
+            \URL::forceScheme('https');
+        }
     }
 }
