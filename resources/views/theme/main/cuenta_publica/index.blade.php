@@ -22,7 +22,7 @@
         <br>
         <div class="masonry-grid row g-mb-0 row-eq-height">
             <div class="masonry-grid-item col-sm-6 col-md-6 col-lg-12 g-mb-30">	
-                <img src="{{ asset('Imagenes Pagina/cuenta-publica.jpg') }}" class="img-responsive" width="100%" alig="center">
+                <img src="{{ asset('Imagenes_Pagina/cuenta-publica.jpg') }}" class="img-responsive" width="100%" alig="center">
             </div>
         </div>
         {{-- secciones --}}
@@ -55,7 +55,7 @@
                                             <div class="d-flex justify-content-between">
                                                 <ul class="u-list-inline"></ul>
                                                     <div class="align-self-center">
-                                                        <a class="" href="{{ $item->ruta_archivo }}" target="_blank"><img src="{{ asset('Imagenes Pagina/2.png') }}"alt=""></a>
+                                                        <a class="" href="{{ $item->ruta_archivo }}" target="_blank"><img src="{{ asset('Imagenes_Pagina/2.png') }}"alt=""></a>
                                                     </div>
                                             </div>
                                         </li> 

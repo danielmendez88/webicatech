@@ -334,7 +334,7 @@ class CuentapublicaController extends Controller
 
     public function sevac()
     {
-        $prim_trimestre2020 =array(
+        $primtrim2020 =array(
             'Estado Analitico de Deuda y de Otros Pasivos' => 'sevac_/2020/1t/estado_analitico_de_deuda_otros_pasivos.pdf',
             'Estado Analitico del Activo' => 'sevac_/2020/1t/estado_analitico_del_activo.pdf',
             'Estado de Actividades' => 'sevac_/2020/1t/estado_de_actividades.pdf',
@@ -361,7 +361,7 @@ class CuentapublicaController extends Controller
 
         );
 
-        $segun_trimestre2020 =array(
+        $segundtrim2020 =array(
             'Estado Analitico de Deuda y de Otros Pasivos' => 'sevac_/2020/2t/estado_analitico_de_la_deuda_y_otros_pasivos.pdf',
             'Estado Analitico del Activo por Rubros' => 'sevac_/2020/2t/estado_analitico_del_activo_por_rubros.pdf',
             'Estado de Actividades por Rubros' => 'sevac_/2020/2t/estado_de_actividades_por_rubros.pdf',
@@ -387,7 +387,7 @@ class CuentapublicaController extends Controller
 
         );
 
-        $tercer_trimestre2020 =array(
+        $tercertrim2020 =array(
             'Estado Analitico de Deuda y de Otros Pasivos' => 'sevac_/2020/3t/estado_analitico_de_deuda_otros_pasivos.pdf',
             'Estado Analitico del Activo por Rubros' => 'sevac_/2020/3t/estado_analitico_del_activo_por_rubros.pdf',
             'Estado de Actividades por Rubros' => 'sevac_/2020/3t/estado_de_actividades_por_rubros.pdf',
@@ -402,7 +402,7 @@ class CuentapublicaController extends Controller
 
         );
 
-        $prim_trimestre =array(
+        $primtrim =array(
             'Montos pagados por concepto de ayudas y subsidios' => 'sevac_/2019/t1/D.1.11 Montos pagados por concepto de ayudas y subsidios.pdf',
             'Estado de Actividades' => 'sevac_/2019/t1/D.2.1 Estado de Actividades.pdf',
             'Estado de Situacion Financiera' => 'sevac_/2019/t1/D.2.2 Estado de Situacion Financiera.pdf',
@@ -426,7 +426,7 @@ class CuentapublicaController extends Controller
 
         );
 
-        $seg_trimestre =array(
+        $segtrim =array(
             'Estado Analitico de Ingresos' => 'sevac_/2019/t2/estadoanaliticodeingresos.pdf',
             'Estado Analitico del Activo Rubros' => 'sevac_/2019/t2/estadoanaliticodelactivorubros.pdf',
             'Estado Analitico de la Deuda y otros Pasos' => 'sevac_/2019/t2/estadoanaliticodeladeudayotrospasivos.pdf',
@@ -440,7 +440,7 @@ class CuentapublicaController extends Controller
 
         );
 
-        $ter_trimestre =array(
+        $tertrim =array(
             'Estado Analitico de la deuda y otros pasivos' => 'sevac_/2019/t3/Estado_Analitico_de_la_Deuda_y_Otros_Pasivos.PDF',
             'Estado Analitico del Activo' => 'sevac_/2019/t3/Estado_Analitico_del_Activo.PDF',
             'Estado de Actividades'  => 'sevac_/2019/t3/Estado_de_Actividades.PDF',
@@ -466,7 +466,7 @@ class CuentapublicaController extends Controller
             'Relación de Cuentas Bancarias Productivos Espesificas' => 'sevac_/2019/t3/Relacion_de_Cuentas_Bancarias_Productivas_Especificas.pdf'
         );
 
-        $cuar_trimestre =array(
+        $cuatrim =array(
             'Estado Analitico de la deuda y otros pasivos' => 'sevac_/2019/tt4/estado_analatico_deuda_y_pasivos.PDF',
             'Estado Analitico del Activo' => 'sevac_/2019/tt4/edo_analitico_del_activo.PDF',
             'Estado de Actividades'  => 'sevac_/2019/tt4/estado_de_actividades.PDF',
@@ -513,7 +513,7 @@ class CuentapublicaController extends Controller
         );*/
 
 
-        $prim_trimestre2018 =array(
+        $trim2018 =array(
             'Montos Pagados por Concepto de Ayudas y Subsidios' => 'sevac_/2018/t1/D.1.11_Montos_pagados_por_concepto_de_ayudas_y_subidios.pdf',
             'Estado de Actividades' => 'sevac_/2018/t1/D.2.1_Estado_de_Actividades.pdf',
             'Estado de Situacion Financiera' => 'sevac_/2018/t1/D.2.2_Estado_de_Situacion_Financiera.pdf',
@@ -537,7 +537,7 @@ class CuentapublicaController extends Controller
 
         );
 
-        $seg_trimestre2018 =array(
+        $segtrim2018 =array(
             'Montos Pagados por Concepto de Ayudas y Subsidios' => 'sevac_/2018/t2/D.1.11 Montos pagados por concepto de ayudas y subidios.pdf',
             'Estado de Actividades' => 'sevac_/2018/t2/D.2.1 Estado de Actividades.pdf',
             'Estado de Situacion Financiera' => 'sevac_/2018/t2/D.2.2 Estado de Situacion Financiera.pdf',
@@ -561,7 +561,7 @@ class CuentapublicaController extends Controller
 
         );
 
-        $terc_trimestre2018 =array(
+        $tertrim2018 =array(
             'Montos Pagados por Concepto de Ayudas y Subsidios' => 'sevac_/2018_/t3/D.1.11 Montos pagados por concepto de ayudas y subsidios.pdf',
             'Estado de Actividades' => 'sevac_/2018_/t3/D.2.1 Estado de Actividades.pdf',
             'Estado de Situacion Financiera' => 'sevac_/2018_/t3/D.2.2 Estado de Situacion Financiera.pdf',
@@ -583,7 +583,7 @@ class CuentapublicaController extends Controller
             'Indicadores de Resultados' => 'sevac_/2018_/t3/D.4.2 Indicadores de Resultados.pdf',
             'Programación y Proyectos de Inversion' => 'sevac_/2018_/t3/D.4.3 Prog y Proyectos de Inversion.pdf'
         );
-        $cuarto_trimestre2020 =array(
+        $cuartotrim2020 =array(
             'Estado de Situación Financiera' => 'sevac_/2020/4t/1estado_de_situacion_financiera_por_rubros.pdf',
             'Estado de Actividades' => 'sevac_/2020/4t/2estado_de_actividades_por_rubros.pdf',
             'Estado de Variacion en la Hacienda Pública' => 'sevac_/2020/4t/3estado_de_variacion_en_la_hacienda_publica_por_rubros.pdf',
@@ -595,7 +595,7 @@ class CuentapublicaController extends Controller
             'Notas a los Estados Financieros' => 'sevac_/2020/4t/9notas_a_los_estados_financieros.pdf',
             'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2020/4t/10montos_pagados_por_ayudas_y_subsidios.pdf'
         );
-        $primer_trimestre2021 =array(
+        $primtrim2021 =array(
             'Estado de Situación Financiera' => 'sevac_/2021/1t/1_estado_de_situacion_flnanciera_por_rubros.pdf',
             'Estado de Actividades' => 'sevac_/2021/1t/2_estado_de_actividades_por_rubros.pdf',
             'Estado de Variacion en la Hacienda Pública' => 'sevac_/2021/1t/3_estado_de_variacion_en_la_hacienda_publica_por_rubros.pdf',
@@ -607,7 +607,7 @@ class CuentapublicaController extends Controller
             'Notas a los Estados Financieros' => 'sevac_/2021/1t/9_notas_a_los_estados_financieros.pdf',
             'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2021/1t/10_montos_pagados_por_ayudas_y_subsidios.pdf'
         );
-        $segundo_trimestre2021 =array(
+        $seguntrim2021 =array(
             'Estado de Situación Financiera' => 'sevac_/2021/2t/1_estado_de_situacion_financiera.pdf',
             'Estado de Actividades' => 'sevac_/2021/2t/2_estado_de_actividades.pdf',
             'Estado de Variacion en la Hacienda Pública' => 'sevac_/2021/2t/3_estado_de_variacion_de_la_hacienda_publica.pdf',
@@ -619,7 +619,7 @@ class CuentapublicaController extends Controller
             'Notas a los Estados Financieros' => 'sevac_/2021/2t/9_notas_a_los_estados_financieros.pdf',
             'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2021/2t/10_montos_pagados_por_ayudas_y_subsidios.pdf'
         );
-        $tercer_trimestre2021 =array(
+        $tercertrim2021 =array(
             'Estado de Situación Financiera' => 'sevac_/2021/3t/1_estado_de_situacion_financiera.pdf',
             'Estado de Actividades' => 'sevac_/2021/3t/2_estado_de_actividades.pdf',
             'Estado de Variacion en la Hacienda Pública' => 'sevac_/2021/3t/3_estado_de_variacion_de_hacienda_publica.pdf',
@@ -645,7 +645,7 @@ class CuentapublicaController extends Controller
             'Montos Pagados Ayudas Subsidios' => 'sevac_/2021/4t/10montos_pagados_ayudas_subsidios.pdf'
         ];
 
-        $primer_trimestre_2022 = [
+        $primtrim2022 = [
             'Estado Analítico de Deudas y Otros Pasivos' => 'sevac_/2022/1t/estado_Analitico_de_deuda_otros_pasivos.pdf',
             'Estado Analítico del Activo' => 'sevac_/2022/1t/estado_analitico_del_activo.pdf',
             'Estado de Cambios en Situación Financiera' => 'sevac_/2022/1t/estado_cambios_en_situacion_financiera.pdf',
@@ -658,7 +658,7 @@ class CuentapublicaController extends Controller
             'Notas a los Estados Financieros' => 'sevac_/2022/1t/notas_estados_financieros.pdf',
         ];
 
-        $segundo_trimestre_2022 = [
+        $segtrim2022 = [
             'Estado Analítico del Activo' => 'sevac_/2022/2t/Estado_analitico_del_activo.pdf',
             'Estado Analítico de la Deuda y Otros Pasivos' => 'sevac_/2022/2t/estado_analitico_deuda_otros_pasivos.pdf',
             'Estado de Cambios en la Situación Financiera' => 'sevac_/2022/2t/estado_cambios_situacion_financiera.pdf',
@@ -671,7 +671,7 @@ class CuentapublicaController extends Controller
             'Notas a los Estados Financieros' => 'sevac_/2022/2t/notas_estados_financieros.pdf',
         ];
 
-        $tercer_trimestre_2022 = [
+        $tertrim2022 = [
             'Estado Analítico del Activo' => 'sevac_/2022/3t/estado_analitico_del_activo.pdf',
             'Estado Analítico de la Deuda y Otros Pasivos' => 'sevac_/2022/3t/estado_analitico_de_la_deuda_y_otros_pasivos.pdf',
             'Estado de Actividades' => 'sevac_/2022/3t/estado_de_actividades.pdf',
@@ -686,8 +686,26 @@ class CuentapublicaController extends Controller
             'Notas a los Estados Financieros' => 'sevac_/2022/3t/notas_a_los_estados_financieros.pdf',
         ];
 
-
-        return view('pages.sevac', ['tercertrim2021' => $tercer_trimestre2021, 'seguntrim2021' => $segundo_trimestre2021, 'cuartotrim2020' => $cuarto_trimestre2020, 'primtrim2021' => $primer_trimestre2021, 'primtrim2020' => $prim_trimestre2020, 'segundtrim2020' => $segun_trimestre2020, 'tercertrim2020' => $tercer_trimestre2020, 'primtrim'=> $prim_trimestre, 'segtrim'=> $seg_trimestre, 'tertrim'=> $ter_trimestre, 'cuatrim'=> $cuar_trimestre, 'trim2018' => $prim_trimestre2018, 'segtrim2018' => $seg_trimestre2018, 'tertrim2018' => $terc_trimestre2018, 'cuarto_trimestre2021' => $cuarto_trimestre2021, 'primtrim2022' => $primer_trimestre_2022, 'segtrim2022' => $segundo_trimestre_2022, 'tertrim2022' => $tercer_trimestre_2022]);
+        $bprincipal = $this->getBanner('banner_principal');
+        return view('pages.sevac', compact('bprincipal', 
+        'tercertrim2021', 
+        'seguntrim2021', 
+        'cuartotrim2020', 
+        'primtrim2021', 
+        'primtrim2020', 
+        'segundtrim2020', 
+        'tercertrim2020', 
+        'primtrim', 
+        'segtrim', 
+        'tertrim', 
+        'cuatrim', 
+        'trim2018', 
+        'segtrim2018', 
+        'tertrim2018', 
+        'cuarto_trimestre2021', 
+        'primtrim2022', 
+        'segtrim2022', 
+        'tertrim2022'));
         //comentario
     }
 

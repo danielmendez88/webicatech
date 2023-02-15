@@ -83,7 +83,7 @@
                     </div> --}}
                 </form>
 
-                <div class="login100-more" style=" background-image: url('{{ asset('/Imagenes Pagina/icatech_banner_principal.jpg') }}'); background-size: contain, cover;">
+                <div class="login100-more" style=" background-image: url('{{ asset('/Imagenes_Pagina/icatech_banner_principal.jpg') }}'); background-size: contain, cover;">
                 </div>
             </div>
         </div>

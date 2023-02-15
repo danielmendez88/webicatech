@@ -38,13 +38,13 @@
 		{{-- include social media END --}}
 		<div class="row">
 			<div class="col-md-12">
-				<img src="{{ asset('Imagenes Pagina/cobertura2.jpg') }}" class="img-responsive" width="100%" style="height: auto;"  alig="center">
+				<img src="{{ asset('Imagenes_Pagina/cobertura2.jpg') }}" class="img-responsive" width="100%" style="height: auto;"  alig="center">
 			</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-md-12 maps">
-				<img src="{{ asset('Imagenes Pagina/mapa.jpg') }}" class="img-thumbnail" width="100%" style="height: auto;" alig="center">
+				<img src="{{ asset('Imagenes_Pagina/mapa.jpg') }}" class="img-thumbnail" width="100%" style="height: auto;" alig="center">
 			</div>
 		</div>
 		<br>

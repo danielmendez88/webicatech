@@ -21,32 +21,32 @@
         <div class="masonry-grid row g-mb-0 row-eq-height">
             <div class="masonry-grid-sizer col-sm-12"></div><br>
             <div class="masonry-grid-item col-sm-6 col-md-6 col-lg-12 g-mb-30">					
-                <img src="{{ asset('Imagenes Pagina/banner icatechtransparencia4.png') }}" class="img-responsive" width="100%">
+                <img src="{{ asset('Imagenes_Pagina/banner icatechtransparencia4.png') }}" class="img-responsive" width="100%">
             </div>
             <div class="row mb-3">
                 <div class="col-md-2 g-mb-30">
                     <a href="http://icatech.transparencia.chiapas.gob.mx" target="_new">
-                        <img src="{{ asset('Imagenes Pagina/transparencia-icatech.png') }}" class="imgRedonda">
+                        <img src="{{ asset('Imagenes_Pagina/transparencia-icatech.png') }}" class="imgRedonda">
                     </a>
                 </div>
                 <div class=" col-md-2 g-mb-30">
                     <a href="{{ route('cuenta-publica') }}">
-                        <img src="{{ asset('Imagenes Pagina/cuentapublica-icatech.png') }}" class="imgRedonda">
+                        <img src="{{ asset('Imagenes_Pagina/cuentapublica-icatech.png') }}" class="imgRedonda">
                     </a>
                 </div>
                 <div class=" col-md-2  g-mb-30">
                     <a href="{{ route('sevac') }}">
-                        <img src="{{ asset('Imagenes Pagina/sevac-icatech.png') }}" class="imgRedonda">
+                        <img src="{{ asset('Imagenes_Pagina/sevac-icatech.png') }}" class="imgRedonda">
                     </a>
                 </div>
                 <div class=" col-md-2 g-mb-30">
                     <a href="{{ route('integridad') }}">
-                        <img src="{{ asset('Imagenes Pagina/codigodecondcuta-icatech.png') }}" class="imgRedonda">
+                        <img src="{{ asset('Imagenes_Pagina/codigodecondcuta-icatech.png') }}" class="imgRedonda">
                     </a>
                 </div>
                 <div class=" col-md-2  g-mb-30">
                     <a href="{{ route('licitaciones') }}">
-                        <img src="{{ asset('Imagenes Pagina/licitaciones-icatech.png') }}" class="imgRedonda">
+                        <img src="{{ asset('Imagenes_Pagina/licitaciones-icatech.png') }}" class="imgRedonda">
                     </a>
                 </div>
             </div>
@@ -79,7 +79,7 @@
                                 <div class="d-flex justify-content-between">
                                     <ul class="u-list-inline"></ul>
                                     <div class="align-self-center">
-                                      <a class="" href="{{ $v }}" target="_blank"><img src="{{ asset('Imagenes Pagina/2.png') }}"alt=""></a>
+                                      <a class="" href="{{ $v }}" target="_blank"><img src="{{ asset('Imagenes_Pagina/2.png') }}"alt=""></a>
                                     </div>
                                 </div>
                             </li>  
@@ -94,22 +94,22 @@
         <div class="masonry-grid row g-mb-0 row-eq-height">
             <div class="row mb-3">
                 <div class="col-md-2 g-mb-30">
-                    <a href="http://inicio.inai.org.mx/SitePages/ifai.aspx" title="Inai" target="_blank"><img src="{{ asset('Imagenes Pagina/inai.png') }}" alt="Inai" width="100%" height="60"><span></span></a>
+                    <a href="https://home.inai.org.mx/" title="Inai" target="_blank"><img src="{{ asset('Imagenes_Pagina/inai.png') }}" alt="Inai" width="100%" height="60"><span></span></a>
                 </div>
                 <div class="col-md-2 g-mb-30">
-                    <a href="http://www.iaipchiapas.org.mx/" title="Iaip" target="_blank"><img src="{{ asset('Imagenes Pagina/iaip.png') }}" alt="Pnt" width="100%" height="60"><span></span></a>
+                    <a href="http://www.iaipchiapas.org.mx/" title="Iaip" target="_blank"><img src="{{ asset('Imagenes_Pagina/iaip.png') }}" alt="Pnt" width="100%" height="60"><span></span></a>
                 </div>
                 <div class="col-md-2 g-mb-30">
-                    <a href="http://consultapublicamx.inai.org.mx:8080/vut-web/?idSujetoObigadoParametro=1184&amp;idEntidadParametro=07&amp;idSectorParametro=21" title="Consulta Ciudadana" target="_blank"><img src="{{ asset('Imagenes Pagina/banner_consulta.jpg') }}" alt="Pnt" width="100%" height="60"><span></span></a>
+                    <a href="http://consultapublicamx.inai.org.mx:8080/vut-web/?idSujetoObigadoParametro=1184&amp;idEntidadParametro=07&amp;idSectorParametro=21" title="Consulta Ciudadana" target="_blank"><img src="{{ asset('Imagenes_Pagina/banner_consulta.jpg') }}" alt="Pnt" width="100%" height="60"><span></span></a>
                 </div>
                 <div class="col-md-2 g-mb-30">
-                    <a href="https://www.plataformadetransparencia.org.mx/web/guest/inicio" title="PNT" target="_blank"><img src="{{ asset('Imagenes Pagina/banner_pnt.jpg') }}" alt="Pnt" width="100%" height="60"><span></span></a>
+                    <a href="https://www.plataformadetransparencia.org.mx/" title="PNT" target="_blank"><img src="{{ asset('Imagenes_Pagina/banner_pnt.jpg') }}" alt="Pnt" width="100%" height="60"><span></span></a>
                 </div>
                 <div class="col-md-2 g-mb-30">
-                    <a href="https://www.plataformadetransparencia.org.mx/web/guest/sac" title="Ssci" target="_blank"><img src="{{ asset('Imagenes Pagina/sisai.png') }}" alt="Pnt" width="100%" height="60"><span></span></a>
+                    <a href="https://www.plataformadetransparencia.org.mx/" title="Ssci" target="_blank"><img src="{{ asset('Imagenes_Pagina/sisai.png') }}" alt="Pnt" width="100%" height="60"><span></span></a>
                 </div>
                 <div class="col-md-2 g-mb-30">
-                    <a href="https://www.plataformadetransparencia.org.mx/web/guest/inicio?p_p_id=58&p_p_lifecycle=1&p_p_state=maximized&p_p_mode=view&_58_struts_action=%2Flogin%2Fcreate_account" title="Sipot" target="_blank"><img src="{{ asset('Imagenes Pagina/sipot.png') }}" alt="Pnt" width="100%" height="60"><span></span></a>
+                    <a href="https://www.plataformadetransparencia.org.mx/" title="Sipot" target="_blank"><img src="{{ asset('Imagenes_Pagina/sipot.png') }}" alt="Pnt" width="100%" height="60"><span></span></a>
                 </div>
             </div>
         </div>

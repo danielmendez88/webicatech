@@ -227,7 +227,7 @@
                           @endforeach
                          @else
                           <li>
-                            <img class="imagen_carrusel" src="{{ asset('Imagenes Pagina/imagen_prueba1.jpeg') }}" />
+                            <img class="imagen_carrusel" src="{{ asset('Imagenes_Pagina/imagen_prueba1.jpeg') }}" />
                             <p class="flex-caption">
                               <a href="javascript:;" target="_blank">
                                 IR A PUBLICACIÓN
@@ -235,7 +235,7 @@
                             </p>
                           </li>
                           <li>
-                            <img class="imagen_carrusel" src="{{ asset('Imagenes Pagina/imagen_prueba2.jpeg') }}" />
+                            <img class="imagen_carrusel" src="{{ asset('Imagenes_Pagina/imagen_prueba2.jpeg') }}" />
                             <p class="flex-caption">
                               <a href="javascript:;" target="_blank">
                                 IR A PUBLICACIÓN
@@ -267,7 +267,7 @@
                 <div class="col-sm-4">
                   <div class="card bg-dark text-white carta">
                     <a href="{{ route('revista') }}" target="_blank">
-                      <img src="{{ asset('Imagenes Pagina/portada_calendario.jpeg') }}" class="card-img" alt="...">
+                      <img src="{{ asset('Imagenes_Pagina/portada_calendario.jpeg') }}" class="card-img" alt="...">
                       <div class="card-img-overlay">
                       </div>
                     </a>
@@ -360,7 +360,7 @@
                   <div class="about-image">
                     <div class="image">
                       <a target="_blank" href="http://consultapublicamx.inai.org.mx:8080/vut-web/?idSujetoObigadoParametro=1184&amp;idEntidadParametro=07&amp;idSectorParametro=21">
-                        <img src="{{ asset('Imagenes Pagina/banner_consulta.jpg') }}" alt="About Images" class="img-thumbnail">
+                        <img src="{{ asset('Imagenes_Pagina/banner_consulta.jpg') }}" alt="About Images" class="img-thumbnail">
                       </a>
                       <br>
                     </div>
@@ -370,7 +370,7 @@
                   <div class="about-image">
                     <div class="image">
                       <a target="_blank" href="https://www.plataformadetransparencia.org.mx/web/guest/inicio">
-                        <img src="{{ asset('Imagenes Pagina/banner_pnt.jpg') }}" alt="About Images" class="img-thumbnail">
+                        <img src="{{ asset('Imagenes_Pagina/banner_pnt.jpg') }}" alt="About Images" class="img-thumbnail">
                       </a>
                       <br>
                     </div>

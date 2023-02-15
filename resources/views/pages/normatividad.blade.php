@@ -10,7 +10,7 @@
       @include('theme.main.media')
       {{-- include social media END --}}
 
-      <img src="Imagenes Pagina/bannernormatividad.jpg" class="img-responsive" width="100%" alig="center">
+      <img src="Imagenes_Pagina/bannernormatividad.jpg" class="img-responsive" width="100%" alig="center">
      <section class="text-left">
                  <!--nuevo!-->
          <div class="card rounded-0 g-brd-none">
@@ -40,7 +40,7 @@
                               <div class="d-flex justify-content-between">
                                 <ul class="u-list-inline"></ul>
                                 <div class="align-self-center">
-                                    <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
+                                    <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes_Pagina/2.png"alt=""></a>
                                 </div>
                               </div>
                          </li>
@@ -78,7 +78,7 @@
                                         <div class="d-flex justify-content-between">
                                           <ul class="u-list-inline"></ul>
                                           <div class="align-self-center">
-                                            <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
+                                            <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes_Pagina/2.png"alt=""></a>
                                           </div>
                                         </div>
                                     </li>
@@ -116,7 +116,7 @@
                                                 <div class="d-flex justify-content-between">
                                                   <ul class="u-list-inline"></ul>
                                                   <div class="align-self-center">
-                                                    <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
+                                                    <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes_Pagina/2.png"alt=""></a>
                                                   </div>
                                                 </div>
                                             </li>
@@ -153,7 +153,7 @@
                                   <div class="d-flex justify-content-between">
                                     <ul class="u-list-inline"></ul>
                                     <div class="align-self-center">
-                                      <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
+                                      <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes_Pagina/2.png"alt=""></a>
                                     </div>
                                   </div>
                               </li>
@@ -192,7 +192,7 @@
                                       <div class="d-flex justify-content-between">
                                         <ul class="u-list-inline"></ul>
                                         <div class="align-self-center">
-                                          <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
+                                          <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes_Pagina/2.png"alt=""></a>
                                         </div>
                                       </div>
                                   </li>
@@ -230,7 +230,7 @@
                           <div class="d-flex justify-content-between">
                             <ul class="u-list-inline"></ul>
                             <div class="align-self-center">
-                              <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
+                              <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes_Pagina/2.png"alt=""></a>
                             </div>
                           </div>
                       </li>
@@ -267,7 +267,7 @@
                           <div class="d-flex justify-content-between">
                             <ul class="u-list-inline"></ul>
                             <div class="align-self-center">
-                              <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
+                              <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes_Pagina/2.png"alt=""></a>
                             </div>
                           </div>
                       </li>
@@ -304,7 +304,7 @@
                           <div class="d-flex justify-content-between">
                             <ul class="u-list-inline"></ul>
                             <div class="align-self-center">
-                              <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes Pagina/2.png"alt=""></a>
+                              <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes_Pagina/2.png"alt=""></a>
                             </div>
                           </div>
                       </li>
