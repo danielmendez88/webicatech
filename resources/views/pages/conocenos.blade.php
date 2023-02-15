@@ -147,7 +147,7 @@
 						Impartir capacitación para y en el trabajo a la población, contribuyendo al mejoramiento de su calidad de vida mediante programas estratégicos con enfoque sustentable y sostenible, impulsando el desarrollo del estado.
 					  </p>
 					</div>
-					<img src="{{ asset('Imagenes_pagina/mision.jpg') }}" class="card-img-bottom" alt="...">
+					<img src="{{ url('Imagenes_pagina/mision.jpg') }}" class="card-img-bottom" alt="...">
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -158,7 +158,7 @@
 						Ser una Institución líder e innovadora, a través de capacitación acorde a las necesidades reales del entorno socieconómico del estado, reconocida por la calidad de sus egresados, en un ambiente de unidad, respeto y equidad.
 					  </p>
 					</div>
-					<img src="{{ asset('Imagenes_pagina/vision.jpg') }}" class="card-img-bottom" alt="...">
+					<img src="{{ url('Imagenes_pagina/vision.jpg') }}" class="card-img-bottom" alt="...">
 				</div>
 			</div>
 		</div>
@@ -168,7 +168,7 @@
 				<div class="card">
 					<div class="row">
 						<div class="col-md-4">
-							<img src="{{ asset('Imagenes_pagina/objetivos_icatech.png') }}" alt="...">
+							<img src="{{ url('Imagenes_pagina/objetivos_icatech.png') }}" alt="...">
 						</div>
 						<div class="col-md-8 imgbcgrnd">
 							<div class="card-body">

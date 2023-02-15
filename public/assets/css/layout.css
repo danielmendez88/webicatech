@@ -115,7 +115,7 @@ body {
     .ticker-container .ticker-caption {
       height: 100%;
       width: 150px;
-      background: url('../../../public/Imagenes Pagina/ticker-caption-bg.png');
+      background: url('../../Imagenes_Pagina/ticker-caption-bg.png');
     }
     .ticker-container .ticker-caption p {
       text-align: left;
