@@ -1,4 +1,4 @@
-o@extends("theme.lte.layout")
+@extends("theme.lte.layout")
 <!--llamar la plantilla -->
 @section('title', 'Sevac | Icatech')
 <!--tituto de la pestaña -->
