@@ -686,6 +686,10 @@ class CuentapublicaController extends Controller
             'Notas a los Estados Financieros' => 'sevac_/2022/3t/notas_a_los_estados_financieros.pdf',
         ];
 
+        $cuartotrim2022 = [
+            'Montos Pagados por Ayudas y Subsidios' =>'sevac_/2022/4t/montos_pagados_por_ayudas_subsidios.pdf',
+        ];
+
         $bprincipal = $this->getBanner('banner_principal');
         return view('pages.sevac', compact('bprincipal', 
         'tercertrim2021', 
@@ -705,7 +709,8 @@ class CuentapublicaController extends Controller
         'cuarto_trimestre2021', 
         'primtrim2022', 
         'segtrim2022', 
-        'tertrim2022'));
+        'tertrim2022', 
+        'cuartotrim2022'));
         //comentario
     }
 

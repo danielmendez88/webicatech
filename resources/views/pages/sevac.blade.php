@@ -123,6 +123,43 @@
             </div>
         </div>
 {{-- fin tercer trimestre sevac 2022 --}}
+{{-- cuarto trimestre sevac 2022 --}}
+        <div class="card rounded-0 g-brd-none">
+            <div id="accordion-07-heading-18" class="u-accordion__header g-pa-0" role="tab">
+                <h5 class="mb-0 g-font-size-default g-font-weight-700 g-pa-20a mb-0">
+                    <a class="collapsed d-flex g-color-main g-text-underline--none--hover" href="#accordion-07-body-18" data-toggle="collapse" data-parent="#accordion-07" aria-expanded="false" aria-controls="accordion-07-body-18">
+                        <span class="u-accordion__control-icon g-brd-right g-brd-gray-light-v4 g-color-primary text-center g-pa-20">
+                            <i class="fa fa-plus"></i>
+                            <i class="fa fa-minus"></i>
+                        </span>
+                        <span class="g-pa-20">
+                            Cuarto Trimestre 2022
+                        </span>
+                    </a>
+                </h5>
+            </div>
+            <div id="accordion-07-body-18" class="collapse" role="tabpanel" aria-labelledby="accordion-07-heading-18" data-parent="#accordion-07">
+                <div class="u-accordion__body g-bg-gray-light-v5 g-px-50 g-py-30">
+                    <ul class="list-unstyled">
+                        @foreach ($cuartotrim2022 as $key => $value)
+                            <li class="g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-primary-left g-rounded-3 g-pa-20 g-mb-7">
+                                <div class="d-flex justify-content-start">
+                                    <h5 class="g-font-weight-600 g-color-black">{{ $key }}</h5>
+
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <ul class="u-list-inline"></ul>
+                                        <div class="align-self-center">
+                                            <a class="" href="{{ $value }}" target="_blank"><img src="Imagenes_Pagina/2.png"alt=""></a>
+                                        </div>
+                                </div>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        </div>
+{{-- fin cuarto trimestre sevac 2022 --}}
 {{-- fin sevac 2022 --}}
 {{-- sevac 2021 --}}
         <b><h4>SEVAC 2021</h4></b><br>
