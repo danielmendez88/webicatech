@@ -147,7 +147,7 @@
 						Impartir capacitación para y en el trabajo a la población, contribuyendo al mejoramiento de su calidad de vida mediante programas estratégicos con enfoque sustentable y sostenible, impulsando el desarrollo del estado.
 					  </p>
 					</div>
-					<img src="{{ url('Imagenes_pagina/mision.jpg') }}" class="card-img-bottom" alt="...">
+					<img src="{{ url('Imagenes_pagina/mision.png') }}" class="card-img-bottom" alt="...">
 				</div>
 			</div>
 			<div class="col-md-6">
