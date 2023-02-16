@@ -12,38 +12,38 @@
 	         	@if (count($bvideoteca) > 0)
                  @foreach ($bvideoteca as $collection)
                     <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/{{ $collection->youtubeid }}?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                      <div class="thumb"><img src="http://img.youtube.com/vi/{{ $collection->youtubeid }}/0.jpg"></div>
+                      <div class="thumb"><img src="https://img.youtube.com/vi/{{ $collection->youtubeid }}/0.jpg"></div>
                       <div class="desc">{{ $collection->nombre }}</div>
                     </div>
                  @endforeach
             @else
               <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/DLoLG8tu_3Y?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                <div class="thumb"><img src="http://img.youtube.com/vi/0RC5oxzheUs/0.jpg"></div>
+                <div class="thumb"><img src="https://img.youtube.com/vi/0RC5oxzheUs/0.jpg"></div>
                 <div class="desc">Jessica Hernandez & the Deltas - Dead Brains</div>
               </div>
             
-              <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/_Tz7KROhuAw?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                <div class="thumb"><img src="http://img.youtube.com/vi/_Tz7KROhuAw/0.jpg"></div>
+              <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/_Tz7KROhuAw?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                <div class="thumb"><img src="https://img.youtube.com/vi/_Tz7KROhuAw/0.jpg"></div>
                 <div class="desc">Barbatuques - CD Tum P&aacute; - Sambalel&ecirc;</div>
               </div>
 
-              <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/F1f-gn_mG8M?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                <div class="thumb"><img src="http://img.youtube.com/vi/F1f-gn_mG8M/0.jpg"></div>
+              <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/F1f-gn_mG8M?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                <div class="thumb"><img src="https://img.youtube.com/vi/F1f-gn_mG8M/0.jpg"></div>
                 <div class="desc">Eleanor Turner plays Baroque Flamenco</div>
               </div>
 
-              <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/fB8UTheTR7s?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                <div class="thumb"><img src="http://img.youtube.com/vi/fB8UTheTR7s/0.jpg"></div>
+              <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/fB8UTheTR7s?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                <div class="thumb"><img src="https://img.youtube.com/vi/fB8UTheTR7s/0.jpg"></div>
                 <div class="desc">Sleepy Man Banjo Boys: Bluegrass</div>
               </div>
 
-            <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/eg6kNoJmzkY?autoplay=1&rel=0&showinfo=0&autohide=1'">
-              <div class="thumb"><img src="http://img.youtube.com/vi/eg6kNoJmzkY/0.jpg"></div>
+            <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/eg6kNoJmzkY?autoplay=1&rel=0&showinfo=0&autohide=1'">
+              <div class="thumb"><img src="https://img.youtube.com/vi/eg6kNoJmzkY/0.jpg"></div>
               <div class="desc">Jessica Hernandez & the Deltas - Dead Brains</div>
             </div>
               
-            <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/_Tz7KROhuAw?autoplay=1&rel=0&showinfo=0&autohide=1'">
-              <div class="thumb"><img src="http://img.youtube.com/vi/_Tz7KROhuAw/0.jpg"></div>
+            <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/_Tz7KROhuAw?autoplay=1&rel=0&showinfo=0&autohide=1'">
+              <div class="thumb"><img src="https://img.youtube.com/vi/_Tz7KROhuAw/0.jpg"></div>
               <div class="desc">Barbatuques - CD Tum P&aacute; - Sambalel&ecirc;</div>
             </div>
             @endif
