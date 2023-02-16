@@ -121,9 +121,9 @@
 {{-- cuerpo del documento --}}
 @section('contenido')
     <div class="header">
-        <img class="imagen_left" src="{{ asset('Imagenes Pagina/instituto_oficial.png') }}" alt="">
-        <img class="imagen_center" src="{{ asset('Imagenes Pagina/chiapas.png') }}" alt="">
-        <img class="imagen_right" src="{{ asset('Imagenes Pagina/icatech_imagen_cabecera.png') }}" alt="">
+        <img class="imagen_left" src="{{ asset('Imagenes_Pagina/instituto_oficial.png') }}" alt="">
+        <img class="imagen_center" src="{{ asset('Imagenes_Pagina/chiapas.png') }}" alt="">
+        <img class="imagen_right" src="{{ asset('Imagenes_Pagina/icatech_imagen_cabecera.png') }}" alt="">
     </div>
     <div class="contenedor_principal">
         <div class="row">
