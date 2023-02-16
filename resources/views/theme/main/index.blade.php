@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="{{asset("assets/css/unify-globals.css")}}">
     <link rel="stylesheet" href="{{asset("assets/css/custom.css")}}">
     <link rel="stylesheet" href="{{ asset("assets/css/layout.css") }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/flexslider.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.0/flexslider.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
         .redes_sociales {
