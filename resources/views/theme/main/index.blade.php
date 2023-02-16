@@ -24,7 +24,7 @@
     <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
 
 					<!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="{{ asset('assets/vendors/fontawesome-free/css/all.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link rel="stylesheet" href="{{asset("assets/vendor/icon-line-pro/style.css")}}">
     <link rel="stylesheet" href="{{asset("assets/vendor/icon-line/css/simple-line-icons.css")}}">
     <link rel="stylesheet" href="{{asset("assets/vendor/icon-hs/style.css")}}">
