@@ -18,21 +18,21 @@
           @endforeach
       @else
           <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url('{{asset('/Imagenes Pagina/banner_inicio.jpeg')}}')">
+          <div class="carousel-item active" style="background-image: url('{{asset('/Imagenes_Pagina/banner_inicio.jpeg')}}')">
             <div class="carousel-caption d-none d-md-block">
               <h2 class="display-4"></h2>
               <p class="lead"></p>
             </div>
           </div>
           <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('{{ asset('/Imagenes Pagina/aviso_de_privacidad.jpg') }}')">
+          <div class="carousel-item" style="background-image: url('{{ asset('/Imagenes_Pagina/aviso_de_privacidad.jpg') }}')">
             <div class="carousel-caption d-none d-md-block">
               <h2 class="display-4"></h2>
               <p class="lead"></p>
             </div>
           </div>
           <!-- Slide Three - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('{{ asset('/Imagenes Pagina/banner icatechtransparencia4.png') }}')">
+          <div class="carousel-item" style="background-image: url('{{ asset('/Imagenes_Pagina/banner icatechtransparencia4.png') }}')">
             <div class="carousel-caption d-none d-md-block">
               <h2 class="display-4"></h2>
               <p class="lead"></p>
