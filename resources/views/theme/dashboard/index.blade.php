@@ -90,7 +90,7 @@
     </div>
     {{-- CONTENEDOR DE SCROLLER END --}}
     {{-- SECCIÓN DE CONTENIDO JAVASCRIPT --}}
-    <script src="{{asset('assets/vendor/jquery/jquery.min.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="{{ asset('assets/vendor/bootstrap-5.0.1/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js_/dashboard/dashboard.js') }}"></script>
     <script src="{{ asset('assets/js_/shared/off-canvas.js') }}"></script>
@@ -112,7 +112,7 @@
       var $anchor = $(this);
       $('html, body').stop().animate({
         scrollTop: ($($anchor.attr('href')).offset().top)
-      }, 150, 'easeInOutExpo');
+      }, 200, 'easeInOutExpo');
       e.preventDefault();
     });
     </script>
