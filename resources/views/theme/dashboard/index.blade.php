@@ -22,7 +22,7 @@
     {{-- iconos --}}
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     {{-- iconos END --}}
-    <link rel="stylesheet" href="{{ asset('assets/vendors/fontawesome-free/css/all.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     @yield('contentSyles')
 </head>
 <body id="page-top">
