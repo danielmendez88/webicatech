@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css_/dashboard/table.css') }}">
     {{-- estilos layouts END --}}
     {{-- estilos vendor --}}
-    <link rel="stylesheet" href="{{ asset('assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="{{ asset('assets/vendors/iconfonts/flag-icons-css/flag-icon.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/vendors/iconfonts/ionicons/dist/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.6.1/ionicons.min.js">
     {{-- estilos vendor END --}}
     
     {{-- iconos --}}
