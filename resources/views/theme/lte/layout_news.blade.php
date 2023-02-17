@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="{{asset("assets/vendor/bootstrap/offcanvas.css")}}">
         
         <!-- CSS Implementing Plugins -->
-        <link rel="stylesheet" href="{{asset("assets/fonts/font-awesome/css/font-awesome.min.css")}}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{{asset("assets/vendor/icon-line-pro/style.css")}}">
         <link rel="stylesheet" href="{{asset("assets/vendor/icon-line/css/simple-line-icons.css")}}">
         <link rel="stylesheet" href="{{asset("assets/vendor/icon-hs/style.css")}}">
