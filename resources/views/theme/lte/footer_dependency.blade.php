@@ -33,7 +33,7 @@
 
 			<div class="col-lg-4 col-md-6 d-none d-sm-none d-md-none d-lg-none d-xl-block">
 				<div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8"><h2 class="u-heading-v2__title h6 mb-0">Contáctanos</h2></div>
-				<address class="g-bg-no-repeat g-line-height-2 g-mt-minus-4" style="background-image: url(../../assets/img/maps/map2.png);"> Instituto de Capacitación y Vinculación Tecnológica del Estado de Chiapas "ICATECH" <br><img alt="ubicacion" src="../../Imagenes_Pagina/icon-ubic.png">14 Poniente Norte No. 239 Colonia Moctezuma <br><img alt="ubicacion" src="../../Imagenes_Pagina/icon-tel.png"> Conmutador: (961) 61-2-16-21 <br> <img alt="ubicacion" src="../../Imagenes_Pagina/icon-mail.png"> Correo: icatech@icatech.gob.mx </address>
+				<address class="g-bg-no-repeat g-line-height-2 g-mt-minus-4"> Instituto de Capacitación y Vinculación Tecnológica del Estado de Chiapas "ICATECH" <br><img alt="ubicacion" src="../../Imagenes_Pagina/icon-ubic.png">14 Poniente Norte No. 239 Colonia Moctezuma <br><img alt="ubicacion" src="../../Imagenes_Pagina/icon-tel.png"> Conmutador: (961) 61-2-16-21 <br> <img alt="ubicacion" src="../../Imagenes_Pagina/icon-mail.png"> Correo: icatech@icatech.gob.mx </address>
 			</div>
 		</div>
 	</div>
