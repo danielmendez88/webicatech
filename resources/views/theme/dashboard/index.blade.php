@@ -16,7 +16,7 @@
     {{-- estilos vendor --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="{{ asset('assets/vendors/iconfonts/flag-icons-css/flag-icon.min.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.6.1/ionicons.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.6.1/css/ionicons.min.css">
     {{-- estilos vendor END --}}
     
     {{-- iconos --}}
