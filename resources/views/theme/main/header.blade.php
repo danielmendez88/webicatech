@@ -11,7 +11,7 @@
                     </span>
                 </button>
 
-                <a href="https://www.chiapas.gob.mx" class="navbar-brand g-text-underline--hover"><img src="../../assets/logo/escudo-icono.png" alt=""></a>
+                <a href="https://www.chiapas.gob.mx" class="navbar-brand g-text-underline--hover"><img src="{{ asset('/assets/logo/escudo-icono.png') }}" alt=""></a>
                 <a href="https://www.chiapas.gob.mx" class="g-color-white-opacity-0_9 g-font-size-16 g-font-weight-300 g-font-secondary g-text-underline--hover">chiapas<span class="g-color-white-opacity-0_6">.gob.mx</span></a>
 
                 <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg" id="navBar">
