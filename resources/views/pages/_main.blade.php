@@ -264,10 +264,13 @@
               <div class="row">
                {{-- calendario --}}
                 <div class="col-md-4 mb-3">
-                  <div class="card bg-dark text-white">
+                  <div class="card text-white">
                     <a href="{{ route('revista') }}" target="_blank">
                       <img src="{{ asset('Imagenes_Pagina/portada_calendario.jpeg') }}" class="card-img" alt="...">
                       <div class="card-img-overlay">
+                      </div>
+                      <div class="card-body">
+                        <h3 class="card-title">Calendario Icatech</h3>
                       </div>
                     </a>
                   </div>
@@ -276,7 +279,7 @@
                 @if (count($brevista) > 0)
                   @foreach ($brevista as $itemrevista)
                     <div class="col-md-4 mb-3">
-                      <div class="card bg-dark text-white">
+                      <div class="card text-white">
                         <a href="{{ $itemrevista->href }}" target="_blank">
                           <img src="{{ $itemrevista->path }}" class="card-img" alt="...">
                           <div class="card-img-overlay">&nbsp;</div>
@@ -289,27 +292,36 @@
                   @endforeach
                 @else
                   <div class="col-sm-4">
-                    <div class="card bg-dark text-white">
+                    <div class="card text-white">
                       <a href="http://">
                         <img src="{{ asset('revista_icatech/revista_febrero.jpg') }}" class="card-img" alt="...">
                         <div class="card-img-overlay">
-                          <h3 class="card-title">Card title</h3>
+                          <h3 class="card-title"></h3>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Card title</h3>
                         </div>
                       </a>
                     </div>
                   </div>
                   <div class="col-sm-4">
-                    <div class="card bg-dark text-white">
+                    <div class="card text-white">
                       <img src="{{ asset('revista_icatech/revista1_2021.jpeg') }}" class="card-img" alt="...">
                       <div class="card-img-overlay">
+                        <h3 class="card-title"></h3>
+                      </div>
+                      <div class="card-body">
                         <h3 class="card-title">Card title</h3>
                       </div>
                     </div>
                   </div>
                   <div class="col-sm-4">
-                    <div class="card bg-dark text-white">
+                    <div class="card text-white">
                       <img src="{{ asset('revista_icatech/revista_2.png') }}" class="card-img" alt="...">
                       <div class="card-img-overlay">
+                        <h3 class="card-title"></h3>
+                      </div>
+                      <div class="card-body">
                         <h3 class="card-title">Card title</h3>
                       </div>
                     </div>
