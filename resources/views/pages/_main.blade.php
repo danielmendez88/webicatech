@@ -279,8 +279,9 @@
                       <div class="card bg-dark text-white">
                         <a href="{{ $itemrevista->href }}" target="_blank">
                           <img src="{{ $itemrevista->path }}" class="card-img" alt="...">
-                          <div class="card-img-overlay">
-                            <h3 class="card-title">{{ $itemrevista->nombre }}</h3>
+                          <div class="card-img-overlay">&nbsp;</div>
+                          <div class="card-body">
+                                <h3 class="card-title">{{ $itemrevista->nombre }}</h3>
                           </div>
                         </a>
                       </div>
