@@ -1,6 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
-  
+
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\principal\InstructoresExternosController;
 use App\Http\Controllers\Auth\LoginController;
@@ -74,7 +74,7 @@ Route::get('/integridad/informe-anual-actividades', 'principal\IntegridadControl
 
 Route::get('/cursos/factibilidad', 'CursoController@getcatfactibilidad')->name('catalogo.factibilidad');
 
-Route::middleware(['cors'])->group(function () {
+Route::middleware(['cors','prevent-back-history'])->group(function () {
     // nuevo comunicado
     Route::get('/nuevo-comunicado', 'ComunicadoController@getform');
     Route::post('/noticias-save', 'ComunicadoController@store')->name('comunicados.save');

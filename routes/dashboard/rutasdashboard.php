@@ -13,7 +13,7 @@ Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 
 Auth::routes(['register' => false]);
 
-Route::group(['middleware' => ['auth']], function() {
+Route::group(['middleware' => ['auth', 'prevent-back-history']], function() {
     Route::get('/dashboard/main/index', 'dashboard\DashboardController@index')->name('dashboard_principal');
     Route::get('/dashboard/admin/form', 'dashboard\DashboardController@createForm')->name('main_form_admin');
     Route::post('/dashboard/admin/form/store', 'dashboard\DashboardController@store')->name('main_form_admin_post');
@@ -41,5 +41,5 @@ Route::group(['middleware' => ['auth']], function() {
     Route::delete('delete-banner-element/{id}/{categoria}', 'dashboard\BannerSectionController@destroy')->name('delete_banner_element');
     Route::get('/dashboard/banner/link/{id}/{idcat}', 'dashboard\BannerSectionController@linked_banner')->name('link_banner_secundario');
     Route::post('/dashboard/vincular/banner/secundario', 'dashboard\BannerSectionController@secondary_banner_linked')->name('save_linked_banner');
- 
+
 });
