@@ -76,7 +76,7 @@
                   @foreach ($comunicado_cintilla as $item_cintilla)
                     <div>
                       <li><span>{{ $item_cintilla->titulo }} &nbsp;&nbsp;<a href="{{ route('comunicado-detalle', ['id' => base64_encode($item_cintilla->id), 'url' => $item_cintilla->url]) }}" target="_blank">Leer Más</a></span></li>
-                    </div> 
+                    </div>
                   @endforeach
               @else
                 <div>
@@ -114,7 +114,7 @@
               @include('theme.main.media')
              {{-- include social media END --}}
               <div class="row">
-                @if (count($comunicados) > 0)       
+                @if (count($comunicados) > 0)
                   @foreach ($comunicados as $itemComunicados)
                     <div class="col-md-4 mb-3">
                       <div class="card">
@@ -132,7 +132,7 @@
                 @else
                   <div class="col-sm-4">
                     <div class="card-flex text-white card-has-bg click-col" style="background-image:url('{{ asset('comunicados/imagen_comunicado_20210324230854_65.jpg') }}');">
-                      
+
                       <div class="card-img-overlay d-flex flex-column">
                         <div class="card-body">
                           <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
@@ -184,88 +184,87 @@
             {{-- SECCIÓN COMUNICADOS END --}}
             {{-- BANNER SECUNDARIO --}}
               <div class="row">
-                <div class="col-6 col-sm-1 mb-3"></div>
-                <div class="col-6 col-sm-10 mb-3">
-                    <section class="slider">
-                      <div class="flexslider">
+                <div class="col-md-12 mb-3">
+                    <div class="flexslider">
                         <ul class="slides">
                          @if ( count($bsecundario) > 0)
-                          @foreach ($bsecundario as $itembannersecundario)
-                            <li>
-                              <img class="imagen_carrusel" src="{{ $itembannersecundario->path }}" />
-                              @if (!is_null($itembannersecundario->path_vinculado))
-                                  @php
-                                      $tipo = pathinfo(\Storage::url($itembannersecundario->path_vinculado), PATHINFO_EXTENSION);
-                                  @endphp
-                                  @switch($tipo)
-                                    @case('pdf')
+                            @foreach ($bsecundario as $itembannersecundario)
+                                <li>
+                                    <img class="imagen_carrusel" src="{{ $itembannersecundario->path }}" />
+                                    @if (!is_null($itembannersecundario->path_vinculado))
+                                        @php
+                                            $tipo = pathinfo(\Storage::url($itembannersecundario->path_vinculado), PATHINFO_EXTENSION);
+                                        @endphp
+                                        @switch($tipo)
+                                            @case('pdf')
+                                                <p class="flex-caption">
+                                                <a href="{{ $itembannersecundario->path_vinculado }}" target="_blank">
+                                                    LEER GUIA
+                                                </a>
+                                                </p>
+                                            @break
+                                            @default
+                                                <p class="flex-caption">
+                                                <a href="javascript:;" data-toggle="modal" data-target="#modelPreComision" data-bannersecundario="{{ $itembannersecundario->path_vinculado }}">
+                                                    VER CONVOCATORIA
+                                                </a>
+                                                </p>
+                                        @endswitch
+                                    @elseif (!is_null($itembannersecundario->href) && !empty($itembannersecundario->href))
+                                        {{-- modificaciones de ver href --}}
                                         <p class="flex-caption">
-                                          <a href="{{ $itembannersecundario->path_vinculado }}" target="_blank">
-                                            LEER GUIA
-                                          </a>
+                                        <a href="{{ $itembannersecundario->href }}" target="_blank">
+                                            IR A PUBLICACIÓN
+                                        </a>
                                         </p>
-                                    @break
-                                    @default
-                                        <p class="flex-caption">
-                                          <a href="javascript:;" data-toggle="modal" data-target="#modelPreComision" data-bannersecundario="{{ $itembannersecundario->path_vinculado }}">
-                                            VER CONVOCATORIA
-                                          </a>
-                                        </p>
-                                  @endswitch
-                              @elseif (!is_null($itembannersecundario->href) && !empty($itembannersecundario->href))
-                                {{-- modificaciones de ver href --}}
-                                <p class="flex-caption">
-                                  <a href="{{ $itembannersecundario->href }}" target="_blank">
-                                    IR A PUBLICACIÓN
-                                  </a>
-                                </p>
-                              @else
-                                
-                              @endif
-                              
-                            </li>
-                          @endforeach
+                                    @else
+
+                                    @endif
+                                </li>
+                            @endforeach
                          @else
-                          <li>
-                            <img class="imagen_carrusel" src="{{ asset('Imagenes_Pagina/imagen_prueba1.jpeg') }}" />
-                            <p class="flex-caption">
-                              <a href="javascript:;" target="_blank">
-                                IR A PUBLICACIÓN
-                              </a>
-                            </p>
-                          </li>
-                          <li>
-                            <img class="imagen_carrusel" src="{{ asset('Imagenes_Pagina/imagen_prueba2.jpeg') }}" />
-                            <p class="flex-caption">
-                              <a href="javascript:;" target="_blank">
-                                IR A PUBLICACIÓN
-                              </a>
-                            </p>
-                          </li>
+                            <li>
+                                <img class="imagen_carrusel" src="{{ asset('Imagenes_Pagina/imagen_prueba1.jpeg') }}" />
+                                <p class="flex-caption">
+                                <a href="javascript:;" target="_blank">
+                                    IR A PUBLICACIÓN
+                                </a>
+                                </p>
+                            </li>
+                            <li>
+                                <img class="imagen_carrusel" src="{{ asset('Imagenes_Pagina/imagen_prueba2.jpeg') }}" />
+                                <p class="flex-caption">
+                                <a href="javascript:;" target="_blank">
+                                    IR A PUBLICACIÓN
+                                </a>
+                                </p>
+                            </li>
                          @endif
                         </ul>
-                      </div>
-                    </section>
+                    </div>
                 </div>
-                <div class="col-6 col-sm-1 mb-3"></div>
               </div>
-              <br><br><br><br><br>
             {{-- BANNER SECUNDARIO END --}}
-            {{-- SECCIÓN DE INDICE REVISTA --}}
+{{-- creamos un grid para darle espacio suficiente a la página --}}
               <div class="row">
-                <div class="col-sm-12">
+                <div class="col-12">&nbsp;</div>
+              </div>
+{{-- creamos un grid para darle espacio suficiante a la página END --}}
+{{-- SECCIÓN DE INDICE REVISTA --}}
+              <div class="row">
+                <div class="col-sm-12 mb-3">
                   <div class="comunicados">
                     <a href="{{ route('revista') }}"><p>REVISTA DIGITAL</p></a>
                     <div class="separador"></div>
                   </div>
                 </div>
               </div>
-            {{-- SECCIÓN DE INDICE REVISTA END --}}
+{{-- SECCIÓN DE INDICE REVISTA END --}}
             {{-- SECCION DE PAGOS Y APLICACIONES --}}
               <div class="row">
                {{-- calendario --}}
-                <div class="col-sm-4">
-                  <div class="card bg-dark text-white carta">
+                <div class="col-md-4 mb-3">
+                  <div class="card bg-dark text-white">
                     <a href="{{ route('revista') }}" target="_blank">
                       <img src="{{ asset('Imagenes_Pagina/portada_calendario.jpeg') }}" class="card-img" alt="...">
                       <div class="card-img-overlay">
@@ -276,8 +275,8 @@
                {{-- calendario --}}
                 @if (count($brevista) > 0)
                   @foreach ($brevista as $itemrevista)
-                    <div class="col-sm-4">
-                      <div class="card bg-dark text-white carta">
+                    <div class="col-md-4 mb-3">
+                      <div class="card bg-dark text-white">
                         <a href="{{ $itemrevista->href }}" target="_blank">
                           <img src="{{ $itemrevista->path }}" class="card-img" alt="...">
                           <div class="card-img-overlay">
@@ -289,7 +288,7 @@
                   @endforeach
                 @else
                   <div class="col-sm-4">
-                    <div class="card bg-dark text-white carta">
+                    <div class="card bg-dark text-white">
                       <a href="http://">
                         <img src="{{ asset('revista_icatech/revista_febrero.jpg') }}" class="card-img" alt="...">
                         <div class="card-img-overlay">
@@ -299,7 +298,7 @@
                     </div>
                   </div>
                   <div class="col-sm-4">
-                    <div class="card bg-dark text-white carta">
+                    <div class="card bg-dark text-white">
                       <img src="{{ asset('revista_icatech/revista1_2021.jpeg') }}" class="card-img" alt="...">
                       <div class="card-img-overlay">
                         <h3 class="card-title">Card title</h3>
@@ -307,7 +306,7 @@
                     </div>
                   </div>
                   <div class="col-sm-4">
-                    <div class="card bg-dark text-white carta">
+                    <div class="card bg-dark text-white">
                       <img src="{{ asset('revista_icatech/revista_2.png') }}" class="card-img" alt="...">
                       <div class="card-img-overlay">
                         <h3 class="card-title">Card title</h3>
@@ -316,7 +315,7 @@
                   </div>
                 @endif
               </div>
-              <br><br><br>
+              <br><br>
             {{-- SECCION DE PAGOS Y APLICACIONES END--}}
             {{-- SECCIÓN INDICE VIDEOTECA --}}
               <div class="row">
@@ -328,10 +327,11 @@
                 </div>
               </div>
             {{-- SECCIÓN INDICE VIDEOTECA END --}}
-            
-            {{-- SECCIÓN DEL VIDEO --}}
+
+{{-- SECCIÓN DEL VIDEO --}}
             @include('pages.video_player')
-            {{-- SECCIÓN DEL VIDEO END --}}
+{{-- SECCIÓN DEL VIDEO END --}}
+            <br><br>
             {{-- SECCIÓN TRANSPARENCIA --}}
             <div class="col-sm-12">
               <div class="comunicados">
@@ -353,7 +353,7 @@
                           <br>
                         </div>
                       </div>
-                    </div> 
+                    </div>
                   @endforeach
               @else
                 <div class="masonry-grid-item col-sm-6 col-md-6 col-lg-6 g-mb-30">
@@ -379,7 +379,7 @@
               @endif
             </div>
             {{-- TRANSPARENCIA --}}
-            
+
             <br>
         </div>
     {{-- CONTENEDOR PRINCIPAL END --}}
