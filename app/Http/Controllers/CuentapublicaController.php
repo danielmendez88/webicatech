@@ -64,10 +64,10 @@ class CuentapublicaController extends Controller
             'Formatos de Analisis' => 'cuenta_publica/ct2020/financiera/formatos_complementarios.pdf',
             'Formatos Armonizados Conac' => 'cuenta_publica/ct2020/financiera/formatos_armonizados_conac.pdf',
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/ct2020/financiera/formatos_ley_de_disciplina_financiera.pdf'
-            
+
         );
         $inf_presupuestal4t20 = array(
-            'Información Presupuestaria' => 'cuenta_publica/ct2020/presupuestal/informacionppt4t2020.pdf'            
+            'Información Presupuestaria' => 'cuenta_publica/ct2020/presupuestal/informacionppt4t2020.pdf'
         );
         $inf_financiera = array(
             'Bienes Patrimoniales' => 'cuenta_publica/pt2019/financiera/bienespatrimoniales.pdf',
@@ -210,7 +210,7 @@ class CuentapublicaController extends Controller
             'Formatos Complementarios' => 'cuenta_publica/st2021/financiera/FORMATOS_COMPLEMENTARIOS.pdf',
             'Formatos Ley de Disciplina Financiera' => 'cuenta_publica/st2021/financiera/FORMATOS_LEY_DE_DISCIPLINA_FINANCIERA.pdf'
         );
-       
+
         $inf_financiera3t21 =array(
             'Bienes Patrimoniales' => 'cuenta_publica/tt2021/financiera/bienes_patrimoniales.pdf',
             'Formatos Armonizados Conac' => 'cuenta_publica/tt2021/financiera/formatos_armonizados_conac.pdf',
@@ -297,6 +297,10 @@ class CuentapublicaController extends Controller
             'ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONÓMICAS' => 'licitaciones_/adquisiciones/AAPTE_5.pdf',
             'ACTA DE FALLO' => 'licitaciones_/adquisiciones/ADF_5.pdf'
         ];
+        $icatech_ictp_001_2023 = [
+            'ACTA DE APERTURA DE PROPUESTAS TÉCNICAS Y ECONÓMICAS' => 'licitaciones_/adquisiciones/AAPTE_1_2023.pdf',
+            'ACTA DE FALLO' => 'licitaciones_/adquisiciones/ADF_1_2023.pdf'
+        ];
         // $lic_anual_adquisiciones = array(
         //     'PROGRAMA ANUAL 2022' => 'licitaciones_/adquisiciones/programa_anual_de_adquisiciones_federal_2022.pdf',
         // );
@@ -319,15 +323,16 @@ class CuentapublicaController extends Controller
         // ];
 
         $bprincipal = $this->getBanner('banner_principal');
-        
 
-        return view('pages.licitaciones', 
+
+        return view('pages.licitaciones',
             [
                 'bprincipal' => $bprincipal,
                 'programa_anual_adquisiciones' => $programa_anual_adquisiciones,
                 'icatech_ictp_003_2022' => $icatech_ictp_003_2022,
                 'icatech_ictp_004_2022' => $icatech_ictp_004_2022,
-                'icatech_ictp_005_2022' => $icatech_ictp_005_2022
+                'icatech_ictp_005_2022' => $icatech_ictp_005_2022,
+                'icatech_ictp_001_2023' => $icatech_ictp_001_2023
             ]
         );
     }
@@ -396,9 +401,9 @@ class CuentapublicaController extends Controller
             'Estado de Situación Financiera por Rubros' => 'sevac_/2020/3t/estado_de_situacion_financiera_por_rubros.pdf',
             'Estado de Variación en la Hacienda Pública' => 'sevac_/2020/3t/estado_de_variacion_en_hacienda_publica.pdf',
             'Informe Sobre Pasivos Contingentes' => 'sevac_/2020/3t/informe_sobre_pasivos_contigentes.pdf',
-            'Notas a los Estados Financieros' => 'sevac_/2020/3t/notas_a_estados_financieros_.pdf',            
+            'Notas a los Estados Financieros' => 'sevac_/2020/3t/notas_a_estados_financieros_.pdf',
             'Montos Pagados por Ayudas y Subsidios' => 'sevac_/2020/3t/montos_pagados_por_ayudas_y_subsidios.pdf'
-            
+
 
         );
 
@@ -691,25 +696,25 @@ class CuentapublicaController extends Controller
         ];
 
         $bprincipal = $this->getBanner('banner_principal');
-        return view('pages.sevac', compact('bprincipal', 
-        'tercertrim2021', 
-        'seguntrim2021', 
-        'cuartotrim2020', 
-        'primtrim2021', 
-        'primtrim2020', 
-        'segundtrim2020', 
-        'tercertrim2020', 
-        'primtrim', 
-        'segtrim', 
-        'tertrim', 
-        'cuatrim', 
-        'trim2018', 
-        'segtrim2018', 
-        'tertrim2018', 
-        'cuarto_trimestre2021', 
-        'primtrim2022', 
-        'segtrim2022', 
-        'tertrim2022', 
+        return view('pages.sevac', compact('bprincipal',
+        'tercertrim2021',
+        'seguntrim2021',
+        'cuartotrim2020',
+        'primtrim2021',
+        'primtrim2020',
+        'segundtrim2020',
+        'tercertrim2020',
+        'primtrim',
+        'segtrim',
+        'tertrim',
+        'cuatrim',
+        'trim2018',
+        'segtrim2018',
+        'tertrim2018',
+        'cuarto_trimestre2021',
+        'primtrim2022',
+        'segtrim2022',
+        'tertrim2022',
         'cuartotrim2022'));
         //comentario
     }
@@ -743,8 +748,8 @@ class CuentapublicaController extends Controller
             'Departamento de Certificación y Control' => 'avisos_privacidad/integral/AVISO_INTEGRAL_TEC_ACAD_CONTROL_ESCOLAR.pdf',
             'Comisaria Pública' => 'avisos_privacidad/integral/21_COMISARIA.pdf',
             'Imparticion de Cursos' => 'avisos_privacidad/integral/AVISO_INTEGRAL_ICATECH_CURSOS_NO_PRESENC.pdf'
-        );            
-       
+        );
+
         $avisos_simplificados2021 =array(
             'ICATECH' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_ICATECH.pdf',
             'Dirección General' => 'avisos_privacidad/simplificado/AVISO_SIMPLIFICADO_DIRECC_GRAL_CTRL_ACCESO.pdf',
@@ -772,7 +777,7 @@ class CuentapublicaController extends Controller
         );
         $bprincipal = $this->getBanner('banner_principal');
 
-        
+
         return view('pages.avisosprivacidad', ['avisos_integrales' => $avisos_integrales2021, 'avisos_simplificados' => $avisos_simplificados2021, 'bprincipal' => $bprincipal]);
     }
 
@@ -894,7 +899,7 @@ class CuentapublicaController extends Controller
                                 ->where(['pages.slug_path' => 'integridad', 'catalogo_categoria.activo' => 1])
                                 ->get();
         /**
-         * 
+         *
          */
         $apartados = CatSubcategoria::select('catalogo_subcategoria.titulo_documento', 'catalogo_subcategoria.ruta_archivo', 'catalogo_subcategoria.apartados_id')
                         ->join('apartados', 'catalogo_subcategoria.apartados_id', '=', 'apartados.id')
